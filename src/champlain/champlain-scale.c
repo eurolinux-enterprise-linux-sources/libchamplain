@@ -337,15 +337,13 @@ redraw_scale (ClutterCanvas *canvas,
 }
 
 
-static gboolean
+static void
 invalidate_canvas (ChamplainScale *layer)
 {
   ChamplainScalePrivate *priv = layer->priv;
 
   clutter_content_invalidate (priv->canvas);
   priv->redraw_scheduled = FALSE;
-
-  return FALSE;
 }
 
 

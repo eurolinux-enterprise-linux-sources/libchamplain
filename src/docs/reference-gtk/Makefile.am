@@ -7,7 +7,7 @@ AUTOMAKE_OPTIONS = 1.6
 DOC_MODULE=libchamplain-gtk
 
 # Uncomment for versioned docs and specify the version of the module, e.g. '2'.
-DOC_MODULE_VERSION=@CHAMPLAIN_API_VERSION@
+#DOC_MODULE_VERSION=2
 
 
 # The top-level SGML file. You can change this if you want to.
@@ -20,11 +20,11 @@ DOC_MAIN_SGML_FILE=$(DOC_MODULE)-docs.sgml
 DOC_SOURCE_DIR=../../champlain-gtk
 
 # Extra options to pass to gtkdoc-scangobj. Not normally needed.
-SCANGOBJ_OPTIONS=
+SCANGOBJ_OPTIONS=--type-init-func='g_type_init()'
 
 # Extra options to supply to gtkdoc-scan.
 # e.g. SCAN_OPTIONS=--deprecated-guards="GTK_DISABLE_DEPRECATED"
-SCAN_OPTIONS=--rebuild-types --deprecated-guards="GTK_DISABLE_DEPRECATED"
+SCAN_OPTIONS=--rebuild-types
 
 # Extra options to supply to gtkdoc-mkdb.
 # e.g. MKDB_OPTIONS=--sgml-mode --output-format=xml

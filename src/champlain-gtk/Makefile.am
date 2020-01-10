@@ -9,7 +9,7 @@ libchamplain_gtk_headers_public =	\
 	$(srcdir)/champlain-gtk.h
 
 libchamplain_gtk_sources = \
-	gtk-champlain-embed.c
+	$(srcdir)/gtk-champlain-embed.c
 
 
 # glib-genmarshal rules
@@ -77,7 +77,7 @@ GtkChamplain-@CHAMPLAIN_API_VERSION@.gir: libchamplain-gtk-@CHAMPLAIN_API_VERSIO
 GtkChamplain_@CHAMPLAIN_API_VERSION_NORM@_gir_NAMESPACE = GtkChamplain
 GtkChamplain_@CHAMPLAIN_API_VERSION_NORM@_gir_VERSION = @CHAMPLAIN_API_VERSION@
 GtkChamplain_@CHAMPLAIN_API_VERSION_NORM@_gir_LIBS = libchamplain-gtk-@CHAMPLAIN_API_VERSION@.la
-GtkChamplain_@CHAMPLAIN_API_VERSION_NORM@_gir_PACKAGES = gobject-2.0 gtk+-3.0 pangocairo
+GtkChamplain_@CHAMPLAIN_API_VERSION_NORM@_gir_PACKAGES = gobject-2.0 gtk+-3.0
 GtkChamplain_@CHAMPLAIN_API_VERSION_NORM@_gir_FILES = $(introspection_sources)
 GtkChamplain_@CHAMPLAIN_API_VERSION_NORM@_gir_INCLUDES = Clutter-1.0 Gtk-3.0
 GtkChamplain_@CHAMPLAIN_API_VERSION_NORM@_gir_EXPORT_PACKAGES = champlain-gtk-@CHAMPLAIN_API_VERSION@
@@ -88,7 +88,7 @@ GtkChamplain_@CHAMPLAIN_API_VERSION_NORM@_gir_SCANNERFLAGS = \
 	--c-include="champlain-gtk/champlain-gtk.h" \
 	--include-uninstalled=$(top_builddir)/champlain/Champlain-@CHAMPLAIN_API_VERSION@.gir
 GtkChamplain_@CHAMPLAIN_API_VERSION_NORM@_gir_CFLAGS = \
-	$(GTK_CFLAGS) $(DEPS_CFLAGS) \
+	$(SOUP_CFLAGS) $(GTK_CFLAGS) $(DEPS_CFLAGS) \
 	-I$(top_srcdir) -I$(top_builddir)\
 	-DCHAMPLAIN_COMPILATION -DCHAMPLAIN_GTK_COMPILATION
 

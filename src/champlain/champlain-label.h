@@ -116,8 +116,6 @@ void champlain_label_set_ellipsize (ChamplainLabel *label,
     PangoEllipsizeMode mode);
 void champlain_label_set_draw_background (ChamplainLabel *label,
     gboolean background);
-void champlain_label_set_draw_shadow (ChamplainLabel *label,
-    gboolean shadow);
 
 gboolean champlain_label_get_use_markup (ChamplainLabel *label);
 const gchar *champlain_label_get_text (ChamplainLabel *label);
@@ -131,7 +129,6 @@ PangoWrapMode champlain_label_get_wrap_mode (ChamplainLabel *label);
 PangoEllipsizeMode champlain_label_get_ellipsize (ChamplainLabel *label);
 gboolean champlain_label_get_single_line_mode (ChamplainLabel *label);
 gboolean champlain_label_get_draw_background (ChamplainLabel *label);
-gboolean champlain_label_get_draw_shadow (ChamplainLabel *label);
 PangoAttrList *champlain_label_get_attributes (ChamplainLabel *label);
 
 

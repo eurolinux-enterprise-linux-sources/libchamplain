@@ -134,7 +134,7 @@ view_state_changed (ChamplainView *view,
   g_object_get (G_OBJECT (view), "state", &state, NULL);
   if (state == CHAMPLAIN_STATE_LOADING)
     {
-      gtk_image_set_from_icon_name (image, "edit-find", GTK_ICON_SIZE_BUTTON);
+      gtk_image_set_from_stock (image, GTK_STOCK_NETWORK, GTK_ICON_SIZE_BUTTON);
     }
   else
     {
@@ -156,17 +156,6 @@ zoom_out (GtkWidget *widget,
     ChamplainView *view)
 {
   champlain_view_zoom_out (view);
-}
-
-
-static void
-toggle_wrap (GtkWidget *widget,
-    ChamplainView *view)
-{
- gboolean wrap;
-
-  wrap = champlain_view_get_horizontal_wrap (view);
-  champlain_view_set_horizontal_wrap (view, !wrap);
 }
 
 
@@ -222,103 +211,12 @@ append_point (ChamplainPathLayer *layer, gdouble lon, gdouble lat)
 }
 
 
-static void
-export_png (GtkButton     *button,
-    ChamplainView *view)
-{
-  cairo_surface_t *surface;
-  GdkPixbuf *pixbuf;
-  GFileOutputStream *os;
-  GFile *file;
-  gint width, height;
-
-  if (champlain_view_get_state (view) != CHAMPLAIN_STATE_DONE)
-    return;
-
-  surface = champlain_view_to_surface (view, TRUE);
-  if (!surface)
-    return;
-
-  width = cairo_image_surface_get_width (surface);
-  height = cairo_image_surface_get_height (surface);
-  pixbuf = gdk_pixbuf_get_from_surface (surface, 0, 0, width, height);
-  if (!pixbuf)
-    return;
-
-  file = g_file_new_for_path ("champlain-map.png");
-  os = g_file_replace (file, NULL, FALSE, G_FILE_CREATE_NONE, NULL, NULL);
-  if (!os)
-    {
-      g_object_unref (pixbuf);
-      return;
-    }
-
-  gdk_pixbuf_save_to_stream (pixbuf, G_OUTPUT_STREAM (os), "png", NULL, NULL, NULL);
-  g_output_stream_close (G_OUTPUT_STREAM (os), NULL, NULL);
-}
-
-
-static void
-add_clicked (GtkButton     *button,
-             ChamplainView *view)
-{
-  GtkWidget *window, *dialog, *vbox, *combo;
-  GtkResponseType response;
-
-  window = g_object_get_data (G_OBJECT (view), "window");
-  dialog = gtk_dialog_new_with_buttons ("Add secondary map source",
-                                        GTK_WINDOW (window),
-                                        GTK_DIALOG_MODAL,
-                                        "Add",
-                                        GTK_RESPONSE_OK,
-                                        "Cancel",
-                                        GTK_RESPONSE_CANCEL,
-                                        NULL);
-
-  combo = gtk_combo_box_new ();
-  build_combo_box (GTK_COMBO_BOX (combo));
-  gtk_combo_box_set_active (GTK_COMBO_BOX (combo), 0);
-
-  vbox = gtk_dialog_get_content_area (GTK_DIALOG (dialog));
-  gtk_container_add (GTK_CONTAINER (vbox), combo);
-
-  gtk_widget_show_all (dialog);
-
-  response = gtk_dialog_run (GTK_DIALOG (dialog));
-
-  if (response == GTK_RESPONSE_OK)
-    {
-      GtkTreeModel *model;
-      GtkTreeIter iter;
-      ChamplainMapSource *source;
-      ChamplainMapSourceFactory *factory;
-      char *id;
-
-      if (!gtk_combo_box_get_active_iter (GTK_COMBO_BOX (combo), &iter))
-        return;
-
-      model = gtk_combo_box_get_model (GTK_COMBO_BOX (combo));
-
-      gtk_tree_model_get (model, &iter, COL_ID, &id, -1);
-
-      factory = champlain_map_source_factory_dup_default ();
-      source = champlain_map_source_factory_create_memcached_source (factory, id);
-
-      champlain_view_add_overlay_source (view, source, 0.6 * 255);
-      g_object_unref (factory);
-      g_free (id);
-    }
-
-  gtk_widget_destroy (dialog);
-}
-
-
 int
 main (int argc,
     char *argv[])
 {
   GtkWidget *window;
-  GtkWidget *widget, *vbox, *bbox, *button, *viewport, *image;
+  GtkWidget *widget, *vbox, *bbox, *button, *viewport;
   ChamplainView *view;
   ChamplainMarkerLayer *layer;
   ClutterActor *scale;
@@ -355,8 +253,6 @@ main (int argc,
       "kinetic-mode", TRUE,
       "zoom-level", 5,
       NULL);
-
-  g_object_set_data (G_OBJECT (view), "window", window);
       
   scale = champlain_scale_new ();
   champlain_scale_connect_view (CHAMPLAIN_SCALE (scale), view);
@@ -393,29 +289,17 @@ main (int argc,
   gtk_widget_set_size_request (widget, 640, 481);
 
   bbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 10);
-  button = gtk_button_new ();
-  image = gtk_image_new_from_icon_name ("zoom-in", GTK_ICON_SIZE_BUTTON);
-  gtk_button_set_image (GTK_BUTTON (button), image);
-  gtk_button_set_label (GTK_BUTTON (button), "Zoom In");
+  button = gtk_button_new_from_stock (GTK_STOCK_ZOOM_IN);
   g_signal_connect (button, "clicked", G_CALLBACK (zoom_in), view);
   gtk_container_add (GTK_CONTAINER (bbox), button);
 
-  button = gtk_button_new ();
-  image = gtk_image_new_from_icon_name ("zoom-out", GTK_ICON_SIZE_BUTTON);
-  gtk_button_set_image (GTK_BUTTON (button), image);
-  gtk_button_set_label (GTK_BUTTON (button), "Zoom Out");
+  button = gtk_button_new_from_stock (GTK_STOCK_ZOOM_OUT);
   g_signal_connect (button, "clicked", G_CALLBACK (zoom_out), view);
   gtk_container_add (GTK_CONTAINER (bbox), button);
 
   button = gtk_toggle_button_new_with_label ("Markers");
   gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button), TRUE);
   g_signal_connect (button, "toggled", G_CALLBACK (toggle_layer), layer);
-  gtk_container_add (GTK_CONTAINER (bbox), button);
-
-  button = gtk_toggle_button_new_with_label ("Toggle wrap");
-  gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button),
-                                champlain_view_get_horizontal_wrap (view));
-  g_signal_connect (button, "toggled", G_CALLBACK (toggle_wrap), view);
   gtk_container_add (GTK_CONTAINER (bbox), button);
 
   button = gtk_combo_box_new ();
@@ -430,18 +314,6 @@ main (int argc,
   g_signal_connect (button, "changed", G_CALLBACK (zoom_changed), view);
   g_signal_connect (view, "notify::zoom-level", G_CALLBACK (map_zoom_changed),
       button);
-  gtk_container_add (GTK_CONTAINER (bbox), button);
-
-  button = gtk_button_new ();
-  image = gtk_image_new_from_icon_name ("list-add", GTK_ICON_SIZE_BUTTON);
-  gtk_button_set_image (GTK_BUTTON (button), image);
-  g_signal_connect (button, "clicked", G_CALLBACK (add_clicked), view);
-  gtk_container_add (GTK_CONTAINER (bbox), button);
-
-  button = gtk_button_new ();
-  image = gtk_image_new_from_icon_name ("camera-photo-symbolic", GTK_ICON_SIZE_BUTTON);
-  gtk_button_set_image (GTK_BUTTON (button), image);
-  g_signal_connect (button, "clicked", G_CALLBACK (export_png), view);
   gtk_container_add (GTK_CONTAINER (bbox), button);
 
   button = gtk_image_new ();

@@ -2,29 +2,36 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>ChamplainPathLayer: libchamplain Reference Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<title>ChamplainPathLayer</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
 <link rel="home" href="index.html" title="libchamplain Reference Manual">
 <link rel="up" href="ch01.html" title="Layers">
 <link rel="prev" href="ChamplainMarkerLayer.html" title="ChamplainMarkerLayer">
 <link rel="next" href="ch02.html" title="Markers">
-<meta name="generator" content="GTK-Doc V1.25 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
-<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
-<td width="100%" align="left" class="shortcuts">
-<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
-                  <a href="#ChamplainPathLayer.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
-                  <a href="#ChamplainPathLayer.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_interfaces">  <span class="dim">|</span> 
-                  <a href="#ChamplainPathLayer.implemented-interfaces" class="shortcut">Implemented Interfaces</a></span><span id="nav_properties">  <span class="dim">|</span> 
-                  <a href="#ChamplainPathLayer.properties" class="shortcut">Properties</a></span>
-</td>
-<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
-<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
-<td><a accesskey="p" href="ChamplainMarkerLayer.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
-<td><a accesskey="n" href="ch02.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
-</tr></table>
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="ChamplainMarkerLayer.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libchamplain Reference Manual</th>
+<td><a accesskey="n" href="ch02.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#ChamplainPathLayer.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#ChamplainPathLayer.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#ChamplainPathLayer.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#ChamplainPathLayer.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#ChamplainPathLayer.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
 <div class="refentry">
 <a name="ChamplainPathLayer"></a><div class="titlepage"></div>
 <div class="refnamediv"><table width="100%"><tr>
@@ -33,993 +40,706 @@
 <p>ChamplainPathLayer — A layer displaying line path between inserted <a class="link" href="ChamplainLocation.html" title="ChamplainLocation"><span class="type">ChamplainLocation</span></a>
 objects</p>
 </td>
-<td class="gallery_image" valign="top" align="right"></td>
+<td valign="top" align="right"></td>
 </tr></table></div>
-<div class="refsect1">
-<a name="ChamplainPathLayer.functions"></a><h2>Functions</h2>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="functions_return">
-<col class="functions_name">
-</colgroup>
-<tbody>
-<tr>
-<td class="function_type">
-<a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="returnvalue">ChamplainPathLayer</span></a> *
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainPathLayer.html#champlain-path-layer-new" title="champlain_path_layer_new ()">champlain_path_layer_new</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<span class="returnvalue">void</span>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainPathLayer.html#champlain-path-layer-add-node" title="champlain_path_layer_add_node ()">champlain_path_layer_add_node</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<span class="returnvalue">void</span>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainPathLayer.html#champlain-path-layer-remove-node" title="champlain_path_layer_remove_node ()">champlain_path_layer_remove_node</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<span class="returnvalue">void</span>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainPathLayer.html#champlain-path-layer-remove-all" title="champlain_path_layer_remove_all ()">champlain_path_layer_remove_all</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<span class="returnvalue">void</span>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainPathLayer.html#champlain-path-layer-insert-node" title="champlain_path_layer_insert_node ()">champlain_path_layer_insert_node</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a href="/usr/share/gtk-doc/html/glibglib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainPathLayer.html#champlain-path-layer-get-nodes" title="champlain_path_layer_get_nodes ()">champlain_path_layer_get_nodes</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<span class="returnvalue">ClutterColor</span> *
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainPathLayer.html#champlain-path-layer-get-fill-color" title="champlain_path_layer_get_fill_color ()">champlain_path_layer_get_fill_color</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<span class="returnvalue">void</span>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainPathLayer.html#champlain-path-layer-set-fill-color" title="champlain_path_layer_set_fill_color ()">champlain_path_layer_set_fill_color</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<span class="returnvalue">ClutterColor</span> *
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainPathLayer.html#champlain-path-layer-get-stroke-color" title="champlain_path_layer_get_stroke_color ()">champlain_path_layer_get_stroke_color</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<span class="returnvalue">void</span>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainPathLayer.html#champlain-path-layer-set-stroke-color" title="champlain_path_layer_set_stroke_color ()">champlain_path_layer_set_stroke_color</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainPathLayer.html#champlain-path-layer-get-fill" title="champlain_path_layer_get_fill ()">champlain_path_layer_get_fill</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<span class="returnvalue">void</span>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainPathLayer.html#champlain-path-layer-set-fill" title="champlain_path_layer_set_fill ()">champlain_path_layer_set_fill</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainPathLayer.html#champlain-path-layer-get-stroke" title="champlain_path_layer_get_stroke ()">champlain_path_layer_get_stroke</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<span class="returnvalue">void</span>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainPathLayer.html#champlain-path-layer-set-stroke" title="champlain_path_layer_set_stroke ()">champlain_path_layer_set_stroke</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainPathLayer.html#champlain-path-layer-get-stroke-width" title="champlain_path_layer_get_stroke_width ()">champlain_path_layer_get_stroke_width</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<span class="returnvalue">void</span>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainPathLayer.html#champlain-path-layer-set-stroke-width" title="champlain_path_layer_set_stroke_width ()">champlain_path_layer_set_stroke_width</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainPathLayer.html#champlain-path-layer-get-visible" title="champlain_path_layer_get_visible ()">champlain_path_layer_get_visible</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<span class="returnvalue">void</span>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainPathLayer.html#champlain-path-layer-set-visible" title="champlain_path_layer_set_visible ()">champlain_path_layer_set_visible</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainPathLayer.html#champlain-path-layer-get-closed" title="champlain_path_layer_get_closed ()">champlain_path_layer_get_closed</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<span class="returnvalue">void</span>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainPathLayer.html#champlain-path-layer-set-closed" title="champlain_path_layer_set_closed ()">champlain_path_layer_set_closed</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a href="/usr/share/gtk-doc/html/glibglib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainPathLayer.html#champlain-path-layer-get-dash" title="champlain_path_layer_get_dash ()">champlain_path_layer_get_dash</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<span class="returnvalue">void</span>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainPathLayer.html#champlain-path-layer-set-dash" title="champlain_path_layer_set_dash ()">champlain_path_layer_set_dash</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="refsect1">
-<a name="ChamplainPathLayer.properties"></a><h2>Properties</h2>
-<div class="informaltable"><table class="informaltable" border="0">
-<colgroup>
-<col width="150px" class="properties_type">
-<col width="300px" class="properties_name">
-<col width="200px" class="properties_flags">
-</colgroup>
-<tbody>
-<tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
-<td class="property_name"><a class="link" href="ChamplainPathLayer.html#ChamplainPathLayer--closed" title="The “closed” property">closed</a></td>
-<td class="property_flags">Read / Write</td>
-</tr>
-<tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
-<td class="property_name"><a class="link" href="ChamplainPathLayer.html#ChamplainPathLayer--fill" title="The “fill” property">fill</a></td>
-<td class="property_flags">Read / Write</td>
-</tr>
-<tr>
-<td class="property_type">
-<span class="type">ClutterColor</span> *</td>
-<td class="property_name"><a class="link" href="ChamplainPathLayer.html#ChamplainPathLayer--fill-color" title="The “fill-color” property">fill-color</a></td>
-<td class="property_flags">Read / Write</td>
-</tr>
-<tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
-<td class="property_name"><a class="link" href="ChamplainPathLayer.html#ChamplainPathLayer--stroke" title="The “stroke” property">stroke</a></td>
-<td class="property_flags">Read / Write</td>
-</tr>
-<tr>
-<td class="property_type">
-<span class="type">ClutterColor</span> *</td>
-<td class="property_name"><a class="link" href="ChamplainPathLayer.html#ChamplainPathLayer--stroke-color" title="The “stroke-color” property">stroke-color</a></td>
-<td class="property_flags">Read / Write</td>
-</tr>
-<tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
-<td class="property_name"><a class="link" href="ChamplainPathLayer.html#ChamplainPathLayer--stroke-width" title="The “stroke-width” property">stroke-width</a></td>
-<td class="property_flags">Read / Write</td>
-</tr>
-<tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
-<td class="property_name"><a class="link" href="ChamplainPathLayer.html#ChamplainPathLayer--visible" title="The “visible” property">visible</a></td>
-<td class="property_flags">Read / Write</td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="refsect1">
-<a name="ChamplainPathLayer.other"></a><h2>Types and Values</h2>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="name">
-<col class="description">
-</colgroup>
-<tbody><tr>
-<td class="datatype_keyword">struct</td>
-<td class="function_name"><a class="link" href="ChamplainPathLayer.html#ChamplainPathLayer-struct" title="struct ChamplainPathLayer">ChamplainPathLayer</a></td>
-</tr></tbody>
-</table></div>
+<div class="refsynopsisdiv">
+<a name="ChamplainPathLayer.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="ChamplainPathLayer.html#ChamplainPathLayer-struct" title="struct ChamplainPathLayer">ChamplainPathLayer</a>;
+<a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="returnvalue">ChamplainPathLayer</span></a> * <a class="link" href="ChamplainPathLayer.html#champlain-path-layer-new" title="champlain_path_layer_new ()">champlain_path_layer_new</a>           (<em class="parameter"><code><span class="type">void</span></code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="ChamplainPathLayer.html#champlain-path-layer-add-node" title="champlain_path_layer_add_node ()">champlain_path_layer_add_node</a>       (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="ChamplainLocation.html" title="ChamplainLocation"><span class="type">ChamplainLocation</span></a> *location</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="ChamplainPathLayer.html#champlain-path-layer-remove-node" title="champlain_path_layer_remove_node ()">champlain_path_layer_remove_node</a>    (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="ChamplainLocation.html" title="ChamplainLocation"><span class="type">ChamplainLocation</span></a> *location</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="ChamplainPathLayer.html#champlain-path-layer-remove-all" title="champlain_path_layer_remove_all ()">champlain_path_layer_remove_all</a>     (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="ChamplainPathLayer.html#champlain-path-layer-insert-node" title="champlain_path_layer_insert_node ()">champlain_path_layer_insert_node</a>    (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="ChamplainLocation.html" title="ChamplainLocation"><span class="type">ChamplainLocation</span></a> *location</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> position</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             <a class="link" href="ChamplainPathLayer.html#champlain-path-layer-get-nodes" title="champlain_path_layer_get_nodes ()">champlain_path_layer_get_nodes</a>      (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>);
+<a href="/usr/share/gtk-doc/html/clutter/clutter-Colors.html#ClutterColor"><span class="returnvalue">ClutterColor</span></a> *      <a class="link" href="ChamplainPathLayer.html#champlain-path-layer-get-fill-color" title="champlain_path_layer_get_fill_color ()">champlain_path_layer_get_fill_color</a> (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="ChamplainPathLayer.html#champlain-path-layer-set-fill-color" title="champlain_path_layer_set_fill_color ()">champlain_path_layer_set_fill_color</a> (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/clutter/clutter-Colors.html#ClutterColor"><span class="type">ClutterColor</span></a> *color</code></em>);
+<a href="/usr/share/gtk-doc/html/clutter/clutter-Colors.html#ClutterColor"><span class="returnvalue">ClutterColor</span></a> *      <a class="link" href="ChamplainPathLayer.html#champlain-path-layer-get-stroke-color" title="champlain_path_layer_get_stroke_color ()">champlain_path_layer_get_stroke_color</a>
+                                                        (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="ChamplainPathLayer.html#champlain-path-layer-set-stroke-color" title="champlain_path_layer_set_stroke_color ()">champlain_path_layer_set_stroke_color</a>
+                                                        (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/clutter/clutter-Colors.html#ClutterColor"><span class="type">ClutterColor</span></a> *color</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="ChamplainPathLayer.html#champlain-path-layer-get-fill" title="champlain_path_layer_get_fill ()">champlain_path_layer_get_fill</a>       (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="ChamplainPathLayer.html#champlain-path-layer-set-fill" title="champlain_path_layer_set_fill ()">champlain_path_layer_set_fill</a>       (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="ChamplainPathLayer.html#champlain-path-layer-get-stroke" title="champlain_path_layer_get_stroke ()">champlain_path_layer_get_stroke</a>     (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="ChamplainPathLayer.html#champlain-path-layer-set-stroke" title="champlain_path_layer_set_stroke ()">champlain_path_layer_set_stroke</a>     (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>             <a class="link" href="ChamplainPathLayer.html#champlain-path-layer-get-stroke-width" title="champlain_path_layer_get_stroke_width ()">champlain_path_layer_get_stroke_width</a>
+                                                        (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="ChamplainPathLayer.html#champlain-path-layer-set-stroke-width" title="champlain_path_layer_set_stroke_width ()">champlain_path_layer_set_stroke_width</a>
+                                                        (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> value</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="ChamplainPathLayer.html#champlain-path-layer-get-visible" title="champlain_path_layer_get_visible ()">champlain_path_layer_get_visible</a>    (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="ChamplainPathLayer.html#champlain-path-layer-set-visible" title="champlain_path_layer_set_visible ()">champlain_path_layer_set_visible</a>    (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="ChamplainPathLayer.html#champlain-path-layer-get-closed" title="champlain_path_layer_get_closed ()">champlain_path_layer_get_closed</a>     (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="ChamplainPathLayer.html#champlain-path-layer-set-closed" title="champlain_path_layer_set_closed ()">champlain_path_layer_set_closed</a>     (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             <a class="link" href="ChamplainPathLayer.html#champlain-path-layer-get-dash" title="champlain_path_layer_get_dash ()">champlain_path_layer_get_dash</a>       (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="ChamplainPathLayer.html#champlain-path-layer-set-dash" title="champlain_path_layer_set_dash ()">champlain_path_layer_set_dash</a>       (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> *dash_pattern</code></em>);
+</pre>
 </div>
 <div class="refsect1">
 <a name="ChamplainPathLayer.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
-    <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
-        <span class="lineart">╰──</span> ClutterActor
-            <span class="lineart">╰──</span> <a class="link" href="ChamplainLayer.html" title="ChamplainLayer">ChamplainLayer</a>
-                <span class="lineart">╰──</span> ChamplainPathLayer
+<pre class="synopsis">
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
+         +----<a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html">ClutterActor</a>
+               +----<a class="link" href="ChamplainLayer.html" title="ChamplainLayer">ChamplainLayer</a>
+                     +----ChamplainPathLayer
 </pre>
 </div>
 <div class="refsect1">
 <a name="ChamplainPathLayer.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
 <p>
 ChamplainPathLayer implements
- ClutterContainer,  ClutterScriptable,  ClutterAnimatable,  AtkImplementorIface and  <a class="link" href="ChamplainExportable.html" title="ChamplainExportable">ChamplainExportable</a>.</p>
+ <a href="/usr/share/gtk-doc/html/clutter/ClutterContainer.html">ClutterContainer</a>,  <a href="/usr/share/gtk-doc/html/clutter/ClutterScriptable.html">ClutterScriptable</a>,  <a href="/usr/share/gtk-doc/html/clutter/ClutterAnimatable.html">ClutterAnimatable</a> and  AtkImplementorIface.</p>
+</div>
+<div class="refsect1">
+<a name="ChamplainPathLayer.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="ChamplainPathLayer.html#ChamplainPathLayer--closed" title='The "closed" property'>closed</a>"                   <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write
+  "<a class="link" href="ChamplainPathLayer.html#ChamplainPathLayer--fill" title='The "fill" property'>fill</a>"                     <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write
+  "<a class="link" href="ChamplainPathLayer.html#ChamplainPathLayer--fill-color" title='The "fill-color" property'>fill-color</a>"               <a href="/usr/share/gtk-doc/html/clutter/clutter-Colors.html#ClutterColor"><span class="type">ClutterColor</span></a>*         : Read / Write
+  "<a class="link" href="ChamplainPathLayer.html#ChamplainPathLayer--stroke" title='The "stroke" property'>stroke</a>"                   <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write
+  "<a class="link" href="ChamplainPathLayer.html#ChamplainPathLayer--stroke-color" title='The "stroke-color" property'>stroke-color</a>"             <a href="/usr/share/gtk-doc/html/clutter/clutter-Colors.html#ClutterColor"><span class="type">ClutterColor</span></a>*         : Read / Write
+  "<a class="link" href="ChamplainPathLayer.html#ChamplainPathLayer--stroke-width" title='The "stroke-width" property'>stroke-width</a>"             <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a>               : Read / Write
+  "<a class="link" href="ChamplainPathLayer.html#ChamplainPathLayer--visible" title='The "visible" property'>visible</a>"                  <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write
+</pre>
 </div>
 <div class="refsect1">
 <a name="ChamplainPathLayer.description"></a><h2>Description</h2>
-<p>This layer shows a connection between inserted objects implementing the
+<p>
+This layer shows a connection between inserted objects implementing the
 <a class="link" href="ChamplainLocation.html" title="ChamplainLocation"><span class="type">ChamplainLocation</span></a> interface. This means that both <a class="link" href="ChamplainMarker.html" title="ChamplainMarker"><span class="type">ChamplainMarker</span></a>
 objects and <a class="link" href="ChamplainCoordinate.html" title="ChamplainCoordinate"><span class="type">ChamplainCoordinate</span></a> objects can be inserted into the layer.
 Of course, custom objects implementing the <a class="link" href="ChamplainLocation.html" title="ChamplainLocation"><span class="type">ChamplainLocation</span></a> interface
-can be used as well.</p>
+can be used as well.
+</p>
 </div>
 <div class="refsect1">
-<a name="ChamplainPathLayer.functions_details"></a><h2>Functions</h2>
-<div class="refsect2">
-<a name="champlain-path-layer-new"></a><h3>champlain_path_layer_new ()</h3>
-<pre class="programlisting"><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="returnvalue">ChamplainPathLayer</span></a> *
-champlain_path_layer_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
-<p>Creates a new instance of <a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a>.</p>
-<div class="refsect3">
-<a name="champlain-path-layer-new.returns"></a><h4>Returns</h4>
-<p> a new instance of <a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a>.</p>
-</div>
-<p class="since">Since: 0.10</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-path-layer-add-node"></a><h3>champlain_path_layer_add_node ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>
-champlain_path_layer_add_node (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>,
-                               <em class="parameter"><code><a class="link" href="ChamplainLocation.html" title="ChamplainLocation"><span class="type">ChamplainLocation</span></a> *location</code></em>);</pre>
-<p>Adds a <a class="link" href="ChamplainLocation.html" title="ChamplainLocation"><span class="type">ChamplainLocation</span></a> object to the layer.
-The node is prepended to the list.</p>
-<div class="refsect3">
-<a name="champlain-path-layer-add-node.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>layer</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>location</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainLocation.html" title="ChamplainLocation"><span class="type">ChamplainLocation</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<p class="since">Since: 0.10</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-path-layer-remove-node"></a><h3>champlain_path_layer_remove_node ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>
-champlain_path_layer_remove_node (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>,
-                                  <em class="parameter"><code><a class="link" href="ChamplainLocation.html" title="ChamplainLocation"><span class="type">ChamplainLocation</span></a> *location</code></em>);</pre>
-<p>Removes the <a class="link" href="ChamplainLocation.html" title="ChamplainLocation"><span class="type">ChamplainLocation</span></a> object from the layer.</p>
-<div class="refsect3">
-<a name="champlain-path-layer-remove-node.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>layer</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>location</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainLocation.html" title="ChamplainLocation"><span class="type">ChamplainLocation</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<p class="since">Since: 0.10</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-path-layer-remove-all"></a><h3>champlain_path_layer_remove_all ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>
-champlain_path_layer_remove_all (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>);</pre>
-<p>Removes all <a class="link" href="ChamplainLocation.html" title="ChamplainLocation"><span class="type">ChamplainLocation</span></a> objects from the layer.</p>
-<div class="refsect3">
-<a name="champlain-path-layer-remove-all.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>layer</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-<p class="since">Since: 0.10</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-path-layer-insert-node"></a><h3>champlain_path_layer_insert_node ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>
-champlain_path_layer_insert_node (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>,
-                                  <em class="parameter"><code><a class="link" href="ChamplainLocation.html" title="ChamplainLocation"><span class="type">ChamplainLocation</span></a> *location</code></em>,
-                                  <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a> position</code></em>);</pre>
-<p>Inserts a <a class="link" href="ChamplainLocation.html" title="ChamplainLocation"><span class="type">ChamplainLocation</span></a> object to the specified position.</p>
-<div class="refsect3">
-<a name="champlain-path-layer-insert-node.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>layer</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>location</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainLocation.html" title="ChamplainLocation"><span class="type">ChamplainLocation</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>position</p></td>
-<td class="parameter_description"><p>position in the list where the <a class="link" href="ChamplainLocation.html" title="ChamplainLocation"><span class="type">ChamplainLocation</span></a> object should be inserted</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<p class="since">Since: 0.10</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-path-layer-get-nodes"></a><h3>champlain_path_layer_get_nodes ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
-champlain_path_layer_get_nodes (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>);</pre>
-<p>Gets a copy of the list of all <a class="link" href="ChamplainLocation.html" title="ChamplainLocation"><span class="type">ChamplainLocation</span></a> objects inserted into the layer. You should
-free the list but not its contents.</p>
-<div class="refsect3">
-<a name="champlain-path-layer-get-nodes.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>layer</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="champlain-path-layer-get-nodes.returns"></a><h4>Returns</h4>
-<p> the list. </p>
-<p><span class="annotation">[<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> ChamplainLocation]</span></p>
-</div>
-<p class="since">Since: 0.10</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-path-layer-get-fill-color"></a><h3>champlain_path_layer_get_fill_color ()</h3>
-<pre class="programlisting"><span class="returnvalue">ClutterColor</span> *
-champlain_path_layer_get_fill_color (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>);</pre>
-<p>Gets the path's fill color.</p>
-<div class="refsect3">
-<a name="champlain-path-layer-get-fill-color.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>layer</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="champlain-path-layer-get-fill-color.returns"></a><h4>Returns</h4>
-<p> the path's fill color.</p>
-</div>
-<p class="since">Since: 0.10</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-path-layer-set-fill-color"></a><h3>champlain_path_layer_set_fill_color ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>
-champlain_path_layer_set_fill_color (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>,
-                                     <em class="parameter"><code>const <span class="type">ClutterColor</span> *color</code></em>);</pre>
-<p>Set the path's fill color.</p>
-<div class="refsect3">
-<a name="champlain-path-layer-set-fill-color.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>layer</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>color</p></td>
-<td class="parameter_description"><p> The path's fill color or NULL to reset to the
-default color. The color parameter is copied. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<p class="since">Since: 0.10</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-path-layer-get-stroke-color"></a><h3>champlain_path_layer_get_stroke_color ()</h3>
-<pre class="programlisting"><span class="returnvalue">ClutterColor</span> *
-champlain_path_layer_get_stroke_color (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>);</pre>
-<p>Gets the path's stroke color.</p>
-<div class="refsect3">
-<a name="champlain-path-layer-get-stroke-color.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>layer</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="champlain-path-layer-get-stroke-color.returns"></a><h4>Returns</h4>
-<p> the path's stroke color.</p>
-</div>
-<p class="since">Since: 0.10</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-path-layer-set-stroke-color"></a><h3>champlain_path_layer_set_stroke_color ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>
-champlain_path_layer_set_stroke_color (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>,
-                                       <em class="parameter"><code>const <span class="type">ClutterColor</span> *color</code></em>);</pre>
-<p>Set the path's stroke color.</p>
-<div class="refsect3">
-<a name="champlain-path-layer-set-stroke-color.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>layer</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>color</p></td>
-<td class="parameter_description"><p> The path's stroke color or NULL to reset to the
-default color. The color parameter is copied. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<p class="since">Since: 0.10</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-path-layer-get-fill"></a><h3>champlain_path_layer_get_fill ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
-champlain_path_layer_get_fill (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>);</pre>
-<p>Checks whether the path is filled.</p>
-<div class="refsect3">
-<a name="champlain-path-layer-get-fill.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>layer</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="champlain-path-layer-get-fill.returns"></a><h4>Returns</h4>
-<p> TRUE if the path is filled, FALSE otherwise.</p>
-</div>
-<p class="since">Since: 0.10</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-path-layer-set-fill"></a><h3>champlain_path_layer_set_fill ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>
-champlain_path_layer_set_fill (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>,
-                               <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);</pre>
-<p>Sets the path to be filled</p>
-<div class="refsect3">
-<a name="champlain-path-layer-set-fill.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>layer</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>value</p></td>
-<td class="parameter_description"><p>if the path is filled</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<p class="since">Since: 0.10</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-path-layer-get-stroke"></a><h3>champlain_path_layer_get_stroke ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
-champlain_path_layer_get_stroke (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>);</pre>
-<p>Checks whether the path is stroked.</p>
-<div class="refsect3">
-<a name="champlain-path-layer-get-stroke.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>layer</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="champlain-path-layer-get-stroke.returns"></a><h4>Returns</h4>
-<p> TRUE if the path is stroked, FALSE otherwise.</p>
-</div>
-<p class="since">Since: 0.10</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-path-layer-set-stroke"></a><h3>champlain_path_layer_set_stroke ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>
-champlain_path_layer_set_stroke (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>,
-                                 <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);</pre>
-<p>Sets the path to be stroked</p>
-<div class="refsect3">
-<a name="champlain-path-layer-set-stroke.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>layer</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>value</p></td>
-<td class="parameter_description"><p>if the path is stroked</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<p class="since">Since: 0.10</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-path-layer-get-stroke-width"></a><h3>champlain_path_layer_get_stroke_width ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
-champlain_path_layer_get_stroke_width (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>);</pre>
-<p>Gets the width of the stroke.</p>
-<div class="refsect3">
-<a name="champlain-path-layer-get-stroke-width.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>layer</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="champlain-path-layer-get-stroke-width.returns"></a><h4>Returns</h4>
-<p> the width of the stroke</p>
-</div>
-<p class="since">Since: 0.10</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-path-layer-set-stroke-width"></a><h3>champlain_path_layer_set_stroke_width ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>
-champlain_path_layer_set_stroke_width (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>,
-                                       <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> value</code></em>);</pre>
-<p>Sets the width of the stroke</p>
-<div class="refsect3">
-<a name="champlain-path-layer-set-stroke-width.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>layer</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>value</p></td>
-<td class="parameter_description"><p>the width of the stroke (in pixels)</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<p class="since">Since: 0.10</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-path-layer-get-visible"></a><h3>champlain_path_layer_get_visible ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
-champlain_path_layer_get_visible (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>);</pre>
-<p>Gets path visibility.</p>
-<div class="refsect3">
-<a name="champlain-path-layer-get-visible.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>layer</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="champlain-path-layer-get-visible.returns"></a><h4>Returns</h4>
-<p> TRUE when the path is visible, FALSE otherwise</p>
-</div>
-<p class="since">Since: 0.10</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-path-layer-set-visible"></a><h3>champlain_path_layer_set_visible ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>
-champlain_path_layer_set_visible (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>,
-                                  <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);</pre>
-<p>Sets path visibility.</p>
-<div class="refsect3">
-<a name="champlain-path-layer-set-visible.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>layer</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>value</p></td>
-<td class="parameter_description"><p>TRUE to make the path visible</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<p class="since">Since: 0.10</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-path-layer-get-closed"></a><h3>champlain_path_layer_get_closed ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
-champlain_path_layer_get_closed (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>);</pre>
-<p>Gets information whether the path is closed.</p>
-<div class="refsect3">
-<a name="champlain-path-layer-get-closed.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>layer</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="champlain-path-layer-get-closed.returns"></a><h4>Returns</h4>
-<p> TRUE when the path is closed, FALSE otherwise</p>
-</div>
-<p class="since">Since: 0.10</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-path-layer-set-closed"></a><h3>champlain_path_layer_set_closed ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>
-champlain_path_layer_set_closed (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>,
-                                 <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);</pre>
-<p>Makes the path closed.</p>
-<div class="refsect3">
-<a name="champlain-path-layer-set-closed.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>layer</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>value</p></td>
-<td class="parameter_description"><p>TRUE to make the path closed</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<p class="since">Since: 0.10</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-path-layer-get-dash"></a><h3>champlain_path_layer_get_dash ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
-champlain_path_layer_get_dash (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>);</pre>
-<p>Returns the list of dash segment lengths.</p>
-<div class="refsect3">
-<a name="champlain-path-layer-get-dash.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>layer</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="champlain-path-layer-get-dash.returns"></a><h4>Returns</h4>
-<p> the list. </p>
-<p><span class="annotation">[<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint]</span></p>
-</div>
-<p class="since">Since: 0.12.4</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-path-layer-set-dash"></a><h3>champlain_path_layer_set_dash ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>
-champlain_path_layer_set_dash (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>,
-                               <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> *dash_pattern</code></em>);</pre>
-<p>Sets dashed line pattern in a way similar to <code class="function">cairo_set_dash()</code> of cairo. This 
-method supports only integer values for segment lengths. The values have to be
-passed inside the data pointer of the list (using the GUINT_TO_POINTER conversion)</p>
-<p>Pass NULL to use solid line.</p>
-<div class="refsect3">
-<a name="champlain-path-layer-set-dash.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>layer</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>dash_pattern</p></td>
-<td class="parameter_description"><p> list of integer values representing lengths
-of dashes/spaces (see cairo documentation of <code class="function">cairo_set_dash()</code>). </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint]</span></td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<p class="since">Since: 0.12.4</p>
-</div>
-</div>
-<div class="refsect1">
-<a name="ChamplainPathLayer.other_details"></a><h2>Types and Values</h2>
+<a name="ChamplainPathLayer.details"></a><h2>Details</h2>
 <div class="refsect2">
 <a name="ChamplainPathLayer-struct"></a><h3>struct ChamplainPathLayer</h3>
 <pre class="programlisting">struct ChamplainPathLayer;</pre>
-<p>The <a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> structure contains only private data
-and should be accessed using the provided API</p>
-<p class="since">Since: 0.10</p>
+<p>
+The <a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> structure contains only private data
+and should be accessed using the provided API
+</p>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-path-layer-new"></a><h3>champlain_path_layer_new ()</h3>
+<pre class="programlisting"><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="returnvalue">ChamplainPathLayer</span></a> * champlain_path_layer_new           (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+Creates a new instance of <a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a new instance of <a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a>.</td>
+</tr></tbody>
+</table></div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-path-layer-add-node"></a><h3>champlain_path_layer_add_node ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                champlain_path_layer_add_node       (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="ChamplainLocation.html" title="ChamplainLocation"><span class="type">ChamplainLocation</span></a> *location</code></em>);</pre>
+<p>
+Adds a <a class="link" href="ChamplainLocation.html" title="ChamplainLocation"><span class="type">ChamplainLocation</span></a> object to the layer.
+The node is prepended to the list.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>layer</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>location</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainLocation.html" title="ChamplainLocation"><span class="type">ChamplainLocation</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-path-layer-remove-node"></a><h3>champlain_path_layer_remove_node ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                champlain_path_layer_remove_node    (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="ChamplainLocation.html" title="ChamplainLocation"><span class="type">ChamplainLocation</span></a> *location</code></em>);</pre>
+<p>
+Removes the <a class="link" href="ChamplainLocation.html" title="ChamplainLocation"><span class="type">ChamplainLocation</span></a> object from the layer.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>layer</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>location</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainLocation.html" title="ChamplainLocation"><span class="type">ChamplainLocation</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-path-layer-remove-all"></a><h3>champlain_path_layer_remove_all ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                champlain_path_layer_remove_all     (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>);</pre>
+<p>
+Removes all <a class="link" href="ChamplainLocation.html" title="ChamplainLocation"><span class="type">ChamplainLocation</span></a> objects from the layer.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>layer</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a>
+</td>
+</tr></tbody>
+</table></div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-path-layer-insert-node"></a><h3>champlain_path_layer_insert_node ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                champlain_path_layer_insert_node    (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="ChamplainLocation.html" title="ChamplainLocation"><span class="type">ChamplainLocation</span></a> *location</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> position</code></em>);</pre>
+<p>
+Inserts a <a class="link" href="ChamplainLocation.html" title="ChamplainLocation"><span class="type">ChamplainLocation</span></a> object to the specified position.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>layer</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>location</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainLocation.html" title="ChamplainLocation"><span class="type">ChamplainLocation</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>position</code></em> :</span></p></td>
+<td>position in the list where the <a class="link" href="ChamplainLocation.html" title="ChamplainLocation"><span class="type">ChamplainLocation</span></a> object should be inserted</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-path-layer-get-nodes"></a><h3>champlain_path_layer_get_nodes ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             champlain_path_layer_get_nodes      (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>);</pre>
+<p>
+Gets a copy of the list of all <a class="link" href="ChamplainLocation.html" title="ChamplainLocation"><span class="type">ChamplainLocation</span></a> objects inserted into the layer. You should
+free the list but not its contents.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>layer</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the list. <span class="annotation">[<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> ChamplainLocation]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-path-layer-get-fill-color"></a><h3>champlain_path_layer_get_fill_color ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/clutter/clutter-Colors.html#ClutterColor"><span class="returnvalue">ClutterColor</span></a> *      champlain_path_layer_get_fill_color (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>);</pre>
+<p>
+Gets the path's fill color.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>layer</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the path's fill color.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-path-layer-set-fill-color"></a><h3>champlain_path_layer_set_fill_color ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                champlain_path_layer_set_fill_color (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/clutter/clutter-Colors.html#ClutterColor"><span class="type">ClutterColor</span></a> *color</code></em>);</pre>
+<p>
+Set the path's fill color.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>layer</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>color</code></em> :</span></p></td>
+<td>The path's fill color or NULL to reset to the
+default color. The color parameter is copied. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-path-layer-get-stroke-color"></a><h3>champlain_path_layer_get_stroke_color ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/clutter/clutter-Colors.html#ClutterColor"><span class="returnvalue">ClutterColor</span></a> *      champlain_path_layer_get_stroke_color
+                                                        (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>);</pre>
+<p>
+Gets the path's stroke color.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>layer</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the path's stroke color.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-path-layer-set-stroke-color"></a><h3>champlain_path_layer_set_stroke_color ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                champlain_path_layer_set_stroke_color
+                                                        (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/clutter/clutter-Colors.html#ClutterColor"><span class="type">ClutterColor</span></a> *color</code></em>);</pre>
+<p>
+Set the path's stroke color.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>layer</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>color</code></em> :</span></p></td>
+<td>The path's stroke color or NULL to reset to the
+default color. The color parameter is copied. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-path-layer-get-fill"></a><h3>champlain_path_layer_get_fill ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            champlain_path_layer_get_fill       (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>);</pre>
+<p>
+Checks whether the path is filled.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>layer</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>TRUE if the path is filled, FALSE otherwise.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-path-layer-set-fill"></a><h3>champlain_path_layer_set_fill ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                champlain_path_layer_set_fill       (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);</pre>
+<p>
+Sets the path to be filled
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>layer</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>if the path is filled</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-path-layer-get-stroke"></a><h3>champlain_path_layer_get_stroke ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            champlain_path_layer_get_stroke     (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>);</pre>
+<p>
+Checks whether the path is stroked.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>layer</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>TRUE if the path is stroked, FALSE otherwise.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-path-layer-set-stroke"></a><h3>champlain_path_layer_set_stroke ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                champlain_path_layer_set_stroke     (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);</pre>
+<p>
+Sets the path to be stroked
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>layer</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>if the path is stroked</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-path-layer-get-stroke-width"></a><h3>champlain_path_layer_get_stroke_width ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>             champlain_path_layer_get_stroke_width
+                                                        (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>);</pre>
+<p>
+Gets the width of the stroke.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>layer</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the width of the stroke</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-path-layer-set-stroke-width"></a><h3>champlain_path_layer_set_stroke_width ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                champlain_path_layer_set_stroke_width
+                                                        (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> value</code></em>);</pre>
+<p>
+Sets the width of the stroke
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>layer</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>the width of the stroke (in pixels)</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-path-layer-get-visible"></a><h3>champlain_path_layer_get_visible ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            champlain_path_layer_get_visible    (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>);</pre>
+<p>
+Gets path visibility.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>layer</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>TRUE when the path is visible, FALSE otherwise</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-path-layer-set-visible"></a><h3>champlain_path_layer_set_visible ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                champlain_path_layer_set_visible    (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);</pre>
+<p>
+Sets path visibility.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>layer</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>TRUE to make the path visible</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-path-layer-get-closed"></a><h3>champlain_path_layer_get_closed ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            champlain_path_layer_get_closed     (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>);</pre>
+<p>
+Gets information whether the path is closed.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>layer</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>TRUE when the path is closed, FALSE otherwise</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-path-layer-set-closed"></a><h3>champlain_path_layer_set_closed ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                champlain_path_layer_set_closed     (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);</pre>
+<p>
+Makes the path closed.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>layer</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>TRUE to make the path closed</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-path-layer-get-dash"></a><h3>champlain_path_layer_get_dash ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             champlain_path_layer_get_dash       (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>);</pre>
+<p>
+Returns the list of dash segment lengths.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>layer</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the list. <span class="annotation">[<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.12.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-path-layer-set-dash"></a><h3>champlain_path_layer_set_dash ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                champlain_path_layer_set_dash       (<em class="parameter"><code><a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a> *layer</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> *dash_pattern</code></em>);</pre>
+<p>
+Sets dashed line pattern in a way similar to <a href="/usr/share/gtk-doc/html/cairo/cairo-cairo-t.html#cairo-set-dash"><code class="function">cairo_set_dash()</code></a> of cairo. This 
+method supports only integer values for segment lengths. The values have to be
+passed inside the data pointer of the list (using the GUINT_TO_POINTER conversion)
+</p>
+<p>
+Pass NULL to use solid line.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>layer</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer"><span class="type">ChamplainPathLayer</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>dash_pattern</code></em> :</span></p></td>
+<td>list of integer values representing lengths
+of dashes/spaces (see cairo documentation of <a href="/usr/share/gtk-doc/html/cairo/cairo-cairo-t.html#cairo-set-dash"><code class="function">cairo_set_dash()</code></a>). <span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.12.4</p>
 </div>
 </div>
 <div class="refsect1">
 <a name="ChamplainPathLayer.property-details"></a><h2>Property Details</h2>
 <div class="refsect2">
-<a name="ChamplainPathLayer--closed"></a><h3>The <code class="literal">“closed”</code> property</h3>
-<pre class="programlisting">  “closed”                   <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
-<p>The shape is a closed path</p>
-<p>Flags: Read / Write</p>
+<a name="ChamplainPathLayer--closed"></a><h3>The <code class="literal">"closed"</code> property</h3>
+<pre class="programlisting">  "closed"                   <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write</pre>
+<p>
+The shape is a closed path
+</p>
 <p>Default value: FALSE</p>
-<p class="since">Since: 0.10</p>
+<p class="since">Since 0.10</p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="ChamplainPathLayer--fill"></a><h3>The <code class="literal">“fill”</code> property</h3>
-<pre class="programlisting">  “fill”                     <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
-<p>The shape should be filled</p>
-<p>Flags: Read / Write</p>
+<a name="ChamplainPathLayer--fill"></a><h3>The <code class="literal">"fill"</code> property</h3>
+<pre class="programlisting">  "fill"                     <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write</pre>
+<p>
+The shape should be filled
+</p>
 <p>Default value: FALSE</p>
-<p class="since">Since: 0.10</p>
+<p class="since">Since 0.10</p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="ChamplainPathLayer--fill-color"></a><h3>The <code class="literal">“fill-color”</code> property</h3>
-<pre class="programlisting">  “fill-color”               <span class="type">ClutterColor</span> *</pre>
-<p>The path's fill color</p>
-<p>Flags: Read / Write</p>
-<p class="since">Since: 0.10</p>
+<a name="ChamplainPathLayer--fill-color"></a><h3>The <code class="literal">"fill-color"</code> property</h3>
+<pre class="programlisting">  "fill-color"               <a href="/usr/share/gtk-doc/html/clutter/clutter-Colors.html#ClutterColor"><span class="type">ClutterColor</span></a>*         : Read / Write</pre>
+<p>
+The path's fill color
+</p>
+<p class="since">Since 0.10</p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="ChamplainPathLayer--stroke"></a><h3>The <code class="literal">“stroke”</code> property</h3>
-<pre class="programlisting">  “stroke”                   <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
-<p>The shape should be stroked</p>
-<p>Flags: Read / Write</p>
+<a name="ChamplainPathLayer--stroke"></a><h3>The <code class="literal">"stroke"</code> property</h3>
+<pre class="programlisting">  "stroke"                   <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write</pre>
+<p>
+The shape should be stroked
+</p>
 <p>Default value: TRUE</p>
-<p class="since">Since: 0.10</p>
+<p class="since">Since 0.10</p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="ChamplainPathLayer--stroke-color"></a><h3>The <code class="literal">“stroke-color”</code> property</h3>
-<pre class="programlisting">  “stroke-color”             <span class="type">ClutterColor</span> *</pre>
-<p>The path's stroke color</p>
-<p>Flags: Read / Write</p>
-<p class="since">Since: 0.10</p>
+<a name="ChamplainPathLayer--stroke-color"></a><h3>The <code class="literal">"stroke-color"</code> property</h3>
+<pre class="programlisting">  "stroke-color"             <a href="/usr/share/gtk-doc/html/clutter/clutter-Colors.html#ClutterColor"><span class="type">ClutterColor</span></a>*         : Read / Write</pre>
+<p>
+The path's stroke color
+</p>
+<p class="since">Since 0.10</p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="ChamplainPathLayer--stroke-width"></a><h3>The <code class="literal">“stroke-width”</code> property</h3>
-<pre class="programlisting">  “stroke-width”             <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
-<p>The path's stroke width (in pixels)</p>
-<p>Flags: Read / Write</p>
+<a name="ChamplainPathLayer--stroke-width"></a><h3>The <code class="literal">"stroke-width"</code> property</h3>
+<pre class="programlisting">  "stroke-width"             <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a>               : Read / Write</pre>
+<p>
+The path's stroke width (in pixels)
+</p>
 <p>Allowed values: [0,100]</p>
 <p>Default value: 2</p>
-<p class="since">Since: 0.10</p>
+<p class="since">Since 0.10</p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="ChamplainPathLayer--visible"></a><h3>The <code class="literal">“visible”</code> property</h3>
-<pre class="programlisting">  “visible”                  <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
-<p>Wether the path is visible</p>
-<p>Flags: Read / Write</p>
+<a name="ChamplainPathLayer--visible"></a><h3>The <code class="literal">"visible"</code> property</h3>
+<pre class="programlisting">  "visible"                  <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write</pre>
+<p>
+Wether the path is visible
+</p>
 <p>Default value: TRUE</p>
-<p class="since">Since: 0.10</p>
+<p class="since">Since 0.10</p>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.25</div>
+<hr>
+          Generated by GTK-Doc V1.18</div>
 </body>
 </html>

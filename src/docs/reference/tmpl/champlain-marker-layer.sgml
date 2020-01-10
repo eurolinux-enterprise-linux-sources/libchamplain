@@ -1,0 +1,186 @@
+<!-- ##### SECTION Title ##### -->
+ChamplainMarkerLayer
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT ChamplainMarkerLayer ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG ChamplainMarkerLayer:selection-mode ##### -->
+<para>
+
+</para>
+
+<!-- ##### ENUM ChamplainSelectionMode ##### -->
+<para>
+
+</para>
+
+@CHAMPLAIN_SELECTION_NONE: 
+@CHAMPLAIN_SELECTION_SINGLE: 
+@CHAMPLAIN_SELECTION_MULTIPLE: 
+
+<!-- ##### FUNCTION champlain_marker_layer_new ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_marker_layer_new_full ##### -->
+<para>
+
+</para>
+
+@mode: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_marker_layer_add_marker ##### -->
+<para>
+
+</para>
+
+@layer: 
+@marker: 
+
+
+<!-- ##### FUNCTION champlain_marker_layer_remove_marker ##### -->
+<para>
+
+</para>
+
+@layer: 
+@marker: 
+
+
+<!-- ##### FUNCTION champlain_marker_layer_remove_all ##### -->
+<para>
+
+</para>
+
+@layer: 
+
+
+<!-- ##### FUNCTION champlain_marker_layer_get_markers ##### -->
+<para>
+
+</para>
+
+@layer: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_marker_layer_get_selected ##### -->
+<para>
+
+</para>
+
+@layer: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_marker_layer_animate_in_all_markers ##### -->
+<para>
+
+</para>
+
+@layer: 
+
+
+<!-- ##### FUNCTION champlain_marker_layer_animate_out_all_markers ##### -->
+<para>
+
+</para>
+
+@layer: 
+
+
+<!-- ##### FUNCTION champlain_marker_layer_show_all_markers ##### -->
+<para>
+
+</para>
+
+@layer: 
+
+
+<!-- ##### FUNCTION champlain_marker_layer_hide_all_markers ##### -->
+<para>
+
+</para>
+
+@layer: 
+
+
+<!-- ##### FUNCTION champlain_marker_layer_set_all_markers_draggable ##### -->
+<para>
+
+</para>
+
+@layer: 
+
+
+<!-- ##### FUNCTION champlain_marker_layer_set_all_markers_undraggable ##### -->
+<para>
+
+</para>
+
+@layer: 
+
+
+<!-- ##### FUNCTION champlain_marker_layer_select_all_markers ##### -->
+<para>
+
+</para>
+
+@layer: 
+
+
+<!-- ##### FUNCTION champlain_marker_layer_unselect_all_markers ##### -->
+<para>
+
+</para>
+
+@layer: 
+
+
+<!-- ##### FUNCTION champlain_marker_layer_set_selection_mode ##### -->
+<para>
+
+</para>
+
+@layer: 
+@mode: 
+
+
+<!-- ##### FUNCTION champlain_marker_layer_get_selection_mode ##### -->
+<para>
+
+</para>
+
+@layer: 
+@Returns: 
+
+

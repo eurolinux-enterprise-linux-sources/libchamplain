@@ -7,7 +7,7 @@ AUTOMAKE_OPTIONS = 1.6
 DOC_MODULE=libchamplain
 
 # Uncomment for versioned docs and specify the version of the module, e.g. '2'.
-DOC_MODULE_VERSION=@CHAMPLAIN_API_VERSION@
+#DOC_MODULE_VERSION=2
 
 
 # The top-level SGML file. You can change this if you want to.
@@ -20,7 +20,7 @@ DOC_MAIN_SGML_FILE=$(DOC_MODULE)-docs.sgml
 DOC_SOURCE_DIR=../../champlain
 
 # Extra options to pass to gtkdoc-scangobj. Not normally needed.
-SCANGOBJ_OPTIONS=
+SCANGOBJ_OPTIONS=--type-init-func="g_type_init()"
 
 # Extra options to supply to gtkdoc-scan.
 # e.g. SCAN_OPTIONS=--deprecated-guards="GTK_DISABLE_DEPRECATED"
@@ -89,7 +89,7 @@ expand_content_files=
 # signals and properties.
 # e.g. GTKDOC_CFLAGS=-I$(top_srcdir) -I$(top_builddir) $(GTK_DEBUG_FLAGS)
 # e.g. GTKDOC_LIBS=$(top_builddir)/gtk/$(gtktargetlib)
-GTKDOC_CFLAGS=$(DEPS_CFLAGS) -I$(top_srcdir) -I$(top_builddir)
+GTKDOC_CFLAGS=$(DEPS_CFLAGS) -I$(top_srcdir) -I$(top_builddir) -I$(top_builddir)/champlain
 GTKDOC_LIBS=$(DEPS_LIBS) $(top_builddir)/champlain/libchamplain-@CHAMPLAIN_API_VERSION@.la
 
 # This includes the standard gtk-doc make rules, copied by gtkdocize.

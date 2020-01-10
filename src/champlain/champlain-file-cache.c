@@ -223,7 +223,7 @@ init_cache (ChamplainFileCache *file_cache)
 
   sqlite3_exec (priv->db,
       "PRAGMA synchronous=OFF;"
-      "PRAGMA auto_vacuum=INCREMENTAL;",
+      "PRAGMA count_changes=OFF;",
       NULL, NULL, &error_msg);
   if (error_msg != NULL)
     {
@@ -280,9 +280,13 @@ champlain_file_cache_constructed (GObject *object)
 
   if (!priv->cache_dir)
     {
+#ifdef CHAMPLAIN_HAS_MAEMO
+      priv->cache_dir = g_strdup ("/home/user/MyDocs/.Maps/");
+#else
       priv->cache_dir = g_build_path (G_DIR_SEPARATOR_S,
             g_get_user_cache_dir (),
             "champlain", NULL);
+#endif
     }
 
   init_cache (file_cache);
@@ -1010,6 +1014,4 @@ champlain_file_cache_purge (ChamplainFileCache *file_cache)
       sqlite3_free (error);
     }
   sqlite3_free (query);
-  
-  sqlite3_exec (priv->db, "PRAGMA incremental_vacuum;", NULL, NULL, &error);
 }

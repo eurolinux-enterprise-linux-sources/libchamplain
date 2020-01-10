@@ -190,14 +190,11 @@ static gboolean
 redraw_tile (ClutterCanvas *canvas,
     cairo_t *cr,
     gint w,
-    gint h,
-    ChamplainTile *tile)
+    gint h)
 {
   cairo_pattern_t *pat;
   gint size = w;
   
-  champlain_exportable_set_surface (CHAMPLAIN_EXPORTABLE (tile), cairo_get_target (cr));
-
   /* draw a linear gray to white pattern */
   pat = cairo_pattern_create_linear (size / 2.0, 0.0, size, size / 2.0);
   cairo_pattern_add_color_stop_rgb (pat, 0, 0.686, 0.686, 0.686);
@@ -217,7 +214,7 @@ redraw_tile (ClutterCanvas *canvas,
   cairo_move_to (cr, 50, 24);
   cairo_line_to (cr, 24, 50);
   cairo_stroke (cr);
-  
+
   return TRUE;
 }
 
@@ -248,16 +245,14 @@ render (ChamplainRenderer *renderer, ChamplainTile *tile)
     {
       priv->error_canvas = clutter_canvas_new ();
       clutter_canvas_set_size (CLUTTER_CANVAS (priv->error_canvas), size, size);
-      g_signal_connect (priv->error_canvas, "draw", G_CALLBACK (redraw_tile), tile);
+      g_signal_connect (priv->error_canvas, "draw", G_CALLBACK (redraw_tile), NULL);
       clutter_content_invalidate (priv->error_canvas);
     }
 
   actor = clutter_actor_new ();
   clutter_actor_set_size (actor, size, size);
   clutter_actor_set_content (actor, priv->error_canvas);
-  /* has to be set for proper opacity */
-  clutter_actor_set_offscreen_redirect (actor, CLUTTER_OFFSCREEN_REDIRECT_AUTOMATIC_FOR_OPACITY);
-
+  
   champlain_tile_set_content (tile, actor);
   g_signal_emit_by_name (tile, "render-complete", data, size, error);
 }

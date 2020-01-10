@@ -1,20 +1,25 @@
-Name:		libchamplain
-Version:	0.12.16
-Release:	2%{?dist}
 Summary:	Map view for Clutter
-
+Name:		libchamplain
+Version:	0.12.4
+Release:	2.2%{?dist}
 License:	LGPLv2+
+Group:		System Environment/Libraries
 URL:		http://projects.gnome.org/libchamplain/
 Source0:	http://download.gnome.org/sources/libchamplain/0.12/%{name}-%{version}.tar.xz
+Patch0: champlain-grr.patch
+
+Requires:	gobject-introspection
 
 BuildRequires:	chrpath
 BuildRequires:	clutter-devel
 BuildRequires:	clutter-gtk-devel
-BuildRequires:	gobject-introspection-devel
 BuildRequires:	libsoup-devel
 BuildRequires:	sqlite-devel
 BuildRequires:	gtk3-devel
-BuildRequires:	vala
+BuildRequires:	vala-devel
+BuildRequires:	vala-tools
+
+BuildRequires: autoconf automake libtool
 
 %description
 Libchamplain is a C library aimed to provide a ClutterActor to display
@@ -22,25 +27,43 @@ rasterized maps.
 
 %package devel
 Summary:	Development files for %{name}
-Requires:	%{name}%{?_isa} = %{version}-%{release}
-Requires:	%{name}-gtk%{?_isa} = %{version}-%{release}
-Obsoletes:	%{name}-gtk-devel < 0.12.12
-Provides:	%{name}-gtk-devel = %{version}-%{release}
-Obsoletes:	%{name}-vala < 0.12.8-1
+Group:		Development/Libraries
+Requires:	gobject-introspection-devel
+Requires:	%{name} = %{version}-%{release}
 
 %description devel
 This package contains development files for %{name}.
 
 %package gtk
 Summary:	Gtk+ widget wrapper for %{name}
-Requires:	%{name}%{?_isa} = %{version}-%{release}
+Group:		System Environment/Libraries
+Requires:	%{name} = %{version}-%{release}
 
 %description gtk
 Libchamplain-gtk is a library providing a GtkWidget to embed %{name}
 into Gtk+ applications.
 
+%package gtk-devel
+Summary:	Development files for %{name}-gtk
+Group:		Development/Libraries
+Requires:	%{name}-devel = %{version}-%{release}
+Requires:	%{name}-gtk = %{version}-%{release}
+
+%description gtk-devel
+This package contains development files for %{name}-gtk.
+
+%package vala
+Summary:	Vala bindings for %{name}
+Group:		Development/Libraries
+Requires:	%{name}-devel = %{version}-%{release}
+Requires:	vala
+
+%description vala
+This package contains vala bindings for development %{name}.
+
 %package demos
 Summary:	Demo apps for %{name}
+Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	%{name}-devel = %{version}-%{release}
 Requires:	%{name}-gtk-devel = %{version}-%{release}
@@ -51,6 +74,9 @@ This package contains demos for development using %{name}.
 
 %prep
 %setup -q
+%patch0 -p1 -b .grr
+
+autoreconf -i -f
 
 %build
 %configure --disable-debug --disable-silent-rules --disable-static \
@@ -63,7 +89,7 @@ sed --in-place --expression 's! -shared ! -Wl,--as-needed\0!g' libtool
 make %{?_smp_mflags}
 
 %install
-%make_install
+make install INSTALL="%{__install} -p" DESTDIR=$RPM_BUILD_ROOT
 find $RPM_BUILD_ROOT -type f -name "*.la" -delete
 
 # Remove rpaths.
@@ -78,32 +104,39 @@ chrpath --delete $RPM_BUILD_ROOT%{_libdir}/%{name}-gtk-*.so.*
 %postun gtk -p /sbin/ldconfig
 
 %files
-%license COPYING
-%doc AUTHORS README NEWS
-%dir %{_libdir}/girepository-1.0
+%defattr(-,root,root,-)
+%doc AUTHORS COPYING README NEWS
 %{_libdir}/girepository-1.0/Champlain-0.12.typelib
 %{_libdir}/%{name}-0.12.so.*
 
 %files devel
-%doc %{_datadir}/gtk-doc/html/libchamplain-0.12
-%doc %{_datadir}/gtk-doc/html/libchamplain-gtk-0.12
-%dir %{_datadir}/gir-1.0
+%defattr(-,root,root,-)
+%doc %{_datadir}/gtk-doc/html/libchamplain
 %{_datadir}/gir-1.0/Champlain-0.12.gir
-%{_datadir}/gir-1.0/GtkChamplain-0.12.gir
-%{_datadir}/vala/vapi/champlain-0.12.vapi
-%{_datadir}/vala/vapi/champlain-gtk-0.12.vapi
 %{_libdir}/%{name}-0.12.so
-%{_libdir}/%{name}-gtk-0.12.so
 %{_libdir}/pkgconfig/champlain-0.12.pc
-%{_libdir}/pkgconfig/champlain-gtk-0.12.pc
 %{_includedir}/%{name}-0.12
-%{_includedir}/%{name}-gtk-0.12
 
 %files gtk
+%defattr(-,root,root,-)
 %{_libdir}/girepository-1.0/GtkChamplain-0.12.typelib
 %{_libdir}/%{name}-gtk-0.12.so.*
 
+%files gtk-devel
+%defattr(-,root,root,-)
+%doc %{_datadir}/gtk-doc/html/libchamplain-gtk
+%{_datadir}/gir-1.0/GtkChamplain-0.12.gir
+%{_libdir}/%{name}-gtk-0.12.so
+%{_libdir}/pkgconfig/champlain-gtk-0.12.pc
+%{_includedir}/%{name}-gtk-0.12
+
+%files vala
+%defattr(-,root,root,-)
+%{_datadir}/vala/vapi/champlain-0.12.vapi
+%{_datadir}/vala/vapi/champlain-gtk-0.12.vapi
+
 %files demos
+%defattr(-,root,root,-)
 %doc demos/*.c
 %doc demos/*.h
 %doc demos/*.vala
@@ -113,31 +146,6 @@ chrpath --delete $RPM_BUILD_ROOT%{_libdir}/%{name}-gtk-*.so.*
 %doc demos/*.osm
 
 %changelog
-* Mon Jun 04 2018 Richard Hughes <rhughes@redhat.com> - 0.12.16-2
-- Update to 0.12.16
-- Resolves: #1569989
-
-* Wed Mar 08 2017 Kalev Lember <klember@redhat.com> - 0.12.15-1
-- Update to 0.12.15
-- Resolves: #1386998
-
-* Wed Sep 07 2016 Kalev Lember <klember@redhat.com> - 0.12.14-1
-- Update to 0.12.14
-- Resolves: #1386998
-
-* Mon Apr 27 2015 Dan Winship <danw@redhat.com> - 0.12.4-5
-- Rebuild against the new cogl
-- Resolves: #1174513
-
-* Fri Jan 24 2014 Daniel Mach <dmach@redhat.com> - 0.12.4-4
-- Mass rebuild 2014-01-24
-
-* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 0.12.4-3
-- Mass rebuild 2013-12-27
-
-* Mon Jul 22 2013 Dan Winship <danw@redhat.com> - 0.12.4-2.2
-- Regen patch, don't override _default_patch_fuzz
-
 * Mon Jul 22 2013 Dan Winship <danw@redhat.com> - 0.12.4-2.1
 - Don't rebuild the docs, so we don't get multilib conflicts
 

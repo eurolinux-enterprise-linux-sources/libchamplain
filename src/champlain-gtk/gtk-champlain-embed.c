@@ -92,11 +92,6 @@ static void view_size_allocated_cb (GtkWidget *widget,
     GtkChamplainEmbed *view);
 static void view_realize_cb (GtkWidget *widget,
     GtkChamplainEmbed *view);
-static gboolean embed_focus_cb (GtkChamplainEmbed *embed,
-    GdkEvent *event);
-static gboolean stage_key_press_cb (ClutterActor *actor,
-    ClutterEvent *event,
-    GtkChamplainEmbed *embed);
 
 G_DEFINE_TYPE (GtkChamplainEmbed, gtk_champlain_embed, GTK_TYPE_ALIGNMENT);
 
@@ -223,8 +218,6 @@ static void
 gtk_champlain_embed_init (GtkChamplainEmbed *embed)
 {
   GtkChamplainEmbedPrivate *priv = GET_PRIVATE (embed);
-  ClutterActor *stage;
-  GdkDisplay *display;
 
   embed->priv = priv;
 
@@ -247,22 +240,11 @@ gtk_champlain_embed_init (GtkChamplainEmbed *embed)
       G_CALLBACK (mouse_button_cb),
       embed);
   /* Setup cursors */
-  display = gdk_display_get_default ();
-  priv->cursor_hand_open = gdk_cursor_new_for_display (display, GDK_HAND1);
-  priv->cursor_hand_closed = gdk_cursor_new_for_display (display, GDK_FLEUR);
+  priv->cursor_hand_open = gdk_cursor_new (GDK_HAND1);
+  priv->cursor_hand_closed = gdk_cursor_new (GDK_FLEUR);
 
   priv->view = NULL;
   set_view (embed, CHAMPLAIN_VIEW (champlain_view_new ()));
-
-  /* Setup focus/key-press events */
-  g_signal_connect (embed, "focus-in-event",
-                    G_CALLBACK (embed_focus_cb),
-                    NULL);
-  stage = gtk_clutter_embed_get_stage (GTK_CLUTTER_EMBED (priv->clutter_embed));
-  g_signal_connect (stage, "key-press-event",
-                    G_CALLBACK (stage_key_press_cb),
-                    embed);
-  gtk_widget_set_can_focus (GTK_WIDGET (embed), TRUE);
 
   gtk_container_add (GTK_CONTAINER (embed), priv->clutter_embed);
 }
@@ -329,11 +311,8 @@ view_realize_cb (GtkWidget *widget,
 
   /* Set selection color */
   style = gtk_widget_get_style_context (widget);
-  gtk_style_context_save (style);
-  gtk_style_context_set_state (style, GTK_STATE_FLAG_SELECTED);
-
-  gtk_style_context_get_color (style, gtk_style_context_get_state (style),
-                               &gdk_rgba_color);
+  
+  gtk_style_context_get_color (style, GTK_STATE_FLAG_SELECTED, &gdk_rgba_color);
   gdk_rgba_to_clutter_color (&gdk_rgba_color, &color);
   if (color.alpha == 0 && color.red == 0 && color.green == 0 && color.blue == 0)
     {
@@ -343,8 +322,7 @@ view_realize_cb (GtkWidget *widget,
     }
   champlain_marker_set_selection_text_color (&color);
 
-  gtk_style_context_get_background_color (style, gtk_style_context_get_state (style),
-                                          &gdk_rgba_color);
+  gtk_style_context_get_background_color (style, GTK_STATE_FLAG_SELECTED, &gdk_rgba_color);
   gdk_rgba_to_clutter_color (&gdk_rgba_color, &color);
   if (color.alpha == 0)
     color.alpha = 255;
@@ -355,8 +333,6 @@ view_realize_cb (GtkWidget *widget,
       color.blue = 131;
     }
   champlain_marker_set_selection_color (&color);
-
-  gtk_style_context_restore (style);
 #endif
 
   /* Setup mouse cursor to a hand */
@@ -396,26 +372,6 @@ mouse_button_cb (GtkWidget *widget,
   return FALSE;
 }
 
-static gboolean
-embed_focus_cb (GtkChamplainEmbed *embed,
-    GdkEvent *event)
-{
-  GtkChamplainEmbedPrivate *priv = embed->priv;
-
-  gtk_widget_grab_focus (priv->clutter_embed);
-  return TRUE;
-}
-
-static gboolean
-stage_key_press_cb (ClutterActor *actor,
-    ClutterEvent *event,
-    GtkChamplainEmbed *embed)
-{
-  ChamplainView *view = gtk_champlain_embed_get_view (embed);
-
-  clutter_actor_event (CLUTTER_ACTOR (view), event, FALSE);
-  return TRUE;
-}
 
 /**
  * gtk_champlain_embed_new:

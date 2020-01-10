@@ -79,8 +79,7 @@ enum
   PROP_WRAP,
   PROP_WRAP_MODE,
   PROP_SINGLE_LINE_MODE,
-  PROP_DRAW_BACKGROUND,
-  PROP_DRAW_SHADOW
+  PROP_DRAW_BACKGROUND
 };
 
 /* static guint champlain_label_signals[LAST_SIGNAL] = { 0, }; */
@@ -100,7 +99,6 @@ struct _ChamplainLabelPrivate
   gboolean single_line_mode;
   PangoEllipsizeMode ellipsize;
   gboolean draw_background;
-  gboolean draw_shadow;
 
   guint redraw_id;
   gint total_width;
@@ -164,10 +162,6 @@ champlain_label_get_property (GObject *object,
 
     case PROP_DRAW_BACKGROUND:
       g_value_set_boolean (value, priv->draw_background);
-      break;
-
-    case PROP_DRAW_SHADOW:
-      g_value_set_boolean (value, priv->draw_shadow);
       break;
 
     case PROP_ELLIPSIZE:
@@ -236,10 +230,6 @@ champlain_label_set_property (GObject *object,
 
     case PROP_DRAW_BACKGROUND:
       champlain_label_set_draw_background (label, g_value_get_boolean (value));
-      break;
-
-    case PROP_DRAW_SHADOW:
-      champlain_label_set_draw_shadow (label, g_value_get_boolean (value));
       break;
 
     case PROP_SINGLE_LINE_MODE:
@@ -521,20 +511,6 @@ champlain_label_class_init (ChamplainLabelClass *klass)
           TRUE, 
           CHAMPLAIN_PARAM_READWRITE));
 
-/**
-   * ChamplainLabel:draw-shadow:
-   *
-   * If the label background has a shadow
-   *
-   * Since: 0.12.10
-   */
-  g_object_class_install_property (object_class, PROP_DRAW_SHADOW,
-      g_param_spec_boolean ("draw-shadow", 
-          "Draw Shadow", 
-          "The label background has a shadow",
-          TRUE, 
-          CHAMPLAIN_PARAM_READWRITE));
-
   /**
    * ChamplainLabel:single-line-mode:
    *
@@ -761,20 +737,17 @@ draw_label (ChamplainLabel *label)
       clutter_content_invalidate (canvas);
       g_object_unref (canvas);
       
-      if (priv->draw_shadow)
-        {
-          canvas = clutter_canvas_new ();
-          clutter_canvas_set_size (CLUTTER_CANVAS (canvas), total_width + get_shadow_slope_width (label), total_height + priv->point);
-          g_signal_connect (canvas, "draw", G_CALLBACK (draw_shadow), label);
+      canvas = clutter_canvas_new ();
+      clutter_canvas_set_size (CLUTTER_CANVAS (canvas), total_width + get_shadow_slope_width (label), total_height + priv->point);
+      g_signal_connect (canvas, "draw", G_CALLBACK (draw_shadow), label);
 
-          shadow = clutter_actor_new ();
-          clutter_actor_set_size (shadow, total_width + get_shadow_slope_width (label), total_height + priv->point);
-          clutter_actor_set_content (shadow, canvas);
-          clutter_actor_add_child (CLUTTER_ACTOR (label), shadow);
-          clutter_actor_set_position (shadow, 0, total_height / 2.0);
-          clutter_content_invalidate (canvas);
-          g_object_unref (canvas);
-        }
+      shadow = clutter_actor_new ();
+      clutter_actor_set_size (shadow, total_width + get_shadow_slope_width (label), total_height + priv->point);
+      clutter_actor_set_content (shadow, canvas);
+      clutter_actor_add_child (CLUTTER_ACTOR (label), shadow);
+      clutter_actor_set_position (shadow, 0, total_height / 2.0);
+      clutter_content_invalidate (canvas);
+      g_object_unref (canvas);
     }
           
   if (text_actor != NULL && background != NULL)
@@ -864,7 +837,6 @@ champlain_label_init (ChamplainLabel *label)
   priv->single_line_mode = TRUE;
   priv->ellipsize = PANGO_ELLIPSIZE_NONE;
   priv->draw_background = TRUE;
-  priv->draw_shadow = TRUE;
   priv->redraw_id = 0;
   priv->total_width = 0;
   priv->total_height = 0;
@@ -1360,26 +1332,6 @@ champlain_label_set_draw_background (ChamplainLabel *label,
 
 
 /**
- * champlain_label_set_draw_shadow:
- * @label: a #ChamplainLabel
- * @shadow: value.
- *
- * Sets if the label's background has a shadow.
- *
- * Since: 0.12.10
- */
-void
-champlain_label_set_draw_shadow (ChamplainLabel *label,
-    gboolean shadow)
-{
-  g_return_if_fail (CHAMPLAIN_IS_LABEL (label));
-
-  label->priv->draw_shadow = shadow;
-  g_object_notify (G_OBJECT (label), "draw-shadow");
-  champlain_label_queue_redraw (label);
-}
-
-/**
  * champlain_label_get_image:
  * @label: a #ChamplainLabel
  *
@@ -1594,7 +1546,7 @@ champlain_label_get_single_line_mode (ChamplainLabel *label)
  *
  * Checks whether the label has a background.
  *
- * Returns: if the label has a background.
+ * Returns: if the label's has a background.
  *
  * Since: 0.10
  */
@@ -1604,25 +1556,6 @@ champlain_label_get_draw_background (ChamplainLabel *label)
   g_return_val_if_fail (CHAMPLAIN_IS_LABEL (label), FALSE);
 
   return label->priv->draw_background;
-}
-
-
-/**
- * champlain_label_get_draw_shadow:
- * @label: a #ChamplainLabel
- *
- * Checks whether the label's background has a shadow.
- *
- * Returns: if the label's background has a shadow.
- *
- * Since: 0.12.10
- */
-gboolean
-champlain_label_get_draw_shadow (ChamplainLabel *label)
-{
-  g_return_val_if_fail (CHAMPLAIN_IS_LABEL (label), FALSE);
-
-  return label->priv->draw_shadow;
 }
 
 

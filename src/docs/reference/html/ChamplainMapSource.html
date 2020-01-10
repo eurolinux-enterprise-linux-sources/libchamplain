@@ -2,28 +2,34 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>ChamplainMapSource: libchamplain Reference Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<title>ChamplainMapSource</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
 <link rel="home" href="index.html" title="libchamplain Reference Manual">
 <link rel="up" href="pt04.html" title="Part IV. Map Source API">
 <link rel="prev" href="pt04.html" title="Part IV. Map Source API">
 <link rel="next" href="ch04.html" title="Tile Sources">
-<meta name="generator" content="GTK-Doc V1.25 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
-<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
-<td width="100%" align="left" class="shortcuts">
-<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
-                  <a href="#ChamplainMapSource.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
-                  <a href="#ChamplainMapSource.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
-                  <a href="#ChamplainMapSource.properties" class="shortcut">Properties</a></span>
-</td>
-<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
-<td><a accesskey="u" href="pt04.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
-<td><a accesskey="p" href="pt04.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
-<td><a accesskey="n" href="ch04.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
-</tr></table>
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="pt04.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="pt04.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libchamplain Reference Manual</th>
+<td><a accesskey="n" href="ch04.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#ChamplainMapSource.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#ChamplainMapSource.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#ChamplainMapSource.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#ChamplainMapSource.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
 <div class="refentry">
 <a name="ChamplainMapSource"></a><div class="titlepage"></div>
 <div class="refnamediv"><table width="100%"><tr>
@@ -31,966 +37,712 @@
 <h2><span class="refentrytitle"><a name="ChamplainMapSource.top_of_page"></a>ChamplainMapSource</span></h2>
 <p>ChamplainMapSource — A base class for map sources</p>
 </td>
-<td class="gallery_image" valign="top" align="right"></td>
+<td valign="top" align="right"></td>
 </tr></table></div>
-<div class="refsect1">
-<a name="ChamplainMapSource.functions"></a><h2>Functions</h2>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="functions_return">
-<col class="functions_name">
-</colgroup>
-<tbody>
-<tr>
-<td class="function_type">const <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainMapSource.html#champlain-map-source-get-id" title="champlain_map_source_get_id ()">champlain_map_source_get_id</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">const <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainMapSource.html#champlain-map-source-get-name" title="champlain_map_source_get_name ()">champlain_map_source_get_name</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">const <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainMapSource.html#champlain-map-source-get-license" title="champlain_map_source_get_license ()">champlain_map_source_get_license</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">const <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainMapSource.html#champlain-map-source-get-license-uri" title="champlain_map_source_get_license_uri ()">champlain_map_source_get_license_uri</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainMapSource.html#champlain-map-source-get-min-zoom-level" title="champlain_map_source_get_min_zoom_level ()">champlain_map_source_get_min_zoom_level</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainMapSource.html#champlain-map-source-get-max-zoom-level" title="champlain_map_source_get_max_zoom_level ()">champlain_map_source_get_max_zoom_level</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainMapSource.html#champlain-map-source-get-tile-size" title="champlain_map_source_get_tile_size ()">champlain_map_source_get_tile_size</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a class="link" href="ChamplainMapSource.html#ChamplainMapProjection" title="enum ChamplainMapProjection"><span class="returnvalue">ChamplainMapProjection</span></a>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainMapSource.html#champlain-map-source-get-projection" title="champlain_map_source_get_projection ()">champlain_map_source_get_projection</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainMapSource.html#champlain-map-source-get-x" title="champlain_map_source_get_x ()">champlain_map_source_get_x</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainMapSource.html#champlain-map-source-get-y" title="champlain_map_source_get_y ()">champlain_map_source_get_y</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainMapSource.html#champlain-map-source-get-longitude" title="champlain_map_source_get_longitude ()">champlain_map_source_get_longitude</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainMapSource.html#champlain-map-source-get-latitude" title="champlain_map_source_get_latitude ()">champlain_map_source_get_latitude</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainMapSource.html#champlain-map-source-get-row-count" title="champlain_map_source_get_row_count ()">champlain_map_source_get_row_count</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainMapSource.html#champlain-map-source-get-column-count" title="champlain_map_source_get_column_count ()">champlain_map_source_get_column_count</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainMapSource.html#champlain-map-source-get-meters-per-pixel" title="champlain_map_source_get_meters_per_pixel ()">champlain_map_source_get_meters_per_pixel</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<span class="returnvalue">void</span>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainMapSource.html#champlain-map-source-fill-tile" title="champlain_map_source_fill_tile ()">champlain_map_source_fill_tile</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="returnvalue">ChamplainMapSource</span></a> *
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainMapSource.html#champlain-map-source-get-next-source" title="champlain_map_source_get_next_source ()">champlain_map_source_get_next_source</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<span class="returnvalue">void</span>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainMapSource.html#champlain-map-source-set-next-source" title="champlain_map_source_set_next_source ()">champlain_map_source_set_next_source</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a class="link" href="ChamplainRenderer.html" title="ChamplainRenderer"><span class="returnvalue">ChamplainRenderer</span></a> *
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainMapSource.html#champlain-map-source-get-renderer" title="champlain_map_source_get_renderer ()">champlain_map_source_get_renderer</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<span class="returnvalue">void</span>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainMapSource.html#champlain-map-source-set-renderer" title="champlain_map_source_set_renderer ()">champlain_map_source_set_renderer</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="refsect1">
-<a name="ChamplainMapSource.properties"></a><h2>Properties</h2>
-<div class="informaltable"><table class="informaltable" border="0">
-<colgroup>
-<col width="150px" class="properties_type">
-<col width="300px" class="properties_name">
-<col width="200px" class="properties_flags">
-</colgroup>
-<tbody>
-<tr>
-<td class="property_type">
-<a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *</td>
-<td class="property_name"><a class="link" href="ChamplainMapSource.html#ChamplainMapSource--next-source" title="The “next-source” property">next-source</a></td>
-<td class="property_flags">Read / Write</td>
-</tr>
-<tr>
-<td class="property_type">
-<a class="link" href="ChamplainRenderer.html" title="ChamplainRenderer"><span class="type">ChamplainRenderer</span></a> *</td>
-<td class="property_name"><a class="link" href="ChamplainMapSource.html#ChamplainMapSource--renderer" title="The “renderer” property">renderer</a></td>
-<td class="property_flags">Read / Write</td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="refsect1">
-<a name="ChamplainMapSource.other"></a><h2>Types and Values</h2>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="name">
-<col class="description">
-</colgroup>
-<tbody>
-<tr>
-<td class="datatype_keyword">struct</td>
-<td class="function_name"><a class="link" href="ChamplainMapSource.html#ChamplainMapSource-struct" title="struct ChamplainMapSource">ChamplainMapSource</a></td>
-</tr>
-<tr>
-<td class="datatype_keyword">enum</td>
-<td class="function_name"><a class="link" href="ChamplainMapSource.html#ChamplainMapProjection" title="enum ChamplainMapProjection">ChamplainMapProjection</a></td>
-</tr>
-</tbody>
-</table></div>
+<div class="refsynopsisdiv">
+<a name="ChamplainMapSource.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="ChamplainMapSource.html#ChamplainMapSource-struct" title="struct ChamplainMapSource">ChamplainMapSource</a>;
+enum                <a class="link" href="ChamplainMapSource.html#ChamplainMapProjection" title="enum ChamplainMapProjection">ChamplainMapProjection</a>;
+const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="ChamplainMapSource.html#champlain-map-source-get-id" title="champlain_map_source_get_id ()">champlain_map_source_get_id</a>         (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>);
+const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="ChamplainMapSource.html#champlain-map-source-get-name" title="champlain_map_source_get_name ()">champlain_map_source_get_name</a>       (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>);
+const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="ChamplainMapSource.html#champlain-map-source-get-license" title="champlain_map_source_get_license ()">champlain_map_source_get_license</a>    (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>);
+const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="ChamplainMapSource.html#champlain-map-source-get-license-uri" title="champlain_map_source_get_license_uri ()">champlain_map_source_get_license_uri</a>
+                                                        (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               <a class="link" href="ChamplainMapSource.html#champlain-map-source-get-min-zoom-level" title="champlain_map_source_get_min_zoom_level ()">champlain_map_source_get_min_zoom_level</a>
+                                                        (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               <a class="link" href="ChamplainMapSource.html#champlain-map-source-get-max-zoom-level" title="champlain_map_source_get_max_zoom_level ()">champlain_map_source_get_max_zoom_level</a>
+                                                        (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               <a class="link" href="ChamplainMapSource.html#champlain-map-source-get-tile-size" title="champlain_map_source_get_tile_size ()">champlain_map_source_get_tile_size</a>  (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>);
+<a class="link" href="ChamplainMapSource.html#ChamplainMapProjection" title="enum ChamplainMapProjection"><span class="returnvalue">ChamplainMapProjection</span></a> <a class="link" href="ChamplainMapSource.html#champlain-map-source-get-projection" title="champlain_map_source_get_projection ()">champlain_map_source_get_projection</a>
+                                                        (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>             <a class="link" href="ChamplainMapSource.html#champlain-map-source-get-x" title="champlain_map_source_get_x ()">champlain_map_source_get_x</a>          (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> zoom_level</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> longitude</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>             <a class="link" href="ChamplainMapSource.html#champlain-map-source-get-y" title="champlain_map_source_get_y ()">champlain_map_source_get_y</a>          (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> zoom_level</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> latitude</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>             <a class="link" href="ChamplainMapSource.html#champlain-map-source-get-longitude" title="champlain_map_source_get_longitude ()">champlain_map_source_get_longitude</a>  (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> zoom_level</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>             <a class="link" href="ChamplainMapSource.html#champlain-map-source-get-latitude" title="champlain_map_source_get_latitude ()">champlain_map_source_get_latitude</a>   (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> zoom_level</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> y</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               <a class="link" href="ChamplainMapSource.html#champlain-map-source-get-row-count" title="champlain_map_source_get_row_count ()">champlain_map_source_get_row_count</a>  (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> zoom_level</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               <a class="link" href="ChamplainMapSource.html#champlain-map-source-get-column-count" title="champlain_map_source_get_column_count ()">champlain_map_source_get_column_count</a>
+                                                        (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> zoom_level</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>             <a class="link" href="ChamplainMapSource.html#champlain-map-source-get-meters-per-pixel" title="champlain_map_source_get_meters_per_pixel ()">champlain_map_source_get_meters_per_pixel</a>
+                                                        (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> zoom_level</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> latitude</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> longitude</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="ChamplainMapSource.html#champlain-map-source-fill-tile" title="champlain_map_source_fill_tile ()">champlain_map_source_fill_tile</a>      (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *tile</code></em>);
+<a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="returnvalue">ChamplainMapSource</span></a> * <a class="link" href="ChamplainMapSource.html#champlain-map-source-get-next-source" title="champlain_map_source_get_next_source ()">champlain_map_source_get_next_source</a>
+                                                        (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="ChamplainMapSource.html#champlain-map-source-set-next-source" title="champlain_map_source_set_next_source ()">champlain_map_source_set_next_source</a>
+                                                        (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *next_source</code></em>);
+<a class="link" href="ChamplainRenderer.html" title="ChamplainRenderer"><span class="returnvalue">ChamplainRenderer</span></a> * <a class="link" href="ChamplainMapSource.html#champlain-map-source-get-renderer" title="champlain_map_source_get_renderer ()">champlain_map_source_get_renderer</a>   (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="ChamplainMapSource.html#champlain-map-source-set-renderer" title="champlain_map_source_set_renderer ()">champlain_map_source_set_renderer</a>   (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="ChamplainRenderer.html" title="ChamplainRenderer"><span class="type">ChamplainRenderer</span></a> *renderer</code></em>);
+</pre>
 </div>
 <div class="refsect1">
 <a name="ChamplainMapSource.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
-    <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
-        <span class="lineart">╰──</span> ChamplainMapSource
-            <span class="lineart">├──</span> <a class="link" href="ChamplainTileCache.html" title="ChamplainTileCache">ChamplainTileCache</a>
-            <span class="lineart">├──</span> <a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource">ChamplainTileSource</a>
-            <span class="lineart">╰──</span> <a class="link" href="ChamplainMapSourceChain.html" title="ChamplainMapSourceChain">ChamplainMapSourceChain</a>
+<pre class="synopsis">
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
+         +----ChamplainMapSource
+               +----<a class="link" href="ChamplainTileCache.html" title="ChamplainTileCache">ChamplainTileCache</a>
+               +----<a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource">ChamplainTileSource</a>
+               +----<a class="link" href="ChamplainMapSourceChain.html" title="ChamplainMapSourceChain">ChamplainMapSourceChain</a>
+</pre>
+</div>
+<div class="refsect1">
+<a name="ChamplainMapSource.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="ChamplainMapSource.html#ChamplainMapSource--next-source" title='The "next-source" property'>next-source</a>"              <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a>*   : Read / Write
+  "<a class="link" href="ChamplainMapSource.html#ChamplainMapSource--renderer" title='The "renderer" property'>renderer</a>"                 <a class="link" href="ChamplainRenderer.html" title="ChamplainRenderer"><span class="type">ChamplainRenderer</span></a>*    : Read / Write
 </pre>
 </div>
 <div class="refsect1">
 <a name="ChamplainMapSource.description"></a><h2>Description</h2>
-<p><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> objects come from map sources which are represented by
+<p>
+<a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> objects come from map sources which are represented by
 <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a>.  This is should be considered an abstract
-type as it does nothing of interest.</p>
-<p>When loading new tiles, <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> calls <a class="link" href="ChamplainMapSource.html#champlain-map-source-fill-tile" title="champlain_map_source_fill_tile ()"><code class="function">champlain_map_source_fill_tile()</code></a>
+type as it does nothing of interest.
+</p>
+<p>
+When loading new tiles, <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> calls <a class="link" href="ChamplainMapSource.html#champlain-map-source-fill-tile" title="champlain_map_source_fill_tile ()"><code class="function">champlain_map_source_fill_tile()</code></a>
 on the current <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> passing it a <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> to be filled
-with the image.</p>
-<p>Apart from being a base class of all map sources, <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a>
+with the image.
+</p>
+<p>
+Apart from being a base class of all map sources, <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a>
 also supports cooperation of multiple map sources by arranging them into
-chains. Every map source has the <a class="link" href="ChamplainMapSource.html#ChamplainMapSource--next-source" title="The “next-source” property"><span class="type">“next-source”</span></a> property
+chains. Every map source has the <a class="link" href="ChamplainMapSource.html#ChamplainMapSource--next-source" title='The "next-source" property'><span class="type">"next-source"</span></a> property
 that determines the next map source in the chain. When a function of
 a <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> object is invoked, the map source may decide to
 delegate the work to the next map source in the chain by invoking the
-same function on it.</p>
-<p>To understand the concept of chains, consider for instance a chain
+same function on it.
+</p>
+<p>
+To understand the concept of chains, consider for instance a chain
 consisting of <a class="link" href="ChamplainFileCache.html" title="ChamplainFileCache"><span class="type">ChamplainFileCache</span></a> whose next source is
 <a class="link" href="ChamplainNetworkTileSource.html" title="ChamplainNetworkTileSource"><span class="type">ChamplainNetworkTileSource</span></a> whose next source is an error tile source
-created with <a class="link" href="ChamplainMapSourceFactory.html#champlain-map-source-factory-create-error-source" title="champlain_map_source_factory_create_error_source ()"><code class="function">champlain_map_source_factory_create_error_source()</code></a>.
-When <a class="link" href="ChamplainMapSource.html#champlain-map-source-fill-tile" title="champlain_map_source_fill_tile ()"><code class="function">champlain_map_source_fill_tile()</code></a> is called on the first object of the
+created with <a class="link" href="ChamplainMapSourceFactory.html#champlain-map-source-factory-create-error-source" title="champlain_map_source_factory_create_error_source ()"><code class="function">champlain_map_source_factory_create_error_source()</code></a>.
+When <a class="link" href="ChamplainMapSource.html#champlain-map-source-fill-tile" title="champlain_map_source_fill_tile ()"><code class="function">champlain_map_source_fill_tile()</code></a> is called on the first object of the
 chain, <a class="link" href="ChamplainFileCache.html" title="ChamplainFileCache"><span class="type">ChamplainFileCache</span></a>, the cache checks whether it contains the
 requested tile in its database. If it does, it returns the tile; otherwise,
-it calls <a class="link" href="ChamplainMapSource.html#champlain-map-source-fill-tile" title="champlain_map_source_fill_tile ()"><code class="function">champlain_map_source_fill_tile()</code></a> on the next source in the chain
+it calls <a class="link" href="ChamplainMapSource.html#champlain-map-source-fill-tile" title="champlain_map_source_fill_tile ()"><code class="function">champlain_map_source_fill_tile()</code></a> on the next source in the chain
 (<a class="link" href="ChamplainNetworkTileSource.html" title="ChamplainNetworkTileSource"><span class="type">ChamplainNetworkTileSource</span></a>). The network tile source loads the tile
 from the network. When successful, it returns the tile; otherwise it requests
 the tile from the next source in the chain (error tile source).
 The error tile source always generates an error tile, no matter what
-its next source is.</p>
+its next source is.
+</p>
 </div>
 <div class="refsect1">
-<a name="ChamplainMapSource.functions_details"></a><h2>Functions</h2>
-<div class="refsect2">
-<a name="champlain-map-source-get-id"></a><h3>champlain_map_source_get_id ()</h3>
-<pre class="programlisting">const <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
-champlain_map_source_get_id (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>);</pre>
-<p>Gets map source's id.</p>
-<div class="refsect3">
-<a name="champlain-map-source-get-id.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>map_source</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="champlain-map-source-get-id.returns"></a><h4>Returns</h4>
-<p> the map source's id.</p>
-</div>
-<p class="since">Since: 0.4</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-map-source-get-name"></a><h3>champlain_map_source_get_name ()</h3>
-<pre class="programlisting">const <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
-champlain_map_source_get_name (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>);</pre>
-<p>Gets map source's name.</p>
-<div class="refsect3">
-<a name="champlain-map-source-get-name.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>map_source</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="champlain-map-source-get-name.returns"></a><h4>Returns</h4>
-<p> the map source's name.</p>
-</div>
-<p class="since">Since: 0.4</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-map-source-get-license"></a><h3>champlain_map_source_get_license ()</h3>
-<pre class="programlisting">const <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
-champlain_map_source_get_license (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>);</pre>
-<p>Gets map source's license.</p>
-<div class="refsect3">
-<a name="champlain-map-source-get-license.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>map_source</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="champlain-map-source-get-license.returns"></a><h4>Returns</h4>
-<p> the map source's license.</p>
-</div>
-<p class="since">Since: 0.4</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-map-source-get-license-uri"></a><h3>champlain_map_source_get_license_uri ()</h3>
-<pre class="programlisting">const <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
-champlain_map_source_get_license_uri (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>);</pre>
-<p>Gets map source's license URI.</p>
-<div class="refsect3">
-<a name="champlain-map-source-get-license-uri.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>map_source</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="champlain-map-source-get-license-uri.returns"></a><h4>Returns</h4>
-<p> the map source's license URI.</p>
-</div>
-<p class="since">Since: 0.4</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-map-source-get-min-zoom-level"></a><h3>champlain_map_source_get_min_zoom_level ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
-champlain_map_source_get_min_zoom_level
-                               (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>);</pre>
-<p>Gets map source's minimum zoom level.</p>
-<div class="refsect3">
-<a name="champlain-map-source-get-min-zoom-level.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>map_source</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="champlain-map-source-get-min-zoom-level.returns"></a><h4>Returns</h4>
-<p> the miminum zoom level this map source supports</p>
-</div>
-<p class="since">Since: 0.4</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-map-source-get-max-zoom-level"></a><h3>champlain_map_source_get_max_zoom_level ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
-champlain_map_source_get_max_zoom_level
-                               (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>);</pre>
-<p>Gets map source's maximum zoom level.</p>
-<div class="refsect3">
-<a name="champlain-map-source-get-max-zoom-level.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>map_source</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="champlain-map-source-get-max-zoom-level.returns"></a><h4>Returns</h4>
-<p> the maximum zoom level this map source supports</p>
-</div>
-<p class="since">Since: 0.4</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-map-source-get-tile-size"></a><h3>champlain_map_source_get_tile_size ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
-champlain_map_source_get_tile_size (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>);</pre>
-<p>Gets map source's tile size.</p>
-<div class="refsect3">
-<a name="champlain-map-source-get-tile-size.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>map_source</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="champlain-map-source-get-tile-size.returns"></a><h4>Returns</h4>
-<p> the tile's size (width and height) in pixels for this map source</p>
-</div>
-<p class="since">Since: 0.4</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-map-source-get-projection"></a><h3>champlain_map_source_get_projection ()</h3>
-<pre class="programlisting"><a class="link" href="ChamplainMapSource.html#ChamplainMapProjection" title="enum ChamplainMapProjection"><span class="returnvalue">ChamplainMapProjection</span></a>
-champlain_map_source_get_projection (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>);</pre>
-<p>Gets map source's projection.</p>
-<div class="refsect3">
-<a name="champlain-map-source-get-projection.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>map_source</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="champlain-map-source-get-projection.returns"></a><h4>Returns</h4>
-<p> the map source's projection.</p>
-</div>
-<p class="since">Since: 0.4</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-map-source-get-x"></a><h3>champlain_map_source_get_x ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
-champlain_map_source_get_x (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>,
-                            <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a> zoom_level</code></em>,
-                            <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> longitude</code></em>);</pre>
-<p>Gets the x position on the map using this map source's projection.
-(0, 0) is located at the top left.</p>
-<div class="refsect3">
-<a name="champlain-map-source-get-x.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>map_source</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>zoom_level</p></td>
-<td class="parameter_description"><p>the zoom level</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>longitude</p></td>
-<td class="parameter_description"><p>a longitude</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="champlain-map-source-get-x.returns"></a><h4>Returns</h4>
-<p> the x position</p>
-</div>
-<p class="since">Since: 0.4</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-map-source-get-y"></a><h3>champlain_map_source_get_y ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
-champlain_map_source_get_y (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>,
-                            <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a> zoom_level</code></em>,
-                            <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> latitude</code></em>);</pre>
-<p>Gets the y position on the map using this map source's projection.
-(0, 0) is located at the top left.</p>
-<div class="refsect3">
-<a name="champlain-map-source-get-y.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>map_source</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>zoom_level</p></td>
-<td class="parameter_description"><p>the zoom level</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>latitude</p></td>
-<td class="parameter_description"><p>a latitude</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="champlain-map-source-get-y.returns"></a><h4>Returns</h4>
-<p> the y position</p>
-</div>
-<p class="since">Since: 0.4</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-map-source-get-longitude"></a><h3>champlain_map_source_get_longitude ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
-champlain_map_source_get_longitude (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>,
-                                    <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a> zoom_level</code></em>,
-                                    <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x</code></em>);</pre>
-<p>Gets the longitude corresponding to this x position in the map source's
-projection.</p>
-<div class="refsect3">
-<a name="champlain-map-source-get-longitude.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>map_source</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>zoom_level</p></td>
-<td class="parameter_description"><p>the zoom level</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>x</p></td>
-<td class="parameter_description"><p>a x position</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="champlain-map-source-get-longitude.returns"></a><h4>Returns</h4>
-<p> the longitude</p>
-</div>
-<p class="since">Since: 0.4</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-map-source-get-latitude"></a><h3>champlain_map_source_get_latitude ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
-champlain_map_source_get_latitude (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>,
-                                   <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a> zoom_level</code></em>,
-                                   <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> y</code></em>);</pre>
-<p>Gets the latitude corresponding to this y position in the map source's
-projection.</p>
-<div class="refsect3">
-<a name="champlain-map-source-get-latitude.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>map_source</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>zoom_level</p></td>
-<td class="parameter_description"><p>the zoom level</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>y</p></td>
-<td class="parameter_description"><p>a y position</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="champlain-map-source-get-latitude.returns"></a><h4>Returns</h4>
-<p> the latitude</p>
-</div>
-<p class="since">Since: 0.4</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-map-source-get-row-count"></a><h3>champlain_map_source_get_row_count ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
-champlain_map_source_get_row_count (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>,
-                                    <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a> zoom_level</code></em>);</pre>
-<p>Gets the number of tiles in a row at this zoom level for this map source.</p>
-<div class="refsect3">
-<a name="champlain-map-source-get-row-count.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>map_source</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>zoom_level</p></td>
-<td class="parameter_description"><p>the zoom level</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="champlain-map-source-get-row-count.returns"></a><h4>Returns</h4>
-<p> the number of tiles in a row</p>
-</div>
-<p class="since">Since: 0.4</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-map-source-get-column-count"></a><h3>champlain_map_source_get_column_count ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
-champlain_map_source_get_column_count (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>,
-                                       <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a> zoom_level</code></em>);</pre>
-<p>Gets the number of tiles in a column at this zoom level for this map
-source.</p>
-<div class="refsect3">
-<a name="champlain-map-source-get-column-count.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>map_source</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>zoom_level</p></td>
-<td class="parameter_description"><p>the zoom level</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="champlain-map-source-get-column-count.returns"></a><h4>Returns</h4>
-<p> the number of tiles in a column</p>
-</div>
-<p class="since">Since: 0.4</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-map-source-get-meters-per-pixel"></a><h3>champlain_map_source_get_meters_per_pixel ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
-champlain_map_source_get_meters_per_pixel
-                               (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>,
-                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a> zoom_level</code></em>,
-                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> latitude</code></em>,
-                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> longitude</code></em>);</pre>
-<p>Gets meters per pixel at the position on the map using this map source's projection.</p>
-<div class="refsect3">
-<a name="champlain-map-source-get-meters-per-pixel.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>map_source</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>zoom_level</p></td>
-<td class="parameter_description"><p>the zoom level</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>latitude</p></td>
-<td class="parameter_description"><p>a latitude</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>longitude</p></td>
-<td class="parameter_description"><p>a longitude</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="champlain-map-source-get-meters-per-pixel.returns"></a><h4>Returns</h4>
-<p> the meters per pixel</p>
-</div>
-<p class="since">Since: 0.4.3</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-map-source-fill-tile"></a><h3>champlain_map_source_fill_tile ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>
-champlain_map_source_fill_tile (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>,
-                                <em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *tile</code></em>);</pre>
-<p>Fills the tile with image data (either from cache, network or rendered
-locally).</p>
-<div class="refsect3">
-<a name="champlain-map-source-fill-tile.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>map_source</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>tile</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<p class="since">Since: 0.4</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-map-source-get-next-source"></a><h3>champlain_map_source_get_next_source ()</h3>
-<pre class="programlisting"><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="returnvalue">ChamplainMapSource</span></a> *
-champlain_map_source_get_next_source (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>);</pre>
-<p>Get the next source in the chain.</p>
-<div class="refsect3">
-<a name="champlain-map-source-get-next-source.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>map_source</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="champlain-map-source-get-next-source.returns"></a><h4>Returns</h4>
-<p> the next source in the chain. </p>
-<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
-</div>
-<p class="since">Since: 0.6</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-map-source-set-next-source"></a><h3>champlain_map_source_set_next_source ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>
-champlain_map_source_set_next_source (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>,
-                                      <em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *next_source</code></em>);</pre>
-<p>Sets the next map source in the chain.</p>
-<div class="refsect3">
-<a name="champlain-map-source-set-next-source.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>map_source</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>next_source</p></td>
-<td class="parameter_description"><p>the next <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> in the chain</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<p class="since">Since: 0.6</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-map-source-get-renderer"></a><h3>champlain_map_source_get_renderer ()</h3>
-<pre class="programlisting"><a class="link" href="ChamplainRenderer.html" title="ChamplainRenderer"><span class="returnvalue">ChamplainRenderer</span></a> *
-champlain_map_source_get_renderer (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>);</pre>
-<p>Get the renderer used for tiles rendering.</p>
-<div class="refsect3">
-<a name="champlain-map-source-get-renderer.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>map_source</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="champlain-map-source-get-renderer.returns"></a><h4>Returns</h4>
-<p> the renderer. </p>
-<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
-</div>
-<p class="since">Since: 0.8</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-map-source-set-renderer"></a><h3>champlain_map_source_set_renderer ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>
-champlain_map_source_set_renderer (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>,
-                                   <em class="parameter"><code><a class="link" href="ChamplainRenderer.html" title="ChamplainRenderer"><span class="type">ChamplainRenderer</span></a> *renderer</code></em>);</pre>
-<p>Sets the renderer used for tiles rendering.</p>
-<div class="refsect3">
-<a name="champlain-map-source-set-renderer.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>map_source</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>renderer</p></td>
-<td class="parameter_description"><p>the renderer</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<p class="since">Since: 0.8</p>
-</div>
-</div>
-<div class="refsect1">
-<a name="ChamplainMapSource.other_details"></a><h2>Types and Values</h2>
+<a name="ChamplainMapSource.details"></a><h2>Details</h2>
 <div class="refsect2">
 <a name="ChamplainMapSource-struct"></a><h3>struct ChamplainMapSource</h3>
 <pre class="programlisting">struct ChamplainMapSource;</pre>
-<p>The <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> structure contains only private data
-and should be accessed using the provided API</p>
-<p class="since">Since: 0.4</p>
+<p>
+The <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> structure contains only private data
+and should be accessed using the provided API
+</p>
+<p class="since">Since 0.4</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ChamplainMapProjection"></a><h3>enum ChamplainMapProjection</h3>
-<p>Projections supported by the library.</p>
-<div class="refsect3">
-<a name="ChamplainMapProjection.members"></a><h4>Members</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="300px" class="enum_members_name">
-<col class="enum_members_description">
-<col width="200px" class="enum_members_annotations">
-</colgroup>
+<pre class="programlisting">typedef enum {
+  CHAMPLAIN_MAP_PROJECTION_MERCATOR
+} ChamplainMapProjection;
+</pre>
+<p>
+Projections supported by the library.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
 <tbody><tr>
-<td class="enum_member_name"><p><a name="CHAMPLAIN-MAP-PROJECTION-MERCATOR:CAPS"></a>CHAMPLAIN_MAP_PROJECTION_MERCATOR</p></td>
-<td class="enum_member_description">
-<p>Currently the only supported projection</p>
+<td><p><a name="CHAMPLAIN-MAP-PROJECTION-MERCATOR:CAPS"></a><span class="term"><code class="literal">CHAMPLAIN_MAP_PROJECTION_MERCATOR</code></span></p></td>
+<td>Currently the only supported projection
 </td>
-<td class="enum_member_annotations"> </td>
 </tr></tbody>
 </table></div>
 </div>
+<hr>
+<div class="refsect2">
+<a name="champlain-map-source-get-id"></a><h3>champlain_map_source_get_id ()</h3>
+<pre class="programlisting">const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       champlain_map_source_get_id         (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>);</pre>
+<p>
+Gets map source's id.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>map_source</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the map source's id.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-map-source-get-name"></a><h3>champlain_map_source_get_name ()</h3>
+<pre class="programlisting">const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       champlain_map_source_get_name       (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>);</pre>
+<p>
+Gets map source's name.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>map_source</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the map source's name.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-map-source-get-license"></a><h3>champlain_map_source_get_license ()</h3>
+<pre class="programlisting">const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       champlain_map_source_get_license    (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>);</pre>
+<p>
+Gets map source's license.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>map_source</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the map source's license.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-map-source-get-license-uri"></a><h3>champlain_map_source_get_license_uri ()</h3>
+<pre class="programlisting">const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       champlain_map_source_get_license_uri
+                                                        (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>);</pre>
+<p>
+Gets map source's license URI.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>map_source</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the map source's license URI.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-map-source-get-min-zoom-level"></a><h3>champlain_map_source_get_min_zoom_level ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               champlain_map_source_get_min_zoom_level
+                                                        (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>);</pre>
+<p>
+Gets map source's minimum zoom level.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>map_source</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the miminum zoom level this map source supports</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-map-source-get-max-zoom-level"></a><h3>champlain_map_source_get_max_zoom_level ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               champlain_map_source_get_max_zoom_level
+                                                        (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>);</pre>
+<p>
+Gets map source's maximum zoom level.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>map_source</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the maximum zoom level this map source supports</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-map-source-get-tile-size"></a><h3>champlain_map_source_get_tile_size ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               champlain_map_source_get_tile_size  (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>);</pre>
+<p>
+Gets map source's tile size.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>map_source</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the tile's size (width and height) in pixels for this map source</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-map-source-get-projection"></a><h3>champlain_map_source_get_projection ()</h3>
+<pre class="programlisting"><a class="link" href="ChamplainMapSource.html#ChamplainMapProjection" title="enum ChamplainMapProjection"><span class="returnvalue">ChamplainMapProjection</span></a> champlain_map_source_get_projection
+                                                        (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>);</pre>
+<p>
+Gets map source's projection.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>map_source</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the map source's projection.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-map-source-get-x"></a><h3>champlain_map_source_get_x ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>             champlain_map_source_get_x          (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> zoom_level</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> longitude</code></em>);</pre>
+<p>
+Gets the x position on the map using this map source's projection.
+(0, 0) is located at the top left.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>map_source</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>zoom_level</code></em> :</span></p></td>
+<td>the zoom level</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>longitude</code></em> :</span></p></td>
+<td>a longitude</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the x position</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-map-source-get-y"></a><h3>champlain_map_source_get_y ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>             champlain_map_source_get_y          (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> zoom_level</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> latitude</code></em>);</pre>
+<p>
+Gets the y position on the map using this map source's projection.
+(0, 0) is located at the top left.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>map_source</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>zoom_level</code></em> :</span></p></td>
+<td>the zoom level</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>latitude</code></em> :</span></p></td>
+<td>a latitude</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the y position</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-map-source-get-longitude"></a><h3>champlain_map_source_get_longitude ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>             champlain_map_source_get_longitude  (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> zoom_level</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x</code></em>);</pre>
+<p>
+Gets the longitude corresponding to this x position in the map source's
+projection.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>map_source</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>zoom_level</code></em> :</span></p></td>
+<td>the zoom level</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>x</code></em> :</span></p></td>
+<td>a x position</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the longitude</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-map-source-get-latitude"></a><h3>champlain_map_source_get_latitude ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>             champlain_map_source_get_latitude   (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> zoom_level</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> y</code></em>);</pre>
+<p>
+Gets the latitude corresponding to this y position in the map source's
+projection.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>map_source</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>zoom_level</code></em> :</span></p></td>
+<td>the zoom level</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>y</code></em> :</span></p></td>
+<td>a y position</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the latitude</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-map-source-get-row-count"></a><h3>champlain_map_source_get_row_count ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               champlain_map_source_get_row_count  (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> zoom_level</code></em>);</pre>
+<p>
+Gets the number of tiles in a row at this zoom level for this map source.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>map_source</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>zoom_level</code></em> :</span></p></td>
+<td>the zoom level</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the number of tiles in a row</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-map-source-get-column-count"></a><h3>champlain_map_source_get_column_count ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               champlain_map_source_get_column_count
+                                                        (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> zoom_level</code></em>);</pre>
+<p>
+Gets the number of tiles in a column at this zoom level for this map
+source.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>map_source</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>zoom_level</code></em> :</span></p></td>
+<td>the zoom level</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the number of tiles in a column</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-map-source-get-meters-per-pixel"></a><h3>champlain_map_source_get_meters_per_pixel ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>             champlain_map_source_get_meters_per_pixel
+                                                        (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> zoom_level</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> latitude</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> longitude</code></em>);</pre>
+<p>
+Gets meters per pixel at the position on the map using this map source's projection.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>map_source</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>zoom_level</code></em> :</span></p></td>
+<td>the zoom level</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>latitude</code></em> :</span></p></td>
+<td>a latitude</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>longitude</code></em> :</span></p></td>
+<td>a longitude</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the meters per pixel</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.4.3</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-map-source-fill-tile"></a><h3>champlain_map_source_fill_tile ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                champlain_map_source_fill_tile      (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *tile</code></em>);</pre>
+<p>
+Fills the tile with image data (either from cache, network or rendered
+locally).
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>map_source</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>tile</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-map-source-get-next-source"></a><h3>champlain_map_source_get_next_source ()</h3>
+<pre class="programlisting"><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="returnvalue">ChamplainMapSource</span></a> * champlain_map_source_get_next_source
+                                                        (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>);</pre>
+<p>
+Get the next source in the chain.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>map_source</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the next source in the chain. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.6</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-map-source-set-next-source"></a><h3>champlain_map_source_set_next_source ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                champlain_map_source_set_next_source
+                                                        (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *next_source</code></em>);</pre>
+<p>
+Sets the next map source in the chain.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>map_source</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>next_source</code></em> :</span></p></td>
+<td>the next <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> in the chain</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.6</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-map-source-get-renderer"></a><h3>champlain_map_source_get_renderer ()</h3>
+<pre class="programlisting"><a class="link" href="ChamplainRenderer.html" title="ChamplainRenderer"><span class="returnvalue">ChamplainRenderer</span></a> * champlain_map_source_get_renderer   (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>);</pre>
+<p>
+Get the renderer used for tiles rendering.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>map_source</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the renderer. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.8</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-map-source-set-renderer"></a><h3>champlain_map_source_set_renderer ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                champlain_map_source_set_renderer   (<em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="ChamplainRenderer.html" title="ChamplainRenderer"><span class="type">ChamplainRenderer</span></a> *renderer</code></em>);</pre>
+<p>
+Sets the renderer used for tiles rendering.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>map_source</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>renderer</code></em> :</span></p></td>
+<td>the renderer</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.8</p>
 </div>
 </div>
 <div class="refsect1">
 <a name="ChamplainMapSource.property-details"></a><h2>Property Details</h2>
 <div class="refsect2">
-<a name="ChamplainMapSource--next-source"></a><h3>The <code class="literal">“next-source”</code> property</h3>
-<pre class="programlisting">  “next-source”              <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *</pre>
-<p>Next source in the loading chain.</p>
-<p>Flags: Read / Write</p>
-<p class="since">Since: 0.6</p>
+<a name="ChamplainMapSource--next-source"></a><h3>The <code class="literal">"next-source"</code> property</h3>
+<pre class="programlisting">  "next-source"              <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a>*   : Read / Write</pre>
+<p>
+Next source in the loading chain.
+</p>
+<p class="since">Since 0.6</p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="ChamplainMapSource--renderer"></a><h3>The <code class="literal">“renderer”</code> property</h3>
-<pre class="programlisting">  “renderer”                 <a class="link" href="ChamplainRenderer.html" title="ChamplainRenderer"><span class="type">ChamplainRenderer</span></a> *</pre>
-<p>Renderer used for tiles rendering.</p>
-<p>Flags: Read / Write</p>
-<p class="since">Since: 0.8</p>
+<a name="ChamplainMapSource--renderer"></a><h3>The <code class="literal">"renderer"</code> property</h3>
+<pre class="programlisting">  "renderer"                 <a class="link" href="ChamplainRenderer.html" title="ChamplainRenderer"><span class="type">ChamplainRenderer</span></a>*    : Read / Write</pre>
+<p>
+Renderer used for tiles rendering.
+</p>
+<p class="since">Since 0.8</p>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.25</div>
+<hr>
+          Generated by GTK-Doc V1.18</div>
 </body>
 </html>

@@ -107,13 +107,6 @@ void champlain_view_ensure_layers_visible (ChamplainView *view,
 
 void champlain_view_set_map_source (ChamplainView *view,
     ChamplainMapSource *map_source);
-void champlain_view_add_overlay_source (ChamplainView *view,
-    ChamplainMapSource *map_source,
-    guint8 opacity);
-void champlain_view_remove_overlay_source (ChamplainView *view,
-    ChamplainMapSource *map_source);
-GList *champlain_view_get_overlay_sources (ChamplainView *view);
-
 void champlain_view_set_deceleration (ChamplainView *view,
     gdouble rate);
 void champlain_view_set_kinetic_mode (ChamplainView *view,
@@ -126,16 +119,11 @@ void champlain_view_set_animate_zoom (ChamplainView *view,
     gboolean value);
 void champlain_view_set_background_pattern (ChamplainView *view,
     ClutterContent *background);
-void champlain_view_set_world (ChamplainView *view,
-    ChamplainBoundingBox *bbox);
-void champlain_view_set_horizontal_wrap (ChamplainView *view,
-    gboolean wrap);
+
 void champlain_view_add_layer (ChamplainView *view,
     ChamplainLayer *layer);
 void champlain_view_remove_layer (ChamplainView *view,
     ChamplainLayer *layer);
-cairo_surface_t * champlain_view_to_surface (ChamplainView *view,
-    gboolean include_layers);
 
 guint champlain_view_get_zoom_level (ChamplainView *view);
 guint champlain_view_get_min_zoom_level (ChamplainView *view);
@@ -148,8 +136,6 @@ gboolean champlain_view_get_zoom_on_double_click (ChamplainView *view);
 gboolean champlain_view_get_animate_zoom (ChamplainView *view);
 ChamplainState champlain_view_get_state (ChamplainView *view);
 ClutterContent *champlain_view_get_background_pattern (ChamplainView *view);
-ChamplainBoundingBox *champlain_view_get_world (ChamplainView *view);
-gboolean champlain_view_get_horizontal_wrap (ChamplainView *view);
 
 void champlain_view_reload_tiles (ChamplainView *view);
 
@@ -162,9 +148,6 @@ gdouble champlain_view_longitude_to_x (ChamplainView *view,
 gdouble champlain_view_latitude_to_y (ChamplainView *view,
     gdouble latitude);
 
-void champlain_view_get_viewport_anchor (ChamplainView *view,
-    gint *anchor_x,
-    gint *anchor_y);
 void champlain_view_get_viewport_origin (ChamplainView *view,
     gint *x,
     gint *y);
@@ -178,8 +161,6 @@ void champlain_view_bin_layout_add (ChamplainView *view,
 ChamplainLicense *champlain_view_get_license_actor (ChamplainView *view);
 
 ChamplainBoundingBox *champlain_view_get_bounding_box (ChamplainView *view);
-ChamplainBoundingBox *champlain_view_get_bounding_box_for_zoom_level (ChamplainView *view,
-    guint zoom_level);
 
 G_END_DECLS
 

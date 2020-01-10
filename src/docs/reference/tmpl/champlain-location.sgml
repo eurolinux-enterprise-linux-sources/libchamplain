@@ -1,0 +1,75 @@
+<!-- ##### SECTION Title ##### -->
+ChamplainLocation
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT ChamplainLocation ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG ChamplainLocation:latitude ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG ChamplainLocation:longitude ##### -->
+<para>
+
+</para>
+
+<!-- ##### STRUCT ChamplainLocationIface ##### -->
+<para>
+
+</para>
+
+@get_latitude: 
+@get_longitude: 
+@set_location: 
+
+<!-- ##### FUNCTION champlain_location_set_location ##### -->
+<para>
+
+</para>
+
+@location: 
+@latitude: 
+@longitude: 
+
+
+<!-- ##### FUNCTION champlain_location_get_latitude ##### -->
+<para>
+
+</para>
+
+@location: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_location_get_longitude ##### -->
+<para>
+
+</para>
+
+@location: 
+@Returns: 
+
+

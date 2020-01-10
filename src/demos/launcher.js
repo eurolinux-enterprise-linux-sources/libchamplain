@@ -118,14 +118,7 @@ button.connect ("button-release-event", Lang.bind (view,
 stage.add_child (buttons);
 
 /* Create the markers and marker layer */
-let orange= Clutter.Color.new(0xf3,0x94,0x07,0xbb);
-let layer=new Champlain.MarkerLayer();
-let marker=Champlain.Label.new_with_text("Sample Marker","Serif 14",null,orange);
-marker.set_location(45.466, -73.75);
-layer.add_marker(marker);
-marker.set_reactive(true);
-layer.show();
-view.add_layer(layer);
+// TODO
 
 /* Connect to the click event */
 view.set_reactive (true);

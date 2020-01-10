@@ -51,7 +51,11 @@
 #include <glib.h>
 #include <glib/gstdio.h>
 #include <glib-object.h>
+#ifdef HAVE_LIBSOUP_GNOME
+#include <libsoup/soup-gnome.h>
+#else
 #include <libsoup/soup.h>
+#endif
 #include <math.h>
 #include <sys/stat.h>
 #include <string.h>
@@ -61,9 +65,7 @@ enum
   PROP_0,
   PROP_URI_FORMAT,
   PROP_OFFLINE,
-  PROP_PROXY_URI,
-  PROP_MAX_CONNS,
-  PROP_USER_AGENT
+  PROP_PROXY_URI
 };
 
 G_DEFINE_TYPE (ChamplainNetworkTileSource, champlain_network_tile_source, CHAMPLAIN_TYPE_TILE_SOURCE);
@@ -71,18 +73,12 @@ G_DEFINE_TYPE (ChamplainNetworkTileSource, champlain_network_tile_source, CHAMPL
 #define GET_PRIVATE(obj) \
   (G_TYPE_INSTANCE_GET_PRIVATE ((obj), CHAMPLAIN_TYPE_NETWORK_TILE_SOURCE, ChamplainNetworkTileSourcePrivate))
 
-/* The osm.org tile set require us to use no more than 2 simultaneous
- * connections so let that be the default.
- */
-#define MAX_CONNS_DEFAULT 2
-
 struct _ChamplainNetworkTileSourcePrivate
 {
   gboolean offline;
   gchar *uri_format;
   gchar *proxy_uri;
   SoupSession *soup_session;
-  gint max_conns;
 };
 
 typedef struct
@@ -138,10 +134,6 @@ champlain_network_tile_source_get_property (GObject *object,
       g_value_set_string (value, priv->proxy_uri);
       break;
 
-    case PROP_MAX_CONNS:
-      g_value_set_int (value, priv->max_conns);
-      break;
-
     default:
       G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
     }
@@ -168,14 +160,6 @@ champlain_network_tile_source_set_property (GObject *object,
 
     case PROP_PROXY_URI:
       champlain_network_tile_source_set_proxy_uri (tile_source, g_value_get_string (value));
-      break;
-
-    case PROP_MAX_CONNS:
-      champlain_network_tile_source_set_max_conns (tile_source, g_value_get_int (value));
-      break;
-
-    case PROP_USER_AGENT:
-      champlain_network_tile_source_set_user_agent (tile_source, g_value_get_string (value));
       break;
 
     default:
@@ -267,7 +251,7 @@ champlain_network_tile_source_class_init (ChamplainNetworkTileSourceClass *klass
   /**
    * ChamplainNetworkTileSource:proxy-uri:
    *
-   * Used to override the default proxy for accessing the network.
+   * The proxy uri used to access network
    *
    * Since: 0.4
    */
@@ -277,43 +261,6 @@ champlain_network_tile_source_class_init (ChamplainNetworkTileSourceClass *klass
         "",
         G_PARAM_READWRITE);
   g_object_class_install_property (object_class, PROP_PROXY_URI, pspec);
-
-  /**
-   * ChamplainNetworkTileSource:max-conns:
-   *
-   * Specifies the max number of allowed simultaneous connections for this tile
-   * source.
-   *
-   * Before changing this remember to verify how many simultaneous connections
-   * your tile provider allows you to make.
-   *
-   * Since: 0.12.14
-   */
-  pspec = g_param_spec_int ("max-conns",
-        "Max Connection Count",
-        "The maximum number of allowed simultaneous connections "
-        "for this tile source.",
-        1,
-        G_MAXINT,
-        MAX_CONNS_DEFAULT,
-        G_PARAM_READWRITE);
-
-  g_object_class_install_property (object_class, PROP_MAX_CONNS, pspec);
-
-  /**
-   * ChamplainNetworkTileSource:user-agent:
-   *
-   * The HTTP user agent used for requests
-   *
-   * Since: 0.12.16
-   */
-  pspec = g_param_spec_string ("user-agent",
-        "HTTP User Agent",
-        "The HTTP user agent used for network requests",
-        "libchamplain/" CHAMPLAIN_VERSION_S,
-        G_PARAM_WRITABLE);
-
-  g_object_class_install_property (object_class, PROP_USER_AGENT, pspec);
 }
 
 
@@ -327,22 +274,19 @@ champlain_network_tile_source_init (ChamplainNetworkTileSource *tile_source)
   priv->proxy_uri = NULL;
   priv->uri_format = NULL;
   priv->offline = FALSE;
-  priv->max_conns = MAX_CONNS_DEFAULT;
 
-  priv->soup_session = soup_session_new_with_options (
+  priv->soup_session = soup_session_async_new_with_options (
         "proxy-uri", NULL,
-        "ssl-strict", FALSE,
+#ifdef HAVE_LIBSOUP_GNOME
         SOUP_SESSION_ADD_FEATURE_BY_TYPE, 
-        SOUP_TYPE_PROXY_RESOLVER_DEFAULT,
-        SOUP_SESSION_ADD_FEATURE_BY_TYPE,
-        SOUP_TYPE_CONTENT_DECODER,
+        SOUP_TYPE_PROXY_RESOLVER_GNOME,
+#endif
         NULL);
   g_object_set (G_OBJECT (priv->soup_session),
       "user-agent", 
       "libchamplain/" CHAMPLAIN_VERSION_S,
-      "max-conns-per-host", MAX_CONNS_DEFAULT,
-      "max-conns", MAX_CONNS_DEFAULT,
-      NULL);
+      "max-conns-per-host", 2,    /* This is as required by OSM */ 
+      NULL); 
 }
 
 
@@ -470,7 +414,7 @@ champlain_network_tile_source_get_proxy_uri (ChamplainNetworkTileSource *tile_so
  * @tile_source: the #ChamplainNetworkTileSource
  * @proxy_uri: the proxy uri used to access network
  *
- * Override the default proxy for accessing the network.
+ * Sets the proxy uri used to access network.
  *
  * Since: 0.6
  */
@@ -538,80 +482,6 @@ champlain_network_tile_source_set_offline (ChamplainNetworkTileSource *tile_sour
   tile_source->priv->offline = offline;
 
   g_object_notify (G_OBJECT (tile_source), "offline");
-}
-
-
-/**
- * champlain_network_tile_source_get_max_conns:
- * @tile_source: the #ChamplainNetworkTileSource
- *
- * Gets the max number of allowed simultaneous connections for this tile
- * source.
- *
- * Returns: the max number of allowed simultaneous connections for this tile
- * source.
- *
- * Since: 0.12.14
- */
-gint
-champlain_network_tile_source_get_max_conns (ChamplainNetworkTileSource *tile_source)
-{
-  g_return_val_if_fail (CHAMPLAIN_IS_NETWORK_TILE_SOURCE (tile_source), 0);
-
-  return tile_source->priv->max_conns;
-}
-
-
-/**
- * champlain_network_tile_source_set_max_conns:
- * @tile_source: the #ChamplainNetworkTileSource
- * @max_conns: the number of allowed simultaneous connections
- *
- * Sets the max number of allowed simultaneous connections for this tile source.
- *
- * Before changing this remember to verify how many simultaneous connections
- * your tile provider allows you to make.
- *
- * Since: 0.12.14
- */
-void
-champlain_network_tile_source_set_max_conns (ChamplainNetworkTileSource *tile_source,
-    gint max_conns)
-{
-  g_return_if_fail (CHAMPLAIN_IS_NETWORK_TILE_SOURCE (tile_source));
-  g_return_if_fail (SOUP_IS_SESSION (tile_source->priv->soup_session));
-
-  tile_source->priv->max_conns = max_conns;
-
-  g_object_set (G_OBJECT (tile_source->priv->soup_session),
-      "max-conns-per-host", max_conns,
-      "max-conns", max_conns,
-      NULL);
-
-  g_object_notify (G_OBJECT (tile_source), "max_conns");
-}
-
-/**
- * champlain_network_tile_source_set_user_agent:
- * @tile_source: a #ChamplainNetworkTileSource
- * @user_agent: A User-Agent string
- *
- * Sets the User-Agent header used communicating with the server.
- * Since: 0.12.16
- */
-void
-champlain_network_tile_source_set_user_agent (
-    ChamplainNetworkTileSource *tile_source,
-    const gchar *user_agent)
-{
-  g_return_if_fail (CHAMPLAIN_IS_NETWORK_TILE_SOURCE (tile_source)
-      && user_agent != NULL);
-
-  ChamplainNetworkTileSourcePrivate *priv = tile_source->priv;
-
-  if (priv->soup_session)
-    g_object_set (G_OBJECT (priv->soup_session), "user-agent",
-        user_agent, NULL);
 }
 
 

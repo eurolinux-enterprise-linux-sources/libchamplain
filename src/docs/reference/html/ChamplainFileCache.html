@@ -2,28 +2,34 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>ChamplainFileCache: libchamplain Reference Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<title>ChamplainFileCache</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
 <link rel="home" href="index.html" title="libchamplain Reference Manual">
 <link rel="up" href="ch05.html" title="Tile Caches">
 <link rel="prev" href="ChamplainTileCache.html" title="ChamplainTileCache">
 <link rel="next" href="ChamplainMemoryCache.html" title="ChamplainMemoryCache">
-<meta name="generator" content="GTK-Doc V1.25 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
-<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
-<td width="100%" align="left" class="shortcuts">
-<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
-                  <a href="#ChamplainFileCache.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
-                  <a href="#ChamplainFileCache.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
-                  <a href="#ChamplainFileCache.properties" class="shortcut">Properties</a></span>
-</td>
-<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
-<td><a accesskey="u" href="ch05.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
-<td><a accesskey="p" href="ChamplainTileCache.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
-<td><a accesskey="n" href="ChamplainMemoryCache.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
-</tr></table>
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="ChamplainTileCache.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch05.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libchamplain Reference Manual</th>
+<td><a accesskey="n" href="ChamplainMemoryCache.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#ChamplainFileCache.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#ChamplainFileCache.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#ChamplainFileCache.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#ChamplainFileCache.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
 <div class="refentry">
 <a name="ChamplainFileCache"></a><div class="titlepage"></div>
 <div class="refnamediv"><table width="100%"><tr>
@@ -31,327 +37,228 @@
 <h2><span class="refentrytitle"><a name="ChamplainFileCache.top_of_page"></a>ChamplainFileCache</span></h2>
 <p>ChamplainFileCache — Stores and loads cached tiles from the file system</p>
 </td>
-<td class="gallery_image" valign="top" align="right"></td>
+<td valign="top" align="right"></td>
 </tr></table></div>
-<div class="refsect1">
-<a name="ChamplainFileCache.functions"></a><h2>Functions</h2>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="functions_return">
-<col class="functions_name">
-</colgroup>
-<tbody>
-<tr>
-<td class="function_type">
-<a class="link" href="ChamplainFileCache.html" title="ChamplainFileCache"><span class="returnvalue">ChamplainFileCache</span></a> *
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainFileCache.html#champlain-file-cache-new-full" title="champlain_file_cache_new_full ()">champlain_file_cache_new_full</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<span class="returnvalue">void</span>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainFileCache.html#champlain-file-cache-set-size-limit" title="champlain_file_cache_set_size_limit ()">champlain_file_cache_set_size_limit</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainFileCache.html#champlain-file-cache-get-size-limit" title="champlain_file_cache_get_size_limit ()">champlain_file_cache_get_size_limit</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">const <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainFileCache.html#champlain-file-cache-get-cache-dir" title="champlain_file_cache_get_cache_dir ()">champlain_file_cache_get_cache_dir</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<span class="returnvalue">void</span>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainFileCache.html#champlain-file-cache-purge" title="champlain_file_cache_purge ()">champlain_file_cache_purge</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<span class="returnvalue">void</span>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainFileCache.html#champlain-file-cache-purge-on-idle" title="champlain_file_cache_purge_on_idle ()">champlain_file_cache_purge_on_idle</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="refsect1">
-<a name="ChamplainFileCache.properties"></a><h2>Properties</h2>
-<div class="informaltable"><table class="informaltable" border="0">
-<colgroup>
-<col width="150px" class="properties_type">
-<col width="300px" class="properties_name">
-<col width="200px" class="properties_flags">
-</colgroup>
-<tbody>
-<tr>
-<td class="property_type">
-<a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
-<td class="property_name"><a class="link" href="ChamplainFileCache.html#ChamplainFileCache--cache-dir" title="The “cache-dir” property">cache-dir</a></td>
-<td class="property_flags">Read / Write / Construct Only</td>
-</tr>
-<tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
-<td class="property_name"><a class="link" href="ChamplainFileCache.html#ChamplainFileCache--size-limit" title="The “size-limit” property">size-limit</a></td>
-<td class="property_flags">Read / Write / Construct</td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="refsect1">
-<a name="ChamplainFileCache.other"></a><h2>Types and Values</h2>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="name">
-<col class="description">
-</colgroup>
-<tbody><tr>
-<td class="datatype_keyword">struct</td>
-<td class="function_name"><a class="link" href="ChamplainFileCache.html#ChamplainFileCache-struct" title="struct ChamplainFileCache">ChamplainFileCache</a></td>
-</tr></tbody>
-</table></div>
+<div class="refsynopsisdiv">
+<a name="ChamplainFileCache.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="ChamplainFileCache.html#ChamplainFileCache-struct" title="struct ChamplainFileCache">ChamplainFileCache</a>;
+<a class="link" href="ChamplainFileCache.html" title="ChamplainFileCache"><span class="returnvalue">ChamplainFileCache</span></a> * <a class="link" href="ChamplainFileCache.html#champlain-file-cache-new-full" title="champlain_file_cache_new_full ()">champlain_file_cache_new_full</a>      (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> size_limit</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *cache_dir</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="ChamplainRenderer.html" title="ChamplainRenderer"><span class="type">ChamplainRenderer</span></a> *renderer</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="ChamplainFileCache.html#champlain-file-cache-set-size-limit" title="champlain_file_cache_set_size_limit ()">champlain_file_cache_set_size_limit</a> (<em class="parameter"><code><a class="link" href="ChamplainFileCache.html" title="ChamplainFileCache"><span class="type">ChamplainFileCache</span></a> *file_cache</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> size_limit</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               <a class="link" href="ChamplainFileCache.html#champlain-file-cache-get-size-limit" title="champlain_file_cache_get_size_limit ()">champlain_file_cache_get_size_limit</a> (<em class="parameter"><code><a class="link" href="ChamplainFileCache.html" title="ChamplainFileCache"><span class="type">ChamplainFileCache</span></a> *file_cache</code></em>);
+const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="ChamplainFileCache.html#champlain-file-cache-get-cache-dir" title="champlain_file_cache_get_cache_dir ()">champlain_file_cache_get_cache_dir</a>  (<em class="parameter"><code><a class="link" href="ChamplainFileCache.html" title="ChamplainFileCache"><span class="type">ChamplainFileCache</span></a> *file_cache</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="ChamplainFileCache.html#champlain-file-cache-purge" title="champlain_file_cache_purge ()">champlain_file_cache_purge</a>          (<em class="parameter"><code><a class="link" href="ChamplainFileCache.html" title="ChamplainFileCache"><span class="type">ChamplainFileCache</span></a> *file_cache</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="ChamplainFileCache.html#champlain-file-cache-purge-on-idle" title="champlain_file_cache_purge_on_idle ()">champlain_file_cache_purge_on_idle</a>  (<em class="parameter"><code><a class="link" href="ChamplainFileCache.html" title="ChamplainFileCache"><span class="type">ChamplainFileCache</span></a> *file_cache</code></em>);
+</pre>
 </div>
 <div class="refsect1">
 <a name="ChamplainFileCache.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
-    <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
-        <span class="lineart">╰──</span> <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource">ChamplainMapSource</a>
-            <span class="lineart">╰──</span> <a class="link" href="ChamplainTileCache.html" title="ChamplainTileCache">ChamplainTileCache</a>
-                <span class="lineart">╰──</span> ChamplainFileCache
+<pre class="synopsis">
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
+         +----<a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource">ChamplainMapSource</a>
+               +----<a class="link" href="ChamplainTileCache.html" title="ChamplainTileCache">ChamplainTileCache</a>
+                     +----ChamplainFileCache
+</pre>
+</div>
+<div class="refsect1">
+<a name="ChamplainFileCache.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="ChamplainFileCache.html#ChamplainFileCache--cache-dir" title='The "cache-dir" property'>cache-dir</a>"                <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write / Construct Only
+  "<a class="link" href="ChamplainFileCache.html#ChamplainFileCache--size-limit" title='The "size-limit" property'>size-limit</a>"               <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a>                 : Read / Write / Construct
 </pre>
 </div>
 <div class="refsect1">
 <a name="ChamplainFileCache.description"></a><h2>Description</h2>
-<p><a class="link" href="ChamplainFileCache.html" title="ChamplainFileCache"><span class="type">ChamplainFileCache</span></a> is a cache that stores and retrieves tiles from the
+<p>
+<a class="link" href="ChamplainFileCache.html" title="ChamplainFileCache"><span class="type">ChamplainFileCache</span></a> is a cache that stores and retrieves tiles from the
 file system. Tiles most frequently loaded gain in "popularity". This popularity
-is taken into account when purging the cache.</p>
+is taken into account when purging the cache.
+</p>
 </div>
 <div class="refsect1">
-<a name="ChamplainFileCache.functions_details"></a><h2>Functions</h2>
-<div class="refsect2">
-<a name="champlain-file-cache-new-full"></a><h3>champlain_file_cache_new_full ()</h3>
-<pre class="programlisting"><a class="link" href="ChamplainFileCache.html" title="ChamplainFileCache"><span class="returnvalue">ChamplainFileCache</span></a> *
-champlain_file_cache_new_full (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a> size_limit</code></em>,
-                               <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *cache_dir</code></em>,
-                               <em class="parameter"><code><a class="link" href="ChamplainRenderer.html" title="ChamplainRenderer"><span class="type">ChamplainRenderer</span></a> *renderer</code></em>);</pre>
-<p>Constructor of <a class="link" href="ChamplainFileCache.html" title="ChamplainFileCache"><span class="type">ChamplainFileCache</span></a>.</p>
-<div class="refsect3">
-<a name="champlain-file-cache-new-full.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>size_limit</p></td>
-<td class="parameter_description"><p>maximum size of the cache in bytes</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>cache_dir</p></td>
-<td class="parameter_description"><p> the directory where the cache is created. When cache_dir == NULL,
-a cache in ~/.cache/champlain is used. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
-</tr>
-<tr>
-<td class="parameter_name"><p>renderer</p></td>
-<td class="parameter_description"><p>the <a class="link" href="ChamplainRenderer.html" title="ChamplainRenderer"><span class="type">ChamplainRenderer</span></a> used for tiles rendering</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="champlain-file-cache-new-full.returns"></a><h4>Returns</h4>
-<p> a constructed <a class="link" href="ChamplainFileCache.html" title="ChamplainFileCache"><span class="type">ChamplainFileCache</span></a></p>
-</div>
-<p class="since">Since: 0.8</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-file-cache-set-size-limit"></a><h3>champlain_file_cache_set_size_limit ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>
-champlain_file_cache_set_size_limit (<em class="parameter"><code><a class="link" href="ChamplainFileCache.html" title="ChamplainFileCache"><span class="type">ChamplainFileCache</span></a> *file_cache</code></em>,
-                                     <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a> size_limit</code></em>);</pre>
-<p>Sets the cache size limit in bytes.</p>
-<div class="refsect3">
-<a name="champlain-file-cache-set-size-limit.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>file_cache</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainFileCache.html" title="ChamplainFileCache"><span class="type">ChamplainFileCache</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>size_limit</p></td>
-<td class="parameter_description"><p>the cache limit in bytes</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<p class="since">Since: 0.4</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-file-cache-get-size-limit"></a><h3>champlain_file_cache_get_size_limit ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
-champlain_file_cache_get_size_limit (<em class="parameter"><code><a class="link" href="ChamplainFileCache.html" title="ChamplainFileCache"><span class="type">ChamplainFileCache</span></a> *file_cache</code></em>);</pre>
-<p>Gets the cache size limit in bytes.</p>
-<div class="refsect3">
-<a name="champlain-file-cache-get-size-limit.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>file_cache</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainFileCache.html" title="ChamplainFileCache"><span class="type">ChamplainFileCache</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="champlain-file-cache-get-size-limit.returns"></a><h4>Returns</h4>
-<p> size limit</p>
-</div>
-<p class="since">Since: 0.4</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-file-cache-get-cache-dir"></a><h3>champlain_file_cache_get_cache_dir ()</h3>
-<pre class="programlisting">const <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
-champlain_file_cache_get_cache_dir (<em class="parameter"><code><a class="link" href="ChamplainFileCache.html" title="ChamplainFileCache"><span class="type">ChamplainFileCache</span></a> *file_cache</code></em>);</pre>
-<p>Gets the directory where the cache database is stored.</p>
-<div class="refsect3">
-<a name="champlain-file-cache-get-cache-dir.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>file_cache</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainFileCache.html" title="ChamplainFileCache"><span class="type">ChamplainFileCache</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="champlain-file-cache-get-cache-dir.returns"></a><h4>Returns</h4>
-<p> the directory</p>
-</div>
-<p class="since">Since: 0.6</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-file-cache-purge"></a><h3>champlain_file_cache_purge ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>
-champlain_file_cache_purge (<em class="parameter"><code><a class="link" href="ChamplainFileCache.html" title="ChamplainFileCache"><span class="type">ChamplainFileCache</span></a> *file_cache</code></em>);</pre>
-<p>Purge the cache from the less popular tiles until cache's size limit is reached.</p>
-<div class="refsect3">
-<a name="champlain-file-cache-purge.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>file_cache</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainFileCache.html" title="ChamplainFileCache"><span class="type">ChamplainFileCache</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-<p class="since">Since: 0.4</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-file-cache-purge-on-idle"></a><h3>champlain_file_cache_purge_on_idle ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>
-champlain_file_cache_purge_on_idle (<em class="parameter"><code><a class="link" href="ChamplainFileCache.html" title="ChamplainFileCache"><span class="type">ChamplainFileCache</span></a> *file_cache</code></em>);</pre>
-<p>Purge the cache from the less popular tiles until cache's size limit is reached.
-This is a non blocking call as the purge will happen when the application is idle</p>
-<div class="refsect3">
-<a name="champlain-file-cache-purge-on-idle.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>file_cache</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainFileCache.html" title="ChamplainFileCache"><span class="type">ChamplainFileCache</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-<p class="since">Since: 0.4</p>
-</div>
-</div>
-<div class="refsect1">
-<a name="ChamplainFileCache.other_details"></a><h2>Types and Values</h2>
+<a name="ChamplainFileCache.details"></a><h2>Details</h2>
 <div class="refsect2">
 <a name="ChamplainFileCache-struct"></a><h3>struct ChamplainFileCache</h3>
 <pre class="programlisting">struct ChamplainFileCache;</pre>
-<p>The <a class="link" href="ChamplainFileCache.html" title="ChamplainFileCache"><span class="type">ChamplainFileCache</span></a> structure contains only private data
-and should be accessed using the provided API</p>
-<p class="since">Since: 0.6</p>
+<p>
+The <a class="link" href="ChamplainFileCache.html" title="ChamplainFileCache"><span class="type">ChamplainFileCache</span></a> structure contains only private data
+and should be accessed using the provided API
+</p>
+<p class="since">Since 0.6</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-file-cache-new-full"></a><h3>champlain_file_cache_new_full ()</h3>
+<pre class="programlisting"><a class="link" href="ChamplainFileCache.html" title="ChamplainFileCache"><span class="returnvalue">ChamplainFileCache</span></a> * champlain_file_cache_new_full      (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> size_limit</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *cache_dir</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="ChamplainRenderer.html" title="ChamplainRenderer"><span class="type">ChamplainRenderer</span></a> *renderer</code></em>);</pre>
+<p>
+Constructor of <a class="link" href="ChamplainFileCache.html" title="ChamplainFileCache"><span class="type">ChamplainFileCache</span></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>size_limit</code></em> :</span></p></td>
+<td>maximum size of the cache in bytes</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>cache_dir</code></em> :</span></p></td>
+<td>the directory where the cache is created. When cache_dir == NULL,
+a cache in ~/.cache/champlain is used. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>renderer</code></em> :</span></p></td>
+<td>the <a class="link" href="ChamplainRenderer.html" title="ChamplainRenderer"><span class="type">ChamplainRenderer</span></a> used for tiles rendering</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a constructed <a class="link" href="ChamplainFileCache.html" title="ChamplainFileCache"><span class="type">ChamplainFileCache</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.8</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-file-cache-set-size-limit"></a><h3>champlain_file_cache_set_size_limit ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                champlain_file_cache_set_size_limit (<em class="parameter"><code><a class="link" href="ChamplainFileCache.html" title="ChamplainFileCache"><span class="type">ChamplainFileCache</span></a> *file_cache</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> size_limit</code></em>);</pre>
+<p>
+Sets the cache size limit in bytes.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>file_cache</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainFileCache.html" title="ChamplainFileCache"><span class="type">ChamplainFileCache</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>size_limit</code></em> :</span></p></td>
+<td>the cache limit in bytes</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-file-cache-get-size-limit"></a><h3>champlain_file_cache_get_size_limit ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               champlain_file_cache_get_size_limit (<em class="parameter"><code><a class="link" href="ChamplainFileCache.html" title="ChamplainFileCache"><span class="type">ChamplainFileCache</span></a> *file_cache</code></em>);</pre>
+<p>
+Gets the cache size limit in bytes.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>file_cache</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainFileCache.html" title="ChamplainFileCache"><span class="type">ChamplainFileCache</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>size limit</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-file-cache-get-cache-dir"></a><h3>champlain_file_cache_get_cache_dir ()</h3>
+<pre class="programlisting">const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       champlain_file_cache_get_cache_dir  (<em class="parameter"><code><a class="link" href="ChamplainFileCache.html" title="ChamplainFileCache"><span class="type">ChamplainFileCache</span></a> *file_cache</code></em>);</pre>
+<p>
+Gets the directory where the cache database is stored.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>file_cache</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainFileCache.html" title="ChamplainFileCache"><span class="type">ChamplainFileCache</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the directory</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.6</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-file-cache-purge"></a><h3>champlain_file_cache_purge ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                champlain_file_cache_purge          (<em class="parameter"><code><a class="link" href="ChamplainFileCache.html" title="ChamplainFileCache"><span class="type">ChamplainFileCache</span></a> *file_cache</code></em>);</pre>
+<p>
+Purge the cache from the less popular tiles until cache's size limit is reached.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>file_cache</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainFileCache.html" title="ChamplainFileCache"><span class="type">ChamplainFileCache</span></a>
+</td>
+</tr></tbody>
+</table></div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-file-cache-purge-on-idle"></a><h3>champlain_file_cache_purge_on_idle ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                champlain_file_cache_purge_on_idle  (<em class="parameter"><code><a class="link" href="ChamplainFileCache.html" title="ChamplainFileCache"><span class="type">ChamplainFileCache</span></a> *file_cache</code></em>);</pre>
+<p>
+Purge the cache from the less popular tiles until cache's size limit is reached.
+This is a non blocking call as the purge will happen when the application is idle
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>file_cache</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainFileCache.html" title="ChamplainFileCache"><span class="type">ChamplainFileCache</span></a>
+</td>
+</tr></tbody>
+</table></div>
+<p class="since">Since 0.4</p>
 </div>
 </div>
 <div class="refsect1">
 <a name="ChamplainFileCache.property-details"></a><h2>Property Details</h2>
 <div class="refsect2">
-<a name="ChamplainFileCache--cache-dir"></a><h3>The <code class="literal">“cache-dir”</code> property</h3>
-<pre class="programlisting">  “cache-dir”                <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
-<p>The directory where the tile database is stored.</p>
-<p>Flags: Read / Write / Construct Only</p>
+<a name="ChamplainFileCache--cache-dir"></a><h3>The <code class="literal">"cache-dir"</code> property</h3>
+<pre class="programlisting">  "cache-dir"                <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write / Construct Only</pre>
+<p>
+The directory where the tile database is stored.
+</p>
 <p>Default value: NULL</p>
-<p class="since">Since: 0.6</p>
+<p class="since">Since 0.6</p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="ChamplainFileCache--size-limit"></a><h3>The <code class="literal">“size-limit”</code> property</h3>
-<pre class="programlisting">  “size-limit”               <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
-<p>The cache size limit in bytes.</p>
-<p>Note: this new value will not be applied until you call <a class="link" href="ChamplainFileCache.html#champlain-file-cache-purge" title="champlain_file_cache_purge ()"><code class="function">champlain_file_cache_purge()</code></a></p>
-<p>Flags: Read / Write / Construct</p>
+<a name="ChamplainFileCache--size-limit"></a><h3>The <code class="literal">"size-limit"</code> property</h3>
+<pre class="programlisting">  "size-limit"               <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a>                 : Read / Write / Construct</pre>
+<p>
+The cache size limit in bytes.
+</p>
+<p>
+Note: this new value will not be applied until you call <a class="link" href="ChamplainFileCache.html#champlain-file-cache-purge" title="champlain_file_cache_purge ()"><code class="function">champlain_file_cache_purge()</code></a>
+</p>
 <p>Allowed values: [1,G_MAXINT]</p>
 <p>Default value: 100000000</p>
-<p class="since">Since: 0.4</p>
+<p class="since">Since 0.4</p>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.25</div>
+<hr>
+          Generated by GTK-Doc V1.18</div>
 </body>
 </html>

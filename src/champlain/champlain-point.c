@@ -55,7 +55,6 @@ enum
   PROP_0,
   PROP_COLOR,
   PROP_SIZE,
-  PROP_SURFACE,
 };
 
 /* static guint champlain_point_signals[LAST_SIGNAL] = { 0, }; */
@@ -65,19 +64,11 @@ struct _ChamplainPointPrivate
   ClutterColor *color;
   gdouble size;
   ClutterContent *canvas;
-  cairo_surface_t *surface;
 
   guint redraw_id;
 };
 
-static void set_surface (ChamplainExportable *exportable,
-    cairo_surface_t *surface);
-static cairo_surface_t *get_surface (ChamplainExportable *exportable);
-
-static void exportable_interface_init (ChamplainExportableIface *iface);
-
-G_DEFINE_TYPE_WITH_CODE (ChamplainPoint, champlain_point, CHAMPLAIN_TYPE_MARKER,
-    G_IMPLEMENT_INTERFACE (CHAMPLAIN_TYPE_EXPORTABLE, exportable_interface_init));
+G_DEFINE_TYPE (ChamplainPoint, champlain_point, CHAMPLAIN_TYPE_MARKER);
 
 #define GET_PRIVATE(obj) \
   (G_TYPE_INSTANCE_GET_PRIVATE ((obj), CHAMPLAIN_TYPE_POINT, ChamplainPointPrivate))
@@ -99,10 +90,6 @@ champlain_point_get_property (GObject *object,
 
     case PROP_SIZE:
       g_value_set_double (value, priv->size);
-      break;
-
-    case PROP_SURFACE:
-      g_value_set_boxed (value, get_surface (CHAMPLAIN_EXPORTABLE (object)));
       break;
 
     default:
@@ -127,10 +114,6 @@ champlain_point_set_property (GObject *object,
 
     case PROP_SIZE:
       champlain_point_set_size (point, g_value_get_double (value));
-      break;
-
-    case PROP_SURFACE:
-      set_surface (CHAMPLAIN_EXPORTABLE (object), g_value_get_boxed (value));
       break;
 
     default:
@@ -163,10 +146,6 @@ pick (ClutterActor *self,
 static void
 champlain_point_dispose (GObject *object)
 {
-  ChamplainPointPrivate *priv = CHAMPLAIN_POINT (object)->priv;
-
-  g_clear_pointer (&priv->surface, cairo_surface_destroy);
-
   G_OBJECT_CLASS (champlain_point_parent_class)->dispose (object);
 }
 
@@ -222,11 +201,6 @@ champlain_point_class_init (ChamplainPointClass *klass)
           G_MAXDOUBLE,
           12, 
           CHAMPLAIN_PARAM_READWRITE));
-
-  g_object_class_override_property (object_class,
-      PROP_SURFACE,
-      "surface");
-
 }
 
 
@@ -241,8 +215,6 @@ draw (ClutterCanvas *canvas,
   gdouble size = priv->size;
   gdouble radius = size / 2.0;
   const ClutterColor *color;
-
-  set_surface (CHAMPLAIN_EXPORTABLE (point), cairo_get_target (cr));
 
   cairo_set_operator (cr, CAIRO_OPERATOR_CLEAR);
   cairo_paint (cr);
@@ -295,40 +267,6 @@ champlain_point_init (ChamplainPoint *point)
   clutter_content_invalidate (priv->canvas);
 
   g_signal_connect (point, "notify::selected", G_CALLBACK (notify_selected), NULL);
-}
-
-
-static void
-set_surface (ChamplainExportable *exportable,
-     cairo_surface_t *surface)
-{
-  g_return_if_fail (CHAMPLAIN_POINT (exportable));
-  g_return_if_fail (surface != NULL);
-
-  ChamplainPoint *self = CHAMPLAIN_POINT (exportable);
-
-  if (self->priv->surface == surface)
-    return;
-
-  cairo_surface_destroy (self->priv->surface);
-  self->priv->surface = cairo_surface_reference (surface);
-  g_object_notify (G_OBJECT (self), "surface");
-}
-
-static cairo_surface_t *
-get_surface (ChamplainExportable *exportable)
-{
-  g_return_val_if_fail (CHAMPLAIN_POINT (exportable), NULL);
-
-  return CHAMPLAIN_POINT (exportable)->priv->surface;
-}
-
-
-static void
-exportable_interface_init (ChamplainExportableIface *iface)
-{
-  iface->get_surface = get_surface;
-  iface->set_surface = set_surface;
 }
 
 

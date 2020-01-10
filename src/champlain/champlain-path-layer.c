@@ -41,10 +41,7 @@
 #include <clutter/clutter.h>
 #include <glib.h>
 
-static void exportable_interface_init (ChamplainExportableIface *iface);
-
-G_DEFINE_TYPE_WITH_CODE (ChamplainPathLayer, champlain_path_layer, CHAMPLAIN_TYPE_LAYER,
-    G_IMPLEMENT_INTERFACE (CHAMPLAIN_TYPE_EXPORTABLE, exportable_interface_init));
+G_DEFINE_TYPE (ChamplainPathLayer, champlain_path_layer, CHAMPLAIN_TYPE_LAYER)
 
 #define GET_PRIVATE(obj) \
   (G_TYPE_INSTANCE_GET_PRIVATE ((obj), CHAMPLAIN_TYPE_PATH_LAYER, ChamplainPathLayerPrivate))
@@ -65,7 +62,6 @@ enum
   PROP_FILL_COLOR,
   PROP_STROKE,
   PROP_VISIBLE,
-  PROP_SURFACE,
 };
 
 static ClutterColor DEFAULT_FILL_COLOR = { 0xcc, 0x00, 0x00, 0xaa };
@@ -87,43 +83,12 @@ struct _ChamplainPathLayerPrivate
   gdouble *dash;
   guint num_dashes;
   
-  cairo_surface_t *surface;
-
-  /* In order to correctly render paths in the horizontal wrap,
-   * the path_actor (a map-wide actor) contains two children that
-   * split the visible paths.
-   *
-   * The right_actor renders paths visible on the original map layer.
-   * (from viewport's x coordinate to the rightmost point on the map)
-
-   * The left_actor renders paths visible on the first cloned map layer.
-   * (a fixed size, from the leftmost point on the map)
-   *
-   * If horizontal wrap is disabled, the left_actor won't render
-   * anything.
-   */
+  ClutterContent *canvas;
   ClutterActor *path_actor;
-
-  ClutterActor *right_actor;
-  ClutterActor *left_actor;
-
-  ClutterContent *right_canvas;
-  ClutterContent *left_canvas;
-
-  cairo_surface_t *right_surface;
-  cairo_surface_t *left_surface;
-
-  gboolean right_surface_updated;
-  gboolean left_surface_updated;
-
   GList *nodes;
   gboolean redraw_scheduled;
 };
 
-
-static void set_surface (ChamplainExportable *exportable,
-    cairo_surface_t *surface);
-static cairo_surface_t *get_surface (ChamplainExportable *exportable);
 
 static gboolean redraw_path (ClutterCanvas *canvas,
     cairo_t *cr,
@@ -176,10 +141,6 @@ champlain_path_layer_get_property (GObject *object,
       g_value_set_boolean (value, priv->visible);
       break;
 
-    case PROP_SURFACE:
-      g_value_set_boxed (value, get_surface (CHAMPLAIN_EXPORTABLE (self)));
-      break;
-
     default:
       G_OBJECT_WARN_INVALID_PROPERTY_ID (object, property_id, pspec);
     }
@@ -229,10 +190,6 @@ champlain_path_layer_set_property (GObject *object,
           g_value_get_boolean (value));
       break;
 
-   case PROP_SURFACE:
-      set_surface (CHAMPLAIN_EXPORTABLE (object), g_value_get_boxed (value));
-      break;
-
     default:
       G_OBJECT_WARN_INVALID_PROPERTY_ID (object, property_id, pspec);
     }
@@ -251,17 +208,11 @@ champlain_path_layer_dispose (GObject *object)
   if (priv->view != NULL)
     set_view (CHAMPLAIN_LAYER (self), NULL);
 
-  if (priv->right_canvas)
+  if (priv->canvas)
     {
-      g_object_unref (priv->right_canvas);
-      g_object_unref (priv->left_canvas);
-      priv->right_canvas = NULL;
-      priv->left_canvas = NULL;
+      g_object_unref (priv->canvas);
+      priv->canvas = NULL;
     }
-
-  g_clear_pointer (&priv->surface, cairo_surface_destroy);
-  g_clear_pointer (&priv->right_surface, cairo_surface_destroy);
-  g_clear_pointer (&priv->left_surface, cairo_surface_destroy);
 
   G_OBJECT_CLASS (champlain_path_layer_parent_class)->dispose (object);
 }
@@ -403,24 +354,8 @@ champlain_path_layer_class_init (ChamplainPathLayerClass *klass)
           "The path's visibility",
           TRUE,
           CHAMPLAIN_PARAM_READWRITE));
-
-  g_object_class_override_property (object_class,
-      PROP_SURFACE,
-      "surface");
 }
 
-static void
-initialize_child_actor (ChamplainPathLayer *self,
-    ClutterActor *child_actor,
-    ClutterContent *canvas)
-{
-  ChamplainPathLayerPrivate *priv = self->priv;;
-
-  clutter_actor_set_content (child_actor, canvas);
-  g_signal_connect (canvas, "draw", G_CALLBACK (redraw_path), self);
-  clutter_actor_set_size (child_actor, 255, 255);
-  clutter_actor_add_child (priv->path_actor, child_actor);
-}
 
 static void
 champlain_path_layer_init (ChamplainPathLayer *self)
@@ -443,124 +378,14 @@ champlain_path_layer_init (ChamplainPathLayer *self)
   priv->fill_color = clutter_color_copy (&DEFAULT_FILL_COLOR);
   priv->stroke_color = clutter_color_copy (&DEFAULT_STROKE_COLOR);
 
+  priv->canvas = clutter_canvas_new ();
+  clutter_canvas_set_size (CLUTTER_CANVAS (priv->canvas), 255, 255);
+  g_signal_connect (priv->canvas, "draw", G_CALLBACK (redraw_path), self);
+
   priv->path_actor = clutter_actor_new ();
-  clutter_actor_add_child (CLUTTER_ACTOR (self), priv->path_actor);
   clutter_actor_set_size (priv->path_actor, 255, 255);
-
-  priv->right_actor = clutter_actor_new ();
-  priv->left_actor = clutter_actor_new ();
-
-  priv->right_canvas = clutter_canvas_new ();
-  priv->left_canvas = clutter_canvas_new ();
-
-  priv->surface = NULL;
-  priv->right_surface = NULL;
-  priv->left_surface = NULL;
-
-  priv->right_surface_updated = FALSE;
-  priv->left_surface_updated = FALSE;
-
-  clutter_canvas_set_size (CLUTTER_CANVAS (priv->right_canvas), 255, 255);
-  clutter_canvas_set_size (CLUTTER_CANVAS (priv->left_canvas), 0, 0);
-
-  initialize_child_actor (self, priv->right_actor, priv->right_canvas);
-  initialize_child_actor (self, priv->left_actor, priv->left_canvas);
-}
-
-
-static void
-set_surface (ChamplainExportable *exportable,
-     cairo_surface_t *surface)
-{
-  g_return_if_fail (CHAMPLAIN_PATH_LAYER (exportable));
-  g_return_if_fail (surface != NULL);
-
-  ChamplainPathLayer *self = CHAMPLAIN_PATH_LAYER (exportable);
-
-  if (self->priv->surface == surface)
-    return;
-
-  cairo_surface_destroy (self->priv->surface);
-  self->priv->surface = cairo_surface_reference (surface);
-  g_object_notify (G_OBJECT (self), "surface");
-}
-
-static void
-get_map_size (ChamplainView *view, gint *width, gint *height)
-{
-  gint size, rows, cols;
-  ChamplainMapSource *map_source = champlain_view_get_map_source (view);
-  gint zoom_level = champlain_view_get_zoom_level (view);
-  size = champlain_map_source_get_tile_size (map_source);
-  rows = champlain_map_source_get_row_count (map_source,
-                                                zoom_level);
-  cols = champlain_map_source_get_column_count (map_source,
-                                                zoom_level);
-  if (width)
-    *width = size * rows;
-
-  if (height)
-    *height = size * cols;
-}
-
-static cairo_surface_t *
-create_merged_surface (ChamplainPathLayer *layer)
-{
-  ChamplainPathLayerPrivate *priv = layer->priv;
-  gfloat view_width, view_height;
-  gint map_width, viewport_x, anchor_x;
-  cairo_surface_t *new_surface;
-  cairo_t *cr;
-
-  get_map_size (priv->view, &map_width, NULL);
-  clutter_actor_get_size (CLUTTER_ACTOR (priv->view), &view_width, &view_height);
-  champlain_view_get_viewport_origin (priv->view, &viewport_x, NULL);
-  champlain_view_get_viewport_anchor (priv->view, &anchor_x, NULL);
-  new_surface = cairo_image_surface_create (CAIRO_FORMAT_ARGB32, view_width, view_height);
-  cr = cairo_create (new_surface);
-
-  cairo_set_source_surface (cr,
-                            priv->right_surface,
-                            0, 0);
-  cairo_paint (cr);
-
-  cairo_set_source_surface (cr,
-                            priv->left_surface,
-                            map_width - viewport_x - anchor_x, 0);
-  cairo_paint (cr);
-  cairo_destroy (cr);
-
-  return new_surface;
-}
-
-static cairo_surface_t *
-get_surface (ChamplainExportable *exportable)
-{
-  g_return_val_if_fail (CHAMPLAIN_IS_PATH_LAYER (exportable), NULL);
-
-  ChamplainPathLayer *self = CHAMPLAIN_PATH_LAYER (exportable);
-
-  if (self->priv->visible)
-    {
-      /* if the surface hasn't yet been rendered, update it */
-      if (!self->priv->surface)
-        {
-          cairo_surface_t *new_surface = create_merged_surface (self);
-
-          set_surface (exportable, new_surface);
-        }
-      return CHAMPLAIN_PATH_LAYER (exportable)->priv->surface;
-    }
-  else
-    return NULL;
-}
-
-
-static void
-exportable_interface_init (ChamplainExportableIface *iface)
-{
-  iface->get_surface = get_surface;
-  iface->set_surface = set_surface;
+  clutter_actor_set_content (priv->path_actor, priv->canvas);
+  clutter_actor_add_child (CLUTTER_ACTOR (self), priv->path_actor);
 }
 
 
@@ -579,73 +404,22 @@ champlain_path_layer_new ()
   return g_object_new (CHAMPLAIN_TYPE_PATH_LAYER, NULL);
 }
 
-static gboolean
+
+static void
 invalidate_canvas (ChamplainPathLayer *layer)
 {
   ChamplainPathLayerPrivate *priv = layer->priv;
-  gfloat view_width, view_height;
-  gint map_width, map_height;
-  gint viewport_x, viewport_y;
-  gint anchor_x, anchor_y;
-  gfloat right_actor_width, right_actor_height;
-  gfloat left_actor_width, left_actor_height;
-
-  right_actor_width = 256;
-  right_actor_height = 256;
-  left_actor_width = 0;
-  left_actor_height = 0;
-  map_width = 256;
-  map_height = 256;
-
+  gfloat width, height;
+  
+  width = 256;
+  height = 256;
   if (priv->view != NULL)
-    {
-      get_map_size (priv->view, &map_width, &map_height);
-      clutter_actor_get_size (CLUTTER_ACTOR (priv->view), &view_width, &view_height);
-      champlain_view_get_viewport_origin (priv->view, &viewport_x, &viewport_y);
-      champlain_view_get_viewport_anchor (priv->view, &anchor_x, &anchor_y);
+    clutter_actor_get_size (CLUTTER_ACTOR (priv->view), &width, &height);
 
-      /* For efficiency in terms of clipping, the path actors must have a minimal size.
-       * The right_actor renders the paths on the visible side of the original map layer
-       * (from viewport offset to end of the map).
-       * The left_actor renders the paths on the visible side of the first cloned map layer
-       * (from the leftmost point on the map, clamped by the viewport width).
-       */
-      right_actor_width = MIN (map_width - (viewport_x + anchor_x), (gint)view_width);
-      right_actor_height = MIN (map_height - (viewport_y + anchor_y), (gint)view_height);
-      left_actor_width = MIN (view_width - right_actor_width, map_width - right_actor_width);
-      left_actor_height = right_actor_height;
-
-      /* Ensure sizes are positive  */
-      right_actor_width = MAX (0, right_actor_width);
-      right_actor_height = MAX (0, right_actor_height);
-      left_actor_width = MAX (0, left_actor_width);
-      left_actor_height = MAX (0, left_actor_height);
-    }
-
-  clutter_actor_set_size (priv->path_actor, map_width, map_height);
-
-  clutter_actor_set_size (priv->right_actor, right_actor_width, right_actor_height);
-  clutter_canvas_set_size (CLUTTER_CANVAS (priv->right_canvas), right_actor_width, right_actor_height);
-  priv->right_surface_updated = FALSE;
-  clutter_content_invalidate (priv->right_canvas);
-
-  /* Since the left actor only renders paths visible on the clone, it should be hidden
-   * when no clone is visible.
-   */
-  if (left_actor_width != 0)
-    {
-      clutter_actor_set_size (priv->left_actor, left_actor_width, left_actor_height);
-      clutter_canvas_set_size (CLUTTER_CANVAS (priv->left_canvas), left_actor_width, left_actor_height);
-      priv->left_surface_updated = FALSE;
-      clutter_content_invalidate (priv->left_canvas);
-      clutter_actor_show (priv->left_actor);
-    }
-  else
-    clutter_actor_hide (priv->left_actor);
-
+  clutter_canvas_set_size (CLUTTER_CANVAS (priv->canvas), width, height);
+  clutter_actor_set_size (priv->path_actor, width, height);
+  clutter_content_invalidate (priv->canvas);
   priv->redraw_scheduled = FALSE;
-
-  return FALSE;
 }
 
 
@@ -825,42 +599,6 @@ relocate_cb (G_GNUC_UNUSED GObject *gobject,
   schedule_redraw (layer);
 }
 
-static void
-update_surface (ChamplainPathLayer *layer,
-    ClutterCanvas *canvas,
-    cairo_surface_t *surface)
-{
-  ChamplainPathLayerPrivate *priv = layer->priv;
-
-  if (canvas == CLUTTER_CANVAS (priv->right_canvas))
-    {
-      cairo_surface_destroy (priv->right_surface);
-      priv->right_surface = cairo_surface_reference (surface);
-      priv->right_surface_updated = TRUE;
-    }
-  else if (canvas == CLUTTER_CANVAS (priv->left_canvas))
-    {
-      cairo_surface_destroy (priv->left_surface);
-      priv->left_surface = cairo_surface_reference (surface);
-      priv->left_surface_updated = TRUE;
-    }
-
- /* Updating the exportable surface. Path layer has two surfaces (one for each canvas)
-  * which have to be merged into a single new one.
-  */
-  if (priv->left_surface_updated && priv->right_surface_updated)
-    {
-      cairo_surface_t *new_surface;
-      new_surface = create_merged_surface (layer);
-
-      set_surface (CHAMPLAIN_EXPORTABLE (layer), new_surface);
-
-      cairo_surface_destroy (new_surface);
-    }
-  /* When only the right actor is visible, no merging is required */
-  else if (!CLUTTER_ACTOR_IS_VISIBLE (priv->left_actor))
-    set_surface (CHAMPLAIN_EXPORTABLE (layer), priv->right_surface);
-}
 
 static gboolean
 redraw_path (ClutterCanvas *canvas,
@@ -872,8 +610,7 @@ redraw_path (ClutterCanvas *canvas,
   ChamplainPathLayerPrivate *priv = layer->priv;
   GList *elem;
   ChamplainView *view = priv->view;
-  gint  viewport_x, viewport_y;
-  gint anchor_x, anchor_y;
+  gint x, y;
   
   /* layer not yet added to the view */
   if (view == NULL)
@@ -882,13 +619,8 @@ redraw_path (ClutterCanvas *canvas,
   if (!priv->visible || width == 0.0 || height == 0.0)
     return FALSE;
 
-  champlain_view_get_viewport_origin (priv->view, &viewport_x, &viewport_y);
-  champlain_view_get_viewport_anchor (priv->view, &anchor_x, &anchor_y);
-
-  if (canvas == CLUTTER_CANVAS (priv->right_canvas))
-    clutter_actor_set_position (priv->right_actor, viewport_x, viewport_y);
-  else
-    clutter_actor_set_position (priv->left_actor, -anchor_x, viewport_y);
+  champlain_view_get_viewport_origin (priv->view, &x, &y);
+  clutter_actor_set_position (priv->path_actor, x, y);
 
   /* Clear the drawing area */
   cairo_set_operator (cr, CAIRO_OPERATOR_CLEAR);
@@ -905,10 +637,7 @@ redraw_path (ClutterCanvas *canvas,
       x = champlain_view_longitude_to_x (view, champlain_location_get_longitude (location));
       y = champlain_view_latitude_to_y (view, champlain_location_get_latitude (location));
 
-      if (canvas == CLUTTER_CANVAS (priv->right_canvas))
-        cairo_line_to (cr, x, y);
-      else
-        cairo_line_to (cr, x + (viewport_x + anchor_x), y);
+      cairo_line_to (cr, x, y);
     }
 
   if (priv->closed_path)
@@ -934,8 +663,6 @@ redraw_path (ClutterCanvas *canvas,
 
   if (priv->stroke)
     cairo_stroke (cr);
-
-  update_surface (layer, canvas, cairo_get_target (cr));
 
   return FALSE;
 }

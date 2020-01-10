@@ -1,0 +1,574 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ChamplainMemphisRenderer</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="libchamplain Reference Manual">
+<link rel="up" href="pt05.html" title="Part V. Renderer API">
+<link rel="prev" href="ChamplainImageRenderer.html" title="ChamplainImageRenderer">
+<link rel="next" href="ChamplainErrorTileRenderer.html" title="ChamplainErrorTileRenderer">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="ChamplainImageRenderer.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="pt05.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libchamplain Reference Manual</th>
+<td><a accesskey="n" href="ChamplainErrorTileRenderer.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#ChamplainMemphisRenderer.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#ChamplainMemphisRenderer.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#ChamplainMemphisRenderer.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#ChamplainMemphisRenderer.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="ChamplainMemphisRenderer"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="ChamplainMemphisRenderer.top_of_page"></a>ChamplainMemphisRenderer</span></h2>
+<p>ChamplainMemphisRenderer — A renderer that renders tiles from OSM vector XML data</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="ChamplainMemphisRenderer.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="ChamplainMemphisRenderer.html#ChamplainMemphisRenderer-struct" title="struct ChamplainMemphisRenderer">ChamplainMemphisRenderer</a>;
+struct              <a class="link" href="ChamplainMemphisRenderer.html#ChamplainMemphisRule" title="struct ChamplainMemphisRule">ChamplainMemphisRule</a>;
+struct              <a class="link" href="ChamplainMemphisRenderer.html#ChamplainMemphisRuleAttr" title="struct ChamplainMemphisRuleAttr">ChamplainMemphisRuleAttr</a>;
+enum                <a class="link" href="ChamplainMemphisRenderer.html#ChamplainMemphisRuleType" title="enum ChamplainMemphisRuleType">ChamplainMemphisRuleType</a>;
+<a class="link" href="ChamplainMemphisRenderer.html" title="ChamplainMemphisRenderer"><span class="returnvalue">ChamplainMemphisRenderer</span></a> * <a class="link" href="ChamplainMemphisRenderer.html#champlain-memphis-renderer-new-full" title="champlain_memphis_renderer_new_full ()">champlain_memphis_renderer_new_full</a>
+                                                        (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> tile_size</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="ChamplainMemphisRenderer.html#champlain-memphis-renderer-load-rules" title="champlain_memphis_renderer_load_rules ()">champlain_memphis_renderer_load_rules</a>
+                                                        (<em class="parameter"><code><a class="link" href="ChamplainMemphisRenderer.html" title="ChamplainMemphisRenderer"><span class="type">ChamplainMemphisRenderer</span></a> *renderer</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *rules_path</code></em>);
+<a href="/usr/share/gtk-doc/html/clutter/clutter-Colors.html#ClutterColor"><span class="returnvalue">ClutterColor</span></a> *      <a class="link" href="ChamplainMemphisRenderer.html#champlain-memphis-renderer-get-background-color" title="champlain_memphis_renderer_get_background_color ()">champlain_memphis_renderer_get_background_color</a>
+                                                        (<em class="parameter"><code><a class="link" href="ChamplainMemphisRenderer.html" title="ChamplainMemphisRenderer"><span class="type">ChamplainMemphisRenderer</span></a> *renderer</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="ChamplainMemphisRenderer.html#champlain-memphis-renderer-set-background-color" title="champlain_memphis_renderer_set_background_color ()">champlain_memphis_renderer_set_background_color</a>
+                                                        (<em class="parameter"><code><a class="link" href="ChamplainMemphisRenderer.html" title="ChamplainMemphisRenderer"><span class="type">ChamplainMemphisRenderer</span></a> *renderer</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/clutter/clutter-Colors.html#ClutterColor"><span class="type">ClutterColor</span></a> *color</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             <a class="link" href="ChamplainMemphisRenderer.html#champlain-memphis-renderer-get-rule-ids" title="champlain_memphis_renderer_get_rule_ids ()">champlain_memphis_renderer_get_rule_ids</a>
+                                                        (<em class="parameter"><code><a class="link" href="ChamplainMemphisRenderer.html" title="ChamplainMemphisRenderer"><span class="type">ChamplainMemphisRenderer</span></a> *renderer</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="ChamplainMemphisRenderer.html#champlain-memphis-renderer-set-rule" title="champlain_memphis_renderer_set_rule ()">champlain_memphis_renderer_set_rule</a> (<em class="parameter"><code><a class="link" href="ChamplainMemphisRenderer.html" title="ChamplainMemphisRenderer"><span class="type">ChamplainMemphisRenderer</span></a> *renderer</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="ChamplainMemphisRenderer.html#ChamplainMemphisRule" title="struct ChamplainMemphisRule"><span class="type">ChamplainMemphisRule</span></a> *rule</code></em>);
+<a class="link" href="ChamplainMemphisRenderer.html#ChamplainMemphisRule" title="struct ChamplainMemphisRule"><span class="returnvalue">ChamplainMemphisRule</span></a> * <a class="link" href="ChamplainMemphisRenderer.html#champlain-memphis-renderer-get-rule" title="champlain_memphis_renderer_get_rule ()">champlain_memphis_renderer_get_rule</a>
+                                                        (<em class="parameter"><code><a class="link" href="ChamplainMemphisRenderer.html" title="ChamplainMemphisRenderer"><span class="type">ChamplainMemphisRenderer</span></a> *renderer</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *id</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="ChamplainMemphisRenderer.html#champlain-memphis-renderer-remove-rule" title="champlain_memphis_renderer_remove_rule ()">champlain_memphis_renderer_remove_rule</a>
+                                                        (<em class="parameter"><code><a class="link" href="ChamplainMemphisRenderer.html" title="ChamplainMemphisRenderer"><span class="type">ChamplainMemphisRenderer</span></a> *renderer</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *id</code></em>);
+<a class="link" href="ChamplainBoundingBox.html" title="ChamplainBoundingBox"><span class="returnvalue">ChamplainBoundingBox</span></a> * <a class="link" href="ChamplainMemphisRenderer.html#champlain-memphis-renderer-get-bounding-box" title="champlain_memphis_renderer_get_bounding_box ()">champlain_memphis_renderer_get_bounding_box</a>
+                                                        (<em class="parameter"><code><a class="link" href="ChamplainMemphisRenderer.html" title="ChamplainMemphisRenderer"><span class="type">ChamplainMemphisRenderer</span></a> *renderer</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="ChamplainMemphisRenderer.html#champlain-memphis-renderer-set-tile-size" title="champlain_memphis_renderer_set_tile_size ()">champlain_memphis_renderer_set_tile_size</a>
+                                                        (<em class="parameter"><code><a class="link" href="ChamplainMemphisRenderer.html" title="ChamplainMemphisRenderer"><span class="type">ChamplainMemphisRenderer</span></a> *renderer</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> size</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               <a class="link" href="ChamplainMemphisRenderer.html#champlain-memphis-renderer-get-tile-size" title="champlain_memphis_renderer_get_tile_size ()">champlain_memphis_renderer_get_tile_size</a>
+                                                        (<em class="parameter"><code><a class="link" href="ChamplainMemphisRenderer.html" title="ChamplainMemphisRenderer"><span class="type">ChamplainMemphisRenderer</span></a> *renderer</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="ChamplainMemphisRenderer.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
+         +----<a class="link" href="ChamplainRenderer.html" title="ChamplainRenderer">ChamplainRenderer</a>
+               +----ChamplainMemphisRenderer
+</pre>
+</div>
+<div class="refsect1">
+<a name="ChamplainMemphisRenderer.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="ChamplainMemphisRenderer.html#ChamplainMemphisRenderer--bounding-box" title='The "bounding-box" property'>bounding-box</a>"             <a class="link" href="ChamplainBoundingBox.html" title="ChamplainBoundingBox"><span class="type">ChamplainBoundingBox</span></a>*  : Read / Write
+  "<a class="link" href="ChamplainMemphisRenderer.html#ChamplainMemphisRenderer--tile-size" title='The "tile-size" property'>tile-size</a>"                <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a>                 : Read / Write
+</pre>
+</div>
+<div class="refsect1">
+<a name="ChamplainMemphisRenderer.description"></a><h2>Description</h2>
+<p>
+The <a class="link" href="ChamplainMemphisRenderer.html" title="ChamplainMemphisRenderer"><span class="type">ChamplainMemphisRenderer</span></a> uses the rendering library
+<a class="ulink" href="https://trac.openstreetmap.ch/trac/memphis/" target="_top">
+LibMemphis</a> to render tiles based on <a class="ulink" href="http://www.openstreetmap.org/" target="_top">
+OpenStreetMap</a> data. Tiles are rendered in separate threads.
+It supports zoom levels 12 to 18.
+</p>
+<p>
+The output of the renderer can be configured with a Memphis rules XML file.
+(TODO: link to the specification) The default rules only show
+highways as thin black lines.
+Once loaded, rules can be queried and edited.
+</p>
+</div>
+<div class="refsect1">
+<a name="ChamplainMemphisRenderer.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="ChamplainMemphisRenderer-struct"></a><h3>struct ChamplainMemphisRenderer</h3>
+<pre class="programlisting">struct ChamplainMemphisRenderer;</pre>
+<p>
+The <a class="link" href="ChamplainMemphisRenderer.html" title="ChamplainMemphisRenderer"><span class="type">ChamplainMemphisRenderer</span></a> structure contains only private data
+and should be accessed using the provided API
+</p>
+<p class="since">Since 0.8</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ChamplainMemphisRule"></a><h3>struct ChamplainMemphisRule</h3>
+<pre class="programlisting">struct ChamplainMemphisRule {
+  gchar **keys;
+  gchar **values;
+  ChamplainMemphisRuleType type;
+  ChamplainMemphisRuleAttr *polygon;
+  ChamplainMemphisRuleAttr *line;
+  ChamplainMemphisRuleAttr *border;
+  ChamplainMemphisRuleAttr *text;
+};
+</pre>
+<p>
+A wrapper of the MemphisRule structure. For details see the libmemphis
+documentation.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> **<em class="structfield"><code><a name="ChamplainMemphisRule.keys"></a>keys</code></em>;</span></p></td>
+<td>keys</td>
+</tr>
+<tr>
+<td><p><span class="term"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> **<em class="structfield"><code><a name="ChamplainMemphisRule.values"></a>values</code></em>;</span></p></td>
+<td>values</td>
+</tr>
+<tr>
+<td><p><span class="term"><a class="link" href="ChamplainMemphisRenderer.html#ChamplainMemphisRuleType" title="enum ChamplainMemphisRuleType"><span class="type">ChamplainMemphisRuleType</span></a> <em class="structfield"><code><a name="ChamplainMemphisRule.type"></a>type</code></em>;</span></p></td>
+<td>type</td>
+</tr>
+<tr>
+<td><p><span class="term"><a class="link" href="ChamplainMemphisRenderer.html#ChamplainMemphisRuleAttr" title="struct ChamplainMemphisRuleAttr"><span class="type">ChamplainMemphisRuleAttr</span></a> *<em class="structfield"><code><a name="ChamplainMemphisRule.polygon"></a>polygon</code></em>;</span></p></td>
+<td>polygon</td>
+</tr>
+<tr>
+<td><p><span class="term"><a class="link" href="ChamplainMemphisRenderer.html#ChamplainMemphisRuleAttr" title="struct ChamplainMemphisRuleAttr"><span class="type">ChamplainMemphisRuleAttr</span></a> *<em class="structfield"><code><a name="ChamplainMemphisRule.line"></a>line</code></em>;</span></p></td>
+<td>line</td>
+</tr>
+<tr>
+<td><p><span class="term"><a class="link" href="ChamplainMemphisRenderer.html#ChamplainMemphisRuleAttr" title="struct ChamplainMemphisRuleAttr"><span class="type">ChamplainMemphisRuleAttr</span></a> *<em class="structfield"><code><a name="ChamplainMemphisRule.border"></a>border</code></em>;</span></p></td>
+<td>border</td>
+</tr>
+<tr>
+<td><p><span class="term"><a class="link" href="ChamplainMemphisRenderer.html#ChamplainMemphisRuleAttr" title="struct ChamplainMemphisRuleAttr"><span class="type">ChamplainMemphisRuleAttr</span></a> *<em class="structfield"><code><a name="ChamplainMemphisRule.text"></a>text</code></em>;</span></p></td>
+<td>text</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.8</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ChamplainMemphisRuleAttr"></a><h3>struct ChamplainMemphisRuleAttr</h3>
+<pre class="programlisting">struct ChamplainMemphisRuleAttr {
+  guint8 z_min;
+  guint8 z_max;
+  guint8 color_red;
+  guint8 color_green;
+  guint8 color_blue;
+  guint8 color_alpha;
+  gchar *style;
+  gdouble size;
+};
+</pre>
+<p>
+A wrapper of the MemphisRuleAttr structure. For details see the libmemphis
+documentation.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><span class="type">guint8</span> <em class="structfield"><code><a name="ChamplainMemphisRuleAttr.z-min"></a>z_min</code></em>;</span></p></td>
+<td>z_min</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="type">guint8</span> <em class="structfield"><code><a name="ChamplainMemphisRuleAttr.z-max"></a>z_max</code></em>;</span></p></td>
+<td>z_max</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="type">guint8</span> <em class="structfield"><code><a name="ChamplainMemphisRuleAttr.color-red"></a>color_red</code></em>;</span></p></td>
+<td>color_red</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="type">guint8</span> <em class="structfield"><code><a name="ChamplainMemphisRuleAttr.color-green"></a>color_green</code></em>;</span></p></td>
+<td>color_green</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="type">guint8</span> <em class="structfield"><code><a name="ChamplainMemphisRuleAttr.color-blue"></a>color_blue</code></em>;</span></p></td>
+<td>color_blue</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="type">guint8</span> <em class="structfield"><code><a name="ChamplainMemphisRuleAttr.color-alpha"></a>color_alpha</code></em>;</span></p></td>
+<td>color_alpha</td>
+</tr>
+<tr>
+<td><p><span class="term"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *<em class="structfield"><code><a name="ChamplainMemphisRuleAttr.style"></a>style</code></em>;</span></p></td>
+<td>style</td>
+</tr>
+<tr>
+<td><p><span class="term"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> <em class="structfield"><code><a name="ChamplainMemphisRuleAttr.size"></a>size</code></em>;</span></p></td>
+<td>size</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.8</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ChamplainMemphisRuleType"></a><h3>enum ChamplainMemphisRuleType</h3>
+<pre class="programlisting">typedef enum {
+  CHAMPLAIN_MEMPHIS_RULE_TYPE_UNKNOWN,
+  CHAMPLAIN_MEMPHIS_RULE_TYPE_NODE,
+  CHAMPLAIN_MEMPHIS_RULE_TYPE_WAY,
+  CHAMPLAIN_MEMPHIS_RULE_TYPE_RELATION
+} ChamplainMemphisRuleType;
+</pre>
+<p>
+A wrapper of the MemphisRuleType union. For details see the libmemphis
+documentation.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><a name="CHAMPLAIN-MEMPHIS-RULE-TYPE-UNKNOWN:CAPS"></a><span class="term"><code class="literal">CHAMPLAIN_MEMPHIS_RULE_TYPE_UNKNOWN</code></span></p></td>
+<td>MEMPHIS_RULE_TYPE_UNKNOWN
+</td>
+</tr>
+<tr>
+<td><p><a name="CHAMPLAIN-MEMPHIS-RULE-TYPE-NODE:CAPS"></a><span class="term"><code class="literal">CHAMPLAIN_MEMPHIS_RULE_TYPE_NODE</code></span></p></td>
+<td>MEMPHIS_RULE_TYPE_NODE
+</td>
+</tr>
+<tr>
+<td><p><a name="CHAMPLAIN-MEMPHIS-RULE-TYPE-WAY:CAPS"></a><span class="term"><code class="literal">CHAMPLAIN_MEMPHIS_RULE_TYPE_WAY</code></span></p></td>
+<td>MEMPHIS_RULE_TYPE_WAY
+</td>
+</tr>
+<tr>
+<td><p><a name="CHAMPLAIN-MEMPHIS-RULE-TYPE-RELATION:CAPS"></a><span class="term"><code class="literal">CHAMPLAIN_MEMPHIS_RULE_TYPE_RELATION</code></span></p></td>
+<td>MEMPHIS_RULE_TYPE_RELATION
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.8</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-memphis-renderer-new-full"></a><h3>champlain_memphis_renderer_new_full ()</h3>
+<pre class="programlisting"><a class="link" href="ChamplainMemphisRenderer.html" title="ChamplainMemphisRenderer"><span class="returnvalue">ChamplainMemphisRenderer</span></a> * champlain_memphis_renderer_new_full
+                                                        (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> tile_size</code></em>);</pre>
+<p>
+Constructor of a <a class="link" href="ChamplainMemphisRenderer.html" title="ChamplainMemphisRenderer"><span class="type">ChamplainMemphisRenderer</span></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>tile_size</code></em> :</span></p></td>
+<td>the size of the rendered error tile</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a constructed <a class="link" href="ChamplainMemphisRenderer.html" title="ChamplainMemphisRenderer"><span class="type">ChamplainMemphisRenderer</span></a> object</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.8</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-memphis-renderer-load-rules"></a><h3>champlain_memphis_renderer_load_rules ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                champlain_memphis_renderer_load_rules
+                                                        (<em class="parameter"><code><a class="link" href="ChamplainMemphisRenderer.html" title="ChamplainMemphisRenderer"><span class="type">ChamplainMemphisRenderer</span></a> *renderer</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *rules_path</code></em>);</pre>
+<p>
+Loads a Memphis rules file.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>renderer</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainMemphisRenderer.html" title="ChamplainMemphisRenderer"><span class="type">ChamplainMemphisRenderer</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>rules_path</code></em> :</span></p></td>
+<td>a path to a rules file</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.8</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-memphis-renderer-get-background-color"></a><h3>champlain_memphis_renderer_get_background_color ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/clutter/clutter-Colors.html#ClutterColor"><span class="returnvalue">ClutterColor</span></a> *      champlain_memphis_renderer_get_background_color
+                                                        (<em class="parameter"><code><a class="link" href="ChamplainMemphisRenderer.html" title="ChamplainMemphisRenderer"><span class="type">ChamplainMemphisRenderer</span></a> *renderer</code></em>);</pre>
+<p>
+Gets the background color of the map.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>renderer</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainMemphisRenderer.html" title="ChamplainMemphisRenderer"><span class="type">ChamplainMemphisRenderer</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the background color of the map as a newly-allocated
+<a href="/usr/share/gtk-doc/html/clutter/clutter-Colors.html#ClutterColor"><span class="type">ClutterColor</span></a>.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.8</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-memphis-renderer-set-background-color"></a><h3>champlain_memphis_renderer_set_background_color ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                champlain_memphis_renderer_set_background_color
+                                                        (<em class="parameter"><code><a class="link" href="ChamplainMemphisRenderer.html" title="ChamplainMemphisRenderer"><span class="type">ChamplainMemphisRenderer</span></a> *renderer</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/clutter/clutter-Colors.html#ClutterColor"><span class="type">ClutterColor</span></a> *color</code></em>);</pre>
+<p>
+Sets the background color of the map from a <a href="/usr/share/gtk-doc/html/clutter/clutter-Colors.html#ClutterColor"><span class="type">ClutterColor</span></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>renderer</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainMemphisRenderer.html" title="ChamplainMemphisRenderer"><span class="type">ChamplainMemphisRenderer</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>color</code></em> :</span></p></td>
+<td>a <a href="/usr/share/gtk-doc/html/clutter/clutter-Colors.html#ClutterColor"><span class="type">ClutterColor</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.8</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-memphis-renderer-get-rule-ids"></a><h3>champlain_memphis_renderer_get_rule_ids ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             champlain_memphis_renderer_get_rule_ids
+                                                        (<em class="parameter"><code><a class="link" href="ChamplainMemphisRenderer.html" title="ChamplainMemphisRenderer"><span class="type">ChamplainMemphisRenderer</span></a> *renderer</code></em>);</pre>
+<p>
+Get a list of rule id's.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>renderer</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainMemphisRenderer.html" title="ChamplainMemphisRenderer"><span class="type">ChamplainMemphisRenderer</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> of id strings of the form:
+key1|key2|...|keyN:value1|value2|...|valueM
+Example: "waterway:river|stream|canal". <span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> utf8]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.8</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-memphis-renderer-set-rule"></a><h3>champlain_memphis_renderer_set_rule ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                champlain_memphis_renderer_set_rule (<em class="parameter"><code><a class="link" href="ChamplainMemphisRenderer.html" title="ChamplainMemphisRenderer"><span class="type">ChamplainMemphisRenderer</span></a> *renderer</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="ChamplainMemphisRenderer.html#ChamplainMemphisRule" title="struct ChamplainMemphisRule"><span class="type">ChamplainMemphisRule</span></a> *rule</code></em>);</pre>
+<p>
+Edits or adds a <a class="link" href="ChamplainMemphisRenderer.html#ChamplainMemphisRule" title="struct ChamplainMemphisRule"><span class="type">ChamplainMemphisRule</span></a> to the rules-set. New rules are appended
+to the list.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>renderer</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainMemphisRenderer.html" title="ChamplainMemphisRenderer"><span class="type">ChamplainMemphisRenderer</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>rule</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainMemphisRenderer.html#ChamplainMemphisRule" title="struct ChamplainMemphisRule"><span class="type">ChamplainMemphisRule</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.8</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-memphis-renderer-get-rule"></a><h3>champlain_memphis_renderer_get_rule ()</h3>
+<pre class="programlisting"><a class="link" href="ChamplainMemphisRenderer.html#ChamplainMemphisRule" title="struct ChamplainMemphisRule"><span class="returnvalue">ChamplainMemphisRule</span></a> * champlain_memphis_renderer_get_rule
+                                                        (<em class="parameter"><code><a class="link" href="ChamplainMemphisRenderer.html" title="ChamplainMemphisRenderer"><span class="type">ChamplainMemphisRenderer</span></a> *renderer</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *id</code></em>);</pre>
+<p>
+Gets the requested <a class="link" href="ChamplainMemphisRenderer.html#ChamplainMemphisRule" title="struct ChamplainMemphisRule"><span class="type">ChamplainMemphisRule</span></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>renderer</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainMemphisRenderer.html" title="ChamplainMemphisRenderer"><span class="type">ChamplainMemphisRenderer</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>id</code></em> :</span></p></td>
+<td>an id string</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the requested <a class="link" href="ChamplainMemphisRenderer.html#ChamplainMemphisRule" title="struct ChamplainMemphisRule"><span class="type">ChamplainMemphisRule</span></a> or NULL if none is found.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.8</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-memphis-renderer-remove-rule"></a><h3>champlain_memphis_renderer_remove_rule ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                champlain_memphis_renderer_remove_rule
+                                                        (<em class="parameter"><code><a class="link" href="ChamplainMemphisRenderer.html" title="ChamplainMemphisRenderer"><span class="type">ChamplainMemphisRenderer</span></a> *renderer</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *id</code></em>);</pre>
+<p>
+Removes the rule with the given id.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>renderer</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainMemphisRenderer.html" title="ChamplainMemphisRenderer"><span class="type">ChamplainMemphisRenderer</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>id</code></em> :</span></p></td>
+<td>an id string</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.8</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-memphis-renderer-get-bounding-box"></a><h3>champlain_memphis_renderer_get_bounding_box ()</h3>
+<pre class="programlisting"><a class="link" href="ChamplainBoundingBox.html" title="ChamplainBoundingBox"><span class="returnvalue">ChamplainBoundingBox</span></a> * champlain_memphis_renderer_get_bounding_box
+                                                        (<em class="parameter"><code><a class="link" href="ChamplainMemphisRenderer.html" title="ChamplainMemphisRenderer"><span class="type">ChamplainMemphisRenderer</span></a> *renderer</code></em>);</pre>
+<p>
+Gets the bounding box of the area for which map data is available.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>renderer</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainMemphisRenderer.html" title="ChamplainMemphisRenderer"><span class="type">ChamplainMemphisRenderer</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the bounding box</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.8</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-memphis-renderer-set-tile-size"></a><h3>champlain_memphis_renderer_set_tile_size ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                champlain_memphis_renderer_set_tile_size
+                                                        (<em class="parameter"><code><a class="link" href="ChamplainMemphisRenderer.html" title="ChamplainMemphisRenderer"><span class="type">ChamplainMemphisRenderer</span></a> *renderer</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> size</code></em>);</pre>
+<p>
+Sets the size of the rendered tiles.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>renderer</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainMemphisRenderer.html" title="ChamplainMemphisRenderer"><span class="type">ChamplainMemphisRenderer</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>size</code></em> :</span></p></td>
+<td>the size of the rendered tiles</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.8</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-memphis-renderer-get-tile-size"></a><h3>champlain_memphis_renderer_get_tile_size ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               champlain_memphis_renderer_get_tile_size
+                                                        (<em class="parameter"><code><a class="link" href="ChamplainMemphisRenderer.html" title="ChamplainMemphisRenderer"><span class="type">ChamplainMemphisRenderer</span></a> *renderer</code></em>);</pre>
+<p>
+Gets the size of the rendered tiles.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>renderer</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainMemphisRenderer.html" title="ChamplainMemphisRenderer"><span class="type">ChamplainMemphisRenderer</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the size of the rendered tiles</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.8</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="ChamplainMemphisRenderer.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="ChamplainMemphisRenderer--bounding-box"></a><h3>The <code class="literal">"bounding-box"</code> property</h3>
+<pre class="programlisting">  "bounding-box"             <a class="link" href="ChamplainBoundingBox.html" title="ChamplainBoundingBox"><span class="type">ChamplainBoundingBox</span></a>*  : Read / Write</pre>
+<p>
+The bounding box of the area that contains map data.
+</p>
+<p class="since">Since 0.8</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ChamplainMemphisRenderer--tile-size"></a><h3>The <code class="literal">"tile-size"</code> property</h3>
+<pre class="programlisting">  "tile-size"                <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a>                 : Read / Write</pre>
+<p>The size of the rendered tile.</p>
+<p>Allowed values: &lt;= G_MAXINT</p>
+<p>Default value: 256</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

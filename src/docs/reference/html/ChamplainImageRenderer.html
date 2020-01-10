@@ -2,27 +2,32 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>ChamplainImageRenderer: libchamplain Reference Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<title>ChamplainImageRenderer</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
 <link rel="home" href="index.html" title="libchamplain Reference Manual">
 <link rel="up" href="pt05.html" title="Part V. Renderer API">
 <link rel="prev" href="ChamplainRenderer.html" title="ChamplainRenderer">
-<link rel="next" href="ChamplainErrorTileRenderer.html" title="ChamplainErrorTileRenderer">
-<meta name="generator" content="GTK-Doc V1.25 (XML mode)">
+<link rel="next" href="ChamplainMemphisRenderer.html" title="ChamplainMemphisRenderer">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
-<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
-<td width="100%" align="left" class="shortcuts">
-<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
-                  <a href="#ChamplainImageRenderer.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
-                  <a href="#ChamplainImageRenderer.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
-</td>
-<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
-<td><a accesskey="u" href="pt05.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
-<td><a accesskey="p" href="ChamplainRenderer.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
-<td><a accesskey="n" href="ChamplainErrorTileRenderer.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
-</tr></table>
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="ChamplainRenderer.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="pt05.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libchamplain Reference Manual</th>
+<td><a accesskey="n" href="ChamplainMemphisRenderer.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#ChamplainImageRenderer.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#ChamplainImageRenderer.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#ChamplainImageRenderer.object-hierarchy" class="shortcut">Object Hierarchy</a>
+</td></tr>
+</table>
 <div class="refentry">
 <a name="ChamplainImageRenderer"></a><div class="titlepage"></div>
 <div class="refnamediv"><table width="100%"><tr>
@@ -30,78 +35,62 @@
 <h2><span class="refentrytitle"><a name="ChamplainImageRenderer.top_of_page"></a>ChamplainImageRenderer</span></h2>
 <p>ChamplainImageRenderer — A renderer that renders tiles from binary image data</p>
 </td>
-<td class="gallery_image" valign="top" align="right"></td>
+<td valign="top" align="right"></td>
 </tr></table></div>
-<div class="refsect1">
-<a name="ChamplainImageRenderer.functions"></a><h2>Functions</h2>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="functions_return">
-<col class="functions_name">
-</colgroup>
-<tbody><tr>
-<td class="function_type">
-<a class="link" href="ChamplainImageRenderer.html" title="ChamplainImageRenderer"><span class="returnvalue">ChamplainImageRenderer</span></a> *
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainImageRenderer.html#champlain-image-renderer-new" title="champlain_image_renderer_new ()">champlain_image_renderer_new</a> <span class="c_punctuation">()</span>
-</td>
-</tr></tbody>
-</table></div>
-</div>
-<div class="refsect1">
-<a name="ChamplainImageRenderer.other"></a><h2>Types and Values</h2>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="name">
-<col class="description">
-</colgroup>
-<tbody><tr>
-<td class="datatype_keyword">struct</td>
-<td class="function_name"><a class="link" href="ChamplainImageRenderer.html#ChamplainImageRenderer-struct" title="struct ChamplainImageRenderer">ChamplainImageRenderer</a></td>
-</tr></tbody>
-</table></div>
+<div class="refsynopsisdiv">
+<a name="ChamplainImageRenderer.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="ChamplainImageRenderer.html#ChamplainImageRenderer-struct" title="struct ChamplainImageRenderer">ChamplainImageRenderer</a>;
+<a class="link" href="ChamplainImageRenderer.html" title="ChamplainImageRenderer"><span class="returnvalue">ChamplainImageRenderer</span></a> * <a class="link" href="ChamplainImageRenderer.html#champlain-image-renderer-new" title="champlain_image_renderer_new ()">champlain_image_renderer_new</a>   (<em class="parameter"><code><span class="type">void</span></code></em>);
+</pre>
 </div>
 <div class="refsect1">
 <a name="ChamplainImageRenderer.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
-    <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
-        <span class="lineart">╰──</span> <a class="link" href="ChamplainRenderer.html" title="ChamplainRenderer">ChamplainRenderer</a>
-            <span class="lineart">╰──</span> ChamplainImageRenderer
+<pre class="synopsis">
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
+         +----<a class="link" href="ChamplainRenderer.html" title="ChamplainRenderer">ChamplainRenderer</a>
+               +----ChamplainImageRenderer
 </pre>
 </div>
 <div class="refsect1">
 <a name="ChamplainImageRenderer.description"></a><h2>Description</h2>
-<p><a class="link" href="ChamplainImageRenderer.html" title="ChamplainImageRenderer"><span class="type">ChamplainImageRenderer</span></a> renders tiles from binary image data. The rendering
-is performed using <span class="type">GdkPixbufLoader</span> so the set of supported image
-formats is equal to the set of formats supported by <span class="type">GdkPixbufLoader</span>.</p>
+<p>
+<a class="link" href="ChamplainImageRenderer.html" title="ChamplainImageRenderer"><span class="type">ChamplainImageRenderer</span></a> renders tiles from binary image data. The rendering
+is performed using <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/GdkPixbufLoader.html"><span class="type">GdkPixbufLoader</span></a> so the set of supported image
+formats is equal to the set of formats supported by <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/GdkPixbufLoader.html"><span class="type">GdkPixbufLoader</span></a>.
+</p>
 </div>
 <div class="refsect1">
-<a name="ChamplainImageRenderer.functions_details"></a><h2>Functions</h2>
-<div class="refsect2">
-<a name="champlain-image-renderer-new"></a><h3>champlain_image_renderer_new ()</h3>
-<pre class="programlisting"><a class="link" href="ChamplainImageRenderer.html" title="ChamplainImageRenderer"><span class="returnvalue">ChamplainImageRenderer</span></a> *
-champlain_image_renderer_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
-<p>Constructor of <a class="link" href="ChamplainImageRenderer.html" title="ChamplainImageRenderer"><span class="type">ChamplainImageRenderer</span></a>.</p>
-<div class="refsect3">
-<a name="champlain-image-renderer-new.returns"></a><h4>Returns</h4>
-<p> a constructed <a class="link" href="ChamplainImageRenderer.html" title="ChamplainImageRenderer"><span class="type">ChamplainImageRenderer</span></a> object</p>
-</div>
-<p class="since">Since: 0.8</p>
-</div>
-</div>
-<div class="refsect1">
-<a name="ChamplainImageRenderer.other_details"></a><h2>Types and Values</h2>
+<a name="ChamplainImageRenderer.details"></a><h2>Details</h2>
 <div class="refsect2">
 <a name="ChamplainImageRenderer-struct"></a><h3>struct ChamplainImageRenderer</h3>
 <pre class="programlisting">struct ChamplainImageRenderer;</pre>
-<p>The <a class="link" href="ChamplainImageRenderer.html" title="ChamplainImageRenderer"><span class="type">ChamplainImageRenderer</span></a> structure contains only private data
-and should be accessed using the provided API</p>
-<p class="since">Since: 0.8</p>
+<p>
+The <a class="link" href="ChamplainImageRenderer.html" title="ChamplainImageRenderer"><span class="type">ChamplainImageRenderer</span></a> structure contains only private data
+and should be accessed using the provided API
+</p>
+<p class="since">Since 0.8</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-image-renderer-new"></a><h3>champlain_image_renderer_new ()</h3>
+<pre class="programlisting"><a class="link" href="ChamplainImageRenderer.html" title="ChamplainImageRenderer"><span class="returnvalue">ChamplainImageRenderer</span></a> * champlain_image_renderer_new   (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+Constructor of <a class="link" href="ChamplainImageRenderer.html" title="ChamplainImageRenderer"><span class="type">ChamplainImageRenderer</span></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a constructed <a class="link" href="ChamplainImageRenderer.html" title="ChamplainImageRenderer"><span class="type">ChamplainImageRenderer</span></a> object</td>
+</tr></tbody>
+</table></div>
+<p class="since">Since 0.8</p>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.25</div>
+<hr>
+          Generated by GTK-Doc V1.18</div>
 </body>
 </html>

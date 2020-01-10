@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE book PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "">
 <book xmlns="http://www.devhelp.net/book" title="libchamplain Reference Manual" link="index.html" author="" name="libchamplain" version="2" language="c">
   <chapters>
     <sub name="Basic API" link="pt01.html">
@@ -48,12 +49,12 @@
     <sub name="Renderer API" link="pt05.html">
       <sub name="ChamplainRenderer" link="ChamplainRenderer.html"/>
       <sub name="ChamplainImageRenderer" link="ChamplainImageRenderer.html"/>
+      <sub name="ChamplainMemphisRenderer" link="ChamplainMemphisRenderer.html"/>
       <sub name="ChamplainErrorTileRenderer" link="ChamplainErrorTileRenderer.html"/>
     </sub>
     <sub name="Others" link="pt06.html">
       <sub name="ChamplainTile" link="ChamplainTile.html"/>
       <sub name="ChamplainBoundingBox" link="ChamplainBoundingBox.html"/>
-      <sub name="ChamplainExportable" link="ChamplainExportable.html"/>
       <sub name="ChamplainVersion" link="libchamplain-ChamplainVersion.html"/>
     </sub>
     <sub name="Annotation Glossary" link="pt07.html">
@@ -70,469 +71,448 @@
     <sub name="Index of new symbols in 0.12" link="ix09.html"/>
   </chapters>
   <functions>
-    <keyword type="function" name="champlain_view_new ()" link="ChamplainView.html#champlain-view-new" since="0.4"/>
-    <keyword type="function" name="champlain_view_center_on ()" link="ChamplainView.html#champlain-view-center-on" since="0.1"/>
-    <keyword type="function" name="champlain_view_go_to ()" link="ChamplainView.html#champlain-view-go-to" since="0.4"/>
-    <keyword type="function" name="champlain_view_stop_go_to ()" link="ChamplainView.html#champlain-view-stop-go-to" since="0.4"/>
-    <keyword type="function" name="champlain_view_zoom_in ()" link="ChamplainView.html#champlain-view-zoom-in" since="0.1"/>
-    <keyword type="function" name="champlain_view_zoom_out ()" link="ChamplainView.html#champlain-view-zoom-out" since="0.1"/>
-    <keyword type="function" name="champlain_view_set_zoom_level ()" link="ChamplainView.html#champlain-view-set-zoom-level" since="0.4"/>
-    <keyword type="function" name="champlain_view_set_min_zoom_level ()" link="ChamplainView.html#champlain-view-set-min-zoom-level" since="0.4"/>
-    <keyword type="function" name="champlain_view_set_max_zoom_level ()" link="ChamplainView.html#champlain-view-set-max-zoom-level" since="0.4"/>
-    <keyword type="function" name="champlain_view_set_world ()" link="ChamplainView.html#champlain-view-set-world" since="0.12.11"/>
-    <keyword type="function" name="champlain_view_get_world ()" link="ChamplainView.html#champlain-view-get-world" since="0.12.11"/>
-    <keyword type="function" name="champlain_view_ensure_visible ()" link="ChamplainView.html#champlain-view-ensure-visible" since="0.10"/>
-    <keyword type="function" name="champlain_view_ensure_layers_visible ()" link="ChamplainView.html#champlain-view-ensure-layers-visible" since="0.10"/>
-    <keyword type="function" name="champlain_view_set_map_source ()" link="ChamplainView.html#champlain-view-set-map-source" since="0.4"/>
-    <keyword type="function" name="champlain_view_add_overlay_source ()" link="ChamplainView.html#champlain-view-add-overlay-source" since="0.12.5"/>
-    <keyword type="function" name="champlain_view_remove_overlay_source ()" link="ChamplainView.html#champlain-view-remove-overlay-source" since="0.12.5"/>
-    <keyword type="function" name="champlain_view_get_overlay_sources ()" link="ChamplainView.html#champlain-view-get-overlay-sources" since="0.12.5"/>
-    <keyword type="function" name="champlain_view_set_deceleration ()" link="ChamplainView.html#champlain-view-set-deceleration" since="0.4"/>
-    <keyword type="function" name="champlain_view_set_kinetic_mode ()" link="ChamplainView.html#champlain-view-set-kinetic-mode" since="0.10"/>
-    <keyword type="function" name="champlain_view_set_keep_center_on_resize ()" link="ChamplainView.html#champlain-view-set-keep-center-on-resize" since="0.4"/>
-    <keyword type="function" name="champlain_view_set_zoom_on_double_click ()" link="ChamplainView.html#champlain-view-set-zoom-on-double-click" since="0.4"/>
-    <keyword type="function" name="champlain_view_set_animate_zoom ()" link="ChamplainView.html#champlain-view-set-animate-zoom" since="0.12"/>
-    <keyword type="function" name="champlain_view_set_background_pattern ()" link="ChamplainView.html#champlain-view-set-background-pattern" since="0.12.4"/>
-    <keyword type="function" name="champlain_view_set_horizontal_wrap ()" link="ChamplainView.html#champlain-view-set-horizontal-wrap"/>
-    <keyword type="function" name="champlain_view_add_layer ()" link="ChamplainView.html#champlain-view-add-layer" since="0.2"/>
-    <keyword type="function" name="champlain_view_remove_layer ()" link="ChamplainView.html#champlain-view-remove-layer" since="0.4.1"/>
-    <keyword type="function" name="champlain_view_get_zoom_level ()" link="ChamplainView.html#champlain-view-get-zoom-level" since="0.4"/>
-    <keyword type="function" name="champlain_view_get_min_zoom_level ()" link="ChamplainView.html#champlain-view-get-min-zoom-level" since="0.4"/>
-    <keyword type="function" name="champlain_view_get_max_zoom_level ()" link="ChamplainView.html#champlain-view-get-max-zoom-level" since="0.4"/>
-    <keyword type="function" name="champlain_view_get_map_source ()" link="ChamplainView.html#champlain-view-get-map-source" since="0.4"/>
-    <keyword type="function" name="champlain_view_get_deceleration ()" link="ChamplainView.html#champlain-view-get-deceleration" since="0.4"/>
-    <keyword type="function" name="champlain_view_get_kinetic_mode ()" link="ChamplainView.html#champlain-view-get-kinetic-mode" since="0.10"/>
-    <keyword type="function" name="champlain_view_get_keep_center_on_resize ()" link="ChamplainView.html#champlain-view-get-keep-center-on-resize" since="0.4"/>
-    <keyword type="function" name="champlain_view_get_zoom_on_double_click ()" link="ChamplainView.html#champlain-view-get-zoom-on-double-click" since="0.4"/>
-    <keyword type="function" name="champlain_view_get_animate_zoom ()" link="ChamplainView.html#champlain-view-get-animate-zoom" since="0.12"/>
-    <keyword type="function" name="champlain_view_get_background_pattern ()" link="ChamplainView.html#champlain-view-get-background-pattern" since="0.12.4"/>
-    <keyword type="function" name="champlain_view_get_horizontal_wrap ()" link="ChamplainView.html#champlain-view-get-horizontal-wrap"/>
-    <keyword type="function" name="champlain_view_reload_tiles ()" link="ChamplainView.html#champlain-view-reload-tiles" since="0.8"/>
-    <keyword type="function" name="champlain_view_to_surface ()" link="ChamplainView.html#champlain-view-to-surface"/>
-    <keyword type="function" name="champlain_view_x_to_longitude ()" link="ChamplainView.html#champlain-view-x-to-longitude" since="0.10"/>
-    <keyword type="function" name="champlain_view_y_to_latitude ()" link="ChamplainView.html#champlain-view-y-to-latitude" since="0.10"/>
-    <keyword type="function" name="champlain_view_longitude_to_x ()" link="ChamplainView.html#champlain-view-longitude-to-x" since="0.10"/>
-    <keyword type="function" name="champlain_view_latitude_to_y ()" link="ChamplainView.html#champlain-view-latitude-to-y" since="0.10"/>
-    <keyword type="function" name="champlain_view_get_viewport_origin ()" link="ChamplainView.html#champlain-view-get-viewport-origin" since="0.10"/>
-    <keyword type="function" name="champlain_view_bin_layout_add ()" link="ChamplainView.html#champlain-view-bin-layout-add" deprecated="" since="0.10"/>
-    <keyword type="function" name="champlain_view_get_license_actor ()" link="ChamplainView.html#champlain-view-get-license-actor" since="0.10"/>
-    <keyword type="function" name="champlain_view_get_center_latitude ()" link="ChamplainView.html#champlain-view-get-center-latitude" since="0.10"/>
-    <keyword type="function" name="champlain_view_get_center_longitude ()" link="ChamplainView.html#champlain-view-get-center-longitude" since="0.10"/>
-    <keyword type="function" name="champlain_view_get_bounding_box ()" link="ChamplainView.html#champlain-view-get-bounding-box" since="0.12.4"/>
-    <keyword type="function" name="champlain_view_get_bounding_box_for_zoom_level ()" link="ChamplainView.html#champlain-view-get-bounding-box-for-zoom-level" since="0.12.6"/>
-    <keyword type="function" name="champlain_view_get_state ()" link="ChamplainView.html#champlain-view-get-state" since="0.10"/>
-    <keyword type="function" name="champlain_view_get_viewport_anchor ()" link="ChamplainView.html#champlain-view-get-viewport-anchor" since="0.12.14"/>
     <keyword type="struct" name="struct ChamplainView" link="ChamplainView.html#ChamplainView-struct"/>
-    <keyword type="property" name="The “animate-zoom” property" link="ChamplainView.html#ChamplainView--animate-zoom"/>
-    <keyword type="property" name="The “background-pattern” property" link="ChamplainView.html#ChamplainView--background-pattern"/>
-    <keyword type="property" name="The “deceleration” property" link="ChamplainView.html#ChamplainView--deceleration"/>
-    <keyword type="property" name="The “goto-animation-duration” property" link="ChamplainView.html#ChamplainView--goto-animation-duration"/>
-    <keyword type="property" name="The “goto-animation-mode” property" link="ChamplainView.html#ChamplainView--goto-animation-mode"/>
-    <keyword type="property" name="The “horizontal-wrap” property" link="ChamplainView.html#ChamplainView--horizontal-wrap"/>
-    <keyword type="property" name="The “keep-center-on-resize” property" link="ChamplainView.html#ChamplainView--keep-center-on-resize"/>
-    <keyword type="property" name="The “kinetic-mode” property" link="ChamplainView.html#ChamplainView--kinetic-mode"/>
-    <keyword type="property" name="The “latitude” property" link="ChamplainView.html#ChamplainView--latitude"/>
-    <keyword type="property" name="The “longitude” property" link="ChamplainView.html#ChamplainView--longitude"/>
-    <keyword type="property" name="The “map-source” property" link="ChamplainView.html#ChamplainView--map-source"/>
-    <keyword type="property" name="The “max-zoom-level” property" link="ChamplainView.html#ChamplainView--max-zoom-level"/>
-    <keyword type="property" name="The “min-zoom-level” property" link="ChamplainView.html#ChamplainView--min-zoom-level"/>
-    <keyword type="property" name="The “state” property" link="ChamplainView.html#ChamplainView--state"/>
-    <keyword type="property" name="The “world” property" link="ChamplainView.html#ChamplainView--world"/>
-    <keyword type="property" name="The “zoom-level” property" link="ChamplainView.html#ChamplainView--zoom-level"/>
-    <keyword type="property" name="The “zoom-on-double-click” property" link="ChamplainView.html#ChamplainView--zoom-on-double-click"/>
-    <keyword type="signal" name="The “animation-completed” signal" link="ChamplainView.html#ChamplainView-animation-completed"/>
-    <keyword type="signal" name="The “layer-relocated” signal" link="ChamplainView.html#ChamplainView-layer-relocated"/>
-    <keyword type="function" name="champlain_layer_set_view ()" link="ChamplainLayer.html#champlain-layer-set-view" since="0.10"/>
-    <keyword type="function" name="champlain_layer_get_bounding_box ()" link="ChamplainLayer.html#champlain-layer-get-bounding-box" since="0.10"/>
+    <keyword type="function" name="champlain_view_new ()" link="ChamplainView.html#champlain-view-new" since="0.4"/>
+    <keyword type="function" name="champlain_view_center_on ()" link="ChamplainView.html#champlain-view-center-on" since="0.1"/>
+    <keyword type="function" name="champlain_view_go_to ()" link="ChamplainView.html#champlain-view-go-to" since="0.4"/>
+    <keyword type="function" name="champlain_view_stop_go_to ()" link="ChamplainView.html#champlain-view-stop-go-to" since="0.4"/>
+    <keyword type="function" name="champlain_view_zoom_in ()" link="ChamplainView.html#champlain-view-zoom-in" since="0.1"/>
+    <keyword type="function" name="champlain_view_zoom_out ()" link="ChamplainView.html#champlain-view-zoom-out" since="0.1"/>
+    <keyword type="function" name="champlain_view_set_zoom_level ()" link="ChamplainView.html#champlain-view-set-zoom-level" since="0.4"/>
+    <keyword type="function" name="champlain_view_set_min_zoom_level ()" link="ChamplainView.html#champlain-view-set-min-zoom-level" since="0.4"/>
+    <keyword type="function" name="champlain_view_set_max_zoom_level ()" link="ChamplainView.html#champlain-view-set-max-zoom-level" since="0.4"/>
+    <keyword type="function" name="champlain_view_ensure_visible ()" link="ChamplainView.html#champlain-view-ensure-visible" since="0.10"/>
+    <keyword type="function" name="champlain_view_ensure_layers_visible ()" link="ChamplainView.html#champlain-view-ensure-layers-visible" since="0.10"/>
+    <keyword type="function" name="champlain_view_set_map_source ()" link="ChamplainView.html#champlain-view-set-map-source" since="0.4"/>
+    <keyword type="function" name="champlain_view_set_deceleration ()" link="ChamplainView.html#champlain-view-set-deceleration" since="0.4"/>
+    <keyword type="function" name="champlain_view_set_kinetic_mode ()" link="ChamplainView.html#champlain-view-set-kinetic-mode" since="0.10"/>
+    <keyword type="function" name="champlain_view_set_keep_center_on_resize ()" link="ChamplainView.html#champlain-view-set-keep-center-on-resize" since="0.4"/>
+    <keyword type="function" name="champlain_view_set_zoom_on_double_click ()" link="ChamplainView.html#champlain-view-set-zoom-on-double-click" since="0.4"/>
+    <keyword type="function" name="champlain_view_set_animate_zoom ()" link="ChamplainView.html#champlain-view-set-animate-zoom" since="0.12"/>
+    <keyword type="function" name="champlain_view_set_background_pattern ()" link="ChamplainView.html#champlain-view-set-background-pattern" since="0.12.4"/>
+    <keyword type="function" name="champlain_view_add_layer ()" link="ChamplainView.html#champlain-view-add-layer" since="0.2"/>
+    <keyword type="function" name="champlain_view_remove_layer ()" link="ChamplainView.html#champlain-view-remove-layer" since="0.4.1"/>
+    <keyword type="function" name="champlain_view_get_zoom_level ()" link="ChamplainView.html#champlain-view-get-zoom-level" since="0.4"/>
+    <keyword type="function" name="champlain_view_get_min_zoom_level ()" link="ChamplainView.html#champlain-view-get-min-zoom-level" since="0.4"/>
+    <keyword type="function" name="champlain_view_get_max_zoom_level ()" link="ChamplainView.html#champlain-view-get-max-zoom-level" since="0.4"/>
+    <keyword type="function" name="champlain_view_get_map_source ()" link="ChamplainView.html#champlain-view-get-map-source" since="0.4"/>
+    <keyword type="function" name="champlain_view_get_deceleration ()" link="ChamplainView.html#champlain-view-get-deceleration" since="0.4"/>
+    <keyword type="function" name="champlain_view_get_kinetic_mode ()" link="ChamplainView.html#champlain-view-get-kinetic-mode" since="0.10"/>
+    <keyword type="function" name="champlain_view_get_keep_center_on_resize ()" link="ChamplainView.html#champlain-view-get-keep-center-on-resize" since="0.4"/>
+    <keyword type="function" name="champlain_view_get_zoom_on_double_click ()" link="ChamplainView.html#champlain-view-get-zoom-on-double-click" since="0.4"/>
+    <keyword type="function" name="champlain_view_get_animate_zoom ()" link="ChamplainView.html#champlain-view-get-animate-zoom" since="0.12"/>
+    <keyword type="function" name="champlain_view_get_background_pattern ()" link="ChamplainView.html#champlain-view-get-background-pattern" since="0.12.4"/>
+    <keyword type="function" name="champlain_view_reload_tiles ()" link="ChamplainView.html#champlain-view-reload-tiles" since="0.8"/>
+    <keyword type="function" name="champlain_view_x_to_longitude ()" link="ChamplainView.html#champlain-view-x-to-longitude" since="0.10"/>
+    <keyword type="function" name="champlain_view_y_to_latitude ()" link="ChamplainView.html#champlain-view-y-to-latitude" since="0.10"/>
+    <keyword type="function" name="champlain_view_longitude_to_x ()" link="ChamplainView.html#champlain-view-longitude-to-x" since="0.10"/>
+    <keyword type="function" name="champlain_view_latitude_to_y ()" link="ChamplainView.html#champlain-view-latitude-to-y" since="0.10"/>
+    <keyword type="function" name="champlain_view_get_viewport_origin ()" link="ChamplainView.html#champlain-view-get-viewport-origin" since="0.10"/>
+    <keyword type="function" name="champlain_view_bin_layout_add ()" link="ChamplainView.html#champlain-view-bin-layout-add" deprecated="" since="0.10"/>
+    <keyword type="function" name="champlain_view_get_license_actor ()" link="ChamplainView.html#champlain-view-get-license-actor" since="0.10"/>
+    <keyword type="function" name="champlain_view_get_center_latitude ()" link="ChamplainView.html#champlain-view-get-center-latitude" since="0.10"/>
+    <keyword type="function" name="champlain_view_get_center_longitude ()" link="ChamplainView.html#champlain-view-get-center-longitude" since="0.10"/>
+    <keyword type="function" name="champlain_view_get_bounding_box ()" link="ChamplainView.html#champlain-view-get-bounding-box" since="0.12.4"/>
+    <keyword type="function" name="champlain_view_get_state ()" link="ChamplainView.html#champlain-view-get-state" since="0.10"/>
+    <keyword type="property" name="The &quot;animate-zoom&quot; property" link="ChamplainView.html#ChamplainView--animate-zoom"/>
+    <keyword type="property" name="The &quot;background-pattern&quot; property" link="ChamplainView.html#ChamplainView--background-pattern"/>
+    <keyword type="property" name="The &quot;deceleration&quot; property" link="ChamplainView.html#ChamplainView--deceleration"/>
+    <keyword type="property" name="The &quot;keep-center-on-resize&quot; property" link="ChamplainView.html#ChamplainView--keep-center-on-resize"/>
+    <keyword type="property" name="The &quot;kinetic-mode&quot; property" link="ChamplainView.html#ChamplainView--kinetic-mode"/>
+    <keyword type="property" name="The &quot;latitude&quot; property" link="ChamplainView.html#ChamplainView--latitude"/>
+    <keyword type="property" name="The &quot;longitude&quot; property" link="ChamplainView.html#ChamplainView--longitude"/>
+    <keyword type="property" name="The &quot;map-source&quot; property" link="ChamplainView.html#ChamplainView--map-source"/>
+    <keyword type="property" name="The &quot;max-zoom-level&quot; property" link="ChamplainView.html#ChamplainView--max-zoom-level"/>
+    <keyword type="property" name="The &quot;min-zoom-level&quot; property" link="ChamplainView.html#ChamplainView--min-zoom-level"/>
+    <keyword type="property" name="The &quot;state&quot; property" link="ChamplainView.html#ChamplainView--state"/>
+    <keyword type="property" name="The &quot;zoom-level&quot; property" link="ChamplainView.html#ChamplainView--zoom-level"/>
+    <keyword type="property" name="The &quot;zoom-on-double-click&quot; property" link="ChamplainView.html#ChamplainView--zoom-on-double-click"/>
+    <keyword type="signal" name="The &quot;animation-completed&quot; signal" link="ChamplainView.html#ChamplainView-animation-completed"/>
+    <keyword type="signal" name="The &quot;layer-relocated&quot; signal" link="ChamplainView.html#ChamplainView-layer-relocated"/>
     <keyword type="struct" name="struct ChamplainLayer" link="ChamplainLayer.html#ChamplainLayer-struct"/>
-    <keyword type="function" name="champlain_marker_layer_new ()" link="ChamplainMarkerLayer.html#champlain-marker-layer-new" since="0.10"/>
-    <keyword type="function" name="champlain_marker_layer_new_full ()" link="ChamplainMarkerLayer.html#champlain-marker-layer-new-full" since="0.10"/>
-    <keyword type="function" name="champlain_marker_layer_add_marker ()" link="ChamplainMarkerLayer.html#champlain-marker-layer-add-marker" since="0.10"/>
-    <keyword type="function" name="champlain_marker_layer_remove_marker ()" link="ChamplainMarkerLayer.html#champlain-marker-layer-remove-marker" since="0.10"/>
-    <keyword type="function" name="champlain_marker_layer_remove_all ()" link="ChamplainMarkerLayer.html#champlain-marker-layer-remove-all" since="0.10"/>
-    <keyword type="function" name="champlain_marker_layer_get_markers ()" link="ChamplainMarkerLayer.html#champlain-marker-layer-get-markers" since="0.10"/>
-    <keyword type="function" name="champlain_marker_layer_get_selected ()" link="ChamplainMarkerLayer.html#champlain-marker-layer-get-selected" since="0.10"/>
-    <keyword type="function" name="champlain_marker_layer_animate_in_all_markers ()" link="ChamplainMarkerLayer.html#champlain-marker-layer-animate-in-all-markers" since="0.10"/>
-    <keyword type="function" name="champlain_marker_layer_animate_out_all_markers ()" link="ChamplainMarkerLayer.html#champlain-marker-layer-animate-out-all-markers" since="0.10"/>
-    <keyword type="function" name="champlain_marker_layer_show_all_markers ()" link="ChamplainMarkerLayer.html#champlain-marker-layer-show-all-markers" since="0.10"/>
-    <keyword type="function" name="champlain_marker_layer_hide_all_markers ()" link="ChamplainMarkerLayer.html#champlain-marker-layer-hide-all-markers" since="0.10"/>
-    <keyword type="function" name="champlain_marker_layer_set_all_markers_draggable ()" link="ChamplainMarkerLayer.html#champlain-marker-layer-set-all-markers-draggable" since="0.10"/>
-    <keyword type="function" name="champlain_marker_layer_set_all_markers_undraggable ()" link="ChamplainMarkerLayer.html#champlain-marker-layer-set-all-markers-undraggable" since="0.10"/>
-    <keyword type="function" name="champlain_marker_layer_select_all_markers ()" link="ChamplainMarkerLayer.html#champlain-marker-layer-select-all-markers" since="0.10"/>
-    <keyword type="function" name="champlain_marker_layer_unselect_all_markers ()" link="ChamplainMarkerLayer.html#champlain-marker-layer-unselect-all-markers" since="0.10"/>
-    <keyword type="function" name="champlain_marker_layer_set_selection_mode ()" link="ChamplainMarkerLayer.html#champlain-marker-layer-set-selection-mode" since="0.10"/>
-    <keyword type="function" name="champlain_marker_layer_get_selection_mode ()" link="ChamplainMarkerLayer.html#champlain-marker-layer-get-selection-mode" since="0.10"/>
+    <keyword type="function" name="champlain_layer_set_view ()" link="ChamplainLayer.html#champlain-layer-set-view" since="0.10"/>
+    <keyword type="function" name="champlain_layer_get_bounding_box ()" link="ChamplainLayer.html#champlain-layer-get-bounding-box" since="0.10"/>
     <keyword type="struct" name="struct ChamplainMarkerLayer" link="ChamplainMarkerLayer.html#ChamplainMarkerLayer-struct"/>
     <keyword type="enum" name="enum ChamplainSelectionMode" link="ChamplainMarkerLayer.html#ChamplainSelectionMode"/>
-    <keyword type="property" name="The “selection-mode” property" link="ChamplainMarkerLayer.html#ChamplainMarkerLayer--selection-mode"/>
-    <keyword type="function" name="champlain_path_layer_new ()" link="ChamplainPathLayer.html#champlain-path-layer-new" since="0.10"/>
-    <keyword type="function" name="champlain_path_layer_add_node ()" link="ChamplainPathLayer.html#champlain-path-layer-add-node" since="0.10"/>
-    <keyword type="function" name="champlain_path_layer_remove_node ()" link="ChamplainPathLayer.html#champlain-path-layer-remove-node" since="0.10"/>
-    <keyword type="function" name="champlain_path_layer_remove_all ()" link="ChamplainPathLayer.html#champlain-path-layer-remove-all" since="0.10"/>
-    <keyword type="function" name="champlain_path_layer_insert_node ()" link="ChamplainPathLayer.html#champlain-path-layer-insert-node" since="0.10"/>
-    <keyword type="function" name="champlain_path_layer_get_nodes ()" link="ChamplainPathLayer.html#champlain-path-layer-get-nodes" since="0.10"/>
-    <keyword type="function" name="champlain_path_layer_get_fill_color ()" link="ChamplainPathLayer.html#champlain-path-layer-get-fill-color" since="0.10"/>
-    <keyword type="function" name="champlain_path_layer_set_fill_color ()" link="ChamplainPathLayer.html#champlain-path-layer-set-fill-color" since="0.10"/>
-    <keyword type="function" name="champlain_path_layer_get_stroke_color ()" link="ChamplainPathLayer.html#champlain-path-layer-get-stroke-color" since="0.10"/>
-    <keyword type="function" name="champlain_path_layer_set_stroke_color ()" link="ChamplainPathLayer.html#champlain-path-layer-set-stroke-color" since="0.10"/>
-    <keyword type="function" name="champlain_path_layer_get_fill ()" link="ChamplainPathLayer.html#champlain-path-layer-get-fill" since="0.10"/>
-    <keyword type="function" name="champlain_path_layer_set_fill ()" link="ChamplainPathLayer.html#champlain-path-layer-set-fill" since="0.10"/>
-    <keyword type="function" name="champlain_path_layer_get_stroke ()" link="ChamplainPathLayer.html#champlain-path-layer-get-stroke" since="0.10"/>
-    <keyword type="function" name="champlain_path_layer_set_stroke ()" link="ChamplainPathLayer.html#champlain-path-layer-set-stroke" since="0.10"/>
-    <keyword type="function" name="champlain_path_layer_get_stroke_width ()" link="ChamplainPathLayer.html#champlain-path-layer-get-stroke-width" since="0.10"/>
-    <keyword type="function" name="champlain_path_layer_set_stroke_width ()" link="ChamplainPathLayer.html#champlain-path-layer-set-stroke-width" since="0.10"/>
-    <keyword type="function" name="champlain_path_layer_get_visible ()" link="ChamplainPathLayer.html#champlain-path-layer-get-visible" since="0.10"/>
-    <keyword type="function" name="champlain_path_layer_set_visible ()" link="ChamplainPathLayer.html#champlain-path-layer-set-visible" since="0.10"/>
-    <keyword type="function" name="champlain_path_layer_get_closed ()" link="ChamplainPathLayer.html#champlain-path-layer-get-closed" since="0.10"/>
-    <keyword type="function" name="champlain_path_layer_set_closed ()" link="ChamplainPathLayer.html#champlain-path-layer-set-closed" since="0.10"/>
-    <keyword type="function" name="champlain_path_layer_get_dash ()" link="ChamplainPathLayer.html#champlain-path-layer-get-dash" since="0.12.4"/>
-    <keyword type="function" name="champlain_path_layer_set_dash ()" link="ChamplainPathLayer.html#champlain-path-layer-set-dash" since="0.12.4"/>
+    <keyword type="function" name="champlain_marker_layer_new ()" link="ChamplainMarkerLayer.html#champlain-marker-layer-new" since="0.10"/>
+    <keyword type="function" name="champlain_marker_layer_new_full ()" link="ChamplainMarkerLayer.html#champlain-marker-layer-new-full" since="0.10"/>
+    <keyword type="function" name="champlain_marker_layer_add_marker ()" link="ChamplainMarkerLayer.html#champlain-marker-layer-add-marker" since="0.10"/>
+    <keyword type="function" name="champlain_marker_layer_remove_marker ()" link="ChamplainMarkerLayer.html#champlain-marker-layer-remove-marker" since="0.10"/>
+    <keyword type="function" name="champlain_marker_layer_remove_all ()" link="ChamplainMarkerLayer.html#champlain-marker-layer-remove-all" since="0.10"/>
+    <keyword type="function" name="champlain_marker_layer_get_markers ()" link="ChamplainMarkerLayer.html#champlain-marker-layer-get-markers" since="0.10"/>
+    <keyword type="function" name="champlain_marker_layer_get_selected ()" link="ChamplainMarkerLayer.html#champlain-marker-layer-get-selected" since="0.10"/>
+    <keyword type="function" name="champlain_marker_layer_animate_in_all_markers ()" link="ChamplainMarkerLayer.html#champlain-marker-layer-animate-in-all-markers" since="0.10"/>
+    <keyword type="function" name="champlain_marker_layer_animate_out_all_markers ()" link="ChamplainMarkerLayer.html#champlain-marker-layer-animate-out-all-markers" since="0.10"/>
+    <keyword type="function" name="champlain_marker_layer_show_all_markers ()" link="ChamplainMarkerLayer.html#champlain-marker-layer-show-all-markers" since="0.10"/>
+    <keyword type="function" name="champlain_marker_layer_hide_all_markers ()" link="ChamplainMarkerLayer.html#champlain-marker-layer-hide-all-markers" since="0.10"/>
+    <keyword type="function" name="champlain_marker_layer_set_all_markers_draggable ()" link="ChamplainMarkerLayer.html#champlain-marker-layer-set-all-markers-draggable" since="0.10"/>
+    <keyword type="function" name="champlain_marker_layer_set_all_markers_undraggable ()" link="ChamplainMarkerLayer.html#champlain-marker-layer-set-all-markers-undraggable" since="0.10"/>
+    <keyword type="function" name="champlain_marker_layer_select_all_markers ()" link="ChamplainMarkerLayer.html#champlain-marker-layer-select-all-markers" since="0.10"/>
+    <keyword type="function" name="champlain_marker_layer_unselect_all_markers ()" link="ChamplainMarkerLayer.html#champlain-marker-layer-unselect-all-markers" since="0.10"/>
+    <keyword type="function" name="champlain_marker_layer_set_selection_mode ()" link="ChamplainMarkerLayer.html#champlain-marker-layer-set-selection-mode" since="0.10"/>
+    <keyword type="function" name="champlain_marker_layer_get_selection_mode ()" link="ChamplainMarkerLayer.html#champlain-marker-layer-get-selection-mode" since="0.10"/>
+    <keyword type="property" name="The &quot;selection-mode&quot; property" link="ChamplainMarkerLayer.html#ChamplainMarkerLayer--selection-mode"/>
     <keyword type="struct" name="struct ChamplainPathLayer" link="ChamplainPathLayer.html#ChamplainPathLayer-struct"/>
-    <keyword type="property" name="The “closed” property" link="ChamplainPathLayer.html#ChamplainPathLayer--closed"/>
-    <keyword type="property" name="The “fill” property" link="ChamplainPathLayer.html#ChamplainPathLayer--fill"/>
-    <keyword type="property" name="The “fill-color” property" link="ChamplainPathLayer.html#ChamplainPathLayer--fill-color"/>
-    <keyword type="property" name="The “stroke” property" link="ChamplainPathLayer.html#ChamplainPathLayer--stroke"/>
-    <keyword type="property" name="The “stroke-color” property" link="ChamplainPathLayer.html#ChamplainPathLayer--stroke-color"/>
-    <keyword type="property" name="The “stroke-width” property" link="ChamplainPathLayer.html#ChamplainPathLayer--stroke-width"/>
-    <keyword type="property" name="The “visible” property" link="ChamplainPathLayer.html#ChamplainPathLayer--visible"/>
-    <keyword type="function" name="champlain_marker_new ()" link="ChamplainMarker.html#champlain-marker-new" since="0.12.4"/>
-    <keyword type="function" name="champlain_marker_set_selectable ()" link="ChamplainMarker.html#champlain-marker-set-selectable" since="0.10"/>
-    <keyword type="function" name="champlain_marker_get_selectable ()" link="ChamplainMarker.html#champlain-marker-get-selectable" since="0.10"/>
-    <keyword type="function" name="champlain_marker_set_draggable ()" link="ChamplainMarker.html#champlain-marker-set-draggable" since="0.10"/>
-    <keyword type="function" name="champlain_marker_get_draggable ()" link="ChamplainMarker.html#champlain-marker-get-draggable" since="0.10"/>
-    <keyword type="function" name="champlain_marker_set_selected ()" link="ChamplainMarker.html#champlain-marker-set-selected" since="0.10"/>
-    <keyword type="function" name="champlain_marker_get_selected ()" link="ChamplainMarker.html#champlain-marker-get-selected" since="0.10"/>
-    <keyword type="function" name="champlain_marker_animate_in ()" link="ChamplainMarker.html#champlain-marker-animate-in" since="0.10"/>
-    <keyword type="function" name="champlain_marker_animate_in_with_delay ()" link="ChamplainMarker.html#champlain-marker-animate-in-with-delay" since="0.10"/>
-    <keyword type="function" name="champlain_marker_animate_out ()" link="ChamplainMarker.html#champlain-marker-animate-out" since="0.10"/>
-    <keyword type="function" name="champlain_marker_animate_out_with_delay ()" link="ChamplainMarker.html#champlain-marker-animate-out-with-delay" since="0.10"/>
-    <keyword type="function" name="champlain_marker_get_selection_color ()" link="ChamplainMarker.html#champlain-marker-get-selection-color" since="0.10"/>
-    <keyword type="function" name="champlain_marker_get_selection_text_color ()" link="ChamplainMarker.html#champlain-marker-get-selection-text-color" since="0.10"/>
-    <keyword type="function" name="champlain_marker_set_selection_color ()" link="ChamplainMarker.html#champlain-marker-set-selection-color" since="0.10"/>
-    <keyword type="function" name="champlain_marker_set_selection_text_color ()" link="ChamplainMarker.html#champlain-marker-set-selection-text-color" since="0.10"/>
+    <keyword type="function" name="champlain_path_layer_new ()" link="ChamplainPathLayer.html#champlain-path-layer-new" since="0.10"/>
+    <keyword type="function" name="champlain_path_layer_add_node ()" link="ChamplainPathLayer.html#champlain-path-layer-add-node" since="0.10"/>
+    <keyword type="function" name="champlain_path_layer_remove_node ()" link="ChamplainPathLayer.html#champlain-path-layer-remove-node" since="0.10"/>
+    <keyword type="function" name="champlain_path_layer_remove_all ()" link="ChamplainPathLayer.html#champlain-path-layer-remove-all" since="0.10"/>
+    <keyword type="function" name="champlain_path_layer_insert_node ()" link="ChamplainPathLayer.html#champlain-path-layer-insert-node" since="0.10"/>
+    <keyword type="function" name="champlain_path_layer_get_nodes ()" link="ChamplainPathLayer.html#champlain-path-layer-get-nodes" since="0.10"/>
+    <keyword type="function" name="champlain_path_layer_get_fill_color ()" link="ChamplainPathLayer.html#champlain-path-layer-get-fill-color" since="0.10"/>
+    <keyword type="function" name="champlain_path_layer_set_fill_color ()" link="ChamplainPathLayer.html#champlain-path-layer-set-fill-color" since="0.10"/>
+    <keyword type="function" name="champlain_path_layer_get_stroke_color ()" link="ChamplainPathLayer.html#champlain-path-layer-get-stroke-color" since="0.10"/>
+    <keyword type="function" name="champlain_path_layer_set_stroke_color ()" link="ChamplainPathLayer.html#champlain-path-layer-set-stroke-color" since="0.10"/>
+    <keyword type="function" name="champlain_path_layer_get_fill ()" link="ChamplainPathLayer.html#champlain-path-layer-get-fill" since="0.10"/>
+    <keyword type="function" name="champlain_path_layer_set_fill ()" link="ChamplainPathLayer.html#champlain-path-layer-set-fill" since="0.10"/>
+    <keyword type="function" name="champlain_path_layer_get_stroke ()" link="ChamplainPathLayer.html#champlain-path-layer-get-stroke" since="0.10"/>
+    <keyword type="function" name="champlain_path_layer_set_stroke ()" link="ChamplainPathLayer.html#champlain-path-layer-set-stroke" since="0.10"/>
+    <keyword type="function" name="champlain_path_layer_get_stroke_width ()" link="ChamplainPathLayer.html#champlain-path-layer-get-stroke-width" since="0.10"/>
+    <keyword type="function" name="champlain_path_layer_set_stroke_width ()" link="ChamplainPathLayer.html#champlain-path-layer-set-stroke-width" since="0.10"/>
+    <keyword type="function" name="champlain_path_layer_get_visible ()" link="ChamplainPathLayer.html#champlain-path-layer-get-visible" since="0.10"/>
+    <keyword type="function" name="champlain_path_layer_set_visible ()" link="ChamplainPathLayer.html#champlain-path-layer-set-visible" since="0.10"/>
+    <keyword type="function" name="champlain_path_layer_get_closed ()" link="ChamplainPathLayer.html#champlain-path-layer-get-closed" since="0.10"/>
+    <keyword type="function" name="champlain_path_layer_set_closed ()" link="ChamplainPathLayer.html#champlain-path-layer-set-closed" since="0.10"/>
+    <keyword type="function" name="champlain_path_layer_get_dash ()" link="ChamplainPathLayer.html#champlain-path-layer-get-dash" since="0.12.4"/>
+    <keyword type="function" name="champlain_path_layer_set_dash ()" link="ChamplainPathLayer.html#champlain-path-layer-set-dash" since="0.12.4"/>
+    <keyword type="property" name="The &quot;closed&quot; property" link="ChamplainPathLayer.html#ChamplainPathLayer--closed"/>
+    <keyword type="property" name="The &quot;fill&quot; property" link="ChamplainPathLayer.html#ChamplainPathLayer--fill"/>
+    <keyword type="property" name="The &quot;fill-color&quot; property" link="ChamplainPathLayer.html#ChamplainPathLayer--fill-color"/>
+    <keyword type="property" name="The &quot;stroke&quot; property" link="ChamplainPathLayer.html#ChamplainPathLayer--stroke"/>
+    <keyword type="property" name="The &quot;stroke-color&quot; property" link="ChamplainPathLayer.html#ChamplainPathLayer--stroke-color"/>
+    <keyword type="property" name="The &quot;stroke-width&quot; property" link="ChamplainPathLayer.html#ChamplainPathLayer--stroke-width"/>
+    <keyword type="property" name="The &quot;visible&quot; property" link="ChamplainPathLayer.html#ChamplainPathLayer--visible"/>
     <keyword type="struct" name="struct ChamplainMarker" link="ChamplainMarker.html#ChamplainMarker-struct"/>
-    <keyword type="property" name="The “draggable” property" link="ChamplainMarker.html#ChamplainMarker--draggable"/>
-    <keyword type="property" name="The “selectable” property" link="ChamplainMarker.html#ChamplainMarker--selectable"/>
-    <keyword type="property" name="The “selected” property" link="ChamplainMarker.html#ChamplainMarker--selected"/>
-    <keyword type="signal" name="The “button-press” signal" link="ChamplainMarker.html#ChamplainMarker-button-press"/>
-    <keyword type="signal" name="The “button-release” signal" link="ChamplainMarker.html#ChamplainMarker-button-release"/>
-    <keyword type="signal" name="The “drag-finish” signal" link="ChamplainMarker.html#ChamplainMarker-drag-finish"/>
-    <keyword type="signal" name="The “drag-motion” signal" link="ChamplainMarker.html#ChamplainMarker-drag-motion"/>
-    <keyword type="function" name="champlain_label_new ()" link="ChamplainLabel.html#champlain-label-new" since="0.10"/>
-    <keyword type="function" name="champlain_label_new_with_text ()" link="ChamplainLabel.html#champlain-label-new-with-text" since="0.10"/>
-    <keyword type="function" name="champlain_label_new_with_image ()" link="ChamplainLabel.html#champlain-label-new-with-image" since="0.10"/>
-    <keyword type="function" name="champlain_label_new_from_file ()" link="ChamplainLabel.html#champlain-label-new-from-file" since="0.10"/>
-    <keyword type="function" name="champlain_label_new_full ()" link="ChamplainLabel.html#champlain-label-new-full" since="0.10"/>
-    <keyword type="function" name="champlain_label_set_text ()" link="ChamplainLabel.html#champlain-label-set-text" since="0.10"/>
-    <keyword type="function" name="champlain_label_set_image ()" link="ChamplainLabel.html#champlain-label-set-image" since="0.10"/>
-    <keyword type="function" name="champlain_label_set_use_markup ()" link="ChamplainLabel.html#champlain-label-set-use-markup" since="0.10"/>
-    <keyword type="function" name="champlain_label_set_alignment ()" link="ChamplainLabel.html#champlain-label-set-alignment" since="0.10"/>
-    <keyword type="function" name="champlain_label_set_color ()" link="ChamplainLabel.html#champlain-label-set-color" since="0.10"/>
-    <keyword type="function" name="champlain_label_set_text_color ()" link="ChamplainLabel.html#champlain-label-set-text-color" since="0.10"/>
-    <keyword type="function" name="champlain_label_set_font_name ()" link="ChamplainLabel.html#champlain-label-set-font-name" since="0.10"/>
-    <keyword type="function" name="champlain_label_set_wrap ()" link="ChamplainLabel.html#champlain-label-set-wrap" since="0.10"/>
-    <keyword type="function" name="champlain_label_set_wrap_mode ()" link="ChamplainLabel.html#champlain-label-set-wrap-mode" since="0.10"/>
-    <keyword type="function" name="champlain_label_set_attributes ()" link="ChamplainLabel.html#champlain-label-set-attributes" since="0.10"/>
-    <keyword type="function" name="champlain_label_set_single_line_mode ()" link="ChamplainLabel.html#champlain-label-set-single-line-mode" since="0.10"/>
-    <keyword type="function" name="champlain_label_set_ellipsize ()" link="ChamplainLabel.html#champlain-label-set-ellipsize" since="0.10"/>
-    <keyword type="function" name="champlain_label_set_draw_background ()" link="ChamplainLabel.html#champlain-label-set-draw-background" since="0.10"/>
-    <keyword type="function" name="champlain_label_set_draw_shadow ()" link="ChamplainLabel.html#champlain-label-set-draw-shadow" since="0.12.10"/>
-    <keyword type="function" name="champlain_label_get_use_markup ()" link="ChamplainLabel.html#champlain-label-get-use-markup" since="0.10"/>
-    <keyword type="function" name="champlain_label_get_text ()" link="ChamplainLabel.html#champlain-label-get-text" since="0.10"/>
-    <keyword type="function" name="champlain_label_get_image ()" link="ChamplainLabel.html#champlain-label-get-image" since="0.10"/>
-    <keyword type="function" name="champlain_label_get_alignment ()" link="ChamplainLabel.html#champlain-label-get-alignment" since="0.10"/>
-    <keyword type="function" name="champlain_label_get_color ()" link="ChamplainLabel.html#champlain-label-get-color" since="0.10"/>
-    <keyword type="function" name="champlain_label_get_text_color ()" link="ChamplainLabel.html#champlain-label-get-text-color" since="0.10"/>
-    <keyword type="function" name="champlain_label_get_font_name ()" link="ChamplainLabel.html#champlain-label-get-font-name" since="0.10"/>
-    <keyword type="function" name="champlain_label_get_wrap ()" link="ChamplainLabel.html#champlain-label-get-wrap" since="0.10"/>
-    <keyword type="function" name="champlain_label_get_wrap_mode ()" link="ChamplainLabel.html#champlain-label-get-wrap-mode" since="0.10"/>
-    <keyword type="function" name="champlain_label_get_ellipsize ()" link="ChamplainLabel.html#champlain-label-get-ellipsize" since="0.10"/>
-    <keyword type="function" name="champlain_label_get_single_line_mode ()" link="ChamplainLabel.html#champlain-label-get-single-line-mode" since="0.10"/>
-    <keyword type="function" name="champlain_label_get_draw_background ()" link="ChamplainLabel.html#champlain-label-get-draw-background" since="0.10"/>
-    <keyword type="function" name="champlain_label_get_attributes ()" link="ChamplainLabel.html#champlain-label-get-attributes" since="0.10"/>
-    <keyword type="function" name="champlain_label_get_draw_shadow ()" link="ChamplainLabel.html#champlain-label-get-draw-shadow" since="0.12.10"/>
+    <keyword type="function" name="champlain_marker_new ()" link="ChamplainMarker.html#champlain-marker-new" since="0.12.4"/>
+    <keyword type="function" name="champlain_marker_set_selectable ()" link="ChamplainMarker.html#champlain-marker-set-selectable" since="0.10"/>
+    <keyword type="function" name="champlain_marker_get_selectable ()" link="ChamplainMarker.html#champlain-marker-get-selectable" since="0.10"/>
+    <keyword type="function" name="champlain_marker_set_draggable ()" link="ChamplainMarker.html#champlain-marker-set-draggable" since="0.10"/>
+    <keyword type="function" name="champlain_marker_get_draggable ()" link="ChamplainMarker.html#champlain-marker-get-draggable" since="0.10"/>
+    <keyword type="function" name="champlain_marker_set_selected ()" link="ChamplainMarker.html#champlain-marker-set-selected" since="0.10"/>
+    <keyword type="function" name="champlain_marker_get_selected ()" link="ChamplainMarker.html#champlain-marker-get-selected" since="0.10"/>
+    <keyword type="function" name="champlain_marker_animate_in ()" link="ChamplainMarker.html#champlain-marker-animate-in" since="0.10"/>
+    <keyword type="function" name="champlain_marker_animate_in_with_delay ()" link="ChamplainMarker.html#champlain-marker-animate-in-with-delay" since="0.10"/>
+    <keyword type="function" name="champlain_marker_animate_out ()" link="ChamplainMarker.html#champlain-marker-animate-out" since="0.10"/>
+    <keyword type="function" name="champlain_marker_animate_out_with_delay ()" link="ChamplainMarker.html#champlain-marker-animate-out-with-delay" since="0.10"/>
+    <keyword type="function" name="champlain_marker_get_selection_color ()" link="ChamplainMarker.html#champlain-marker-get-selection-color" since="0.10"/>
+    <keyword type="function" name="champlain_marker_get_selection_text_color ()" link="ChamplainMarker.html#champlain-marker-get-selection-text-color" since="0.10"/>
+    <keyword type="function" name="champlain_marker_set_selection_color ()" link="ChamplainMarker.html#champlain-marker-set-selection-color" since="0.10"/>
+    <keyword type="function" name="champlain_marker_set_selection_text_color ()" link="ChamplainMarker.html#champlain-marker-set-selection-text-color" since="0.10"/>
+    <keyword type="property" name="The &quot;draggable&quot; property" link="ChamplainMarker.html#ChamplainMarker--draggable"/>
+    <keyword type="property" name="The &quot;selectable&quot; property" link="ChamplainMarker.html#ChamplainMarker--selectable"/>
+    <keyword type="property" name="The &quot;selected&quot; property" link="ChamplainMarker.html#ChamplainMarker--selected"/>
+    <keyword type="signal" name="The &quot;button-press&quot; signal" link="ChamplainMarker.html#ChamplainMarker-button-press"/>
+    <keyword type="signal" name="The &quot;button-release&quot; signal" link="ChamplainMarker.html#ChamplainMarker-button-release"/>
+    <keyword type="signal" name="The &quot;drag-finish&quot; signal" link="ChamplainMarker.html#ChamplainMarker-drag-finish"/>
+    <keyword type="signal" name="The &quot;drag-motion&quot; signal" link="ChamplainMarker.html#ChamplainMarker-drag-motion"/>
     <keyword type="struct" name="struct ChamplainLabel" link="ChamplainLabel.html#ChamplainLabel-struct"/>
-    <keyword type="property" name="The “alignment” property" link="ChamplainLabel.html#ChamplainLabel--alignment"/>
-    <keyword type="property" name="The “color” property" link="ChamplainLabel.html#ChamplainLabel--color"/>
-    <keyword type="property" name="The “draw-background” property" link="ChamplainLabel.html#ChamplainLabel--draw-background"/>
-    <keyword type="property" name="The “draw-shadow” property" link="ChamplainLabel.html#ChamplainLabel--draw-shadow"/>
-    <keyword type="property" name="The “ellipsize” property" link="ChamplainLabel.html#ChamplainLabel--ellipsize"/>
-    <keyword type="property" name="The “font-name” property" link="ChamplainLabel.html#ChamplainLabel--font-name"/>
-    <keyword type="property" name="The “image” property" link="ChamplainLabel.html#ChamplainLabel--image"/>
-    <keyword type="property" name="The “single-line-mode” property" link="ChamplainLabel.html#ChamplainLabel--single-line-mode"/>
-    <keyword type="property" name="The “text” property" link="ChamplainLabel.html#ChamplainLabel--text"/>
-    <keyword type="property" name="The “text-color” property" link="ChamplainLabel.html#ChamplainLabel--text-color"/>
-    <keyword type="property" name="The “use-markup” property" link="ChamplainLabel.html#ChamplainLabel--use-markup"/>
-    <keyword type="property" name="The “wrap” property" link="ChamplainLabel.html#ChamplainLabel--wrap"/>
-    <keyword type="property" name="The “wrap-mode” property" link="ChamplainLabel.html#ChamplainLabel--wrap-mode"/>
-    <keyword type="function" name="champlain_point_new ()" link="ChamplainPoint.html#champlain-point-new" since="0.10"/>
-    <keyword type="function" name="champlain_point_new_full ()" link="ChamplainPoint.html#champlain-point-new-full" since="0.10"/>
-    <keyword type="function" name="champlain_point_set_color ()" link="ChamplainPoint.html#champlain-point-set-color" since="0.10"/>
-    <keyword type="function" name="champlain_point_get_color ()" link="ChamplainPoint.html#champlain-point-get-color" since="0.10"/>
-    <keyword type="function" name="champlain_point_set_size ()" link="ChamplainPoint.html#champlain-point-set-size" since="0.10"/>
-    <keyword type="function" name="champlain_point_get_size ()" link="ChamplainPoint.html#champlain-point-get-size" since="0.10"/>
+    <keyword type="function" name="champlain_label_new ()" link="ChamplainLabel.html#champlain-label-new" since="0.10"/>
+    <keyword type="function" name="champlain_label_new_with_text ()" link="ChamplainLabel.html#champlain-label-new-with-text" since="0.10"/>
+    <keyword type="function" name="champlain_label_new_with_image ()" link="ChamplainLabel.html#champlain-label-new-with-image" since="0.10"/>
+    <keyword type="function" name="champlain_label_new_from_file ()" link="ChamplainLabel.html#champlain-label-new-from-file" since="0.10"/>
+    <keyword type="function" name="champlain_label_new_full ()" link="ChamplainLabel.html#champlain-label-new-full" since="0.10"/>
+    <keyword type="function" name="champlain_label_set_text ()" link="ChamplainLabel.html#champlain-label-set-text" since="0.10"/>
+    <keyword type="function" name="champlain_label_set_image ()" link="ChamplainLabel.html#champlain-label-set-image" since="0.10"/>
+    <keyword type="function" name="champlain_label_set_use_markup ()" link="ChamplainLabel.html#champlain-label-set-use-markup" since="0.10"/>
+    <keyword type="function" name="champlain_label_set_alignment ()" link="ChamplainLabel.html#champlain-label-set-alignment" since="0.10"/>
+    <keyword type="function" name="champlain_label_set_color ()" link="ChamplainLabel.html#champlain-label-set-color" since="0.10"/>
+    <keyword type="function" name="champlain_label_set_text_color ()" link="ChamplainLabel.html#champlain-label-set-text-color" since="0.10"/>
+    <keyword type="function" name="champlain_label_set_font_name ()" link="ChamplainLabel.html#champlain-label-set-font-name" since="0.10"/>
+    <keyword type="function" name="champlain_label_set_wrap ()" link="ChamplainLabel.html#champlain-label-set-wrap" since="0.10"/>
+    <keyword type="function" name="champlain_label_set_wrap_mode ()" link="ChamplainLabel.html#champlain-label-set-wrap-mode" since="0.10"/>
+    <keyword type="function" name="champlain_label_set_attributes ()" link="ChamplainLabel.html#champlain-label-set-attributes" since="0.10"/>
+    <keyword type="function" name="champlain_label_set_single_line_mode ()" link="ChamplainLabel.html#champlain-label-set-single-line-mode" since="0.10"/>
+    <keyword type="function" name="champlain_label_set_ellipsize ()" link="ChamplainLabel.html#champlain-label-set-ellipsize" since="0.10"/>
+    <keyword type="function" name="champlain_label_set_draw_background ()" link="ChamplainLabel.html#champlain-label-set-draw-background" since="0.10"/>
+    <keyword type="function" name="champlain_label_get_use_markup ()" link="ChamplainLabel.html#champlain-label-get-use-markup" since="0.10"/>
+    <keyword type="function" name="champlain_label_get_text ()" link="ChamplainLabel.html#champlain-label-get-text" since="0.10"/>
+    <keyword type="function" name="champlain_label_get_image ()" link="ChamplainLabel.html#champlain-label-get-image" since="0.10"/>
+    <keyword type="function" name="champlain_label_get_alignment ()" link="ChamplainLabel.html#champlain-label-get-alignment" since="0.10"/>
+    <keyword type="function" name="champlain_label_get_color ()" link="ChamplainLabel.html#champlain-label-get-color" since="0.10"/>
+    <keyword type="function" name="champlain_label_get_text_color ()" link="ChamplainLabel.html#champlain-label-get-text-color" since="0.10"/>
+    <keyword type="function" name="champlain_label_get_font_name ()" link="ChamplainLabel.html#champlain-label-get-font-name" since="0.10"/>
+    <keyword type="function" name="champlain_label_get_wrap ()" link="ChamplainLabel.html#champlain-label-get-wrap" since="0.10"/>
+    <keyword type="function" name="champlain_label_get_wrap_mode ()" link="ChamplainLabel.html#champlain-label-get-wrap-mode" since="0.10"/>
+    <keyword type="function" name="champlain_label_get_ellipsize ()" link="ChamplainLabel.html#champlain-label-get-ellipsize" since="0.10"/>
+    <keyword type="function" name="champlain_label_get_single_line_mode ()" link="ChamplainLabel.html#champlain-label-get-single-line-mode" since="0.10"/>
+    <keyword type="function" name="champlain_label_get_draw_background ()" link="ChamplainLabel.html#champlain-label-get-draw-background" since="0.10"/>
+    <keyword type="function" name="champlain_label_get_attributes ()" link="ChamplainLabel.html#champlain-label-get-attributes" since="0.10"/>
+    <keyword type="property" name="The &quot;alignment&quot; property" link="ChamplainLabel.html#ChamplainLabel--alignment"/>
+    <keyword type="property" name="The &quot;color&quot; property" link="ChamplainLabel.html#ChamplainLabel--color"/>
+    <keyword type="property" name="The &quot;draw-background&quot; property" link="ChamplainLabel.html#ChamplainLabel--draw-background"/>
+    <keyword type="property" name="The &quot;ellipsize&quot; property" link="ChamplainLabel.html#ChamplainLabel--ellipsize"/>
+    <keyword type="property" name="The &quot;font-name&quot; property" link="ChamplainLabel.html#ChamplainLabel--font-name"/>
+    <keyword type="property" name="The &quot;image&quot; property" link="ChamplainLabel.html#ChamplainLabel--image"/>
+    <keyword type="property" name="The &quot;single-line-mode&quot; property" link="ChamplainLabel.html#ChamplainLabel--single-line-mode"/>
+    <keyword type="property" name="The &quot;text&quot; property" link="ChamplainLabel.html#ChamplainLabel--text"/>
+    <keyword type="property" name="The &quot;text-color&quot; property" link="ChamplainLabel.html#ChamplainLabel--text-color"/>
+    <keyword type="property" name="The &quot;use-markup&quot; property" link="ChamplainLabel.html#ChamplainLabel--use-markup"/>
+    <keyword type="property" name="The &quot;wrap&quot; property" link="ChamplainLabel.html#ChamplainLabel--wrap"/>
+    <keyword type="property" name="The &quot;wrap-mode&quot; property" link="ChamplainLabel.html#ChamplainLabel--wrap-mode"/>
     <keyword type="struct" name="struct ChamplainPoint" link="ChamplainPoint.html#ChamplainPoint-struct"/>
-    <keyword type="property" name="The “color” property" link="ChamplainPoint.html#ChamplainPoint--color"/>
-    <keyword type="property" name="The “size” property" link="ChamplainPoint.html#ChamplainPoint--size"/>
-    <keyword type="function" name="champlain_custom_marker_new ()" link="ChamplainCustomMarker.html#champlain-custom-marker-new" deprecated="" since="0.10"/>
+    <keyword type="function" name="champlain_point_new ()" link="ChamplainPoint.html#champlain-point-new" since="0.10"/>
+    <keyword type="function" name="champlain_point_new_full ()" link="ChamplainPoint.html#champlain-point-new-full" since="0.10"/>
+    <keyword type="function" name="champlain_point_set_color ()" link="ChamplainPoint.html#champlain-point-set-color" since="0.10"/>
+    <keyword type="function" name="champlain_point_get_color ()" link="ChamplainPoint.html#champlain-point-get-color" since="0.10"/>
+    <keyword type="function" name="champlain_point_set_size ()" link="ChamplainPoint.html#champlain-point-set-size" since="0.10"/>
+    <keyword type="function" name="champlain_point_get_size ()" link="ChamplainPoint.html#champlain-point-get-size" since="0.10"/>
+    <keyword type="property" name="The &quot;color&quot; property" link="ChamplainPoint.html#ChamplainPoint--color"/>
+    <keyword type="property" name="The &quot;size&quot; property" link="ChamplainPoint.html#ChamplainPoint--size"/>
     <keyword type="struct" name="struct ChamplainCustomMarker" link="ChamplainCustomMarker.html#ChamplainCustomMarker-struct"/>
-    <keyword type="function" name="champlain_location_set_location ()" link="ChamplainLocation.html#champlain-location-set-location" since="0.10"/>
-    <keyword type="function" name="champlain_location_get_latitude ()" link="ChamplainLocation.html#champlain-location-get-latitude" since="0.10"/>
-    <keyword type="function" name="champlain_location_get_longitude ()" link="ChamplainLocation.html#champlain-location-get-longitude" since="0.10"/>
+    <keyword type="function" name="champlain_custom_marker_new ()" link="ChamplainCustomMarker.html#champlain-custom-marker-new" deprecated="" since="0.10"/>
     <keyword type="struct" name="ChamplainLocation" link="ChamplainLocation.html#ChamplainLocation-struct"/>
     <keyword type="struct" name="struct ChamplainLocationIface" link="ChamplainLocation.html#ChamplainLocationIface"/>
-    <keyword type="property" name="The “latitude” property" link="ChamplainLocation.html#ChamplainLocation--latitude"/>
-    <keyword type="property" name="The “longitude” property" link="ChamplainLocation.html#ChamplainLocation--longitude"/>
-    <keyword type="function" name="champlain_coordinate_new ()" link="ChamplainCoordinate.html#champlain-coordinate-new" since="0.10"/>
-    <keyword type="function" name="champlain_coordinate_new_full ()" link="ChamplainCoordinate.html#champlain-coordinate-new-full" since="0.10"/>
+    <keyword type="function" name="champlain_location_set_location ()" link="ChamplainLocation.html#champlain-location-set-location" since="0.10"/>
+    <keyword type="function" name="champlain_location_get_latitude ()" link="ChamplainLocation.html#champlain-location-get-latitude" since="0.10"/>
+    <keyword type="function" name="champlain_location_get_longitude ()" link="ChamplainLocation.html#champlain-location-get-longitude" since="0.10"/>
+    <keyword type="property" name="The &quot;latitude&quot; property" link="ChamplainLocation.html#ChamplainLocation--latitude"/>
+    <keyword type="property" name="The &quot;longitude&quot; property" link="ChamplainLocation.html#ChamplainLocation--longitude"/>
     <keyword type="struct" name="struct ChamplainCoordinate" link="ChamplainCoordinate.html#ChamplainCoordinate-struct"/>
-    <keyword type="function" name="champlain_license_new ()" link="ChamplainLicense.html#champlain-license-new" since="0.10"/>
-    <keyword type="function" name="champlain_license_set_extra_text ()" link="ChamplainLicense.html#champlain-license-set-extra-text" since="0.10"/>
-    <keyword type="function" name="champlain_license_get_extra_text ()" link="ChamplainLicense.html#champlain-license-get-extra-text" since="0.10"/>
-    <keyword type="function" name="champlain_license_set_alignment ()" link="ChamplainLicense.html#champlain-license-set-alignment" since="0.10"/>
-    <keyword type="function" name="champlain_license_get_alignment ()" link="ChamplainLicense.html#champlain-license-get-alignment" since="0.10"/>
-    <keyword type="function" name="champlain_license_connect_view ()" link="ChamplainLicense.html#champlain-license-connect-view" since="0.10"/>
-    <keyword type="function" name="champlain_license_disconnect_view ()" link="ChamplainLicense.html#champlain-license-disconnect-view" since="0.10"/>
+    <keyword type="function" name="champlain_coordinate_new ()" link="ChamplainCoordinate.html#champlain-coordinate-new" since="0.10"/>
+    <keyword type="function" name="champlain_coordinate_new_full ()" link="ChamplainCoordinate.html#champlain-coordinate-new-full" since="0.10"/>
     <keyword type="struct" name="struct ChamplainLicense" link="ChamplainLicense.html#ChamplainLicense-struct"/>
-    <keyword type="property" name="The “alignment” property" link="ChamplainLicense.html#ChamplainLicense--alignment"/>
-    <keyword type="property" name="The “extra-text” property" link="ChamplainLicense.html#ChamplainLicense--extra-text"/>
-    <keyword type="function" name="champlain_scale_new ()" link="ChamplainScale.html#champlain-scale-new" since="0.10"/>
-    <keyword type="function" name="champlain_scale_set_max_width ()" link="ChamplainScale.html#champlain-scale-set-max-width" since="0.10"/>
-    <keyword type="function" name="champlain_scale_set_unit ()" link="ChamplainScale.html#champlain-scale-set-unit" since="0.10"/>
-    <keyword type="function" name="champlain_scale_get_max_width ()" link="ChamplainScale.html#champlain-scale-get-max-width" since="0.10"/>
-    <keyword type="function" name="champlain_scale_get_unit ()" link="ChamplainScale.html#champlain-scale-get-unit" since="0.10"/>
-    <keyword type="function" name="champlain_scale_connect_view ()" link="ChamplainScale.html#champlain-scale-connect-view" since="0.10"/>
-    <keyword type="function" name="champlain_scale_disconnect_view ()" link="ChamplainScale.html#champlain-scale-disconnect-view" since="0.10"/>
+    <keyword type="function" name="champlain_license_new ()" link="ChamplainLicense.html#champlain-license-new" since="0.10"/>
+    <keyword type="function" name="champlain_license_set_extra_text ()" link="ChamplainLicense.html#champlain-license-set-extra-text" since="0.10"/>
+    <keyword type="function" name="champlain_license_get_extra_text ()" link="ChamplainLicense.html#champlain-license-get-extra-text" since="0.10"/>
+    <keyword type="function" name="champlain_license_set_alignment ()" link="ChamplainLicense.html#champlain-license-set-alignment" since="0.10"/>
+    <keyword type="function" name="champlain_license_get_alignment ()" link="ChamplainLicense.html#champlain-license-get-alignment" since="0.10"/>
+    <keyword type="function" name="champlain_license_connect_view ()" link="ChamplainLicense.html#champlain-license-connect-view" since="0.10"/>
+    <keyword type="function" name="champlain_license_disconnect_view ()" link="ChamplainLicense.html#champlain-license-disconnect-view" since="0.10"/>
+    <keyword type="property" name="The &quot;alignment&quot; property" link="ChamplainLicense.html#ChamplainLicense--alignment"/>
+    <keyword type="property" name="The &quot;extra-text&quot; property" link="ChamplainLicense.html#ChamplainLicense--extra-text"/>
     <keyword type="struct" name="struct ChamplainScale" link="ChamplainScale.html#ChamplainScale-struct"/>
     <keyword type="enum" name="enum ChamplainUnit" link="ChamplainScale.html#ChamplainUnit"/>
-    <keyword type="property" name="The “max-width” property" link="ChamplainScale.html#ChamplainScale--max-width"/>
-    <keyword type="property" name="The “unit” property" link="ChamplainScale.html#ChamplainScale--unit"/>
-    <keyword type="function" name="champlain_map_source_get_id ()" link="ChamplainMapSource.html#champlain-map-source-get-id" since="0.4"/>
-    <keyword type="function" name="champlain_map_source_get_name ()" link="ChamplainMapSource.html#champlain-map-source-get-name" since="0.4"/>
-    <keyword type="function" name="champlain_map_source_get_license ()" link="ChamplainMapSource.html#champlain-map-source-get-license" since="0.4"/>
-    <keyword type="function" name="champlain_map_source_get_license_uri ()" link="ChamplainMapSource.html#champlain-map-source-get-license-uri" since="0.4"/>
-    <keyword type="function" name="champlain_map_source_get_min_zoom_level ()" link="ChamplainMapSource.html#champlain-map-source-get-min-zoom-level" since="0.4"/>
-    <keyword type="function" name="champlain_map_source_get_max_zoom_level ()" link="ChamplainMapSource.html#champlain-map-source-get-max-zoom-level" since="0.4"/>
-    <keyword type="function" name="champlain_map_source_get_tile_size ()" link="ChamplainMapSource.html#champlain-map-source-get-tile-size" since="0.4"/>
-    <keyword type="function" name="champlain_map_source_get_projection ()" link="ChamplainMapSource.html#champlain-map-source-get-projection" since="0.4"/>
-    <keyword type="function" name="champlain_map_source_get_x ()" link="ChamplainMapSource.html#champlain-map-source-get-x" since="0.4"/>
-    <keyword type="function" name="champlain_map_source_get_y ()" link="ChamplainMapSource.html#champlain-map-source-get-y" since="0.4"/>
-    <keyword type="function" name="champlain_map_source_get_longitude ()" link="ChamplainMapSource.html#champlain-map-source-get-longitude" since="0.4"/>
-    <keyword type="function" name="champlain_map_source_get_latitude ()" link="ChamplainMapSource.html#champlain-map-source-get-latitude" since="0.4"/>
-    <keyword type="function" name="champlain_map_source_get_row_count ()" link="ChamplainMapSource.html#champlain-map-source-get-row-count" since="0.4"/>
-    <keyword type="function" name="champlain_map_source_get_column_count ()" link="ChamplainMapSource.html#champlain-map-source-get-column-count" since="0.4"/>
-    <keyword type="function" name="champlain_map_source_get_meters_per_pixel ()" link="ChamplainMapSource.html#champlain-map-source-get-meters-per-pixel" since="0.4.3"/>
-    <keyword type="function" name="champlain_map_source_fill_tile ()" link="ChamplainMapSource.html#champlain-map-source-fill-tile" since="0.4"/>
-    <keyword type="function" name="champlain_map_source_get_next_source ()" link="ChamplainMapSource.html#champlain-map-source-get-next-source" since="0.6"/>
-    <keyword type="function" name="champlain_map_source_set_next_source ()" link="ChamplainMapSource.html#champlain-map-source-set-next-source" since="0.6"/>
-    <keyword type="function" name="champlain_map_source_get_renderer ()" link="ChamplainMapSource.html#champlain-map-source-get-renderer" since="0.8"/>
-    <keyword type="function" name="champlain_map_source_set_renderer ()" link="ChamplainMapSource.html#champlain-map-source-set-renderer" since="0.8"/>
+    <keyword type="function" name="champlain_scale_new ()" link="ChamplainScale.html#champlain-scale-new" since="0.10"/>
+    <keyword type="function" name="champlain_scale_set_max_width ()" link="ChamplainScale.html#champlain-scale-set-max-width" since="0.10"/>
+    <keyword type="function" name="champlain_scale_set_unit ()" link="ChamplainScale.html#champlain-scale-set-unit" since="0.10"/>
+    <keyword type="function" name="champlain_scale_get_max_width ()" link="ChamplainScale.html#champlain-scale-get-max-width" since="0.10"/>
+    <keyword type="function" name="champlain_scale_get_unit ()" link="ChamplainScale.html#champlain-scale-get-unit" since="0.10"/>
+    <keyword type="function" name="champlain_scale_connect_view ()" link="ChamplainScale.html#champlain-scale-connect-view" since="0.10"/>
+    <keyword type="function" name="champlain_scale_disconnect_view ()" link="ChamplainScale.html#champlain-scale-disconnect-view" since="0.10"/>
+    <keyword type="property" name="The &quot;max-width&quot; property" link="ChamplainScale.html#ChamplainScale--max-width"/>
+    <keyword type="property" name="The &quot;unit&quot; property" link="ChamplainScale.html#ChamplainScale--unit"/>
     <keyword type="struct" name="struct ChamplainMapSource" link="ChamplainMapSource.html#ChamplainMapSource-struct"/>
     <keyword type="enum" name="enum ChamplainMapProjection" link="ChamplainMapSource.html#ChamplainMapProjection"/>
-    <keyword type="property" name="The “next-source” property" link="ChamplainMapSource.html#ChamplainMapSource--next-source"/>
-    <keyword type="property" name="The “renderer” property" link="ChamplainMapSource.html#ChamplainMapSource--renderer"/>
-    <keyword type="function" name="champlain_tile_source_set_cache ()" link="ChamplainTileSource.html#champlain-tile-source-set-cache" since="0.6"/>
-    <keyword type="function" name="champlain_tile_source_get_cache ()" link="ChamplainTileSource.html#champlain-tile-source-get-cache" since="0.6"/>
-    <keyword type="function" name="champlain_tile_source_set_id ()" link="ChamplainTileSource.html#champlain-tile-source-set-id" since="0.4"/>
-    <keyword type="function" name="champlain_tile_source_set_name ()" link="ChamplainTileSource.html#champlain-tile-source-set-name" since="0.4"/>
-    <keyword type="function" name="champlain_tile_source_set_license ()" link="ChamplainTileSource.html#champlain-tile-source-set-license" since="0.4"/>
-    <keyword type="function" name="champlain_tile_source_set_license_uri ()" link="ChamplainTileSource.html#champlain-tile-source-set-license-uri" since="0.4"/>
-    <keyword type="function" name="champlain_tile_source_set_min_zoom_level ()" link="ChamplainTileSource.html#champlain-tile-source-set-min-zoom-level" since="0.6"/>
-    <keyword type="function" name="champlain_tile_source_set_max_zoom_level ()" link="ChamplainTileSource.html#champlain-tile-source-set-max-zoom-level" since="0.6"/>
-    <keyword type="function" name="champlain_tile_source_set_tile_size ()" link="ChamplainTileSource.html#champlain-tile-source-set-tile-size" since="0.6"/>
-    <keyword type="function" name="champlain_tile_source_set_projection ()" link="ChamplainTileSource.html#champlain-tile-source-set-projection" since="0.4"/>
+    <keyword type="function" name="champlain_map_source_get_id ()" link="ChamplainMapSource.html#champlain-map-source-get-id" since="0.4"/>
+    <keyword type="function" name="champlain_map_source_get_name ()" link="ChamplainMapSource.html#champlain-map-source-get-name" since="0.4"/>
+    <keyword type="function" name="champlain_map_source_get_license ()" link="ChamplainMapSource.html#champlain-map-source-get-license" since="0.4"/>
+    <keyword type="function" name="champlain_map_source_get_license_uri ()" link="ChamplainMapSource.html#champlain-map-source-get-license-uri" since="0.4"/>
+    <keyword type="function" name="champlain_map_source_get_min_zoom_level ()" link="ChamplainMapSource.html#champlain-map-source-get-min-zoom-level" since="0.4"/>
+    <keyword type="function" name="champlain_map_source_get_max_zoom_level ()" link="ChamplainMapSource.html#champlain-map-source-get-max-zoom-level" since="0.4"/>
+    <keyword type="function" name="champlain_map_source_get_tile_size ()" link="ChamplainMapSource.html#champlain-map-source-get-tile-size" since="0.4"/>
+    <keyword type="function" name="champlain_map_source_get_projection ()" link="ChamplainMapSource.html#champlain-map-source-get-projection" since="0.4"/>
+    <keyword type="function" name="champlain_map_source_get_x ()" link="ChamplainMapSource.html#champlain-map-source-get-x" since="0.4"/>
+    <keyword type="function" name="champlain_map_source_get_y ()" link="ChamplainMapSource.html#champlain-map-source-get-y" since="0.4"/>
+    <keyword type="function" name="champlain_map_source_get_longitude ()" link="ChamplainMapSource.html#champlain-map-source-get-longitude" since="0.4"/>
+    <keyword type="function" name="champlain_map_source_get_latitude ()" link="ChamplainMapSource.html#champlain-map-source-get-latitude" since="0.4"/>
+    <keyword type="function" name="champlain_map_source_get_row_count ()" link="ChamplainMapSource.html#champlain-map-source-get-row-count" since="0.4"/>
+    <keyword type="function" name="champlain_map_source_get_column_count ()" link="ChamplainMapSource.html#champlain-map-source-get-column-count" since="0.4"/>
+    <keyword type="function" name="champlain_map_source_get_meters_per_pixel ()" link="ChamplainMapSource.html#champlain-map-source-get-meters-per-pixel" since="0.4.3"/>
+    <keyword type="function" name="champlain_map_source_fill_tile ()" link="ChamplainMapSource.html#champlain-map-source-fill-tile" since="0.4"/>
+    <keyword type="function" name="champlain_map_source_get_next_source ()" link="ChamplainMapSource.html#champlain-map-source-get-next-source" since="0.6"/>
+    <keyword type="function" name="champlain_map_source_set_next_source ()" link="ChamplainMapSource.html#champlain-map-source-set-next-source" since="0.6"/>
+    <keyword type="function" name="champlain_map_source_get_renderer ()" link="ChamplainMapSource.html#champlain-map-source-get-renderer" since="0.8"/>
+    <keyword type="function" name="champlain_map_source_set_renderer ()" link="ChamplainMapSource.html#champlain-map-source-set-renderer" since="0.8"/>
+    <keyword type="property" name="The &quot;next-source&quot; property" link="ChamplainMapSource.html#ChamplainMapSource--next-source"/>
+    <keyword type="property" name="The &quot;renderer&quot; property" link="ChamplainMapSource.html#ChamplainMapSource--renderer"/>
     <keyword type="struct" name="struct ChamplainTileSource" link="ChamplainTileSource.html#ChamplainTileSource-struct"/>
-    <keyword type="property" name="The “cache” property" link="ChamplainTileSource.html#ChamplainTileSource--cache"/>
-    <keyword type="property" name="The “id” property" link="ChamplainTileSource.html#ChamplainTileSource--id"/>
-    <keyword type="property" name="The “license” property" link="ChamplainTileSource.html#ChamplainTileSource--license"/>
-    <keyword type="property" name="The “license-uri” property" link="ChamplainTileSource.html#ChamplainTileSource--license-uri"/>
-    <keyword type="property" name="The “max-zoom-level” property" link="ChamplainTileSource.html#ChamplainTileSource--max-zoom-level"/>
-    <keyword type="property" name="The “min-zoom-level” property" link="ChamplainTileSource.html#ChamplainTileSource--min-zoom-level"/>
-    <keyword type="property" name="The “name” property" link="ChamplainTileSource.html#ChamplainTileSource--name"/>
-    <keyword type="property" name="The “projection” property" link="ChamplainTileSource.html#ChamplainTileSource--projection"/>
-    <keyword type="property" name="The “tile-size” property" link="ChamplainTileSource.html#ChamplainTileSource--tile-size"/>
-    <keyword type="function" name="champlain_network_tile_source_new_full ()" link="ChamplainNetworkTileSource.html#champlain-network-tile-source-new-full" since="0.4"/>
-    <keyword type="function" name="champlain_network_tile_source_set_uri_format ()" link="ChamplainNetworkTileSource.html#champlain-network-tile-source-set-uri-format" since="0.4"/>
-    <keyword type="function" name="champlain_network_tile_source_get_uri_format ()" link="ChamplainNetworkTileSource.html#champlain-network-tile-source-get-uri-format" since="0.6"/>
-    <keyword type="function" name="champlain_network_tile_source_set_offline ()" link="ChamplainNetworkTileSource.html#champlain-network-tile-source-set-offline" since="0.6"/>
-    <keyword type="function" name="champlain_network_tile_source_get_offline ()" link="ChamplainNetworkTileSource.html#champlain-network-tile-source-get-offline" since="0.6"/>
-    <keyword type="function" name="champlain_network_tile_source_set_proxy_uri ()" link="ChamplainNetworkTileSource.html#champlain-network-tile-source-set-proxy-uri" since="0.6"/>
-    <keyword type="function" name="champlain_network_tile_source_get_proxy_uri ()" link="ChamplainNetworkTileSource.html#champlain-network-tile-source-get-proxy-uri" since="0.6"/>
-    <keyword type="function" name="champlain_network_tile_source_set_max_conns ()" link="ChamplainNetworkTileSource.html#champlain-network-tile-source-set-max-conns" since="0.12.14"/>
-    <keyword type="function" name="champlain_network_tile_source_get_max_conns ()" link="ChamplainNetworkTileSource.html#champlain-network-tile-source-get-max-conns" since="0.12.14"/>
-    <keyword type="function" name="champlain_network_tile_source_set_user_agent ()" link="ChamplainNetworkTileSource.html#champlain-network-tile-source-set-user-agent" since="0.12.16"/>
+    <keyword type="function" name="champlain_tile_source_set_cache ()" link="ChamplainTileSource.html#champlain-tile-source-set-cache" since="0.6"/>
+    <keyword type="function" name="champlain_tile_source_get_cache ()" link="ChamplainTileSource.html#champlain-tile-source-get-cache" since="0.6"/>
+    <keyword type="function" name="champlain_tile_source_set_id ()" link="ChamplainTileSource.html#champlain-tile-source-set-id" since="0.4"/>
+    <keyword type="function" name="champlain_tile_source_set_name ()" link="ChamplainTileSource.html#champlain-tile-source-set-name" since="0.4"/>
+    <keyword type="function" name="champlain_tile_source_set_license ()" link="ChamplainTileSource.html#champlain-tile-source-set-license" since="0.4"/>
+    <keyword type="function" name="champlain_tile_source_set_license_uri ()" link="ChamplainTileSource.html#champlain-tile-source-set-license-uri" since="0.4"/>
+    <keyword type="function" name="champlain_tile_source_set_min_zoom_level ()" link="ChamplainTileSource.html#champlain-tile-source-set-min-zoom-level" since="0.6"/>
+    <keyword type="function" name="champlain_tile_source_set_max_zoom_level ()" link="ChamplainTileSource.html#champlain-tile-source-set-max-zoom-level" since="0.6"/>
+    <keyword type="function" name="champlain_tile_source_set_tile_size ()" link="ChamplainTileSource.html#champlain-tile-source-set-tile-size" since="0.6"/>
+    <keyword type="function" name="champlain_tile_source_set_projection ()" link="ChamplainTileSource.html#champlain-tile-source-set-projection" since="0.4"/>
+    <keyword type="property" name="The &quot;cache&quot; property" link="ChamplainTileSource.html#ChamplainTileSource--cache"/>
+    <keyword type="property" name="The &quot;id&quot; property" link="ChamplainTileSource.html#ChamplainTileSource--id"/>
+    <keyword type="property" name="The &quot;license&quot; property" link="ChamplainTileSource.html#ChamplainTileSource--license"/>
+    <keyword type="property" name="The &quot;license-uri&quot; property" link="ChamplainTileSource.html#ChamplainTileSource--license-uri"/>
+    <keyword type="property" name="The &quot;max-zoom-level&quot; property" link="ChamplainTileSource.html#ChamplainTileSource--max-zoom-level"/>
+    <keyword type="property" name="The &quot;min-zoom-level&quot; property" link="ChamplainTileSource.html#ChamplainTileSource--min-zoom-level"/>
+    <keyword type="property" name="The &quot;name&quot; property" link="ChamplainTileSource.html#ChamplainTileSource--name"/>
+    <keyword type="property" name="The &quot;projection&quot; property" link="ChamplainTileSource.html#ChamplainTileSource--projection"/>
+    <keyword type="property" name="The &quot;tile-size&quot; property" link="ChamplainTileSource.html#ChamplainTileSource--tile-size"/>
     <keyword type="struct" name="struct ChamplainNetworkTileSource" link="ChamplainNetworkTileSource.html#ChamplainNetworkTileSource-struct"/>
-    <keyword type="property" name="The “max-conns” property" link="ChamplainNetworkTileSource.html#ChamplainNetworkTileSource--max-conns"/>
-    <keyword type="property" name="The “offline” property" link="ChamplainNetworkTileSource.html#ChamplainNetworkTileSource--offline"/>
-    <keyword type="property" name="The “proxy-uri” property" link="ChamplainNetworkTileSource.html#ChamplainNetworkTileSource--proxy-uri"/>
-    <keyword type="property" name="The “uri-format” property" link="ChamplainNetworkTileSource.html#ChamplainNetworkTileSource--uri-format"/>
-    <keyword type="property" name="The “user-agent” property" link="ChamplainNetworkTileSource.html#ChamplainNetworkTileSource--user-agent"/>
-    <keyword type="function" name="champlain_null_tile_source_new_full ()" link="ChamplainNullTileSource.html#champlain-null-tile-source-new-full" since="0.8"/>
+    <keyword type="function" name="champlain_network_tile_source_new_full ()" link="ChamplainNetworkTileSource.html#champlain-network-tile-source-new-full" since="0.4"/>
+    <keyword type="function" name="champlain_network_tile_source_set_uri_format ()" link="ChamplainNetworkTileSource.html#champlain-network-tile-source-set-uri-format" since="0.4"/>
+    <keyword type="function" name="champlain_network_tile_source_get_uri_format ()" link="ChamplainNetworkTileSource.html#champlain-network-tile-source-get-uri-format" since="0.6"/>
+    <keyword type="function" name="champlain_network_tile_source_set_offline ()" link="ChamplainNetworkTileSource.html#champlain-network-tile-source-set-offline" since="0.6"/>
+    <keyword type="function" name="champlain_network_tile_source_get_offline ()" link="ChamplainNetworkTileSource.html#champlain-network-tile-source-get-offline" since="0.6"/>
+    <keyword type="function" name="champlain_network_tile_source_set_proxy_uri ()" link="ChamplainNetworkTileSource.html#champlain-network-tile-source-set-proxy-uri" since="0.6"/>
+    <keyword type="function" name="champlain_network_tile_source_get_proxy_uri ()" link="ChamplainNetworkTileSource.html#champlain-network-tile-source-get-proxy-uri" since="0.6"/>
+    <keyword type="property" name="The &quot;offline&quot; property" link="ChamplainNetworkTileSource.html#ChamplainNetworkTileSource--offline"/>
+    <keyword type="property" name="The &quot;proxy-uri&quot; property" link="ChamplainNetworkTileSource.html#ChamplainNetworkTileSource--proxy-uri"/>
+    <keyword type="property" name="The &quot;uri-format&quot; property" link="ChamplainNetworkTileSource.html#ChamplainNetworkTileSource--uri-format"/>
     <keyword type="struct" name="struct ChamplainNullTileSource" link="ChamplainNullTileSource.html#ChamplainNullTileSource-struct"/>
-    <keyword type="function" name="champlain_file_tile_source_new_full ()" link="ChamplainFileTileSource.html#champlain-file-tile-source-new-full" since="0.8"/>
-    <keyword type="function" name="champlain_file_tile_source_load_map_data ()" link="ChamplainFileTileSource.html#champlain-file-tile-source-load-map-data" since="0.8"/>
+    <keyword type="function" name="champlain_null_tile_source_new_full ()" link="ChamplainNullTileSource.html#champlain-null-tile-source-new-full" since="0.8"/>
     <keyword type="struct" name="struct ChamplainFileTileSource" link="ChamplainFileTileSource.html#ChamplainFileTileSource-struct"/>
-    <keyword type="function" name="champlain_network_bbox_tile_source_new_full ()" link="ChamplainNetworkBboxTileSource.html#champlain-network-bbox-tile-source-new-full" since="0.8"/>
-    <keyword type="function" name="champlain_network_bbox_tile_source_load_map_data ()" link="ChamplainNetworkBboxTileSource.html#champlain-network-bbox-tile-source-load-map-data" since="0.10"/>
-    <keyword type="function" name="champlain_network_bbox_tile_source_get_api_uri ()" link="ChamplainNetworkBboxTileSource.html#champlain-network-bbox-tile-source-get-api-uri" since="0.8"/>
-    <keyword type="function" name="champlain_network_bbox_tile_source_set_api_uri ()" link="ChamplainNetworkBboxTileSource.html#champlain-network-bbox-tile-source-set-api-uri" since="0.8"/>
-    <keyword type="function" name="champlain_network_bbox_tile_source_set_user_agent ()" link="ChamplainNetworkBboxTileSource.html#champlain-network-bbox-tile-source-set-user-agent" since="0.12.16"/>
+    <keyword type="function" name="champlain_file_tile_source_new_full ()" link="ChamplainFileTileSource.html#champlain-file-tile-source-new-full" since="0.8"/>
+    <keyword type="function" name="champlain_file_tile_source_load_map_data ()" link="ChamplainFileTileSource.html#champlain-file-tile-source-load-map-data" since="0.8"/>
     <keyword type="struct" name="struct ChamplainNetworkBboxTileSource" link="ChamplainNetworkBboxTileSource.html#ChamplainNetworkBboxTileSource-struct"/>
-    <keyword type="property" name="The “api-uri” property" link="ChamplainNetworkBboxTileSource.html#ChamplainNetworkBboxTileSource--api-uri"/>
-    <keyword type="property" name="The “proxy-uri” property" link="ChamplainNetworkBboxTileSource.html#ChamplainNetworkBboxTileSource--proxy-uri"/>
-    <keyword type="property" name="The “state” property" link="ChamplainNetworkBboxTileSource.html#ChamplainNetworkBboxTileSource--state"/>
-    <keyword type="property" name="The “user-agent” property" link="ChamplainNetworkBboxTileSource.html#ChamplainNetworkBboxTileSource--user-agent"/>
-    <keyword type="function" name="champlain_tile_cache_store_tile ()" link="ChamplainTileCache.html#champlain-tile-cache-store-tile" since="0.6"/>
-    <keyword type="function" name="champlain_tile_cache_refresh_tile_time ()" link="ChamplainTileCache.html#champlain-tile-cache-refresh-tile-time" since="0.6"/>
-    <keyword type="function" name="champlain_tile_cache_on_tile_filled ()" link="ChamplainTileCache.html#champlain-tile-cache-on-tile-filled" since="0.6"/>
+    <keyword type="function" name="champlain_network_bbox_tile_source_new_full ()" link="ChamplainNetworkBboxTileSource.html#champlain-network-bbox-tile-source-new-full" since="0.8"/>
+    <keyword type="function" name="champlain_network_bbox_tile_source_load_map_data ()" link="ChamplainNetworkBboxTileSource.html#champlain-network-bbox-tile-source-load-map-data" since="0.10"/>
+    <keyword type="function" name="champlain_network_bbox_tile_source_get_api_uri ()" link="ChamplainNetworkBboxTileSource.html#champlain-network-bbox-tile-source-get-api-uri" since="0.8"/>
+    <keyword type="function" name="champlain_network_bbox_tile_source_set_api_uri ()" link="ChamplainNetworkBboxTileSource.html#champlain-network-bbox-tile-source-set-api-uri" since="0.8"/>
+    <keyword type="property" name="The &quot;api-uri&quot; property" link="ChamplainNetworkBboxTileSource.html#ChamplainNetworkBboxTileSource--api-uri"/>
+    <keyword type="property" name="The &quot;proxy-uri&quot; property" link="ChamplainNetworkBboxTileSource.html#ChamplainNetworkBboxTileSource--proxy-uri"/>
+    <keyword type="property" name="The &quot;state&quot; property" link="ChamplainNetworkBboxTileSource.html#ChamplainNetworkBboxTileSource--state"/>
     <keyword type="struct" name="struct ChamplainTileCache" link="ChamplainTileCache.html#ChamplainTileCache-struct"/>
-    <keyword type="function" name="champlain_file_cache_new_full ()" link="ChamplainFileCache.html#champlain-file-cache-new-full" since="0.8"/>
-    <keyword type="function" name="champlain_file_cache_set_size_limit ()" link="ChamplainFileCache.html#champlain-file-cache-set-size-limit" since="0.4"/>
-    <keyword type="function" name="champlain_file_cache_get_size_limit ()" link="ChamplainFileCache.html#champlain-file-cache-get-size-limit" since="0.4"/>
-    <keyword type="function" name="champlain_file_cache_get_cache_dir ()" link="ChamplainFileCache.html#champlain-file-cache-get-cache-dir" since="0.6"/>
-    <keyword type="function" name="champlain_file_cache_purge ()" link="ChamplainFileCache.html#champlain-file-cache-purge" since="0.4"/>
-    <keyword type="function" name="champlain_file_cache_purge_on_idle ()" link="ChamplainFileCache.html#champlain-file-cache-purge-on-idle" since="0.4"/>
+    <keyword type="function" name="champlain_tile_cache_store_tile ()" link="ChamplainTileCache.html#champlain-tile-cache-store-tile" since="0.6"/>
+    <keyword type="function" name="champlain_tile_cache_refresh_tile_time ()" link="ChamplainTileCache.html#champlain-tile-cache-refresh-tile-time" since="0.6"/>
+    <keyword type="function" name="champlain_tile_cache_on_tile_filled ()" link="ChamplainTileCache.html#champlain-tile-cache-on-tile-filled" since="0.6"/>
     <keyword type="struct" name="struct ChamplainFileCache" link="ChamplainFileCache.html#ChamplainFileCache-struct"/>
-    <keyword type="property" name="The “cache-dir” property" link="ChamplainFileCache.html#ChamplainFileCache--cache-dir"/>
-    <keyword type="property" name="The “size-limit” property" link="ChamplainFileCache.html#ChamplainFileCache--size-limit"/>
-    <keyword type="function" name="champlain_memory_cache_new_full ()" link="ChamplainMemoryCache.html#champlain-memory-cache-new-full" since="0.8"/>
-    <keyword type="function" name="champlain_memory_cache_get_size_limit ()" link="ChamplainMemoryCache.html#champlain-memory-cache-get-size-limit" since="0.8"/>
-    <keyword type="function" name="champlain_memory_cache_set_size_limit ()" link="ChamplainMemoryCache.html#champlain-memory-cache-set-size-limit" since="0.8"/>
-    <keyword type="function" name="champlain_memory_cache_clean ()" link="ChamplainMemoryCache.html#champlain-memory-cache-clean" since="0.8"/>
+    <keyword type="function" name="champlain_file_cache_new_full ()" link="ChamplainFileCache.html#champlain-file-cache-new-full" since="0.8"/>
+    <keyword type="function" name="champlain_file_cache_set_size_limit ()" link="ChamplainFileCache.html#champlain-file-cache-set-size-limit" since="0.4"/>
+    <keyword type="function" name="champlain_file_cache_get_size_limit ()" link="ChamplainFileCache.html#champlain-file-cache-get-size-limit" since="0.4"/>
+    <keyword type="function" name="champlain_file_cache_get_cache_dir ()" link="ChamplainFileCache.html#champlain-file-cache-get-cache-dir" since="0.6"/>
+    <keyword type="function" name="champlain_file_cache_purge ()" link="ChamplainFileCache.html#champlain-file-cache-purge" since="0.4"/>
+    <keyword type="function" name="champlain_file_cache_purge_on_idle ()" link="ChamplainFileCache.html#champlain-file-cache-purge-on-idle" since="0.4"/>
+    <keyword type="property" name="The &quot;cache-dir&quot; property" link="ChamplainFileCache.html#ChamplainFileCache--cache-dir"/>
+    <keyword type="property" name="The &quot;size-limit&quot; property" link="ChamplainFileCache.html#ChamplainFileCache--size-limit"/>
     <keyword type="struct" name="struct ChamplainMemoryCache" link="ChamplainMemoryCache.html#ChamplainMemoryCache-struct"/>
-    <keyword type="property" name="The “size-limit” property" link="ChamplainMemoryCache.html#ChamplainMemoryCache--size-limit"/>
-    <keyword type="function" name="champlain_map_source_chain_new ()" link="ChamplainMapSourceChain.html#champlain-map-source-chain-new" since="0.6"/>
-    <keyword type="function" name="champlain_map_source_chain_push ()" link="ChamplainMapSourceChain.html#champlain-map-source-chain-push" since="0.6"/>
-    <keyword type="function" name="champlain_map_source_chain_pop ()" link="ChamplainMapSourceChain.html#champlain-map-source-chain-pop" since="0.6"/>
+    <keyword type="function" name="champlain_memory_cache_new_full ()" link="ChamplainMemoryCache.html#champlain-memory-cache-new-full" since="0.8"/>
+    <keyword type="function" name="champlain_memory_cache_get_size_limit ()" link="ChamplainMemoryCache.html#champlain-memory-cache-get-size-limit" since="0.8"/>
+    <keyword type="function" name="champlain_memory_cache_set_size_limit ()" link="ChamplainMemoryCache.html#champlain-memory-cache-set-size-limit" since="0.8"/>
+    <keyword type="function" name="champlain_memory_cache_clean ()" link="ChamplainMemoryCache.html#champlain-memory-cache-clean" since="0.8"/>
+    <keyword type="property" name="The &quot;size-limit&quot; property" link="ChamplainMemoryCache.html#ChamplainMemoryCache--size-limit"/>
     <keyword type="struct" name="struct ChamplainMapSourceChain" link="ChamplainMapSourceChain.html#ChamplainMapSourceChain-struct"/>
-    <keyword type="function" name="champlain_map_source_factory_dup_default ()" link="ChamplainMapSourceFactory.html#champlain-map-source-factory-dup-default" since="0.4"/>
-    <keyword type="function" name="champlain_map_source_factory_create ()" link="ChamplainMapSourceFactory.html#champlain-map-source-factory-create" since="0.4"/>
-    <keyword type="function" name="champlain_map_source_factory_create_cached_source ()" link="ChamplainMapSourceFactory.html#champlain-map-source-factory-create-cached-source" since="0.6"/>
-    <keyword type="function" name="champlain_map_source_factory_create_memcached_source ()" link="ChamplainMapSourceFactory.html#champlain-map-source-factory-create-memcached-source" since="0.12.5"/>
-    <keyword type="function" name="champlain_map_source_factory_create_error_source ()" link="ChamplainMapSourceFactory.html#champlain-map-source-factory-create-error-source" since="0.8"/>
-    <keyword type="function" name="champlain_map_source_factory_register ()" link="ChamplainMapSourceFactory.html#champlain-map-source-factory-register" since="0.10"/>
-    <keyword type="function" name="champlain_map_source_factory_get_registered ()" link="ChamplainMapSourceFactory.html#champlain-map-source-factory-get-registered" since="0.4"/>
+    <keyword type="function" name="champlain_map_source_chain_new ()" link="ChamplainMapSourceChain.html#champlain-map-source-chain-new" since="0.6"/>
+    <keyword type="function" name="champlain_map_source_chain_push ()" link="ChamplainMapSourceChain.html#champlain-map-source-chain-push" since="0.6"/>
+    <keyword type="function" name="champlain_map_source_chain_pop ()" link="ChamplainMapSourceChain.html#champlain-map-source-chain-pop" since="0.6"/>
     <keyword type="struct" name="struct ChamplainMapSourceFactory" link="ChamplainMapSourceFactory.html#ChamplainMapSourceFactory-struct"/>
+    <keyword type="function" name="champlain_map_source_factory_dup_default ()" link="ChamplainMapSourceFactory.html#champlain-map-source-factory-dup-default" since="0.4"/>
+    <keyword type="function" name="champlain_map_source_factory_create ()" link="ChamplainMapSourceFactory.html#champlain-map-source-factory-create" since="0.4"/>
+    <keyword type="function" name="champlain_map_source_factory_create_cached_source ()" link="ChamplainMapSourceFactory.html#champlain-map-source-factory-create-cached-source" since="0.6"/>
+    <keyword type="function" name="champlain_map_source_factory_create_error_source ()" link="ChamplainMapSourceFactory.html#champlain-map-source-factory-create-error-source" since="0.8"/>
+    <keyword type="function" name="champlain_map_source_factory_register ()" link="ChamplainMapSourceFactory.html#champlain-map-source-factory-register" since="0.10"/>
+    <keyword type="function" name="champlain_map_source_factory_get_registered ()" link="ChamplainMapSourceFactory.html#champlain-map-source-factory-get-registered" since="0.4"/>
     <keyword type="macro" name="CHAMPLAIN_MAP_SOURCE_OSM_MAPNIK" link="ChamplainMapSourceFactory.html#CHAMPLAIN-MAP-SOURCE-OSM-MAPNIK:CAPS"/>
     <keyword type="macro" name="CHAMPLAIN_MAP_SOURCE_OSM_CYCLE_MAP" link="ChamplainMapSourceFactory.html#CHAMPLAIN-MAP-SOURCE-OSM-CYCLE-MAP:CAPS"/>
     <keyword type="macro" name="CHAMPLAIN_MAP_SOURCE_OSM_TRANSPORT_MAP" link="ChamplainMapSourceFactory.html#CHAMPLAIN-MAP-SOURCE-OSM-TRANSPORT-MAP:CAPS"/>
-    <keyword type="macro" name="CHAMPLAIN_MAP_SOURCE_OSM_AERIAL_MAP" link="ChamplainMapSourceFactory.html#CHAMPLAIN-MAP-SOURCE-OSM-AERIAL-MAP:CAPS" deprecated=""/>
-    <keyword type="macro" name="CHAMPLAIN_MAP_SOURCE_OSM_MAPQUEST" link="ChamplainMapSourceFactory.html#CHAMPLAIN-MAP-SOURCE-OSM-MAPQUEST:CAPS" deprecated=""/>
+    <keyword type="macro" name="CHAMPLAIN_MAP_SOURCE_OSM_AERIAL_MAP" link="ChamplainMapSourceFactory.html#CHAMPLAIN-MAP-SOURCE-OSM-AERIAL-MAP:CAPS"/>
+    <keyword type="macro" name="CHAMPLAIN_MAP_SOURCE_OSM_MAPQUEST" link="ChamplainMapSourceFactory.html#CHAMPLAIN-MAP-SOURCE-OSM-MAPQUEST:CAPS"/>
     <keyword type="macro" name="CHAMPLAIN_MAP_SOURCE_MFF_RELIEF" link="ChamplainMapSourceFactory.html#CHAMPLAIN-MAP-SOURCE-MFF-RELIEF:CAPS"/>
     <keyword type="macro" name="CHAMPLAIN_MAP_SOURCE_OAM" link="ChamplainMapSourceFactory.html#CHAMPLAIN-MAP-SOURCE-OAM:CAPS" deprecated=""/>
     <keyword type="macro" name="CHAMPLAIN_MAP_SOURCE_OSM_OSMARENDER" link="ChamplainMapSourceFactory.html#CHAMPLAIN-MAP-SOURCE-OSM-OSMARENDER:CAPS" deprecated=""/>
-    <keyword type="macro" name="CHAMPLAIN_MAP_SOURCE_OWM_CLOUDS" link="ChamplainMapSourceFactory.html#CHAMPLAIN-MAP-SOURCE-OWM-CLOUDS:CAPS"/>
-    <keyword type="macro" name="CHAMPLAIN_MAP_SOURCE_OWM_PRECIPITATION" link="ChamplainMapSourceFactory.html#CHAMPLAIN-MAP-SOURCE-OWM-PRECIPITATION:CAPS"/>
-    <keyword type="macro" name="CHAMPLAIN_MAP_SOURCE_OWM_PRESSURE" link="ChamplainMapSourceFactory.html#CHAMPLAIN-MAP-SOURCE-OWM-PRESSURE:CAPS"/>
-    <keyword type="macro" name="CHAMPLAIN_MAP_SOURCE_OWM_TEMPERATURE" link="ChamplainMapSourceFactory.html#CHAMPLAIN-MAP-SOURCE-OWM-TEMPERATURE:CAPS"/>
-    <keyword type="macro" name="CHAMPLAIN_MAP_SOURCE_OWM_WIND" link="ChamplainMapSourceFactory.html#CHAMPLAIN-MAP-SOURCE-OWM-WIND:CAPS"/>
-    <keyword type="function" name="ChamplainMapSourceConstructor ()" link="ChamplainMapSourceDesc.html#ChamplainMapSourceConstructor" since="0.10"/>
-    <keyword type="function" name="champlain_map_source_desc_new_full ()" link="ChamplainMapSourceDesc.html#champlain-map-source-desc-new-full" since="0.10"/>
-    <keyword type="function" name="champlain_map_source_desc_get_id ()" link="ChamplainMapSourceDesc.html#champlain-map-source-desc-get-id" since="0.10"/>
-    <keyword type="function" name="champlain_map_source_desc_get_name ()" link="ChamplainMapSourceDesc.html#champlain-map-source-desc-get-name" since="0.10"/>
-    <keyword type="function" name="champlain_map_source_desc_get_license ()" link="ChamplainMapSourceDesc.html#champlain-map-source-desc-get-license" since="0.10"/>
-    <keyword type="function" name="champlain_map_source_desc_get_license_uri ()" link="ChamplainMapSourceDesc.html#champlain-map-source-desc-get-license-uri" since="0.10"/>
-    <keyword type="function" name="champlain_map_source_desc_get_uri_format ()" link="ChamplainMapSourceDesc.html#champlain-map-source-desc-get-uri-format" since="0.10"/>
-    <keyword type="function" name="champlain_map_source_desc_get_min_zoom_level ()" link="ChamplainMapSourceDesc.html#champlain-map-source-desc-get-min-zoom-level" since="0.10"/>
-    <keyword type="function" name="champlain_map_source_desc_get_max_zoom_level ()" link="ChamplainMapSourceDesc.html#champlain-map-source-desc-get-max-zoom-level" since="0.10"/>
-    <keyword type="function" name="champlain_map_source_desc_get_tile_size ()" link="ChamplainMapSourceDesc.html#champlain-map-source-desc-get-tile-size" since="0.10"/>
-    <keyword type="function" name="champlain_map_source_desc_get_projection ()" link="ChamplainMapSourceDesc.html#champlain-map-source-desc-get-projection" since="0.10"/>
-    <keyword type="function" name="champlain_map_source_desc_get_data ()" link="ChamplainMapSourceDesc.html#champlain-map-source-desc-get-data" since="0.10"/>
-    <keyword type="function" name="champlain_map_source_desc_get_constructor ()" link="ChamplainMapSourceDesc.html#champlain-map-source-desc-get-constructor" since="0.10"/>
+    <keyword type="macro" name="CHAMPLAIN_MAP_SOURCE_MEMPHIS_LOCAL" link="ChamplainMapSourceFactory.html#CHAMPLAIN-MAP-SOURCE-MEMPHIS-LOCAL:CAPS"/>
+    <keyword type="macro" name="CHAMPLAIN_MAP_SOURCE_MEMPHIS_NETWORK" link="ChamplainMapSourceFactory.html#CHAMPLAIN-MAP-SOURCE-MEMPHIS-NETWORK:CAPS"/>
     <keyword type="struct" name="struct ChamplainMapSourceDesc" link="ChamplainMapSourceDesc.html#ChamplainMapSourceDesc-struct"/>
+    <keyword type="function" name="ChamplainMapSourceConstructor ()" link="ChamplainMapSourceDesc.html#ChamplainMapSourceConstructor" since="0.10"/>
     <keyword type="macro" name="CHAMPLAIN_MAP_SOURCE_CONSTRUCTOR" link="ChamplainMapSourceDesc.html#CHAMPLAIN-MAP-SOURCE-CONSTRUCTOR:CAPS" since="0.10"/>
-    <keyword type="property" name="The “constructor” property" link="ChamplainMapSourceDesc.html#ChamplainMapSourceDesc--constructor"/>
-    <keyword type="property" name="The “data” property" link="ChamplainMapSourceDesc.html#ChamplainMapSourceDesc--data"/>
-    <keyword type="property" name="The “id” property" link="ChamplainMapSourceDesc.html#ChamplainMapSourceDesc--id"/>
-    <keyword type="property" name="The “license” property" link="ChamplainMapSourceDesc.html#ChamplainMapSourceDesc--license"/>
-    <keyword type="property" name="The “license-uri” property" link="ChamplainMapSourceDesc.html#ChamplainMapSourceDesc--license-uri"/>
-    <keyword type="property" name="The “max-zoom-level” property" link="ChamplainMapSourceDesc.html#ChamplainMapSourceDesc--max-zoom-level"/>
-    <keyword type="property" name="The “min-zoom-level” property" link="ChamplainMapSourceDesc.html#ChamplainMapSourceDesc--min-zoom-level"/>
-    <keyword type="property" name="The “name” property" link="ChamplainMapSourceDesc.html#ChamplainMapSourceDesc--name"/>
-    <keyword type="property" name="The “projection” property" link="ChamplainMapSourceDesc.html#ChamplainMapSourceDesc--projection"/>
-    <keyword type="property" name="The “tile-size” property" link="ChamplainMapSourceDesc.html#ChamplainMapSourceDesc--tile-size"/>
-    <keyword type="property" name="The “uri-format” property" link="ChamplainMapSourceDesc.html#ChamplainMapSourceDesc--uri-format"/>
-    <keyword type="function" name="champlain_renderer_set_data ()" link="ChamplainRenderer.html#champlain-renderer-set-data" since="0.8"/>
-    <keyword type="function" name="champlain_renderer_render ()" link="ChamplainRenderer.html#champlain-renderer-render" since="0.8"/>
+    <keyword type="function" name="champlain_map_source_desc_new_full ()" link="ChamplainMapSourceDesc.html#champlain-map-source-desc-new-full" since="0.10"/>
+    <keyword type="function" name="champlain_map_source_desc_get_id ()" link="ChamplainMapSourceDesc.html#champlain-map-source-desc-get-id" since="0.10"/>
+    <keyword type="function" name="champlain_map_source_desc_get_name ()" link="ChamplainMapSourceDesc.html#champlain-map-source-desc-get-name" since="0.10"/>
+    <keyword type="function" name="champlain_map_source_desc_get_license ()" link="ChamplainMapSourceDesc.html#champlain-map-source-desc-get-license" since="0.10"/>
+    <keyword type="function" name="champlain_map_source_desc_get_license_uri ()" link="ChamplainMapSourceDesc.html#champlain-map-source-desc-get-license-uri" since="0.10"/>
+    <keyword type="function" name="champlain_map_source_desc_get_uri_format ()" link="ChamplainMapSourceDesc.html#champlain-map-source-desc-get-uri-format" since="0.10"/>
+    <keyword type="function" name="champlain_map_source_desc_get_min_zoom_level ()" link="ChamplainMapSourceDesc.html#champlain-map-source-desc-get-min-zoom-level" since="0.10"/>
+    <keyword type="function" name="champlain_map_source_desc_get_max_zoom_level ()" link="ChamplainMapSourceDesc.html#champlain-map-source-desc-get-max-zoom-level" since="0.10"/>
+    <keyword type="function" name="champlain_map_source_desc_get_tile_size ()" link="ChamplainMapSourceDesc.html#champlain-map-source-desc-get-tile-size" since="0.10"/>
+    <keyword type="function" name="champlain_map_source_desc_get_projection ()" link="ChamplainMapSourceDesc.html#champlain-map-source-desc-get-projection" since="0.10"/>
+    <keyword type="function" name="champlain_map_source_desc_get_data ()" link="ChamplainMapSourceDesc.html#champlain-map-source-desc-get-data" since="0.10"/>
+    <keyword type="function" name="champlain_map_source_desc_get_constructor ()" link="ChamplainMapSourceDesc.html#champlain-map-source-desc-get-constructor" since="0.10"/>
+    <keyword type="property" name="The &quot;constructor&quot; property" link="ChamplainMapSourceDesc.html#ChamplainMapSourceDesc--constructor"/>
+    <keyword type="property" name="The &quot;data&quot; property" link="ChamplainMapSourceDesc.html#ChamplainMapSourceDesc--data"/>
+    <keyword type="property" name="The &quot;id&quot; property" link="ChamplainMapSourceDesc.html#ChamplainMapSourceDesc--id"/>
+    <keyword type="property" name="The &quot;license&quot; property" link="ChamplainMapSourceDesc.html#ChamplainMapSourceDesc--license"/>
+    <keyword type="property" name="The &quot;license-uri&quot; property" link="ChamplainMapSourceDesc.html#ChamplainMapSourceDesc--license-uri"/>
+    <keyword type="property" name="The &quot;max-zoom-level&quot; property" link="ChamplainMapSourceDesc.html#ChamplainMapSourceDesc--max-zoom-level"/>
+    <keyword type="property" name="The &quot;min-zoom-level&quot; property" link="ChamplainMapSourceDesc.html#ChamplainMapSourceDesc--min-zoom-level"/>
+    <keyword type="property" name="The &quot;name&quot; property" link="ChamplainMapSourceDesc.html#ChamplainMapSourceDesc--name"/>
+    <keyword type="property" name="The &quot;projection&quot; property" link="ChamplainMapSourceDesc.html#ChamplainMapSourceDesc--projection"/>
+    <keyword type="property" name="The &quot;tile-size&quot; property" link="ChamplainMapSourceDesc.html#ChamplainMapSourceDesc--tile-size"/>
+    <keyword type="property" name="The &quot;uri-format&quot; property" link="ChamplainMapSourceDesc.html#ChamplainMapSourceDesc--uri-format"/>
     <keyword type="struct" name="struct ChamplainRenderer" link="ChamplainRenderer.html#ChamplainRenderer-struct"/>
-    <keyword type="function" name="champlain_image_renderer_new ()" link="ChamplainImageRenderer.html#champlain-image-renderer-new" since="0.8"/>
+    <keyword type="function" name="champlain_renderer_set_data ()" link="ChamplainRenderer.html#champlain-renderer-set-data" since="0.8"/>
+    <keyword type="function" name="champlain_renderer_render ()" link="ChamplainRenderer.html#champlain-renderer-render" since="0.8"/>
     <keyword type="struct" name="struct ChamplainImageRenderer" link="ChamplainImageRenderer.html#ChamplainImageRenderer-struct"/>
-    <keyword type="function" name="champlain_error_tile_renderer_new ()" link="ChamplainErrorTileRenderer.html#champlain-error-tile-renderer-new" since="0.8"/>
-    <keyword type="function" name="champlain_error_tile_renderer_set_tile_size ()" link="ChamplainErrorTileRenderer.html#champlain-error-tile-renderer-set-tile-size" since="0.8"/>
-    <keyword type="function" name="champlain_error_tile_renderer_get_tile_size ()" link="ChamplainErrorTileRenderer.html#champlain-error-tile-renderer-get-tile-size" since="0.8"/>
+    <keyword type="function" name="champlain_image_renderer_new ()" link="ChamplainImageRenderer.html#champlain-image-renderer-new" since="0.8"/>
+    <keyword type="struct" name="struct ChamplainMemphisRenderer" link="ChamplainMemphisRenderer.html#ChamplainMemphisRenderer-struct"/>
+    <keyword type="struct" name="struct ChamplainMemphisRule" link="ChamplainMemphisRenderer.html#ChamplainMemphisRule" since="0.8"/>
+    <keyword type="struct" name="struct ChamplainMemphisRuleAttr" link="ChamplainMemphisRenderer.html#ChamplainMemphisRuleAttr" since="0.8"/>
+    <keyword type="enum" name="enum ChamplainMemphisRuleType" link="ChamplainMemphisRenderer.html#ChamplainMemphisRuleType" since="0.8"/>
+    <keyword type="function" name="champlain_memphis_renderer_new_full ()" link="ChamplainMemphisRenderer.html#champlain-memphis-renderer-new-full" since="0.8"/>
+    <keyword type="function" name="champlain_memphis_renderer_load_rules ()" link="ChamplainMemphisRenderer.html#champlain-memphis-renderer-load-rules" since="0.8"/>
+    <keyword type="function" name="champlain_memphis_renderer_get_background_color ()" link="ChamplainMemphisRenderer.html#champlain-memphis-renderer-get-background-color" since="0.8"/>
+    <keyword type="function" name="champlain_memphis_renderer_set_background_color ()" link="ChamplainMemphisRenderer.html#champlain-memphis-renderer-set-background-color" since="0.8"/>
+    <keyword type="function" name="champlain_memphis_renderer_get_rule_ids ()" link="ChamplainMemphisRenderer.html#champlain-memphis-renderer-get-rule-ids" since="0.8"/>
+    <keyword type="function" name="champlain_memphis_renderer_set_rule ()" link="ChamplainMemphisRenderer.html#champlain-memphis-renderer-set-rule" since="0.8"/>
+    <keyword type="function" name="champlain_memphis_renderer_get_rule ()" link="ChamplainMemphisRenderer.html#champlain-memphis-renderer-get-rule" since="0.8"/>
+    <keyword type="function" name="champlain_memphis_renderer_remove_rule ()" link="ChamplainMemphisRenderer.html#champlain-memphis-renderer-remove-rule" since="0.8"/>
+    <keyword type="function" name="champlain_memphis_renderer_get_bounding_box ()" link="ChamplainMemphisRenderer.html#champlain-memphis-renderer-get-bounding-box" since="0.8"/>
+    <keyword type="function" name="champlain_memphis_renderer_set_tile_size ()" link="ChamplainMemphisRenderer.html#champlain-memphis-renderer-set-tile-size" since="0.8"/>
+    <keyword type="function" name="champlain_memphis_renderer_get_tile_size ()" link="ChamplainMemphisRenderer.html#champlain-memphis-renderer-get-tile-size" since="0.8"/>
+    <keyword type="property" name="The &quot;bounding-box&quot; property" link="ChamplainMemphisRenderer.html#ChamplainMemphisRenderer--bounding-box"/>
+    <keyword type="property" name="The &quot;tile-size&quot; property" link="ChamplainMemphisRenderer.html#ChamplainMemphisRenderer--tile-size"/>
     <keyword type="struct" name="struct ChamplainErrorTileRenderer" link="ChamplainErrorTileRenderer.html#ChamplainErrorTileRenderer-struct"/>
-    <keyword type="property" name="The “tile-size” property" link="ChamplainErrorTileRenderer.html#ChamplainErrorTileRenderer--tile-size"/>
-    <keyword type="function" name="champlain_tile_new ()" link="ChamplainTile.html#champlain-tile-new" since="0.4"/>
-    <keyword type="function" name="champlain_tile_new_full ()" link="ChamplainTile.html#champlain-tile-new-full" since="0.4"/>
-    <keyword type="function" name="champlain_tile_get_x ()" link="ChamplainTile.html#champlain-tile-get-x" since="0.4"/>
-    <keyword type="function" name="champlain_tile_get_y ()" link="ChamplainTile.html#champlain-tile-get-y" since="0.4"/>
-    <keyword type="function" name="champlain_tile_get_zoom_level ()" link="ChamplainTile.html#champlain-tile-get-zoom-level" since="0.4"/>
-    <keyword type="function" name="champlain_tile_get_size ()" link="ChamplainTile.html#champlain-tile-get-size" since="0.4"/>
-    <keyword type="function" name="champlain_tile_get_state ()" link="ChamplainTile.html#champlain-tile-get-state" since="0.4"/>
-    <keyword type="function" name="champlain_tile_get_fade_in ()" link="ChamplainTile.html#champlain-tile-get-fade-in" since="0.6"/>
-    <keyword type="function" name="champlain_tile_set_x ()" link="ChamplainTile.html#champlain-tile-set-x" since="0.4"/>
-    <keyword type="function" name="champlain_tile_set_y ()" link="ChamplainTile.html#champlain-tile-set-y" since="0.4"/>
-    <keyword type="function" name="champlain_tile_set_zoom_level ()" link="ChamplainTile.html#champlain-tile-set-zoom-level" since="0.4"/>
-    <keyword type="function" name="champlain_tile_set_size ()" link="ChamplainTile.html#champlain-tile-set-size" since="0.4"/>
-    <keyword type="function" name="champlain_tile_set_state ()" link="ChamplainTile.html#champlain-tile-set-state" since="0.4"/>
-    <keyword type="function" name="champlain_tile_set_fade_in ()" link="ChamplainTile.html#champlain-tile-set-fade-in" since="0.6"/>
-    <keyword type="function" name="champlain_tile_get_content ()" link="ChamplainTile.html#champlain-tile-get-content" since="0.4"/>
-    <keyword type="function" name="champlain_tile_get_etag ()" link="ChamplainTile.html#champlain-tile-get-etag" since="0.4"/>
-    <keyword type="function" name="champlain_tile_get_modified_time ()" link="ChamplainTile.html#champlain-tile-get-modified-time" since="0.4"/>
-    <keyword type="function" name="champlain_tile_set_content ()" link="ChamplainTile.html#champlain-tile-set-content" since="0.4"/>
-    <keyword type="function" name="champlain_tile_set_etag ()" link="ChamplainTile.html#champlain-tile-set-etag" since="0.4"/>
-    <keyword type="function" name="champlain_tile_set_modified_time ()" link="ChamplainTile.html#champlain-tile-set-modified-time" since="0.4"/>
-    <keyword type="function" name="champlain_tile_display_content ()" link="ChamplainTile.html#champlain-tile-display-content" since="0.8"/>
+    <keyword type="function" name="champlain_error_tile_renderer_new ()" link="ChamplainErrorTileRenderer.html#champlain-error-tile-renderer-new" since="0.8"/>
+    <keyword type="function" name="champlain_error_tile_renderer_set_tile_size ()" link="ChamplainErrorTileRenderer.html#champlain-error-tile-renderer-set-tile-size" since="0.8"/>
+    <keyword type="function" name="champlain_error_tile_renderer_get_tile_size ()" link="ChamplainErrorTileRenderer.html#champlain-error-tile-renderer-get-tile-size" since="0.8"/>
+    <keyword type="property" name="The &quot;tile-size&quot; property" link="ChamplainErrorTileRenderer.html#ChamplainErrorTileRenderer--tile-size"/>
     <keyword type="enum" name="enum ChamplainState" link="ChamplainTile.html#ChamplainState"/>
     <keyword type="struct" name="struct ChamplainTile" link="ChamplainTile.html#ChamplainTile-struct"/>
-    <keyword type="property" name="The “content” property" link="ChamplainTile.html#ChamplainTile--content"/>
-    <keyword type="property" name="The “etag” property" link="ChamplainTile.html#ChamplainTile--etag"/>
-    <keyword type="property" name="The “fade-in” property" link="ChamplainTile.html#ChamplainTile--fade-in"/>
-    <keyword type="property" name="The “size” property" link="ChamplainTile.html#ChamplainTile--size"/>
-    <keyword type="property" name="The “state” property" link="ChamplainTile.html#ChamplainTile--state"/>
-    <keyword type="property" name="The “x” property" link="ChamplainTile.html#ChamplainTile--x"/>
-    <keyword type="property" name="The “y” property" link="ChamplainTile.html#ChamplainTile--y"/>
-    <keyword type="property" name="The “zoom-level” property" link="ChamplainTile.html#ChamplainTile--zoom-level"/>
-    <keyword type="signal" name="The “render-complete” signal" link="ChamplainTile.html#ChamplainTile-render-complete"/>
-    <keyword type="function" name="champlain_bounding_box_new ()" link="ChamplainBoundingBox.html#champlain-bounding-box-new" since="0.6"/>
-    <keyword type="function" name="champlain_bounding_box_copy ()" link="ChamplainBoundingBox.html#champlain-bounding-box-copy" since="0.6"/>
-    <keyword type="function" name="champlain_bounding_box_free ()" link="ChamplainBoundingBox.html#champlain-bounding-box-free" since="0.6"/>
-    <keyword type="function" name="champlain_bounding_box_get_center ()" link="ChamplainBoundingBox.html#champlain-bounding-box-get-center" since="0.6"/>
-    <keyword type="function" name="champlain_bounding_box_compose ()" link="ChamplainBoundingBox.html#champlain-bounding-box-compose" since="0.10"/>
-    <keyword type="function" name="champlain_bounding_box_extend ()" link="ChamplainBoundingBox.html#champlain-bounding-box-extend" since="0.10"/>
-    <keyword type="function" name="champlain_bounding_box_is_valid ()" link="ChamplainBoundingBox.html#champlain-bounding-box-is-valid" since="0.10"/>
-    <keyword type="function" name="champlain_bounding_box_covers ()" link="ChamplainBoundingBox.html#champlain-bounding-box-covers" since="0.12.4"/>
+    <keyword type="function" name="champlain_tile_new ()" link="ChamplainTile.html#champlain-tile-new" since="0.4"/>
+    <keyword type="function" name="champlain_tile_new_full ()" link="ChamplainTile.html#champlain-tile-new-full" since="0.4"/>
+    <keyword type="function" name="champlain_tile_get_x ()" link="ChamplainTile.html#champlain-tile-get-x" since="0.4"/>
+    <keyword type="function" name="champlain_tile_get_y ()" link="ChamplainTile.html#champlain-tile-get-y" since="0.4"/>
+    <keyword type="function" name="champlain_tile_get_zoom_level ()" link="ChamplainTile.html#champlain-tile-get-zoom-level" since="0.4"/>
+    <keyword type="function" name="champlain_tile_get_size ()" link="ChamplainTile.html#champlain-tile-get-size" since="0.4"/>
+    <keyword type="function" name="champlain_tile_get_state ()" link="ChamplainTile.html#champlain-tile-get-state" since="0.4"/>
+    <keyword type="function" name="champlain_tile_get_fade_in ()" link="ChamplainTile.html#champlain-tile-get-fade-in" since="0.6"/>
+    <keyword type="function" name="champlain_tile_set_x ()" link="ChamplainTile.html#champlain-tile-set-x" since="0.4"/>
+    <keyword type="function" name="champlain_tile_set_y ()" link="ChamplainTile.html#champlain-tile-set-y" since="0.4"/>
+    <keyword type="function" name="champlain_tile_set_zoom_level ()" link="ChamplainTile.html#champlain-tile-set-zoom-level" since="0.4"/>
+    <keyword type="function" name="champlain_tile_set_size ()" link="ChamplainTile.html#champlain-tile-set-size" since="0.4"/>
+    <keyword type="function" name="champlain_tile_set_state ()" link="ChamplainTile.html#champlain-tile-set-state" since="0.4"/>
+    <keyword type="function" name="champlain_tile_set_fade_in ()" link="ChamplainTile.html#champlain-tile-set-fade-in" since="0.6"/>
+    <keyword type="function" name="champlain_tile_get_content ()" link="ChamplainTile.html#champlain-tile-get-content" since="0.4"/>
+    <keyword type="function" name="champlain_tile_get_etag ()" link="ChamplainTile.html#champlain-tile-get-etag" since="0.4"/>
+    <keyword type="function" name="champlain_tile_get_modified_time ()" link="ChamplainTile.html#champlain-tile-get-modified-time" since="0.4"/>
+    <keyword type="function" name="champlain_tile_set_content ()" link="ChamplainTile.html#champlain-tile-set-content" since="0.4"/>
+    <keyword type="function" name="champlain_tile_set_etag ()" link="ChamplainTile.html#champlain-tile-set-etag" since="0.4"/>
+    <keyword type="function" name="champlain_tile_set_modified_time ()" link="ChamplainTile.html#champlain-tile-set-modified-time" since="0.4"/>
+    <keyword type="function" name="champlain_tile_display_content ()" link="ChamplainTile.html#champlain-tile-display-content" since="0.8"/>
+    <keyword type="property" name="The &quot;content&quot; property" link="ChamplainTile.html#ChamplainTile--content"/>
+    <keyword type="property" name="The &quot;etag&quot; property" link="ChamplainTile.html#ChamplainTile--etag"/>
+    <keyword type="property" name="The &quot;fade-in&quot; property" link="ChamplainTile.html#ChamplainTile--fade-in"/>
+    <keyword type="property" name="The &quot;size&quot; property" link="ChamplainTile.html#ChamplainTile--size"/>
+    <keyword type="property" name="The &quot;state&quot; property" link="ChamplainTile.html#ChamplainTile--state"/>
+    <keyword type="property" name="The &quot;x&quot; property" link="ChamplainTile.html#ChamplainTile--x"/>
+    <keyword type="property" name="The &quot;y&quot; property" link="ChamplainTile.html#ChamplainTile--y"/>
+    <keyword type="property" name="The &quot;zoom-level&quot; property" link="ChamplainTile.html#ChamplainTile--zoom-level"/>
+    <keyword type="signal" name="The &quot;render-complete&quot; signal" link="ChamplainTile.html#ChamplainTile-render-complete"/>
     <keyword type="struct" name="struct ChamplainBoundingBox" link="ChamplainBoundingBox.html#ChamplainBoundingBox-struct"/>
-    <keyword type="function" name="champlain_exportable_set_surface ()" link="ChamplainExportable.html#champlain-exportable-set-surface" since="0.12.12"/>
-    <keyword type="function" name="champlain_exportable_get_surface ()" link="ChamplainExportable.html#champlain-exportable-get-surface" since="0.12.12"/>
-    <keyword type="struct" name="ChamplainExportable" link="ChamplainExportable.html#ChamplainExportable-struct"/>
-    <keyword type="struct" name="struct ChamplainExportableIface" link="ChamplainExportable.html#ChamplainExportableIface"/>
-    <keyword type="property" name="The “surface” property" link="ChamplainExportable.html#ChamplainExportable--surface"/>
-    <keyword type="macro" name="CHAMPLAIN_CHECK_VERSION()" link="libchamplain-ChamplainVersion.html#CHAMPLAIN-CHECK-VERSION:CAPS"/>
+    <keyword type="function" name="champlain_bounding_box_new ()" link="ChamplainBoundingBox.html#champlain-bounding-box-new" since="0.6"/>
+    <keyword type="function" name="champlain_bounding_box_copy ()" link="ChamplainBoundingBox.html#champlain-bounding-box-copy" since="0.6"/>
+    <keyword type="function" name="champlain_bounding_box_free ()" link="ChamplainBoundingBox.html#champlain-bounding-box-free" since="0.6"/>
+    <keyword type="function" name="champlain_bounding_box_get_center ()" link="ChamplainBoundingBox.html#champlain-bounding-box-get-center" since="0.6"/>
+    <keyword type="function" name="champlain_bounding_box_compose ()" link="ChamplainBoundingBox.html#champlain-bounding-box-compose" since="0.10"/>
+    <keyword type="function" name="champlain_bounding_box_extend ()" link="ChamplainBoundingBox.html#champlain-bounding-box-extend" since="0.10"/>
+    <keyword type="function" name="champlain_bounding_box_is_valid ()" link="ChamplainBoundingBox.html#champlain-bounding-box-is-valid" since="0.10"/>
+    <keyword type="function" name="champlain_bounding_box_covers ()" link="ChamplainBoundingBox.html#champlain-bounding-box-covers" since="0.12.4"/>
     <keyword type="macro" name="CHAMPLAIN_MAJOR_VERSION" link="libchamplain-ChamplainVersion.html#CHAMPLAIN-MAJOR-VERSION:CAPS"/>
     <keyword type="macro" name="CHAMPLAIN_MINOR_VERSION" link="libchamplain-ChamplainVersion.html#CHAMPLAIN-MINOR-VERSION:CAPS"/>
     <keyword type="macro" name="CHAMPLAIN_MICRO_VERSION" link="libchamplain-ChamplainVersion.html#CHAMPLAIN-MICRO-VERSION:CAPS"/>
     <keyword type="macro" name="CHAMPLAIN_VERSION" link="libchamplain-ChamplainVersion.html#CHAMPLAIN-VERSION:CAPS"/>
     <keyword type="macro" name="CHAMPLAIN_VERSION_S" link="libchamplain-ChamplainVersion.html#CHAMPLAIN-VERSION-S:CAPS"/>
     <keyword type="macro" name="CHAMPLAIN_VERSION_HEX" link="libchamplain-ChamplainVersion.html#CHAMPLAIN-VERSION-HEX:CAPS"/>
+    <keyword type="macro" name="CHAMPLAIN_CHECK_VERSION()" link="libchamplain-ChamplainVersion.html#CHAMPLAIN-CHECK-VERSION:CAPS"/>
     <keyword type="constant" name="CHAMPLAIN_SELECTION_NONE" link="ChamplainMarkerLayer.html#CHAMPLAIN-SELECTION-NONE:CAPS"/>
     <keyword type="constant" name="CHAMPLAIN_SELECTION_SINGLE" link="ChamplainMarkerLayer.html#CHAMPLAIN-SELECTION-SINGLE:CAPS"/>
     <keyword type="constant" name="CHAMPLAIN_SELECTION_MULTIPLE" link="ChamplainMarkerLayer.html#CHAMPLAIN-SELECTION-MULTIPLE:CAPS"/>
     <keyword type="constant" name="CHAMPLAIN_UNIT_KM" link="ChamplainScale.html#CHAMPLAIN-UNIT-KM:CAPS"/>
     <keyword type="constant" name="CHAMPLAIN_UNIT_MILES" link="ChamplainScale.html#CHAMPLAIN-UNIT-MILES:CAPS"/>
     <keyword type="constant" name="CHAMPLAIN_MAP_PROJECTION_MERCATOR" link="ChamplainMapSource.html#CHAMPLAIN-MAP-PROJECTION-MERCATOR:CAPS"/>
+    <keyword type="constant" name="CHAMPLAIN_MEMPHIS_RULE_TYPE_UNKNOWN" link="ChamplainMemphisRenderer.html#CHAMPLAIN-MEMPHIS-RULE-TYPE-UNKNOWN:CAPS"/>
+    <keyword type="constant" name="CHAMPLAIN_MEMPHIS_RULE_TYPE_NODE" link="ChamplainMemphisRenderer.html#CHAMPLAIN-MEMPHIS-RULE-TYPE-NODE:CAPS"/>
+    <keyword type="constant" name="CHAMPLAIN_MEMPHIS_RULE_TYPE_WAY" link="ChamplainMemphisRenderer.html#CHAMPLAIN-MEMPHIS-RULE-TYPE-WAY:CAPS"/>
+    <keyword type="constant" name="CHAMPLAIN_MEMPHIS_RULE_TYPE_RELATION" link="ChamplainMemphisRenderer.html#CHAMPLAIN-MEMPHIS-RULE-TYPE-RELATION:CAPS"/>
     <keyword type="constant" name="CHAMPLAIN_STATE_NONE" link="ChamplainTile.html#CHAMPLAIN-STATE-NONE:CAPS"/>
     <keyword type="constant" name="CHAMPLAIN_STATE_LOADING" link="ChamplainTile.html#CHAMPLAIN-STATE-LOADING:CAPS"/>
     <keyword type="constant" name="CHAMPLAIN_STATE_LOADED" link="ChamplainTile.html#CHAMPLAIN-STATE-LOADED:CAPS"/>
     <keyword type="constant" name="CHAMPLAIN_STATE_DONE" link="ChamplainTile.html#CHAMPLAIN-STATE-DONE:CAPS"/>
-    <keyword type="member" name="ChamplainLocationIface.get-latitude" link="ChamplainLocation.html#ChamplainLocationIface.get-latitude"/>
-    <keyword type="member" name="ChamplainLocationIface.get-longitude" link="ChamplainLocation.html#ChamplainLocationIface.get-longitude"/>
-    <keyword type="member" name="ChamplainLocationIface.set-location" link="ChamplainLocation.html#ChamplainLocationIface.set-location"/>
-    <keyword type="member" name="ChamplainBoundingBox-struct.left" link="ChamplainBoundingBox.html#ChamplainBoundingBox-struct.left"/>
-    <keyword type="member" name="ChamplainBoundingBox-struct.top" link="ChamplainBoundingBox.html#ChamplainBoundingBox-struct.top"/>
-    <keyword type="member" name="ChamplainBoundingBox-struct.right" link="ChamplainBoundingBox.html#ChamplainBoundingBox-struct.right"/>
-    <keyword type="member" name="ChamplainBoundingBox-struct.bottom" link="ChamplainBoundingBox.html#ChamplainBoundingBox-struct.bottom"/>
-    <keyword type="member" name="ChamplainExportableIface.get-surface" link="ChamplainExportable.html#ChamplainExportableIface.get-surface"/>
-    <keyword type="member" name="ChamplainExportableIface.set-surface" link="ChamplainExportable.html#ChamplainExportableIface.set-surface"/>
   </functions>
 </book>

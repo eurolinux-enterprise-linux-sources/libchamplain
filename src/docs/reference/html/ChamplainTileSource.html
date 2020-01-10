@@ -2,28 +2,34 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>ChamplainTileSource: libchamplain Reference Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<title>ChamplainTileSource</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
 <link rel="home" href="index.html" title="libchamplain Reference Manual">
 <link rel="up" href="ch04.html" title="Tile Sources">
 <link rel="prev" href="ch04.html" title="Tile Sources">
 <link rel="next" href="ChamplainNetworkTileSource.html" title="ChamplainNetworkTileSource">
-<meta name="generator" content="GTK-Doc V1.25 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
-<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
-<td width="100%" align="left" class="shortcuts">
-<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
-                  <a href="#ChamplainTileSource.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
-                  <a href="#ChamplainTileSource.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
-                  <a href="#ChamplainTileSource.properties" class="shortcut">Properties</a></span>
-</td>
-<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
-<td><a accesskey="u" href="ch04.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
-<td><a accesskey="p" href="ch04.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
-<td><a accesskey="n" href="ChamplainNetworkTileSource.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
-</tr></table>
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="ch04.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch04.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libchamplain Reference Manual</th>
+<td><a accesskey="n" href="ChamplainNetworkTileSource.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#ChamplainTileSource.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#ChamplainTileSource.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#ChamplainTileSource.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#ChamplainTileSource.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
 <div class="refentry">
 <a name="ChamplainTileSource"></a><div class="titlepage"></div>
 <div class="refnamediv"><table width="100%"><tr>
@@ -31,599 +37,425 @@
 <h2><span class="refentrytitle"><a name="ChamplainTileSource.top_of_page"></a>ChamplainTileSource</span></h2>
 <p>ChamplainTileSource — A base class of tile sources</p>
 </td>
-<td class="gallery_image" valign="top" align="right"></td>
+<td valign="top" align="right"></td>
 </tr></table></div>
-<div class="refsect1">
-<a name="ChamplainTileSource.functions"></a><h2>Functions</h2>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="functions_return">
-<col class="functions_name">
-</colgroup>
-<tbody>
-<tr>
-<td class="function_type">
-<span class="returnvalue">void</span>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainTileSource.html#champlain-tile-source-set-cache" title="champlain_tile_source_set_cache ()">champlain_tile_source_set_cache</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a class="link" href="ChamplainTileCache.html" title="ChamplainTileCache"><span class="returnvalue">ChamplainTileCache</span></a> *
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainTileSource.html#champlain-tile-source-get-cache" title="champlain_tile_source_get_cache ()">champlain_tile_source_get_cache</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<span class="returnvalue">void</span>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainTileSource.html#champlain-tile-source-set-id" title="champlain_tile_source_set_id ()">champlain_tile_source_set_id</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<span class="returnvalue">void</span>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainTileSource.html#champlain-tile-source-set-name" title="champlain_tile_source_set_name ()">champlain_tile_source_set_name</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<span class="returnvalue">void</span>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainTileSource.html#champlain-tile-source-set-license" title="champlain_tile_source_set_license ()">champlain_tile_source_set_license</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<span class="returnvalue">void</span>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainTileSource.html#champlain-tile-source-set-license-uri" title="champlain_tile_source_set_license_uri ()">champlain_tile_source_set_license_uri</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<span class="returnvalue">void</span>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainTileSource.html#champlain-tile-source-set-min-zoom-level" title="champlain_tile_source_set_min_zoom_level ()">champlain_tile_source_set_min_zoom_level</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<span class="returnvalue">void</span>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainTileSource.html#champlain-tile-source-set-max-zoom-level" title="champlain_tile_source_set_max_zoom_level ()">champlain_tile_source_set_max_zoom_level</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<span class="returnvalue">void</span>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainTileSource.html#champlain-tile-source-set-tile-size" title="champlain_tile_source_set_tile_size ()">champlain_tile_source_set_tile_size</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<span class="returnvalue">void</span>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainTileSource.html#champlain-tile-source-set-projection" title="champlain_tile_source_set_projection ()">champlain_tile_source_set_projection</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="refsect1">
-<a name="ChamplainTileSource.properties"></a><h2>Properties</h2>
-<div class="informaltable"><table class="informaltable" border="0">
-<colgroup>
-<col width="150px" class="properties_type">
-<col width="300px" class="properties_name">
-<col width="200px" class="properties_flags">
-</colgroup>
-<tbody>
-<tr>
-<td class="property_type">
-<a class="link" href="ChamplainTileCache.html" title="ChamplainTileCache"><span class="type">ChamplainTileCache</span></a> *</td>
-<td class="property_name"><a class="link" href="ChamplainTileSource.html#ChamplainTileSource--cache" title="The “cache” property">cache</a></td>
-<td class="property_flags">Read / Write</td>
-</tr>
-<tr>
-<td class="property_type">
-<a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
-<td class="property_name"><a class="link" href="ChamplainTileSource.html#ChamplainTileSource--id" title="The “id” property">id</a></td>
-<td class="property_flags">Read / Write / Construct</td>
-</tr>
-<tr>
-<td class="property_type">
-<a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
-<td class="property_name"><a class="link" href="ChamplainTileSource.html#ChamplainTileSource--license" title="The “license” property">license</a></td>
-<td class="property_flags">Read / Write / Construct</td>
-</tr>
-<tr>
-<td class="property_type">
-<a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
-<td class="property_name"><a class="link" href="ChamplainTileSource.html#ChamplainTileSource--license-uri" title="The “license-uri” property">license-uri</a></td>
-<td class="property_flags">Read / Write / Construct</td>
-</tr>
-<tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
-<td class="property_name"><a class="link" href="ChamplainTileSource.html#ChamplainTileSource--max-zoom-level" title="The “max-zoom-level” property">max-zoom-level</a></td>
-<td class="property_flags">Read / Write / Construct</td>
-</tr>
-<tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
-<td class="property_name"><a class="link" href="ChamplainTileSource.html#ChamplainTileSource--min-zoom-level" title="The “min-zoom-level” property">min-zoom-level</a></td>
-<td class="property_flags">Read / Write / Construct</td>
-</tr>
-<tr>
-<td class="property_type">
-<a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
-<td class="property_name"><a class="link" href="ChamplainTileSource.html#ChamplainTileSource--name" title="The “name” property">name</a></td>
-<td class="property_flags">Read / Write / Construct</td>
-</tr>
-<tr>
-<td class="property_type"><a class="link" href="ChamplainMapSource.html#ChamplainMapProjection" title="enum ChamplainMapProjection"><span class="type">ChamplainMapProjection</span></a></td>
-<td class="property_name"><a class="link" href="ChamplainTileSource.html#ChamplainTileSource--projection" title="The “projection” property">projection</a></td>
-<td class="property_flags">Read / Write / Construct</td>
-</tr>
-<tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
-<td class="property_name"><a class="link" href="ChamplainTileSource.html#ChamplainTileSource--tile-size" title="The “tile-size” property">tile-size</a></td>
-<td class="property_flags">Read / Write / Construct</td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="refsect1">
-<a name="ChamplainTileSource.other"></a><h2>Types and Values</h2>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="name">
-<col class="description">
-</colgroup>
-<tbody><tr>
-<td class="datatype_keyword">struct</td>
-<td class="function_name"><a class="link" href="ChamplainTileSource.html#ChamplainTileSource-struct" title="struct ChamplainTileSource">ChamplainTileSource</a></td>
-</tr></tbody>
-</table></div>
+<div class="refsynopsisdiv">
+<a name="ChamplainTileSource.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="ChamplainTileSource.html#ChamplainTileSource-struct" title="struct ChamplainTileSource">ChamplainTileSource</a>;
+<span class="returnvalue">void</span>                <a class="link" href="ChamplainTileSource.html#champlain-tile-source-set-cache" title="champlain_tile_source_set_cache ()">champlain_tile_source_set_cache</a>     (<em class="parameter"><code><a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a> *tile_source</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="ChamplainTileCache.html" title="ChamplainTileCache"><span class="type">ChamplainTileCache</span></a> *cache</code></em>);
+<a class="link" href="ChamplainTileCache.html" title="ChamplainTileCache"><span class="returnvalue">ChamplainTileCache</span></a> * <a class="link" href="ChamplainTileSource.html#champlain-tile-source-get-cache" title="champlain_tile_source_get_cache ()">champlain_tile_source_get_cache</a>    (<em class="parameter"><code><a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a> *tile_source</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="ChamplainTileSource.html#champlain-tile-source-set-id" title="champlain_tile_source_set_id ()">champlain_tile_source_set_id</a>        (<em class="parameter"><code><a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a> *tile_source</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *id</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="ChamplainTileSource.html#champlain-tile-source-set-name" title="champlain_tile_source_set_name ()">champlain_tile_source_set_name</a>      (<em class="parameter"><code><a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a> *tile_source</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="ChamplainTileSource.html#champlain-tile-source-set-license" title="champlain_tile_source_set_license ()">champlain_tile_source_set_license</a>   (<em class="parameter"><code><a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a> *tile_source</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *license</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="ChamplainTileSource.html#champlain-tile-source-set-license-uri" title="champlain_tile_source_set_license_uri ()">champlain_tile_source_set_license_uri</a>
+                                                        (<em class="parameter"><code><a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a> *tile_source</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *license_uri</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="ChamplainTileSource.html#champlain-tile-source-set-min-zoom-level" title="champlain_tile_source_set_min_zoom_level ()">champlain_tile_source_set_min_zoom_level</a>
+                                                        (<em class="parameter"><code><a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a> *tile_source</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> zoom_level</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="ChamplainTileSource.html#champlain-tile-source-set-max-zoom-level" title="champlain_tile_source_set_max_zoom_level ()">champlain_tile_source_set_max_zoom_level</a>
+                                                        (<em class="parameter"><code><a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a> *tile_source</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> zoom_level</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="ChamplainTileSource.html#champlain-tile-source-set-tile-size" title="champlain_tile_source_set_tile_size ()">champlain_tile_source_set_tile_size</a> (<em class="parameter"><code><a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a> *tile_source</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> tile_size</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="ChamplainTileSource.html#champlain-tile-source-set-projection" title="champlain_tile_source_set_projection ()">champlain_tile_source_set_projection</a>
+                                                        (<em class="parameter"><code><a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a> *tile_source</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="ChamplainMapSource.html#ChamplainMapProjection" title="enum ChamplainMapProjection"><span class="type">ChamplainMapProjection</span></a> projection</code></em>);
+</pre>
 </div>
 <div class="refsect1">
 <a name="ChamplainTileSource.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
-    <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
-        <span class="lineart">╰──</span> <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource">ChamplainMapSource</a>
-            <span class="lineart">╰──</span> ChamplainTileSource
-                <span class="lineart">├──</span> <a class="link" href="ChamplainFileTileSource.html" title="ChamplainFileTileSource">ChamplainFileTileSource</a>
-                <span class="lineart">├──</span> <a class="link" href="ChamplainNetworkBboxTileSource.html" title="ChamplainNetworkBboxTileSource">ChamplainNetworkBboxTileSource</a>
-                <span class="lineart">├──</span> <a class="link" href="ChamplainNetworkTileSource.html" title="ChamplainNetworkTileSource">ChamplainNetworkTileSource</a>
-                <span class="lineart">╰──</span> <a class="link" href="ChamplainNullTileSource.html" title="ChamplainNullTileSource">ChamplainNullTileSource</a>
+<pre class="synopsis">
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
+         +----<a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource">ChamplainMapSource</a>
+               +----ChamplainTileSource
+                     +----<a class="link" href="ChamplainFileTileSource.html" title="ChamplainFileTileSource">ChamplainFileTileSource</a>
+                     +----<a class="link" href="ChamplainNetworkBboxTileSource.html" title="ChamplainNetworkBboxTileSource">ChamplainNetworkBboxTileSource</a>
+                     +----<a class="link" href="ChamplainNetworkTileSource.html" title="ChamplainNetworkTileSource">ChamplainNetworkTileSource</a>
+                     +----<a class="link" href="ChamplainNullTileSource.html" title="ChamplainNullTileSource">ChamplainNullTileSource</a>
+</pre>
+</div>
+<div class="refsect1">
+<a name="ChamplainTileSource.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="ChamplainTileSource.html#ChamplainTileSource--cache" title='The "cache" property'>cache</a>"                    <a class="link" href="ChamplainTileCache.html" title="ChamplainTileCache"><span class="type">ChamplainTileCache</span></a>*   : Read / Write
+  "<a class="link" href="ChamplainTileSource.html#ChamplainTileSource--id" title='The "id" property'>id</a>"                       <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write / Construct
+  "<a class="link" href="ChamplainTileSource.html#ChamplainTileSource--license" title='The "license" property'>license</a>"                  <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write / Construct
+  "<a class="link" href="ChamplainTileSource.html#ChamplainTileSource--license-uri" title='The "license-uri" property'>license-uri</a>"              <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write / Construct
+  "<a class="link" href="ChamplainTileSource.html#ChamplainTileSource--max-zoom-level" title='The "max-zoom-level" property'>max-zoom-level</a>"           <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a>                 : Read / Write / Construct
+  "<a class="link" href="ChamplainTileSource.html#ChamplainTileSource--min-zoom-level" title='The "min-zoom-level" property'>min-zoom-level</a>"           <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a>                 : Read / Write / Construct
+  "<a class="link" href="ChamplainTileSource.html#ChamplainTileSource--name" title='The "name" property'>name</a>"                     <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write / Construct
+  "<a class="link" href="ChamplainTileSource.html#ChamplainTileSource--projection" title='The "projection" property'>projection</a>"               <a class="link" href="ChamplainMapSource.html#ChamplainMapProjection" title="enum ChamplainMapProjection"><span class="type">ChamplainMapProjection</span></a>  : Read / Write / Construct
+  "<a class="link" href="ChamplainTileSource.html#ChamplainTileSource--tile-size" title='The "tile-size" property'>tile-size</a>"                <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a>                 : Read / Write / Construct
 </pre>
 </div>
 <div class="refsect1">
 <a name="ChamplainTileSource.description"></a><h2>Description</h2>
-<p>This class defines properties common to all tile sources (that is, map
-sources that are not caches).</p>
+<p>
+This class defines properties common to all tile sources (that is, map
+sources that are not caches).
+</p>
 </div>
 <div class="refsect1">
-<a name="ChamplainTileSource.functions_details"></a><h2>Functions</h2>
-<div class="refsect2">
-<a name="champlain-tile-source-set-cache"></a><h3>champlain_tile_source_set_cache ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>
-champlain_tile_source_set_cache (<em class="parameter"><code><a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a> *tile_source</code></em>,
-                                 <em class="parameter"><code><a class="link" href="ChamplainTileCache.html" title="ChamplainTileCache"><span class="type">ChamplainTileCache</span></a> *cache</code></em>);</pre>
-<p>Sets the map source's cache used for storing tiles.</p>
-<div class="refsect3">
-<a name="champlain-tile-source-set-cache.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>tile_source</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>cache</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainTileCache.html" title="ChamplainTileCache"><span class="type">ChamplainTileCache</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<p class="since">Since: 0.6</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-tile-source-get-cache"></a><h3>champlain_tile_source_get_cache ()</h3>
-<pre class="programlisting"><a class="link" href="ChamplainTileCache.html" title="ChamplainTileCache"><span class="returnvalue">ChamplainTileCache</span></a> *
-champlain_tile_source_get_cache (<em class="parameter"><code><a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a> *tile_source</code></em>);</pre>
-<p>Gets the cache used for storing tiles by this tile source.</p>
-<div class="refsect3">
-<a name="champlain-tile-source-get-cache.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>tile_source</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="champlain-tile-source-get-cache.returns"></a><h4>Returns</h4>
-<p> the cache. </p>
-<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
-</div>
-<p class="since">Since: 0.6</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-tile-source-set-id"></a><h3>champlain_tile_source_set_id ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>
-champlain_tile_source_set_id (<em class="parameter"><code><a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a> *tile_source</code></em>,
-                              <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *id</code></em>);</pre>
-<p>Sets the tile source's id.</p>
-<div class="refsect3">
-<a name="champlain-tile-source-set-id.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>tile_source</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>id</p></td>
-<td class="parameter_description"><p>an id</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<p class="since">Since: 0.4</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-tile-source-set-name"></a><h3>champlain_tile_source_set_name ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>
-champlain_tile_source_set_name (<em class="parameter"><code><a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a> *tile_source</code></em>,
-                                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);</pre>
-<p>Sets the tile source's name.</p>
-<div class="refsect3">
-<a name="champlain-tile-source-set-name.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>tile_source</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>name</p></td>
-<td class="parameter_description"><p>a name</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<p class="since">Since: 0.4</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-tile-source-set-license"></a><h3>champlain_tile_source_set_license ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>
-champlain_tile_source_set_license (<em class="parameter"><code><a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a> *tile_source</code></em>,
-                                   <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *license</code></em>);</pre>
-<p>Sets the tile source's license.</p>
-<div class="refsect3">
-<a name="champlain-tile-source-set-license.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>tile_source</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>license</p></td>
-<td class="parameter_description"><p>the licence</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<p class="since">Since: 0.4</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-tile-source-set-license-uri"></a><h3>champlain_tile_source_set_license_uri ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>
-champlain_tile_source_set_license_uri (<em class="parameter"><code><a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a> *tile_source</code></em>,
-                                       <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *license_uri</code></em>);</pre>
-<p>Sets the tile source's license URI.</p>
-<div class="refsect3">
-<a name="champlain-tile-source-set-license-uri.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>tile_source</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>license_uri</p></td>
-<td class="parameter_description"><p>the licence URI</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<p class="since">Since: 0.4</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-tile-source-set-min-zoom-level"></a><h3>champlain_tile_source_set_min_zoom_level ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>
-champlain_tile_source_set_min_zoom_level
-                               (<em class="parameter"><code><a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a> *tile_source</code></em>,
-                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a> zoom_level</code></em>);</pre>
-<p>Sets the tile source's minimal zoom level.</p>
-<div class="refsect3">
-<a name="champlain-tile-source-set-min-zoom-level.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>tile_source</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>zoom_level</p></td>
-<td class="parameter_description"><p>the minimal zoom level</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<p class="since">Since: 0.6</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-tile-source-set-max-zoom-level"></a><h3>champlain_tile_source_set_max_zoom_level ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>
-champlain_tile_source_set_max_zoom_level
-                               (<em class="parameter"><code><a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a> *tile_source</code></em>,
-                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a> zoom_level</code></em>);</pre>
-<p>Sets the tile source's maximum zoom level.</p>
-<div class="refsect3">
-<a name="champlain-tile-source-set-max-zoom-level.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>tile_source</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>zoom_level</p></td>
-<td class="parameter_description"><p>the maximum zoom level</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<p class="since">Since: 0.6</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-tile-source-set-tile-size"></a><h3>champlain_tile_source_set_tile_size ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>
-champlain_tile_source_set_tile_size (<em class="parameter"><code><a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a> *tile_source</code></em>,
-                                     <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a> tile_size</code></em>);</pre>
-<p>Sets the tile source's tile size.</p>
-<div class="refsect3">
-<a name="champlain-tile-source-set-tile-size.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>tile_source</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>tile_size</p></td>
-<td class="parameter_description"><p>the tile size</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<p class="since">Since: 0.6</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-tile-source-set-projection"></a><h3>champlain_tile_source_set_projection ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>
-champlain_tile_source_set_projection (<em class="parameter"><code><a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a> *tile_source</code></em>,
-                                      <em class="parameter"><code><a class="link" href="ChamplainMapSource.html#ChamplainMapProjection" title="enum ChamplainMapProjection"><span class="type">ChamplainMapProjection</span></a> projection</code></em>);</pre>
-<p>Sets the tile source's projection.</p>
-<div class="refsect3">
-<a name="champlain-tile-source-set-projection.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>tile_source</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>projection</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainMapSource.html#ChamplainMapProjection" title="enum ChamplainMapProjection"><span class="type">ChamplainMapProjection</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<p class="since">Since: 0.4</p>
-</div>
-</div>
-<div class="refsect1">
-<a name="ChamplainTileSource.other_details"></a><h2>Types and Values</h2>
+<a name="ChamplainTileSource.details"></a><h2>Details</h2>
 <div class="refsect2">
 <a name="ChamplainTileSource-struct"></a><h3>struct ChamplainTileSource</h3>
 <pre class="programlisting">struct ChamplainTileSource;</pre>
-<p>The <a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a> structure contains only private data
-and should be accessed using the provided API</p>
-<p class="since">Since: 0.6</p>
+<p>
+The <a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a> structure contains only private data
+and should be accessed using the provided API
+</p>
+<p class="since">Since 0.6</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-tile-source-set-cache"></a><h3>champlain_tile_source_set_cache ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                champlain_tile_source_set_cache     (<em class="parameter"><code><a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a> *tile_source</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="ChamplainTileCache.html" title="ChamplainTileCache"><span class="type">ChamplainTileCache</span></a> *cache</code></em>);</pre>
+<p>
+Sets the map source's cache used for storing tiles.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>tile_source</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>cache</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainTileCache.html" title="ChamplainTileCache"><span class="type">ChamplainTileCache</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.6</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-tile-source-get-cache"></a><h3>champlain_tile_source_get_cache ()</h3>
+<pre class="programlisting"><a class="link" href="ChamplainTileCache.html" title="ChamplainTileCache"><span class="returnvalue">ChamplainTileCache</span></a> * champlain_tile_source_get_cache    (<em class="parameter"><code><a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a> *tile_source</code></em>);</pre>
+<p>
+Gets the cache used for storing tiles by this tile source.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>tile_source</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the cache. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.6</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-tile-source-set-id"></a><h3>champlain_tile_source_set_id ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                champlain_tile_source_set_id        (<em class="parameter"><code><a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a> *tile_source</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *id</code></em>);</pre>
+<p>
+Sets the tile source's id.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>tile_source</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>id</code></em> :</span></p></td>
+<td>an id</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-tile-source-set-name"></a><h3>champlain_tile_source_set_name ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                champlain_tile_source_set_name      (<em class="parameter"><code><a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a> *tile_source</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);</pre>
+<p>
+Sets the tile source's name.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>tile_source</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>name</code></em> :</span></p></td>
+<td>a name</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-tile-source-set-license"></a><h3>champlain_tile_source_set_license ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                champlain_tile_source_set_license   (<em class="parameter"><code><a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a> *tile_source</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *license</code></em>);</pre>
+<p>
+Sets the tile source's license.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>tile_source</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>license</code></em> :</span></p></td>
+<td>the licence</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-tile-source-set-license-uri"></a><h3>champlain_tile_source_set_license_uri ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                champlain_tile_source_set_license_uri
+                                                        (<em class="parameter"><code><a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a> *tile_source</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *license_uri</code></em>);</pre>
+<p>
+Sets the tile source's license URI.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>tile_source</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>license_uri</code></em> :</span></p></td>
+<td>the licence URI</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-tile-source-set-min-zoom-level"></a><h3>champlain_tile_source_set_min_zoom_level ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                champlain_tile_source_set_min_zoom_level
+                                                        (<em class="parameter"><code><a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a> *tile_source</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> zoom_level</code></em>);</pre>
+<p>
+Sets the tile source's minimal zoom level.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>tile_source</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>zoom_level</code></em> :</span></p></td>
+<td>the minimal zoom level</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.6</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-tile-source-set-max-zoom-level"></a><h3>champlain_tile_source_set_max_zoom_level ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                champlain_tile_source_set_max_zoom_level
+                                                        (<em class="parameter"><code><a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a> *tile_source</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> zoom_level</code></em>);</pre>
+<p>
+Sets the tile source's maximum zoom level.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>tile_source</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>zoom_level</code></em> :</span></p></td>
+<td>the maximum zoom level</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.6</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-tile-source-set-tile-size"></a><h3>champlain_tile_source_set_tile_size ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                champlain_tile_source_set_tile_size (<em class="parameter"><code><a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a> *tile_source</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> tile_size</code></em>);</pre>
+<p>
+Sets the tile source's tile size.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>tile_source</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>tile_size</code></em> :</span></p></td>
+<td>the tile size</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.6</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-tile-source-set-projection"></a><h3>champlain_tile_source_set_projection ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                champlain_tile_source_set_projection
+                                                        (<em class="parameter"><code><a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a> *tile_source</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="ChamplainMapSource.html#ChamplainMapProjection" title="enum ChamplainMapProjection"><span class="type">ChamplainMapProjection</span></a> projection</code></em>);</pre>
+<p>
+Sets the tile source's projection.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>tile_source</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>projection</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainMapSource.html#ChamplainMapProjection" title="enum ChamplainMapProjection"><span class="type">ChamplainMapProjection</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.4</p>
 </div>
 </div>
 <div class="refsect1">
 <a name="ChamplainTileSource.property-details"></a><h2>Property Details</h2>
 <div class="refsect2">
-<a name="ChamplainTileSource--cache"></a><h3>The <code class="literal">“cache”</code> property</h3>
-<pre class="programlisting">  “cache”                    <a class="link" href="ChamplainTileCache.html" title="ChamplainTileCache"><span class="type">ChamplainTileCache</span></a> *</pre>
-<p>The cache used for tile storage</p>
-<p>Flags: Read / Write</p>
-<p class="since">Since: 0.6</p>
+<a name="ChamplainTileSource--cache"></a><h3>The <code class="literal">"cache"</code> property</h3>
+<pre class="programlisting">  "cache"                    <a class="link" href="ChamplainTileCache.html" title="ChamplainTileCache"><span class="type">ChamplainTileCache</span></a>*   : Read / Write</pre>
+<p>
+The cache used for tile storage
+</p>
+<p class="since">Since 0.6</p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="ChamplainTileSource--id"></a><h3>The <code class="literal">“id”</code> property</h3>
-<pre class="programlisting">  “id”                       <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
-<p>The id of the tile source</p>
-<p>Flags: Read / Write / Construct</p>
+<a name="ChamplainTileSource--id"></a><h3>The <code class="literal">"id"</code> property</h3>
+<pre class="programlisting">  "id"                       <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write / Construct</pre>
+<p>
+The id of the tile source
+</p>
 <p>Default value: ""</p>
-<p class="since">Since: 0.4</p>
+<p class="since">Since 0.4</p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="ChamplainTileSource--license"></a><h3>The <code class="literal">“license”</code> property</h3>
-<pre class="programlisting">  “license”                  <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
-<p>The usage license of the tile source</p>
-<p>Flags: Read / Write / Construct</p>
+<a name="ChamplainTileSource--license"></a><h3>The <code class="literal">"license"</code> property</h3>
+<pre class="programlisting">  "license"                  <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write / Construct</pre>
+<p>
+The usage license of the tile source
+</p>
 <p>Default value: ""</p>
-<p class="since">Since: 0.4</p>
+<p class="since">Since 0.4</p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="ChamplainTileSource--license-uri"></a><h3>The <code class="literal">“license-uri”</code> property</h3>
-<pre class="programlisting">  “license-uri”              <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
-<p>The usage license's uri for more information</p>
-<p>Flags: Read / Write / Construct</p>
+<a name="ChamplainTileSource--license-uri"></a><h3>The <code class="literal">"license-uri"</code> property</h3>
+<pre class="programlisting">  "license-uri"              <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write / Construct</pre>
+<p>
+The usage license's uri for more information
+</p>
 <p>Default value: ""</p>
-<p class="since">Since: 0.4</p>
+<p class="since">Since 0.4</p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="ChamplainTileSource--max-zoom-level"></a><h3>The <code class="literal">“max-zoom-level”</code> property</h3>
-<pre class="programlisting">  “max-zoom-level”           <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
-<p>The maximum zoom level</p>
-<p>Flags: Read / Write / Construct</p>
+<a name="ChamplainTileSource--max-zoom-level"></a><h3>The <code class="literal">"max-zoom-level"</code> property</h3>
+<pre class="programlisting">  "max-zoom-level"           <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a>                 : Read / Write / Construct</pre>
+<p>
+The maximum zoom level
+</p>
 <p>Allowed values: &lt;= 50</p>
 <p>Default value: 18</p>
-<p class="since">Since: 0.4</p>
+<p class="since">Since 0.4</p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="ChamplainTileSource--min-zoom-level"></a><h3>The <code class="literal">“min-zoom-level”</code> property</h3>
-<pre class="programlisting">  “min-zoom-level”           <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
-<p>The minimum zoom level</p>
-<p>Flags: Read / Write / Construct</p>
+<a name="ChamplainTileSource--min-zoom-level"></a><h3>The <code class="literal">"min-zoom-level"</code> property</h3>
+<pre class="programlisting">  "min-zoom-level"           <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a>                 : Read / Write / Construct</pre>
+<p>
+The minimum zoom level
+</p>
 <p>Allowed values: &lt;= 50</p>
 <p>Default value: 0</p>
-<p class="since">Since: 0.4</p>
+<p class="since">Since 0.4</p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="ChamplainTileSource--name"></a><h3>The <code class="literal">“name”</code> property</h3>
-<pre class="programlisting">  “name”                     <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
-<p>The name of the tile source</p>
-<p>Flags: Read / Write / Construct</p>
+<a name="ChamplainTileSource--name"></a><h3>The <code class="literal">"name"</code> property</h3>
+<pre class="programlisting">  "name"                     <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write / Construct</pre>
+<p>
+The name of the tile source
+</p>
 <p>Default value: ""</p>
-<p class="since">Since: 0.4</p>
+<p class="since">Since 0.4</p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="ChamplainTileSource--projection"></a><h3>The <code class="literal">“projection”</code> property</h3>
-<pre class="programlisting">  “projection”               <a class="link" href="ChamplainMapSource.html#ChamplainMapProjection" title="enum ChamplainMapProjection"><span class="type">ChamplainMapProjection</span></a></pre>
-<p>The map projection of the tile source</p>
-<p>Flags: Read / Write / Construct</p>
+<a name="ChamplainTileSource--projection"></a><h3>The <code class="literal">"projection"</code> property</h3>
+<pre class="programlisting">  "projection"               <a class="link" href="ChamplainMapSource.html#ChamplainMapProjection" title="enum ChamplainMapProjection"><span class="type">ChamplainMapProjection</span></a>  : Read / Write / Construct</pre>
+<p>
+The map projection of the tile source
+</p>
 <p>Default value: CHAMPLAIN_MAP_PROJECTION_MERCATOR</p>
-<p class="since">Since: 0.4</p>
+<p class="since">Since 0.4</p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="ChamplainTileSource--tile-size"></a><h3>The <code class="literal">“tile-size”</code> property</h3>
-<pre class="programlisting">  “tile-size”                <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
-<p>The tile size of the tile source</p>
-<p>Flags: Read / Write / Construct</p>
+<a name="ChamplainTileSource--tile-size"></a><h3>The <code class="literal">"tile-size"</code> property</h3>
+<pre class="programlisting">  "tile-size"                <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a>                 : Read / Write / Construct</pre>
+<p>
+The tile size of the tile source
+</p>
 <p>Allowed values: &lt;= 2048</p>
 <p>Default value: 256</p>
-<p class="since">Since: 0.4</p>
+<p class="since">Since 0.4</p>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.25</div>
+<hr>
+          Generated by GTK-Doc V1.18</div>
 </body>
 </html>

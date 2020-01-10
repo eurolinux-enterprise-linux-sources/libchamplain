@@ -2,30 +2,38 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>ChamplainTile: libchamplain Reference Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<title>ChamplainTile</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
 <link rel="home" href="index.html" title="libchamplain Reference Manual">
 <link rel="up" href="pt06.html" title="Part VI. Others">
 <link rel="prev" href="pt06.html" title="Part VI. Others">
 <link rel="next" href="ChamplainBoundingBox.html" title="ChamplainBoundingBox">
-<meta name="generator" content="GTK-Doc V1.25 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
-<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
-<td width="100%" align="left" class="shortcuts">
-<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
-                  <a href="#ChamplainTile.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
-                  <a href="#ChamplainTile.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_interfaces">  <span class="dim">|</span> 
-                  <a href="#ChamplainTile.implemented-interfaces" class="shortcut">Implemented Interfaces</a></span><span id="nav_properties">  <span class="dim">|</span> 
-                  <a href="#ChamplainTile.properties" class="shortcut">Properties</a></span><span id="nav_signals">  <span class="dim">|</span> 
-                  <a href="#ChamplainTile.signals" class="shortcut">Signals</a></span>
-</td>
-<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
-<td><a accesskey="u" href="pt06.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
-<td><a accesskey="p" href="pt06.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
-<td><a accesskey="n" href="ChamplainBoundingBox.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
-</tr></table>
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="pt06.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="pt06.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libchamplain Reference Manual</th>
+<td><a accesskey="n" href="ChamplainBoundingBox.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#ChamplainTile.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#ChamplainTile.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#ChamplainTile.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#ChamplainTile.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#ChamplainTile.properties" class="shortcut">Properties</a>
+                   | 
+                  <a href="#ChamplainTile.signals" class="shortcut">Signals</a>
+</td></tr>
+</table>
 <div class="refentry">
 <a name="ChamplainTile"></a><div class="titlepage"></div>
 <div class="refnamediv"><table width="100%"><tr>
@@ -33,1091 +41,772 @@
 <h2><span class="refentrytitle"><a name="ChamplainTile.top_of_page"></a>ChamplainTile</span></h2>
 <p>ChamplainTile — An object that represent map tiles</p>
 </td>
-<td class="gallery_image" valign="top" align="right"></td>
+<td valign="top" align="right"></td>
 </tr></table></div>
-<div class="refsect1">
-<a name="ChamplainTile.functions"></a><h2>Functions</h2>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="functions_return">
-<col class="functions_name">
-</colgroup>
-<tbody>
-<tr>
-<td class="function_type">
-<a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="returnvalue">ChamplainTile</span></a> *
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainTile.html#champlain-tile-new" title="champlain_tile_new ()">champlain_tile_new</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="returnvalue">ChamplainTile</span></a> *
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainTile.html#champlain-tile-new-full" title="champlain_tile_new_full ()">champlain_tile_new_full</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainTile.html#champlain-tile-get-x" title="champlain_tile_get_x ()">champlain_tile_get_x</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainTile.html#champlain-tile-get-y" title="champlain_tile_get_y ()">champlain_tile_get_y</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainTile.html#champlain-tile-get-zoom-level" title="champlain_tile_get_zoom_level ()">champlain_tile_get_zoom_level</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainTile.html#champlain-tile-get-size" title="champlain_tile_get_size ()">champlain_tile_get_size</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a class="link" href="ChamplainTile.html#ChamplainState" title="enum ChamplainState"><span class="returnvalue">ChamplainState</span></a>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainTile.html#champlain-tile-get-state" title="champlain_tile_get_state ()">champlain_tile_get_state</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainTile.html#champlain-tile-get-fade-in" title="champlain_tile_get_fade_in ()">champlain_tile_get_fade_in</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<span class="returnvalue">void</span>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainTile.html#champlain-tile-set-x" title="champlain_tile_set_x ()">champlain_tile_set_x</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<span class="returnvalue">void</span>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainTile.html#champlain-tile-set-y" title="champlain_tile_set_y ()">champlain_tile_set_y</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<span class="returnvalue">void</span>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainTile.html#champlain-tile-set-zoom-level" title="champlain_tile_set_zoom_level ()">champlain_tile_set_zoom_level</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<span class="returnvalue">void</span>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainTile.html#champlain-tile-set-size" title="champlain_tile_set_size ()">champlain_tile_set_size</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<span class="returnvalue">void</span>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainTile.html#champlain-tile-set-state" title="champlain_tile_set_state ()">champlain_tile_set_state</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<span class="returnvalue">void</span>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainTile.html#champlain-tile-set-fade-in" title="champlain_tile_set_fade_in ()">champlain_tile_set_fade_in</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<span class="returnvalue">ClutterActor</span> *
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainTile.html#champlain-tile-get-content" title="champlain_tile_get_content ()">champlain_tile_get_content</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">const <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainTile.html#champlain-tile-get-etag" title="champlain_tile_get_etag ()">champlain_tile_get_etag</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">const <a href="/usr/share/gtk-doc/html/glibglib-Date-and-Time-Functions.html#GTimeVal"><span class="returnvalue">GTimeVal</span></a> *
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainTile.html#champlain-tile-get-modified-time" title="champlain_tile_get_modified_time ()">champlain_tile_get_modified_time</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<span class="returnvalue">void</span>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainTile.html#champlain-tile-set-content" title="champlain_tile_set_content ()">champlain_tile_set_content</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<span class="returnvalue">void</span>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainTile.html#champlain-tile-set-etag" title="champlain_tile_set_etag ()">champlain_tile_set_etag</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<span class="returnvalue">void</span>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainTile.html#champlain-tile-set-modified-time" title="champlain_tile_set_modified_time ()">champlain_tile_set_modified_time</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<span class="returnvalue">void</span>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainTile.html#champlain-tile-display-content" title="champlain_tile_display_content ()">champlain_tile_display_content</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="refsect1">
-<a name="ChamplainTile.properties"></a><h2>Properties</h2>
-<div class="informaltable"><table class="informaltable" border="0">
-<colgroup>
-<col width="150px" class="properties_type">
-<col width="300px" class="properties_name">
-<col width="200px" class="properties_flags">
-</colgroup>
-<tbody>
-<tr>
-<td class="property_type">
-<span class="type">ClutterActor</span> *</td>
-<td class="property_name"><a class="link" href="ChamplainTile.html#ChamplainTile--content" title="The “content” property">content</a></td>
-<td class="property_flags">Read / Write</td>
-</tr>
-<tr>
-<td class="property_type">
-<a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
-<td class="property_name"><a class="link" href="ChamplainTile.html#ChamplainTile--etag" title="The “etag” property">etag</a></td>
-<td class="property_flags">Read / Write</td>
-</tr>
-<tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
-<td class="property_name"><a class="link" href="ChamplainTile.html#ChamplainTile--fade-in" title="The “fade-in” property">fade-in</a></td>
-<td class="property_flags">Read / Write</td>
-</tr>
-<tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
-<td class="property_name"><a class="link" href="ChamplainTile.html#ChamplainTile--size" title="The “size” property">size</a></td>
-<td class="property_flags">Read / Write</td>
-</tr>
-<tr>
-<td class="property_type"><a class="link" href="ChamplainTile.html#ChamplainState" title="enum ChamplainState"><span class="type">ChamplainState</span></a></td>
-<td class="property_name"><a class="link" href="ChamplainTile.html#ChamplainTile--state" title="The “state” property">state</a></td>
-<td class="property_flags">Read / Write</td>
-</tr>
-<tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
-<td class="property_name"><a class="link" href="ChamplainTile.html#ChamplainTile--x" title="The “x” property">x</a></td>
-<td class="property_flags">Read / Write</td>
-</tr>
-<tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
-<td class="property_name"><a class="link" href="ChamplainTile.html#ChamplainTile--y" title="The “y” property">y</a></td>
-<td class="property_flags">Read / Write</td>
-</tr>
-<tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
-<td class="property_name"><a class="link" href="ChamplainTile.html#ChamplainTile--zoom-level" title="The “zoom-level” property">zoom-level</a></td>
-<td class="property_flags">Read / Write</td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="refsect1">
-<a name="ChamplainTile.signals"></a><h2>Signals</h2>
-<div class="informaltable"><table class="informaltable" border="0">
-<colgroup>
-<col width="150px" class="signals_return">
-<col width="300px" class="signals_name">
-<col width="200px" class="signals_flags">
-</colgroup>
-<tbody><tr>
-<td class="signal_type"><span class="returnvalue">void</span></td>
-<td class="signal_name"><a class="link" href="ChamplainTile.html#ChamplainTile-render-complete" title="The “render-complete” signal">render-complete</a></td>
-<td class="signal_flags"><a href="/usr/share/gtk-doc/html/gobjectgobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
-</tr></tbody>
-</table></div>
-</div>
-<div class="refsect1">
-<a name="ChamplainTile.other"></a><h2>Types and Values</h2>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="name">
-<col class="description">
-</colgroup>
-<tbody>
-<tr>
-<td class="datatype_keyword">enum</td>
-<td class="function_name"><a class="link" href="ChamplainTile.html#ChamplainState" title="enum ChamplainState">ChamplainState</a></td>
-</tr>
-<tr>
-<td class="datatype_keyword">struct</td>
-<td class="function_name"><a class="link" href="ChamplainTile.html#ChamplainTile-struct" title="struct ChamplainTile">ChamplainTile</a></td>
-</tr>
-</tbody>
-</table></div>
+<div class="refsynopsisdiv">
+<a name="ChamplainTile.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">enum                <a class="link" href="ChamplainTile.html#ChamplainState" title="enum ChamplainState">ChamplainState</a>;
+struct              <a class="link" href="ChamplainTile.html#ChamplainTile-struct" title="struct ChamplainTile">ChamplainTile</a>;
+<a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="returnvalue">ChamplainTile</span></a> *     <a class="link" href="ChamplainTile.html#champlain-tile-new" title="champlain_tile_new ()">champlain_tile_new</a>                  (<em class="parameter"><code><span class="type">void</span></code></em>);
+<a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="returnvalue">ChamplainTile</span></a> *     <a class="link" href="ChamplainTile.html#champlain-tile-new-full" title="champlain_tile_new_full ()">champlain_tile_new_full</a>             (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> x</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> y</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> size</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> zoom_level</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               <a class="link" href="ChamplainTile.html#champlain-tile-get-x" title="champlain_tile_get_x ()">champlain_tile_get_x</a>                (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               <a class="link" href="ChamplainTile.html#champlain-tile-get-y" title="champlain_tile_get_y ()">champlain_tile_get_y</a>                (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               <a class="link" href="ChamplainTile.html#champlain-tile-get-zoom-level" title="champlain_tile_get_zoom_level ()">champlain_tile_get_zoom_level</a>       (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               <a class="link" href="ChamplainTile.html#champlain-tile-get-size" title="champlain_tile_get_size ()">champlain_tile_get_size</a>             (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>);
+<a class="link" href="ChamplainTile.html#ChamplainState" title="enum ChamplainState"><span class="returnvalue">ChamplainState</span></a>      <a class="link" href="ChamplainTile.html#champlain-tile-get-state" title="champlain_tile_get_state ()">champlain_tile_get_state</a>            (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="ChamplainTile.html#champlain-tile-get-fade-in" title="champlain_tile_get_fade_in ()">champlain_tile_get_fade_in</a>          (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="ChamplainTile.html#champlain-tile-set-x" title="champlain_tile_set_x ()">champlain_tile_set_x</a>                (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> x</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="ChamplainTile.html#champlain-tile-set-y" title="champlain_tile_set_y ()">champlain_tile_set_y</a>                (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> y</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="ChamplainTile.html#champlain-tile-set-zoom-level" title="champlain_tile_set_zoom_level ()">champlain_tile_set_zoom_level</a>       (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> zoom_level</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="ChamplainTile.html#champlain-tile-set-size" title="champlain_tile_set_size ()">champlain_tile_set_size</a>             (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> size</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="ChamplainTile.html#champlain-tile-set-state" title="champlain_tile_set_state ()">champlain_tile_set_state</a>            (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="ChamplainTile.html#ChamplainState" title="enum ChamplainState"><span class="type">ChamplainState</span></a> state</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="ChamplainTile.html#champlain-tile-set-fade-in" title="champlain_tile_set_fade_in ()">champlain_tile_set_fade_in</a>          (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> fade_in</code></em>);
+<a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="returnvalue">ClutterActor</span></a> *      <a class="link" href="ChamplainTile.html#champlain-tile-get-content" title="champlain_tile_get_content ()">champlain_tile_get_content</a>          (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>);
+const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="ChamplainTile.html#champlain-tile-get-etag" title="champlain_tile_get_etag ()">champlain_tile_get_etag</a>             (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>);
+const <a href="http://library.gnome.org/devel/glib/unstable/glib-Date-and-Time-Functions.html#GTimeVal"><span class="returnvalue">GTimeVal</span></a> *    <a class="link" href="ChamplainTile.html#champlain-tile-get-modified-time" title="champlain_tile_get_modified_time ()">champlain_tile_get_modified_time</a>    (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="ChamplainTile.html#champlain-tile-set-content" title="champlain_tile_set_content ()">champlain_tile_set_content</a>          (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="type">ClutterActor</span></a> *actor</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="ChamplainTile.html#champlain-tile-set-etag" title="champlain_tile_set_etag ()">champlain_tile_set_etag</a>             (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *etag</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="ChamplainTile.html#champlain-tile-set-modified-time" title="champlain_tile_set_modified_time ()">champlain_tile_set_modified_time</a>    (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Date-and-Time-Functions.html#GTimeVal"><span class="type">GTimeVal</span></a> *time</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="ChamplainTile.html#champlain-tile-display-content" title="champlain_tile_display_content ()">champlain_tile_display_content</a>      (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>);
+</pre>
 </div>
 <div class="refsect1">
 <a name="ChamplainTile.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
-    <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
-        <span class="lineart">╰──</span> ClutterActor
-            <span class="lineart">╰──</span> ChamplainTile
+<pre class="synopsis">
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
+         +----<a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html">ClutterActor</a>
+               +----ChamplainTile
 </pre>
 </div>
 <div class="refsect1">
 <a name="ChamplainTile.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
 <p>
 ChamplainTile implements
- ClutterContainer,  ClutterScriptable,  ClutterAnimatable,  AtkImplementorIface and  <a class="link" href="ChamplainExportable.html" title="ChamplainExportable">ChamplainExportable</a>.</p>
+ <a href="/usr/share/gtk-doc/html/clutter/ClutterContainer.html">ClutterContainer</a>,  <a href="/usr/share/gtk-doc/html/clutter/ClutterScriptable.html">ClutterScriptable</a>,  <a href="/usr/share/gtk-doc/html/clutter/ClutterAnimatable.html">ClutterAnimatable</a> and  AtkImplementorIface.</p>
+</div>
+<div class="refsect1">
+<a name="ChamplainTile.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="ChamplainTile.html#ChamplainTile--content" title='The "content" property'>content</a>"                  <a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="type">ClutterActor</span></a>*         : Read / Write
+  "<a class="link" href="ChamplainTile.html#ChamplainTile--etag" title='The "etag" property'>etag</a>"                     <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="ChamplainTile.html#ChamplainTile--fade-in" title='The "fade-in" property'>fade-in</a>"                  <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write
+  "<a class="link" href="ChamplainTile.html#ChamplainTile--size" title='The "size" property'>size</a>"                     <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a>                 : Read / Write
+  "<a class="link" href="ChamplainTile.html#ChamplainTile--state" title='The "state" property'>state</a>"                    <a class="link" href="ChamplainTile.html#ChamplainState" title="enum ChamplainState"><span class="type">ChamplainState</span></a>        : Read / Write
+  "<a class="link" href="ChamplainTile.html#ChamplainTile--x" title='The "x" property'>x</a>"                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a>                 : Read / Write
+  "<a class="link" href="ChamplainTile.html#ChamplainTile--y" title='The "y" property'>y</a>"                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a>                 : Read / Write
+  "<a class="link" href="ChamplainTile.html#ChamplainTile--zoom-level" title='The "zoom-level" property'>zoom-level</a>"               <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a>                 : Read / Write
+</pre>
+</div>
+<div class="refsect1">
+<a name="ChamplainTile.signals"></a><h2>Signals</h2>
+<pre class="synopsis">
+  "<a class="link" href="ChamplainTile.html#ChamplainTile-render-complete" title='The "render-complete" signal'>render-complete</a>"                                : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a>
+</pre>
 </div>
 <div class="refsect1">
 <a name="ChamplainTile.description"></a><h2>Description</h2>
-<p>This object represents map tiles. Tiles are loaded by <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a>.</p>
+<p>
+This object represents map tiles. Tiles are loaded by <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a>.
+</p>
 </div>
 <div class="refsect1">
-<a name="ChamplainTile.functions_details"></a><h2>Functions</h2>
-<div class="refsect2">
-<a name="champlain-tile-new"></a><h3>champlain_tile_new ()</h3>
-<pre class="programlisting"><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="returnvalue">ChamplainTile</span></a> *
-champlain_tile_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
-<p>Creates an instance of <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a>.</p>
-<div class="refsect3">
-<a name="champlain-tile-new.returns"></a><h4>Returns</h4>
-<p> a new <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a></p>
-</div>
-<p class="since">Since: 0.4</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-tile-new-full"></a><h3>champlain_tile_new_full ()</h3>
-<pre class="programlisting"><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="returnvalue">ChamplainTile</span></a> *
-champlain_tile_new_full (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a> x</code></em>,
-                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a> y</code></em>,
-                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a> size</code></em>,
-                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a> zoom_level</code></em>);</pre>
-<p>Creates an instance of <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a>.</p>
-<div class="refsect3">
-<a name="champlain-tile-new-full.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>x</p></td>
-<td class="parameter_description"><p>the x position</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>y</p></td>
-<td class="parameter_description"><p>the y position</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>size</p></td>
-<td class="parameter_description"><p>the size in pixels</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>zoom_level</p></td>
-<td class="parameter_description"><p>the zoom level</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="champlain-tile-new-full.returns"></a><h4>Returns</h4>
-<p> a <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a></p>
-</div>
-<p class="since">Since: 0.4</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-tile-get-x"></a><h3>champlain_tile_get_x ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
-champlain_tile_get_x (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>);</pre>
-<p>Gets the tile's x position.</p>
-<div class="refsect3">
-<a name="champlain-tile-get-x.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>self</p></td>
-<td class="parameter_description"><p>the <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="champlain-tile-get-x.returns"></a><h4>Returns</h4>
-<p> the tile's x position</p>
-</div>
-<p class="since">Since: 0.4</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-tile-get-y"></a><h3>champlain_tile_get_y ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
-champlain_tile_get_y (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>);</pre>
-<p>Gets the tile's y position.</p>
-<div class="refsect3">
-<a name="champlain-tile-get-y.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>self</p></td>
-<td class="parameter_description"><p>the <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="champlain-tile-get-y.returns"></a><h4>Returns</h4>
-<p> the tile's y position</p>
-</div>
-<p class="since">Since: 0.4</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-tile-get-zoom-level"></a><h3>champlain_tile_get_zoom_level ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
-champlain_tile_get_zoom_level (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>);</pre>
-<p>Gets the tile's zoom level.</p>
-<div class="refsect3">
-<a name="champlain-tile-get-zoom-level.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>self</p></td>
-<td class="parameter_description"><p>the <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="champlain-tile-get-zoom-level.returns"></a><h4>Returns</h4>
-<p> the tile's zoom level</p>
-</div>
-<p class="since">Since: 0.4</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-tile-get-size"></a><h3>champlain_tile_get_size ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
-champlain_tile_get_size (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>);</pre>
-<p>Gets the tile's size.</p>
-<div class="refsect3">
-<a name="champlain-tile-get-size.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>self</p></td>
-<td class="parameter_description"><p>the <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="champlain-tile-get-size.returns"></a><h4>Returns</h4>
-<p> the tile's size in pixels</p>
-</div>
-<p class="since">Since: 0.4</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-tile-get-state"></a><h3>champlain_tile_get_state ()</h3>
-<pre class="programlisting"><a class="link" href="ChamplainTile.html#ChamplainState" title="enum ChamplainState"><span class="returnvalue">ChamplainState</span></a>
-champlain_tile_get_state (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>);</pre>
-<p>Gets the current state of tile loading.</p>
-<div class="refsect3">
-<a name="champlain-tile-get-state.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>self</p></td>
-<td class="parameter_description"><p>the <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="champlain-tile-get-state.returns"></a><h4>Returns</h4>
-<p> the tile's <a class="link" href="ChamplainTile.html#ChamplainState" title="enum ChamplainState"><span class="type">ChamplainState</span></a></p>
-</div>
-<p class="since">Since: 0.4</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-tile-get-fade-in"></a><h3>champlain_tile_get_fade_in ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
-champlain_tile_get_fade_in (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>);</pre>
-<p>Checks whether the tile should fade in.</p>
-<div class="refsect3">
-<a name="champlain-tile-get-fade-in.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>self</p></td>
-<td class="parameter_description"><p>the <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="champlain-tile-get-fade-in.returns"></a><h4>Returns</h4>
-<p> the return value determines whether the tile should fade in when loading.</p>
-</div>
-<p class="since">Since: 0.6</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-tile-set-x"></a><h3>champlain_tile_set_x ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>
-champlain_tile_set_x (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>,
-                      <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a> x</code></em>);</pre>
-<p>Sets the tile's x position</p>
-<div class="refsect3">
-<a name="champlain-tile-set-x.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>self</p></td>
-<td class="parameter_description"><p>the <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>x</p></td>
-<td class="parameter_description"><p>the position</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<p class="since">Since: 0.4</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-tile-set-y"></a><h3>champlain_tile_set_y ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>
-champlain_tile_set_y (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>,
-                      <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a> y</code></em>);</pre>
-<p>Sets the tile's y position</p>
-<div class="refsect3">
-<a name="champlain-tile-set-y.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>self</p></td>
-<td class="parameter_description"><p>the <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>y</p></td>
-<td class="parameter_description"><p>the position</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<p class="since">Since: 0.4</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-tile-set-zoom-level"></a><h3>champlain_tile_set_zoom_level ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>
-champlain_tile_set_zoom_level (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>,
-                               <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a> zoom_level</code></em>);</pre>
-<p>Sets the tile's zoom level</p>
-<div class="refsect3">
-<a name="champlain-tile-set-zoom-level.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>self</p></td>
-<td class="parameter_description"><p>the <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>zoom_level</p></td>
-<td class="parameter_description"><p>the zoom level</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<p class="since">Since: 0.4</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-tile-set-size"></a><h3>champlain_tile_set_size ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>
-champlain_tile_set_size (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>,
-                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a> size</code></em>);</pre>
-<p>Sets the tile's size</p>
-<div class="refsect3">
-<a name="champlain-tile-set-size.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>self</p></td>
-<td class="parameter_description"><p>the <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>size</p></td>
-<td class="parameter_description"><p>the size in pixels</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<p class="since">Since: 0.4</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-tile-set-state"></a><h3>champlain_tile_set_state ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>
-champlain_tile_set_state (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>,
-                          <em class="parameter"><code><a class="link" href="ChamplainTile.html#ChamplainState" title="enum ChamplainState"><span class="type">ChamplainState</span></a> state</code></em>);</pre>
-<p>Sets the tile's <a class="link" href="ChamplainTile.html#ChamplainState" title="enum ChamplainState"><span class="type">ChamplainState</span></a></p>
-<div class="refsect3">
-<a name="champlain-tile-set-state.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>self</p></td>
-<td class="parameter_description"><p>the <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>state</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainTile.html#ChamplainState" title="enum ChamplainState"><span class="type">ChamplainState</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<p class="since">Since: 0.4</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-tile-set-fade-in"></a><h3>champlain_tile_set_fade_in ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>
-champlain_tile_set_fade_in (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>,
-                            <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> fade_in</code></em>);</pre>
-<p>Sets the flag determining whether the tile should fade in when loading</p>
-<div class="refsect3">
-<a name="champlain-tile-set-fade-in.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>self</p></td>
-<td class="parameter_description"><p>the <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>fade_in</p></td>
-<td class="parameter_description"><p>determines whether the tile should fade in when loading</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<p class="since">Since: 0.6</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-tile-get-content"></a><h3>champlain_tile_get_content ()</h3>
-<pre class="programlisting"><span class="returnvalue">ClutterActor</span> *
-champlain_tile_get_content (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>);</pre>
-<p>Gets the tile's content actor.</p>
-<div class="refsect3">
-<a name="champlain-tile-get-content.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>self</p></td>
-<td class="parameter_description"><p>the <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="champlain-tile-get-content.returns"></a><h4>Returns</h4>
-<p> the tile's content, this actor will change each time the tile's content changes.
-You should not unref this content, it is owned by the tile. </p>
-<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
-</div>
-<p class="since">Since: 0.4</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-tile-get-etag"></a><h3>champlain_tile_get_etag ()</h3>
-<pre class="programlisting">const <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
-champlain_tile_get_etag (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>);</pre>
-<p>Gets the tile's ETag.</p>
-<div class="refsect3">
-<a name="champlain-tile-get-etag.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>self</p></td>
-<td class="parameter_description"><p>the <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="champlain-tile-get-etag.returns"></a><h4>Returns</h4>
-<p> the tile's ETag</p>
-</div>
-<p class="since">Since: 0.4</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-tile-get-modified-time"></a><h3>champlain_tile_get_modified_time ()</h3>
-<pre class="programlisting">const <a href="/usr/share/gtk-doc/html/glibglib-Date-and-Time-Functions.html#GTimeVal"><span class="returnvalue">GTimeVal</span></a> *
-champlain_tile_get_modified_time (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>);</pre>
-<p>Gets the tile's last modified time.</p>
-<div class="refsect3">
-<a name="champlain-tile-get-modified-time.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>self</p></td>
-<td class="parameter_description"><p>the <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="champlain-tile-get-modified-time.returns"></a><h4>Returns</h4>
-<p> the tile's last modified time</p>
-</div>
-<p class="since">Since: 0.4</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-tile-set-content"></a><h3>champlain_tile_set_content ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>
-champlain_tile_set_content (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>,
-                            <em class="parameter"><code><span class="type">ClutterActor</span> *actor</code></em>);</pre>
-<p>Sets the tile's content. To also disppay the tile, you have to call
-<a class="link" href="ChamplainTile.html#champlain-tile-display-content" title="champlain_tile_display_content ()"><code class="function">champlain_tile_display_content()</code></a> in addition.</p>
-<div class="refsect3">
-<a name="champlain-tile-set-content.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>self</p></td>
-<td class="parameter_description"><p>the <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>actor</p></td>
-<td class="parameter_description"><p>the new content</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<p class="since">Since: 0.4</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-tile-set-etag"></a><h3>champlain_tile_set_etag ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>
-champlain_tile_set_etag (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>,
-                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *etag</code></em>);</pre>
-<p>Sets the tile's ETag</p>
-<div class="refsect3">
-<a name="champlain-tile-set-etag.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>self</p></td>
-<td class="parameter_description"><p>the <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>etag</p></td>
-<td class="parameter_description"><p>the tile's ETag as sent by the server</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<p class="since">Since: 0.4</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-tile-set-modified-time"></a><h3>champlain_tile_set_modified_time ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>
-champlain_tile_set_modified_time (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>,
-                                  <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glibglib-Date-and-Time-Functions.html#GTimeVal"><span class="type">GTimeVal</span></a> *time</code></em>);</pre>
-<p>Sets the tile's modified time</p>
-<div class="refsect3">
-<a name="champlain-tile-set-modified-time.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>self</p></td>
-<td class="parameter_description"><p>the <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>time</p></td>
-<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/glibglib-Date-and-Time-Functions.html#GTimeVal"><span class="type">GTimeVal</span></a>, the value will be copied</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<p class="since">Since: 0.4</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-tile-display-content"></a><h3>champlain_tile_display_content ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>
-champlain_tile_display_content (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>);</pre>
-<p>Displays the tile's content.</p>
-<div class="refsect3">
-<a name="champlain-tile-display-content.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>self</p></td>
-<td class="parameter_description"><p>the <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-<p class="since">Since: 0.8</p>
-</div>
-</div>
-<div class="refsect1">
-<a name="ChamplainTile.other_details"></a><h2>Types and Values</h2>
+<a name="ChamplainTile.details"></a><h2>Details</h2>
 <div class="refsect2">
 <a name="ChamplainState"></a><h3>enum ChamplainState</h3>
-<p>Tile loading state.</p>
-<div class="refsect3">
-<a name="ChamplainState.members"></a><h4>Members</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="300px" class="enum_members_name">
-<col class="enum_members_description">
-<col width="200px" class="enum_members_annotations">
-</colgroup>
+<pre class="programlisting">typedef enum {
+  CHAMPLAIN_STATE_NONE,
+  CHAMPLAIN_STATE_LOADING,
+  CHAMPLAIN_STATE_LOADED,
+  CHAMPLAIN_STATE_DONE
+} ChamplainState;
+</pre>
+<p>
+Tile loading state.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
 <tbody>
 <tr>
-<td class="enum_member_name"><p><a name="CHAMPLAIN-STATE-NONE:CAPS"></a>CHAMPLAIN_STATE_NONE</p></td>
-<td class="enum_member_description">
-<p>Initial or undefined state</p>
+<td><p><a name="CHAMPLAIN-STATE-NONE:CAPS"></a><span class="term"><code class="literal">CHAMPLAIN_STATE_NONE</code></span></p></td>
+<td>Initial or undefined state
 </td>
-<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
-<td class="enum_member_name"><p><a name="CHAMPLAIN-STATE-LOADING:CAPS"></a>CHAMPLAIN_STATE_LOADING</p></td>
-<td class="enum_member_description">
-<p>Tile is loading</p>
+<td><p><a name="CHAMPLAIN-STATE-LOADING:CAPS"></a><span class="term"><code class="literal">CHAMPLAIN_STATE_LOADING</code></span></p></td>
+<td>Tile is loading
 </td>
-<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
-<td class="enum_member_name"><p><a name="CHAMPLAIN-STATE-LOADED:CAPS"></a>CHAMPLAIN_STATE_LOADED</p></td>
-<td class="enum_member_description">
-<p>Tile is loaded but not yet displayed</p>
+<td><p><a name="CHAMPLAIN-STATE-LOADED:CAPS"></a><span class="term"><code class="literal">CHAMPLAIN_STATE_LOADED</code></span></p></td>
+<td>Tile is loaded but not yet displayed
 </td>
-<td class="enum_member_annotations"> </td>
 </tr>
 <tr>
-<td class="enum_member_name"><p><a name="CHAMPLAIN-STATE-DONE:CAPS"></a>CHAMPLAIN_STATE_DONE</p></td>
-<td class="enum_member_description">
-<p>Tile loading finished. Also used to inform map sources
-    that tile loading has been cancelled.</p>
+<td><p><a name="CHAMPLAIN-STATE-DONE:CAPS"></a><span class="term"><code class="literal">CHAMPLAIN_STATE_DONE</code></span></p></td>
+<td>Tile loading finished. Also used to inform map sources
+    that tile loading has been cancelled.
 </td>
-<td class="enum_member_annotations"> </td>
 </tr>
 </tbody>
 </table></div>
-</div>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ChamplainTile-struct"></a><h3>struct ChamplainTile</h3>
 <pre class="programlisting">struct ChamplainTile;</pre>
-<p>The <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> structure contains only private data
-and should be accessed using the provided API</p>
-<p class="since">Since: 0.4</p>
+<p>
+The <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> structure contains only private data
+and should be accessed using the provided API
+</p>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-tile-new"></a><h3>champlain_tile_new ()</h3>
+<pre class="programlisting"><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="returnvalue">ChamplainTile</span></a> *     champlain_tile_new                  (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+Creates an instance of <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a new <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a>
+</td>
+</tr></tbody>
+</table></div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-tile-new-full"></a><h3>champlain_tile_new_full ()</h3>
+<pre class="programlisting"><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="returnvalue">ChamplainTile</span></a> *     champlain_tile_new_full             (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> x</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> y</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> size</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> zoom_level</code></em>);</pre>
+<p>
+Creates an instance of <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>x</code></em> :</span></p></td>
+<td>the x position</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>y</code></em> :</span></p></td>
+<td>the y position</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>size</code></em> :</span></p></td>
+<td>the size in pixels</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>zoom_level</code></em> :</span></p></td>
+<td>the zoom level</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-tile-get-x"></a><h3>champlain_tile_get_x ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               champlain_tile_get_x                (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>);</pre>
+<p>
+Gets the tile's x position.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the tile's x position</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-tile-get-y"></a><h3>champlain_tile_get_y ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               champlain_tile_get_y                (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>);</pre>
+<p>
+Gets the tile's y position.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the tile's y position</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-tile-get-zoom-level"></a><h3>champlain_tile_get_zoom_level ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               champlain_tile_get_zoom_level       (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>);</pre>
+<p>
+Gets the tile's zoom level.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the tile's zoom level</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-tile-get-size"></a><h3>champlain_tile_get_size ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               champlain_tile_get_size             (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>);</pre>
+<p>
+Gets the tile's size.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the tile's size in pixels</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-tile-get-state"></a><h3>champlain_tile_get_state ()</h3>
+<pre class="programlisting"><a class="link" href="ChamplainTile.html#ChamplainState" title="enum ChamplainState"><span class="returnvalue">ChamplainState</span></a>      champlain_tile_get_state            (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>);</pre>
+<p>
+Gets the current state of tile loading.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the tile's <a class="link" href="ChamplainTile.html#ChamplainState" title="enum ChamplainState"><span class="type">ChamplainState</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-tile-get-fade-in"></a><h3>champlain_tile_get_fade_in ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            champlain_tile_get_fade_in          (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>);</pre>
+<p>
+Checks whether the tile should fade in.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the return value determines whether the tile should fade in when loading.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.6</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-tile-set-x"></a><h3>champlain_tile_set_x ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                champlain_tile_set_x                (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> x</code></em>);</pre>
+<p>
+Sets the tile's x position
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>x</code></em> :</span></p></td>
+<td>the position</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-tile-set-y"></a><h3>champlain_tile_set_y ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                champlain_tile_set_y                (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> y</code></em>);</pre>
+<p>
+Sets the tile's y position
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>y</code></em> :</span></p></td>
+<td>the position</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-tile-set-zoom-level"></a><h3>champlain_tile_set_zoom_level ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                champlain_tile_set_zoom_level       (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> zoom_level</code></em>);</pre>
+<p>
+Sets the tile's zoom level
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>zoom_level</code></em> :</span></p></td>
+<td>the zoom level</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-tile-set-size"></a><h3>champlain_tile_set_size ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                champlain_tile_set_size             (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> size</code></em>);</pre>
+<p>
+Sets the tile's size
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>size</code></em> :</span></p></td>
+<td>the size in pixels</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-tile-set-state"></a><h3>champlain_tile_set_state ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                champlain_tile_set_state            (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="ChamplainTile.html#ChamplainState" title="enum ChamplainState"><span class="type">ChamplainState</span></a> state</code></em>);</pre>
+<p>
+Sets the tile's <a class="link" href="ChamplainTile.html#ChamplainState" title="enum ChamplainState"><span class="type">ChamplainState</span></a>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>state</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainTile.html#ChamplainState" title="enum ChamplainState"><span class="type">ChamplainState</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-tile-set-fade-in"></a><h3>champlain_tile_set_fade_in ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                champlain_tile_set_fade_in          (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> fade_in</code></em>);</pre>
+<p>
+Sets the flag determining whether the tile should fade in when loading
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>fade_in</code></em> :</span></p></td>
+<td>determines whether the tile should fade in when loading</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.6</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-tile-get-content"></a><h3>champlain_tile_get_content ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="returnvalue">ClutterActor</span></a> *      champlain_tile_get_content          (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>);</pre>
+<p>
+Gets the tile's content actor.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the tile's content, this actor will change each time the tile's content changes.
+You should not unref this content, it is owned by the tile. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-tile-get-etag"></a><h3>champlain_tile_get_etag ()</h3>
+<pre class="programlisting">const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       champlain_tile_get_etag             (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>);</pre>
+<p>
+Gets the tile's ETag.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the tile's ETag</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-tile-get-modified-time"></a><h3>champlain_tile_get_modified_time ()</h3>
+<pre class="programlisting">const <a href="http://library.gnome.org/devel/glib/unstable/glib-Date-and-Time-Functions.html#GTimeVal"><span class="returnvalue">GTimeVal</span></a> *    champlain_tile_get_modified_time    (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>);</pre>
+<p>
+Gets the tile's last modified time.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the tile's last modified time</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-tile-set-content"></a><h3>champlain_tile_set_content ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                champlain_tile_set_content          (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="type">ClutterActor</span></a> *actor</code></em>);</pre>
+<p>
+Sets the tile's content. To also disppay the tile, you have to call
+<a class="link" href="ChamplainTile.html#champlain-tile-display-content" title="champlain_tile_display_content ()"><code class="function">champlain_tile_display_content()</code></a> in addition.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>actor</code></em> :</span></p></td>
+<td>the new content</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-tile-set-etag"></a><h3>champlain_tile_set_etag ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                champlain_tile_set_etag             (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *etag</code></em>);</pre>
+<p>
+Sets the tile's ETag
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>etag</code></em> :</span></p></td>
+<td>the tile's ETag as sent by the server</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-tile-set-modified-time"></a><h3>champlain_tile_set_modified_time ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                champlain_tile_set_modified_time    (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Date-and-Time-Functions.html#GTimeVal"><span class="type">GTimeVal</span></a> *time</code></em>);</pre>
+<p>
+Sets the tile's modified time
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>time</code></em> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Date-and-Time-Functions.html#GTimeVal"><span class="type">GTimeVal</span></a>, the value will be copied</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-tile-display-content"></a><h3>champlain_tile_display_content ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                champlain_tile_display_content      (<em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self</code></em>);</pre>
+<p>
+Displays the tile's content.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a>
+</td>
+</tr></tbody>
+</table></div>
+<p class="since">Since 0.8</p>
 </div>
 </div>
 <div class="refsect1">
 <a name="ChamplainTile.property-details"></a><h2>Property Details</h2>
 <div class="refsect2">
-<a name="ChamplainTile--content"></a><h3>The <code class="literal">“content”</code> property</h3>
-<pre class="programlisting">  “content”                  <span class="type">ClutterActor</span> *</pre>
-<p>The <span class="type">ClutterActor</span> with the specific image content.  When changing this
-property, the new actor will be faded in.</p>
-<p>Flags: Read / Write</p>
-<p class="since">Since: 0.4</p>
+<a name="ChamplainTile--content"></a><h3>The <code class="literal">"content"</code> property</h3>
+<pre class="programlisting">  "content"                  <a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="type">ClutterActor</span></a>*         : Read / Write</pre>
+<p>
+The <a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="type">ClutterActor</span></a> with the specific image content.  When changing this
+property, the new actor will be faded in.
+</p>
+<p class="since">Since 0.4</p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="ChamplainTile--etag"></a><h3>The <code class="literal">“etag”</code> property</h3>
-<pre class="programlisting">  “etag”                     <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
-<p>The tile's ETag. This information is sent by some web servers as a mean
+<a name="ChamplainTile--etag"></a><h3>The <code class="literal">"etag"</code> property</h3>
+<pre class="programlisting">  "etag"                     <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>
+The tile's ETag. This information is sent by some web servers as a mean
 to identify if a tile has changed.  This information is saved in the cache
-and sent in GET queries.</p>
-<p>Flags: Read / Write</p>
+and sent in GET queries.
+</p>
 <p>Default value: NULL</p>
-<p class="since">Since: 0.4</p>
+<p class="since">Since 0.4</p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="ChamplainTile--fade-in"></a><h3>The <code class="literal">“fade-in”</code> property</h3>
-<pre class="programlisting">  “fade-in”                  <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
-<p>Specifies whether the tile should fade in when loading</p>
-<p>Flags: Read / Write</p>
+<a name="ChamplainTile--fade-in"></a><h3>The <code class="literal">"fade-in"</code> property</h3>
+<pre class="programlisting">  "fade-in"                  <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write</pre>
+<p>
+Specifies whether the tile should fade in when loading
+</p>
 <p>Default value: FALSE</p>
-<p class="since">Since: 0.6</p>
+<p class="since">Since 0.6</p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="ChamplainTile--size"></a><h3>The <code class="literal">“size”</code> property</h3>
-<pre class="programlisting">  “size”                     <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
-<p>The size of the tile in pixels</p>
-<p>Flags: Read / Write</p>
+<a name="ChamplainTile--size"></a><h3>The <code class="literal">"size"</code> property</h3>
+<pre class="programlisting">  "size"                     <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a>                 : Read / Write</pre>
+<p>
+The size of the tile in pixels
+</p>
 <p>Allowed values: &lt;= G_MAXINT</p>
 <p>Default value: 256</p>
-<p class="since">Since: 0.4</p>
+<p class="since">Since 0.4</p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="ChamplainTile--state"></a><h3>The <code class="literal">“state”</code> property</h3>
-<pre class="programlisting">  “state”                    <a class="link" href="ChamplainTile.html#ChamplainState" title="enum ChamplainState"><span class="type">ChamplainState</span></a></pre>
-<p>The state of the tile</p>
-<p>Flags: Read / Write</p>
+<a name="ChamplainTile--state"></a><h3>The <code class="literal">"state"</code> property</h3>
+<pre class="programlisting">  "state"                    <a class="link" href="ChamplainTile.html#ChamplainState" title="enum ChamplainState"><span class="type">ChamplainState</span></a>        : Read / Write</pre>
+<p>
+The state of the tile
+</p>
 <p>Default value: CHAMPLAIN_STATE_NONE</p>
-<p class="since">Since: 0.4</p>
+<p class="since">Since 0.4</p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="ChamplainTile--x"></a><h3>The <code class="literal">“x”</code> property</h3>
-<pre class="programlisting">  “x”                        <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
-<p>The x position of the tile</p>
-<p>Flags: Read / Write</p>
+<a name="ChamplainTile--x"></a><h3>The <code class="literal">"x"</code> property</h3>
+<pre class="programlisting">  "x"                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a>                 : Read / Write</pre>
+<p>
+The x position of the tile
+</p>
 <p>Allowed values: &lt;= G_MAXINT</p>
 <p>Default value: 0</p>
-<p class="since">Since: 0.4</p>
+<p class="since">Since 0.4</p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="ChamplainTile--y"></a><h3>The <code class="literal">“y”</code> property</h3>
-<pre class="programlisting">  “y”                        <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
-<p>The y position of the tile</p>
-<p>Flags: Read / Write</p>
+<a name="ChamplainTile--y"></a><h3>The <code class="literal">"y"</code> property</h3>
+<pre class="programlisting">  "y"                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a>                 : Read / Write</pre>
+<p>
+The y position of the tile
+</p>
 <p>Allowed values: &lt;= G_MAXINT</p>
 <p>Default value: 0</p>
-<p class="since">Since: 0.4</p>
+<p class="since">Since 0.4</p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="ChamplainTile--zoom-level"></a><h3>The <code class="literal">“zoom-level”</code> property</h3>
-<pre class="programlisting">  “zoom-level”               <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
-<p>The zoom level of the tile</p>
-<p>Flags: Read / Write</p>
+<a name="ChamplainTile--zoom-level"></a><h3>The <code class="literal">"zoom-level"</code> property</h3>
+<pre class="programlisting">  "zoom-level"               <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a>                 : Read / Write</pre>
+<p>
+The zoom level of the tile
+</p>
 <p>Allowed values: &lt;= G_MAXINT</p>
 <p>Default value: 0</p>
-<p class="since">Since: 0.4</p>
+<p class="since">Since 0.4</p>
 </div>
 </div>
 <div class="refsect1">
 <a name="ChamplainTile.signal-details"></a><h2>Signal Details</h2>
 <div class="refsect2">
-<a name="ChamplainTile-render-complete"></a><h3>The <code class="literal">“render-complete”</code> signal</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>
-user_function (<a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self,
-               <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>       data,
-               <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a>          size,
-               <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>       error,
-               <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>       user_data)</pre>
-<p>The <a class="link" href="ChamplainTile.html#ChamplainTile-render-complete" title="The “render-complete” signal"><span class="type">“render-complete”</span></a> signal is emitted when rendering of the tile is
-completed by the renderer.</p>
-<div class="refsect3">
-<a name="ChamplainTile-render-complete.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
+<a name="ChamplainTile-render-complete"></a><h3>The <code class="literal">"render-complete"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *self,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>       data,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a>          size,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>       error,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>       user_data)      : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a></pre>
+<p>
+The <a class="link" href="ChamplainTile.html#ChamplainTile-render-complete" title='The "render-complete" signal'><span class="type">"render-complete"</span></a> signal is emitted when rendering of the tile is
+completed by the renderer.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
 <tbody>
 <tr>
-<td class="parameter_name"><p>self</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a></p></td>
-<td class="parameter_annotations"> </td>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a>
+</td>
 </tr>
 <tr>
-<td class="parameter_name"><p>data</p></td>
-<td class="parameter_description"><p>the result of the rendering</p></td>
-<td class="parameter_annotations"> </td>
+<td><p><span class="term"><em class="parameter"><code>data</code></em> :</span></p></td>
+<td>the result of the rendering</td>
 </tr>
 <tr>
-<td class="parameter_name"><p>size</p></td>
-<td class="parameter_description"><p>size of data</p></td>
-<td class="parameter_annotations"> </td>
+<td><p><span class="term"><em class="parameter"><code>size</code></em> :</span></p></td>
+<td>size of data</td>
 </tr>
 <tr>
-<td class="parameter_name"><p>error</p></td>
-<td class="parameter_description"><p>TRUE if there was an error during rendering</p></td>
-<td class="parameter_annotations"> </td>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>TRUE if there was an error during rendering</td>
 </tr>
 <tr>
-<td class="parameter_name"><p>user_data</p></td>
-<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
-<td class="parameter_annotations"> </td>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
 </tr>
 </tbody>
 </table></div>
-</div>
-<p>Flags: <a href="/usr/share/gtk-doc/html/gobjectgobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
-<p class="since">Since: 0.10</p>
+<p class="since">Since 0.10</p>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.25</div>
+<hr>
+          Generated by GTK-Doc V1.18</div>
 </body>
 </html>

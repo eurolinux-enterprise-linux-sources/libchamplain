@@ -21,7 +21,6 @@
 #define CHAMPLAIN_MAP_TILE_H
 
 #include <champlain/champlain-defines.h>
-#include <champlain/champlain-exportable.h>
 
 #include <glib.h>
 #include <clutter/clutter.h>

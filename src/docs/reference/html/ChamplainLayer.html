@@ -2,28 +2,34 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>ChamplainLayer: libchamplain Reference Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<title>ChamplainLayer</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
 <link rel="home" href="index.html" title="libchamplain Reference Manual">
 <link rel="up" href="ch01.html" title="Layers">
 <link rel="prev" href="ch01.html" title="Layers">
 <link rel="next" href="ChamplainMarkerLayer.html" title="ChamplainMarkerLayer">
-<meta name="generator" content="GTK-Doc V1.25 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
-<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
-<td width="100%" align="left" class="shortcuts">
-<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
-                  <a href="#ChamplainLayer.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
-                  <a href="#ChamplainLayer.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_interfaces">  <span class="dim">|</span> 
-                  <a href="#ChamplainLayer.implemented-interfaces" class="shortcut">Implemented Interfaces</a></span>
-</td>
-<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
-<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
-<td><a accesskey="p" href="ch01.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
-<td><a accesskey="n" href="ChamplainMarkerLayer.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
-</tr></table>
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="ch01.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libchamplain Reference Manual</th>
+<td><a accesskey="n" href="ChamplainMarkerLayer.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#ChamplainLayer.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#ChamplainLayer.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#ChamplainLayer.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#ChamplainLayer.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+</td></tr>
+</table>
 <div class="refentry">
 <a name="ChamplainLayer"></a><div class="titlepage"></div>
 <div class="refnamediv"><table width="100%"><tr>
@@ -31,145 +37,107 @@
 <h2><span class="refentrytitle"><a name="ChamplainLayer.top_of_page"></a>ChamplainLayer</span></h2>
 <p>ChamplainLayer — Base class of libchamplain layers</p>
 </td>
-<td class="gallery_image" valign="top" align="right"></td>
+<td valign="top" align="right"></td>
 </tr></table></div>
-<div class="refsect1">
-<a name="ChamplainLayer.functions"></a><h2>Functions</h2>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="functions_return">
-<col class="functions_name">
-</colgroup>
-<tbody>
-<tr>
-<td class="function_type">
-<span class="returnvalue">void</span>
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainLayer.html#champlain-layer-set-view" title="champlain_layer_set_view ()">champlain_layer_set_view</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a class="link" href="ChamplainBoundingBox.html" title="ChamplainBoundingBox"><span class="returnvalue">ChamplainBoundingBox</span></a> *
-</td>
-<td class="function_name">
-<a class="link" href="ChamplainLayer.html#champlain-layer-get-bounding-box" title="champlain_layer_get_bounding_box ()">champlain_layer_get_bounding_box</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="refsect1">
-<a name="ChamplainLayer.other"></a><h2>Types and Values</h2>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="name">
-<col class="description">
-</colgroup>
-<tbody><tr>
-<td class="datatype_keyword">struct</td>
-<td class="function_name"><a class="link" href="ChamplainLayer.html#ChamplainLayer-struct" title="struct ChamplainLayer">ChamplainLayer</a></td>
-</tr></tbody>
-</table></div>
+<div class="refsynopsisdiv">
+<a name="ChamplainLayer.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="ChamplainLayer.html#ChamplainLayer-struct" title="struct ChamplainLayer">ChamplainLayer</a>;
+<span class="returnvalue">void</span>                <a class="link" href="ChamplainLayer.html#champlain-layer-set-view" title="champlain_layer_set_view ()">champlain_layer_set_view</a>            (<em class="parameter"><code><a class="link" href="ChamplainLayer.html" title="ChamplainLayer"><span class="type">ChamplainLayer</span></a> *layer</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>);
+<a class="link" href="ChamplainBoundingBox.html" title="ChamplainBoundingBox"><span class="returnvalue">ChamplainBoundingBox</span></a> * <a class="link" href="ChamplainLayer.html#champlain-layer-get-bounding-box" title="champlain_layer_get_bounding_box ()">champlain_layer_get_bounding_box</a> (<em class="parameter"><code><a class="link" href="ChamplainLayer.html" title="ChamplainLayer"><span class="type">ChamplainLayer</span></a> *layer</code></em>);
+</pre>
 </div>
 <div class="refsect1">
 <a name="ChamplainLayer.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
-    <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
-        <span class="lineart">╰──</span> ClutterActor
-            <span class="lineart">╰──</span> ChamplainLayer
-                <span class="lineart">├──</span> <a class="link" href="ChamplainMarkerLayer.html" title="ChamplainMarkerLayer">ChamplainMarkerLayer</a>
-                <span class="lineart">╰──</span> <a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer">ChamplainPathLayer</a>
+<pre class="synopsis">
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
+         +----<a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html">ClutterActor</a>
+               +----ChamplainLayer
+                     +----<a class="link" href="ChamplainMarkerLayer.html" title="ChamplainMarkerLayer">ChamplainMarkerLayer</a>
+                     +----<a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer">ChamplainPathLayer</a>
 </pre>
 </div>
 <div class="refsect1">
 <a name="ChamplainLayer.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
 <p>
 ChamplainLayer implements
- ClutterContainer,  ClutterScriptable,  ClutterAnimatable and  AtkImplementorIface.</p>
+ <a href="/usr/share/gtk-doc/html/clutter/ClutterContainer.html">ClutterContainer</a>,  <a href="/usr/share/gtk-doc/html/clutter/ClutterScriptable.html">ClutterScriptable</a>,  <a href="/usr/share/gtk-doc/html/clutter/ClutterAnimatable.html">ClutterAnimatable</a> and  AtkImplementorIface.</p>
 </div>
 <div class="refsect1">
 <a name="ChamplainLayer.description"></a><h2>Description</h2>
-<p>Every layer (overlay that moves together with the map) has to inherit this
-class and implement its virtual methods.</p>
+<p>
+Every layer (overlay that moves together with the map) has to inherit this
+class and implement its virtual methods.
+</p>
 </div>
 <div class="refsect1">
-<a name="ChamplainLayer.functions_details"></a><h2>Functions</h2>
-<div class="refsect2">
-<a name="champlain-layer-set-view"></a><h3>champlain_layer_set_view ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>
-champlain_layer_set_view (<em class="parameter"><code><a class="link" href="ChamplainLayer.html" title="ChamplainLayer"><span class="type">ChamplainLayer</span></a> *layer</code></em>,
-                          <em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>);</pre>
-<p><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> calls this method to pass a reference to itself to the layer
-when the layer is added to the view. When the layer is removed from the
-view, it passes NULL to the layer. Custom layers can implement this method
-and perform the necessary initialization. This method should not be called
-by user code.</p>
-<div class="refsect3">
-<a name="champlain-layer-set-view.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>layer</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainLayer.html" title="ChamplainLayer"><span class="type">ChamplainLayer</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>view</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<p class="since">Since: 0.10</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="champlain-layer-get-bounding-box"></a><h3>champlain_layer_get_bounding_box ()</h3>
-<pre class="programlisting"><a class="link" href="ChamplainBoundingBox.html" title="ChamplainBoundingBox"><span class="returnvalue">ChamplainBoundingBox</span></a> *
-champlain_layer_get_bounding_box (<em class="parameter"><code><a class="link" href="ChamplainLayer.html" title="ChamplainLayer"><span class="type">ChamplainLayer</span></a> *layer</code></em>);</pre>
-<p>Gets the bounding box occupied by the elements inside the layer.</p>
-<div class="refsect3">
-<a name="champlain-layer-get-bounding-box.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody><tr>
-<td class="parameter_name"><p>layer</p></td>
-<td class="parameter_description"><p>a <a class="link" href="ChamplainLayer.html" title="ChamplainLayer"><span class="type">ChamplainLayer</span></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr></tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="champlain-layer-get-bounding-box.returns"></a><h4>Returns</h4>
-<p> The bounding box.</p>
-</div>
-<p class="since">Since: 0.10</p>
-</div>
-</div>
-<div class="refsect1">
-<a name="ChamplainLayer.other_details"></a><h2>Types and Values</h2>
+<a name="ChamplainLayer.details"></a><h2>Details</h2>
 <div class="refsect2">
 <a name="ChamplainLayer-struct"></a><h3>struct ChamplainLayer</h3>
 <pre class="programlisting">struct ChamplainLayer;</pre>
-<p>The <a class="link" href="ChamplainLayer.html" title="ChamplainLayer"><span class="type">ChamplainLayer</span></a> structure contains only private data
-and should be accessed using the provided API</p>
-<p class="since">Since: 0.10</p>
+<p>
+The <a class="link" href="ChamplainLayer.html" title="ChamplainLayer"><span class="type">ChamplainLayer</span></a> structure contains only private data
+and should be accessed using the provided API
+</p>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-layer-set-view"></a><h3>champlain_layer_set_view ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                champlain_layer_set_view            (<em class="parameter"><code><a class="link" href="ChamplainLayer.html" title="ChamplainLayer"><span class="type">ChamplainLayer</span></a> *layer</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>);</pre>
+<p>
+<a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> calls this method to pass a reference to itself to the layer
+when the layer is added to the view. When the layer is removed from the
+view, it passes NULL to the layer. Custom layers can implement this method
+and perform the necessary initialization. This method should not be called
+by user code.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>layer</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainLayer.html" title="ChamplainLayer"><span class="type">ChamplainLayer</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>view</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-layer-get-bounding-box"></a><h3>champlain_layer_get_bounding_box ()</h3>
+<pre class="programlisting"><a class="link" href="ChamplainBoundingBox.html" title="ChamplainBoundingBox"><span class="returnvalue">ChamplainBoundingBox</span></a> * champlain_layer_get_bounding_box (<em class="parameter"><code><a class="link" href="ChamplainLayer.html" title="ChamplainLayer"><span class="type">ChamplainLayer</span></a> *layer</code></em>);</pre>
+<p>
+Gets the bounding box occupied by the elements inside the layer.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>layer</code></em> :</span></p></td>
+<td>a <a class="link" href="ChamplainLayer.html" title="ChamplainLayer"><span class="type">ChamplainLayer</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The bounding box.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.10</p>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.25</div>
+<hr>
+          Generated by GTK-Doc V1.18</div>
 </body>
 </html>

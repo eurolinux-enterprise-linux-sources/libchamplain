@@ -272,9 +272,9 @@ set_location (ChamplainLocation *location,
   g_return_if_fail (CHAMPLAIN_IS_MARKER (location));
 
   ChamplainMarkerPrivate *priv = CHAMPLAIN_MARKER (location)->priv;
-  
-  priv->lon = CLAMP (longitude, CHAMPLAIN_MIN_LONGITUDE, CHAMPLAIN_MAX_LONGITUDE);
-  priv->lat = CLAMP (latitude, CHAMPLAIN_MIN_LATITUDE, CHAMPLAIN_MAX_LATITUDE);
+
+  priv->lon = longitude;
+  priv->lat = latitude;
 
   g_object_notify (G_OBJECT (location), "latitude");
   g_object_notify (G_OBJECT (location), "longitude");
@@ -381,7 +381,6 @@ champlain_marker_class_init (ChamplainMarkerClass *marker_class)
 
   /**
    * ChamplainMarker::button-press:
-   * @self: a #ChamplainMarker
    * @event: the underlying ClutterEvent
    *
    * Emitted when button is pressed.
@@ -400,7 +399,6 @@ champlain_marker_class_init (ChamplainMarkerClass *marker_class)
 
   /**
    * ChamplainMarker::button-release:
-   * @self: a #ChamplainMarker
    * @event: the underlying ClutterEvent
    *
    * Emitted when button is released. This signal is not emmitted at the end of dragging.
@@ -419,7 +417,6 @@ champlain_marker_class_init (ChamplainMarkerClass *marker_class)
 
   /**
    * ChamplainMarker::drag-motion:
-   * @self: a #ChamplainMarker
    * @dx: by how much the marker has been moved in the x direction
    * @dy: by how much the marker has been moved in the y direction
    * @event: the underlying ClutterEvent
@@ -441,7 +438,6 @@ champlain_marker_class_init (ChamplainMarkerClass *marker_class)
 
   /**
    * ChamplainMarker::drag-finish:
-   * @self: a #ChamplainMarker
    * @event: the underlying ClutterEvent
    *
    * Emitted when marker dragging ends (i.e. the button is released at the end

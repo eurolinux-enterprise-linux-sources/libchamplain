@@ -35,15 +35,8 @@
 #include <libsoup/soup.h>
 #include <gio/gio.h>
 #include <clutter/clutter.h>
-#include <cairo-gobject.h>
 
-static void set_surface (ChamplainExportable *exportable,
-    cairo_surface_t *surface);
-static cairo_surface_t *get_surface (ChamplainExportable *exportable);
-static void exportable_interface_init (ChamplainExportableIface *iface);
-
-G_DEFINE_TYPE_WITH_CODE (ChamplainTile, champlain_tile, CLUTTER_TYPE_ACTOR,
-    G_IMPLEMENT_INTERFACE (CHAMPLAIN_TYPE_EXPORTABLE, exportable_interface_init));
+G_DEFINE_TYPE (ChamplainTile, champlain_tile, CLUTTER_TYPE_ACTOR)
 
 #define GET_PRIVATE(o) \
   (G_TYPE_INSTANCE_GET_PRIVATE ((o), CHAMPLAIN_TYPE_TILE, ChamplainTilePrivate))
@@ -59,8 +52,7 @@ enum
   PROP_STATE,
   PROP_CONTENT,
   PROP_ETAG,
-  PROP_FADE_IN,
-  PROP_SURFACE
+  PROP_FADE_IN
 };
 
 enum
@@ -87,7 +79,6 @@ struct _ChamplainTilePrivate
   GTimeVal *modified_time; /* The last modified time of the cache */
   gchar *etag; /* The HTTP ETag sent by the server */
   gboolean content_displayed;
-  cairo_surface_t *surface;
 };
 
 static void
@@ -130,10 +121,6 @@ champlain_tile_get_property (GObject *object,
 
     case PROP_FADE_IN:
       g_value_set_boolean (value, champlain_tile_get_fade_in (self));
-      break;
-
-    case PROP_SURFACE:
-      g_value_set_boxed (value, get_surface (CHAMPLAIN_EXPORTABLE (self)));
       break;
 
     default:
@@ -184,10 +171,6 @@ champlain_tile_set_property (GObject *object,
       champlain_tile_set_fade_in (self, g_value_get_boolean (value));
       break;
 
-    case PROP_SURFACE:
-      set_surface (CHAMPLAIN_EXPORTABLE (self), g_value_get_boxed (value));
-      break;
-
     default:
       G_OBJECT_WARN_INVALID_PROPERTY_ID (object, property_id, pspec);
     }
@@ -205,7 +188,6 @@ champlain_tile_dispose (GObject *object)
       priv->content_actor = NULL;
     }
 
-  g_clear_pointer (&priv->surface, cairo_surface_destroy);
   G_OBJECT_CLASS (champlain_tile_parent_class)->dispose (object);
 }
 
@@ -366,10 +348,6 @@ champlain_tile_class_init (ChamplainTileClass *klass)
           FALSE,
           G_PARAM_READWRITE));
 
-  g_object_class_override_property (object_class,
-      PROP_SURFACE,
-      "surface");
-
   /**
    * ChamplainTile::render-complete:
    * @self: a #ChamplainTile
@@ -414,41 +392,6 @@ champlain_tile_init (ChamplainTile *self)
   priv->content_displayed = FALSE;
 
   priv->content_actor = NULL;
-}
-
-
-static void
-set_surface (ChamplainExportable *exportable,
-     cairo_surface_t *surface)
-{
-  g_return_if_fail (CHAMPLAIN_TILE (exportable));
-  g_return_if_fail (surface != NULL);
-
-  ChamplainTile *self = CHAMPLAIN_TILE (exportable);
-
-  if (self->priv->surface == surface)
-    return;
-
-  cairo_surface_destroy (self->priv->surface);
-  self->priv->surface = cairo_surface_reference (surface);
-  g_object_notify (G_OBJECT (self), "surface");
-}
-
-
-static cairo_surface_t *
-get_surface (ChamplainExportable *exportable)
-{
-  g_return_val_if_fail (CHAMPLAIN_IS_TILE (exportable), NULL);
-
-  return CHAMPLAIN_TILE (exportable)->priv->surface;
-}
-
-
-static void
-exportable_interface_init (ChamplainExportableIface *iface)
-{
-  iface->get_surface = get_surface;
-  iface->set_surface = set_surface;
 }
 
 

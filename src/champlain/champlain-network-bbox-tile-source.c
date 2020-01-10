@@ -38,7 +38,11 @@
 #include "champlain-version.h"
 #include "champlain-tile.h"
 
+#ifdef HAVE_LIBSOUP_GNOME
+#include <libsoup/soup-gnome.h>
+#else
 #include <libsoup/soup.h>
+#endif
 
 G_DEFINE_TYPE (ChamplainNetworkBboxTileSource, champlain_network_bbox_tile_source, CHAMPLAIN_TYPE_TILE_SOURCE)
 
@@ -50,8 +54,7 @@ enum
   PROP_0,
   PROP_API_URI,
   PROP_PROXY_URI,
-  PROP_STATE,
-  PROP_USER_AGENT
+  PROP_STATE
 };
 
 struct _ChamplainNetworkBboxTileSourcePrivate
@@ -128,11 +131,6 @@ champlain_network_bbox_tile_source_set_property (GObject *object,
       g_object_notify (G_OBJECT (self), "state");
       break;
 
-    case PROP_USER_AGENT:
-      champlain_network_bbox_tile_source_set_user_agent (self,
-          g_value_get_string (value));
-     break;
-
     default:
       G_OBJECT_WARN_INVALID_PROPERTY_ID (object, property_id, pspec);
     }
@@ -203,7 +201,7 @@ champlain_network_bbox_tile_source_class_init (ChamplainNetworkBboxTileSourceCla
   /**
    * ChamplainNetworkBboxTileSource:proxy-uri:
    *
-   * Used to override the default proxy for accessing the network.
+   * The proxy URI to use to access network
    *
    * Since: 0.8
    */
@@ -231,21 +229,6 @@ champlain_network_bbox_tile_source_class_init (ChamplainNetworkBboxTileSourceCla
           CHAMPLAIN_TYPE_STATE,
           CHAMPLAIN_STATE_NONE,
           G_PARAM_READWRITE));
-
-  /**
-   * ChamplainNetworkBboxTileSource:user-agent:
-   *
-   * The HTTP user agent used for requests
-   *
-   * Since: 0.12.16
-   */
-  g_object_class_install_property (object_class,
-      PROP_USER_AGENT,
-      g_param_spec_string ("user-agent",
-        "HTTP User Agent",
-        "The HTTP user agent used for network requests",
-        "libchamplain/" CHAMPLAIN_VERSION_S,
-        G_PARAM_WRITABLE));
 }
 
 
@@ -259,11 +242,12 @@ champlain_network_bbox_tile_source_init (ChamplainNetworkBboxTileSource *self)
   priv->api_uri = g_strdup ("http://www.informationfreeway.org/api/0.6");
   /* informationfreeway.org is a load-balancer for different api servers */
   priv->proxy_uri = g_strdup ("");
-  priv->soup_session = soup_session_new_with_options (
+  priv->soup_session = soup_session_async_new_with_options (
         "proxy-uri", soup_uri_new (priv->proxy_uri),
-        "ssl-strict", FALSE,
+#ifdef HAVE_LIBSOUP_GNOME
         SOUP_SESSION_ADD_FEATURE_BY_TYPE, 
-        SOUP_TYPE_PROXY_RESOLVER_DEFAULT,
+        SOUP_TYPE_PROXY_RESOLVER_GNOME,
+#endif
         NULL);
   g_object_set (G_OBJECT (priv->soup_session),
       "user-agent", 
@@ -500,28 +484,4 @@ champlain_network_bbox_tile_source_set_api_uri (
   g_free (priv->api_uri);
   priv->api_uri = g_strdup (api_uri);
   g_object_notify (G_OBJECT (self), "api-uri");
-}
-
-
-/**
- * champlain_network_bbox_tile_source_set_user_agent:
- * @map_data_source: a #ChamplainNetworkBboxTileSource
- * @user_agent: A User-Agent string
- *
- * Sets the User-Agent header used communicating with the server.
- * Since: 0.12.16
- */
-void
-champlain_network_bbox_tile_source_set_user_agent (
-    ChamplainNetworkBboxTileSource *self,
-    const gchar *user_agent)
-{
-  g_return_if_fail (CHAMPLAIN_IS_NETWORK_BBOX_TILE_SOURCE (self)
-      && user_agent != NULL);
-
-  ChamplainNetworkBboxTileSourcePrivate *priv = self->priv;
-
-  if (priv->soup_session)
-    g_object_set (G_OBJECT (priv->soup_session), "user-agent",
-        user_agent, NULL);
 }

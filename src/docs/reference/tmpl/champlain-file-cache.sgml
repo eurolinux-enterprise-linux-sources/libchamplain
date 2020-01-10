@@ -1,0 +1,92 @@
+<!-- ##### SECTION Title ##### -->
+ChamplainFileCache
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT ChamplainFileCache ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG ChamplainFileCache:cache-dir ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG ChamplainFileCache:size-limit ##### -->
+<para>
+
+</para>
+
+<!-- ##### FUNCTION champlain_file_cache_new_full ##### -->
+<para>
+
+</para>
+
+@size_limit: 
+@cache_dir: 
+@renderer: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_file_cache_set_size_limit ##### -->
+<para>
+
+</para>
+
+@file_cache: 
+@size_limit: 
+
+
+<!-- ##### FUNCTION champlain_file_cache_get_size_limit ##### -->
+<para>
+
+</para>
+
+@file_cache: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_file_cache_get_cache_dir ##### -->
+<para>
+
+</para>
+
+@file_cache: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_file_cache_purge ##### -->
+<para>
+
+</para>
+
+@file_cache: 
+
+
+<!-- ##### FUNCTION champlain_file_cache_purge_on_idle ##### -->
+<para>
+
+</para>
+
+@file_cache: 
+
+

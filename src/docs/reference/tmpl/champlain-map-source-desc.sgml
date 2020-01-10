@@ -1,0 +1,217 @@
+<!-- ##### SECTION Title ##### -->
+ChamplainMapSourceDesc
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT ChamplainMapSourceDesc ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG ChamplainMapSourceDesc:constructor ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG ChamplainMapSourceDesc:data ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG ChamplainMapSourceDesc:id ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG ChamplainMapSourceDesc:license ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG ChamplainMapSourceDesc:license-uri ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG ChamplainMapSourceDesc:max-zoom-level ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG ChamplainMapSourceDesc:min-zoom-level ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG ChamplainMapSourceDesc:name ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG ChamplainMapSourceDesc:projection ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG ChamplainMapSourceDesc:tile-size ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG ChamplainMapSourceDesc:uri-format ##### -->
+<para>
+
+</para>
+
+<!-- ##### USER_FUNCTION ChamplainMapSourceConstructor ##### -->
+<para>
+
+</para>
+
+@desc: 
+@Returns: 
+
+
+<!-- ##### MACRO CHAMPLAIN_MAP_SOURCE_CONSTRUCTOR ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### FUNCTION champlain_map_source_desc_new_full ##### -->
+<para>
+
+</para>
+
+@id: 
+@name: 
+@license: 
+@license_uri: 
+@min_zoom: 
+@max_zoom: 
+@tile_size: 
+@projection: 
+@uri_format: 
+@constructor: 
+@data: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_map_source_desc_get_id ##### -->
+<para>
+
+</para>
+
+@desc: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_map_source_desc_get_name ##### -->
+<para>
+
+</para>
+
+@desc: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_map_source_desc_get_license ##### -->
+<para>
+
+</para>
+
+@desc: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_map_source_desc_get_license_uri ##### -->
+<para>
+
+</para>
+
+@desc: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_map_source_desc_get_uri_format ##### -->
+<para>
+
+</para>
+
+@desc: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_map_source_desc_get_min_zoom_level ##### -->
+<para>
+
+</para>
+
+@desc: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_map_source_desc_get_max_zoom_level ##### -->
+<para>
+
+</para>
+
+@desc: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_map_source_desc_get_tile_size ##### -->
+<para>
+
+</para>
+
+@desc: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_map_source_desc_get_projection ##### -->
+<para>
+
+</para>
+
+@desc: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_map_source_desc_get_data ##### -->
+<para>
+
+</para>
+
+@desc: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_map_source_desc_get_constructor ##### -->
+<para>
+
+</para>
+
+@desc: 
+@Returns: 
+
+

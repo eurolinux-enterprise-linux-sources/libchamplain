@@ -1,0 +1,208 @@
+<!-- ##### SECTION Title ##### -->
+ChamplainMarker
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT ChamplainMarker ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SIGNAL ChamplainMarker::button-press ##### -->
+<para>
+
+</para>
+
+@champlainmarker: the object which received the signal.
+@arg1: 
+
+<!-- ##### SIGNAL ChamplainMarker::button-release ##### -->
+<para>
+
+</para>
+
+@champlainmarker: the object which received the signal.
+@arg1: 
+
+<!-- ##### SIGNAL ChamplainMarker::drag-finish ##### -->
+<para>
+
+</para>
+
+@champlainmarker: the object which received the signal.
+@arg1: 
+
+<!-- ##### SIGNAL ChamplainMarker::drag-motion ##### -->
+<para>
+
+</para>
+
+@champlainmarker: the object which received the signal.
+@arg1: 
+@arg2: 
+@arg3: 
+
+<!-- ##### ARG ChamplainMarker:draggable ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG ChamplainMarker:selectable ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG ChamplainMarker:selected ##### -->
+<para>
+
+</para>
+
+<!-- ##### FUNCTION champlain_marker_new ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_marker_set_selectable ##### -->
+<para>
+
+</para>
+
+@marker: 
+@value: 
+
+
+<!-- ##### FUNCTION champlain_marker_get_selectable ##### -->
+<para>
+
+</para>
+
+@marker: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_marker_set_draggable ##### -->
+<para>
+
+</para>
+
+@marker: 
+@value: 
+
+
+<!-- ##### FUNCTION champlain_marker_get_draggable ##### -->
+<para>
+
+</para>
+
+@marker: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_marker_set_selected ##### -->
+<para>
+
+</para>
+
+@marker: 
+@value: 
+
+
+<!-- ##### FUNCTION champlain_marker_get_selected ##### -->
+<para>
+
+</para>
+
+@marker: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_marker_animate_in ##### -->
+<para>
+
+</para>
+
+@marker: 
+
+
+<!-- ##### FUNCTION champlain_marker_animate_in_with_delay ##### -->
+<para>
+
+</para>
+
+@marker: 
+@delay: 
+
+
+<!-- ##### FUNCTION champlain_marker_animate_out ##### -->
+<para>
+
+</para>
+
+@marker: 
+
+
+<!-- ##### FUNCTION champlain_marker_animate_out_with_delay ##### -->
+<para>
+
+</para>
+
+@marker: 
+@delay: 
+
+
+<!-- ##### FUNCTION champlain_marker_get_selection_color ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_marker_get_selection_text_color ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_marker_set_selection_color ##### -->
+<para>
+
+</para>
+
+@color: 
+
+
+<!-- ##### FUNCTION champlain_marker_set_selection_text_color ##### -->
+<para>
+
+</para>
+
+@color: 
+
+
