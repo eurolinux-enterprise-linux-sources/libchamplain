@@ -49,14 +49,14 @@
  *
  * The micro version of libchamplain (3, if %CHAMPLAIN_VERSION is 1.2.3)
  */
-#define CHAMPLAIN_MICRO_VERSION   (15)
+#define CHAMPLAIN_MICRO_VERSION   (16)
 
 /**
  * CHAMPLAIN_VERSION:
  *
  * The full version of libchamplain, like 1.2.3
  */
-#define CHAMPLAIN_VERSION         0.12.15
+#define CHAMPLAIN_VERSION         0.12.16
 
 /**
  * CHAMPLAIN_VERSION_S:
@@ -64,7 +64,7 @@
  * The full version of libchamplain, in string form (suited for
  * string concatenation)
  */
-#define CHAMPLAIN_VERSION_S       "0.12.15"
+#define CHAMPLAIN_VERSION_S       "0.12.16"
 
 /**
  * CHAMPLAIN_VERSION_HEX:

@@ -2,20 +2,20 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>libchamplain Reference Manual: ChamplainMapSourceFactory</title>
-<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<title>ChamplainMapSourceFactory: libchamplain Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
 <link rel="home" href="index.html" title="libchamplain Reference Manual">
 <link rel="up" href="ch06.html" title="Map Source Utilities">
 <link rel="prev" href="ChamplainMapSourceChain.html" title="ChamplainMapSourceChain">
 <link rel="next" href="ChamplainMapSourceDesc.html" title="ChamplainMapSourceDesc">
-<meta name="generator" content="GTK-Doc V1.20 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.25 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
-<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="10"><tr valign="middle">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
 <td width="100%" align="left" class="shortcuts">
-<a href="#" class="shortcut">Top</a><span id="nav_description"> <span class="dim">|</span> 
-                  <a href="#ChamplainMapSourceFactory.description" class="shortcut">Description</a></span><span id="nav_hierarchy"> <span class="dim">|</span> 
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#ChamplainMapSourceFactory.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
                   <a href="#ChamplainMapSourceFactory.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
 </td>
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
@@ -34,7 +34,7 @@
 </tr></table></div>
 <div class="refsect1">
 <a name="ChamplainMapSourceFactory.functions"></a><h2>Functions</h2>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="functions_return">
 <col class="functions_name">
@@ -82,7 +82,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+<a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="ChamplainMapSourceFactory.html#champlain-map-source-factory-register" title="champlain_map_source_factory_register ()">champlain_map_source_factory_register</a> <span class="c_punctuation">()</span>
@@ -90,7 +90,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="http://library.gnome.org/devel/glib/unstable/glib-Singly-Linked-Lists.html#GSList"><span class="returnvalue">GSList</span></a> *
+<a href="/usr/share/gtk-doc/html/glibglib-Singly-Linked-Lists.html#GSList"><span class="returnvalue">GSList</span></a> *
 </td>
 <td class="function_name">
 <a class="link" href="ChamplainMapSourceFactory.html#champlain-map-source-factory-get-registered" title="champlain_map_source_factory_get_registered ()">champlain_map_source_factory_get_registered</a> <span class="c_punctuation">()</span>
@@ -101,7 +101,7 @@
 </div>
 <div class="refsect1">
 <a name="ChamplainMapSourceFactory.other"></a><h2>Types and Values</h2>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="name">
 <col class="description">
@@ -168,7 +168,7 @@
 </div>
 <div class="refsect1">
 <a name="ChamplainMapSourceFactory.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> ChamplainMapSourceFactory
 </pre>
 </div>
@@ -191,24 +191,24 @@ champlain_map_source_factory_dup_default
                                (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
 <p>A method to obtain the singleton object.</p>
 <div class="refsect3">
-<a name="id-1.5.5.3.7.2.5"></a><h4>Returns</h4>
+<a name="champlain-map-source-factory-dup-default.returns"></a><h4>Returns</h4>
 <p> the singleton <a class="link" href="ChamplainMapSourceFactory.html" title="ChamplainMapSourceFactory"><span class="type">ChamplainMapSourceFactory</span></a>, it should be freed
-using <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function"><GTKDOCLINK HREF="g-object-unref"><code class="function">g_object_unref()</code></a></code></GTKDOCLINK> when not needed. </p>
+using <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#g-object-unref"><code class="function"><GTKDOCLINK HREF="g-object-unref"><code class="function">g_object_unref()</code></a></code></GTKDOCLINK> when not needed. </p>
 <p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
-<p class="since">Since 0.4</p>
+<p class="since">Since: 0.4</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="champlain-map-source-factory-create"></a><h3>champlain_map_source_factory_create ()</h3>
 <pre class="programlisting"><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="returnvalue">ChamplainMapSource</span></a> *
 champlain_map_source_factory_create (<em class="parameter"><code><a class="link" href="ChamplainMapSourceFactory.html" title="ChamplainMapSourceFactory"><span class="type">ChamplainMapSourceFactory</span></a> *factory</code></em>,
-                                     <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *id</code></em>);</pre>
+                                     <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *id</code></em>);</pre>
 <p>Note: The id should not contain any character that can't be in a filename as it
 will be used as the cache directory name for that map source.</p>
 <div class="refsect3">
-<a name="id-1.5.5.3.7.3.5"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<a name="champlain-map-source-factory-create.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -229,12 +229,12 @@ will be used as the cache directory name for that map source.</p>
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.5.5.3.7.3.6"></a><h4>Returns</h4>
+<a name="champlain-map-source-factory-create.returns"></a><h4>Returns</h4>
 <p> a ready to use <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> matching the given name;
 returns NULL if the source with the given name doesn't exist. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 0.4</p>
+<p class="since">Since: 0.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -242,11 +242,11 @@ returns NULL if the source with the given name doesn't exist. </p>
 <pre class="programlisting"><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="returnvalue">ChamplainMapSource</span></a> *
 champlain_map_source_factory_create_cached_source
                                (<em class="parameter"><code><a class="link" href="ChamplainMapSourceFactory.html" title="ChamplainMapSourceFactory"><span class="type">ChamplainMapSourceFactory</span></a> *factory</code></em>,
-                                <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *id</code></em>);</pre>
+                                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *id</code></em>);</pre>
 <p>Creates a cached map source.</p>
 <div class="refsect3">
-<a name="id-1.5.5.3.7.4.5"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<a name="champlain-map-source-factory-create-cached-source.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -267,14 +267,14 @@ champlain_map_source_factory_create_cached_source
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.5.5.3.7.4.6"></a><h4>Returns</h4>
+<a name="champlain-map-source-factory-create-cached-source.returns"></a><h4>Returns</h4>
 <p> a ready to use <a class="link" href="ChamplainMapSourceChain.html" title="ChamplainMapSourceChain"><span class="type">ChamplainMapSourceChain</span></a> consisting of
 <a class="link" href="ChamplainMemoryCache.html" title="ChamplainMemoryCache"><span class="type">ChamplainMemoryCache</span></a>, <a class="link" href="ChamplainFileCache.html" title="ChamplainFileCache"><span class="type">ChamplainFileCache</span></a>, <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> matching the given name, and
 an error tile source created with <a class="link" href="ChamplainMapSourceFactory.html#champlain-map-source-factory-create-error-source" title="champlain_map_source_factory_create_error_source ()"><code class="function">champlain_map_source_factory_create_error_source()</code></a>.
 Returns NULL if the source with the given name doesn't exist. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 0.6</p>
+<p class="since">Since: 0.6</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -282,11 +282,11 @@ Returns NULL if the source with the given name doesn't exist. </p>
 <pre class="programlisting"><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="returnvalue">ChamplainMapSource</span></a> *
 champlain_map_source_factory_create_memcached_source
                                (<em class="parameter"><code><a class="link" href="ChamplainMapSourceFactory.html" title="ChamplainMapSourceFactory"><span class="type">ChamplainMapSourceFactory</span></a> *factory</code></em>,
-                                <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *id</code></em>);</pre>
+                                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *id</code></em>);</pre>
 <p>Creates a memory cached map source.</p>
 <div class="refsect3">
-<a name="id-1.5.5.3.7.5.5"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<a name="champlain-map-source-factory-create-memcached-source.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -307,13 +307,13 @@ champlain_map_source_factory_create_memcached_source
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.5.5.3.7.5.6"></a><h4>Returns</h4>
+<a name="champlain-map-source-factory-create-memcached-source.returns"></a><h4>Returns</h4>
 <p> a ready to use <a class="link" href="ChamplainMapSourceChain.html" title="ChamplainMapSourceChain"><span class="type">ChamplainMapSourceChain</span></a> consisting of
 <a class="link" href="ChamplainMemoryCache.html" title="ChamplainMemoryCache"><span class="type">ChamplainMemoryCache</span></a> and <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> matching the given name.
 Returns NULL if the source with the given name doesn't exist. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 0.12.5</p>
+<p class="since">Since: 0.12.5</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -321,11 +321,11 @@ Returns NULL if the source with the given name doesn't exist. </p>
 <pre class="programlisting"><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="returnvalue">ChamplainMapSource</span></a> *
 champlain_map_source_factory_create_error_source
                                (<em class="parameter"><code><a class="link" href="ChamplainMapSourceFactory.html" title="ChamplainMapSourceFactory"><span class="type">ChamplainMapSourceFactory</span></a> *factory</code></em>,
-                                <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> tile_size</code></em>);</pre>
+                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a> tile_size</code></em>);</pre>
 <p>Creates a map source generating error tiles.</p>
 <div class="refsect3">
-<a name="id-1.5.5.3.7.6.5"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<a name="champlain-map-source-factory-create-error-source.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -346,16 +346,16 @@ champlain_map_source_factory_create_error_source
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.5.5.3.7.6.6"></a><h4>Returns</h4>
+<a name="champlain-map-source-factory-create-error-source.returns"></a><h4>Returns</h4>
 <p> a ready to use map source generating error tiles. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
-<p class="since">Since 0.8</p>
+<p class="since">Since: 0.8</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="champlain-map-source-factory-register"></a><h3>champlain_map_source_factory_register ()</h3>
-<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 champlain_map_source_factory_register (<em class="parameter"><code><a class="link" href="ChamplainMapSourceFactory.html" title="ChamplainMapSourceFactory"><span class="type">ChamplainMapSourceFactory</span></a> *factory</code></em>,
                                        <em class="parameter"><code><a class="link" href="ChamplainMapSourceDesc.html" title="ChamplainMapSourceDesc"><span class="type">ChamplainMapSourceDesc</span></a> *desc</code></em>);</pre>
 <p>Registers the new map source with the given constructor.  When this map
@@ -363,8 +363,8 @@ source is requested, the given constructor will be used to build the
 map source.  <a class="link" href="ChamplainMapSourceFactory.html" title="ChamplainMapSourceFactory"><span class="type">ChamplainMapSourceFactory</span></a> will take ownership of the passed
 <a class="link" href="ChamplainMapSourceDesc.html" title="ChamplainMapSourceDesc"><span class="type">ChamplainMapSourceDesc</span></a>, so don't free it.</p>
 <div class="refsect3">
-<a name="id-1.5.5.3.7.7.5"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<a name="champlain-map-source-factory-register.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -385,22 +385,21 @@ map source.  <a class="link" href="ChamplainMapSourceFactory.html" title="Champl
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.5.5.3.7.7.6"></a><h4>Returns</h4>
+<a name="champlain-map-source-factory-register.returns"></a><h4>Returns</h4>
 <p> TRUE if the registration suceeded.</p>
-<p></p>
 </div>
-<p class="since">Since 0.10</p>
+<p class="since">Since: 0.10</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="champlain-map-source-factory-get-registered"></a><h3>champlain_map_source_factory_get_registered ()</h3>
-<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Singly-Linked-Lists.html#GSList"><span class="returnvalue">GSList</span></a> *
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Singly-Linked-Lists.html#GSList"><span class="returnvalue">GSList</span></a> *
 champlain_map_source_factory_get_registered
                                (<em class="parameter"><code><a class="link" href="ChamplainMapSourceFactory.html" title="ChamplainMapSourceFactory"><span class="type">ChamplainMapSourceFactory</span></a> *factory</code></em>);</pre>
 <p>Get the list of registered map sources.</p>
 <div class="refsect3">
-<a name="id-1.5.5.3.7.8.5"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<a name="champlain-map-source-factory-get-registered.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -414,12 +413,12 @@ champlain_map_source_factory_get_registered
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.5.5.3.7.8.6"></a><h4>Returns</h4>
+<a name="champlain-map-source-factory-get-registered.returns"></a><h4>Returns</h4>
 <p> the list of registered map sources, the items should not be freed,
-the list should be freed with <a href="http://library.gnome.org/devel/glib/unstable/glib-Singly-Linked-Lists.html#g-slist-free"><span class="type">g_slist_free</span></a>. </p>
+the list should be freed with <a href="/usr/share/gtk-doc/html/glibglib-Singly-Linked-Lists.html#g-slist-free"><span class="type">g_slist_free</span></a>. </p>
 <p><span class="annotation">[<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> ChamplainMapSourceDesc]</span></p>
 </div>
-<p class="since">Since 0.4</p>
+<p class="since">Since: 0.4</p>
 </div>
 </div>
 <div class="refsect1">
@@ -429,7 +428,7 @@ the list should be freed with <a href="http://library.gnome.org/devel/glib/unsta
 <pre class="programlisting">struct ChamplainMapSourceFactory;</pre>
 <p>The <a class="link" href="ChamplainMapSourceFactory.html" title="ChamplainMapSourceFactory"><span class="type">ChamplainMapSourceFactory</span></a> structure contains only private data
 and should be accessed using the provided API</p>
-<p class="since">Since 0.4</p>
+<p class="since">Since: 0.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -548,7 +547,6 @@ return any source.</p>
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.20</div>
+<hr>Generated by GTK-Doc V1.25</div>
 </body>
 </html>

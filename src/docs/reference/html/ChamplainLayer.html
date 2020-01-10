@@ -2,21 +2,21 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>libchamplain Reference Manual: ChamplainLayer</title>
-<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<title>ChamplainLayer: libchamplain Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
 <link rel="home" href="index.html" title="libchamplain Reference Manual">
 <link rel="up" href="ch01.html" title="Layers">
 <link rel="prev" href="ch01.html" title="Layers">
 <link rel="next" href="ChamplainMarkerLayer.html" title="ChamplainMarkerLayer">
-<meta name="generator" content="GTK-Doc V1.20 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.25 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
-<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="10"><tr valign="middle">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
 <td width="100%" align="left" class="shortcuts">
-<a href="#" class="shortcut">Top</a><span id="nav_description"> <span class="dim">|</span> 
-                  <a href="#ChamplainLayer.description" class="shortcut">Description</a></span><span id="nav_hierarchy"> <span class="dim">|</span> 
-                  <a href="#ChamplainLayer.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_interfaces"> <span class="dim">|</span> 
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#ChamplainLayer.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#ChamplainLayer.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_interfaces">  <span class="dim">|</span> 
                   <a href="#ChamplainLayer.implemented-interfaces" class="shortcut">Implemented Interfaces</a></span>
 </td>
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
@@ -35,7 +35,7 @@
 </tr></table></div>
 <div class="refsect1">
 <a name="ChamplainLayer.functions"></a><h2>Functions</h2>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="functions_return">
 <col class="functions_name">
@@ -62,7 +62,7 @@
 </div>
 <div class="refsect1">
 <a name="ChamplainLayer.other"></a><h2>Types and Values</h2>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="name">
 <col class="description">
@@ -75,9 +75,9 @@
 </div>
 <div class="refsect1">
 <a name="ChamplainLayer.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
-    <span class="lineart">╰──</span> <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
-        <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html">ClutterActor</a>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span> ClutterActor
             <span class="lineart">╰──</span> ChamplainLayer
                 <span class="lineart">├──</span> <a class="link" href="ChamplainMarkerLayer.html" title="ChamplainMarkerLayer">ChamplainMarkerLayer</a>
                 <span class="lineart">╰──</span> <a class="link" href="ChamplainPathLayer.html" title="ChamplainPathLayer">ChamplainPathLayer</a>
@@ -87,7 +87,7 @@
 <a name="ChamplainLayer.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
 <p>
 ChamplainLayer implements
- <a href="/usr/share/gtk-doc/html/clutter/ClutterContainer.html">ClutterContainer</a>,  <a href="/usr/share/gtk-doc/html/clutter/ClutterScriptable.html">ClutterScriptable</a>,  <a href="/usr/share/gtk-doc/html/clutter/ClutterAnimatable.html">ClutterAnimatable</a> and  AtkImplementorIface.</p>
+ ClutterContainer,  ClutterScriptable,  ClutterAnimatable and  AtkImplementorIface.</p>
 </div>
 <div class="refsect1">
 <a name="ChamplainLayer.description"></a><h2>Description</h2>
@@ -107,8 +107,8 @@ view, it passes NULL to the layer. Custom layers can implement this method
 and perform the necessary initialization. This method should not be called
 by user code.</p>
 <div class="refsect3">
-<a name="id-1.3.2.2.8.2.5"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<a name="champlain-layer-set-view.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -128,7 +128,7 @@ by user code.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 0.10</p>
+<p class="since">Since: 0.10</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -137,8 +137,8 @@ by user code.</p>
 champlain_layer_get_bounding_box (<em class="parameter"><code><a class="link" href="ChamplainLayer.html" title="ChamplainLayer"><span class="type">ChamplainLayer</span></a> *layer</code></em>);</pre>
 <p>Gets the bounding box occupied by the elements inside the layer.</p>
 <div class="refsect3">
-<a name="id-1.3.2.2.8.3.5"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<a name="champlain-layer-get-bounding-box.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -152,11 +152,10 @@ champlain_layer_get_bounding_box (<em class="parameter"><code><a class="link" hr
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.3.2.2.8.3.6"></a><h4>Returns</h4>
+<a name="champlain-layer-get-bounding-box.returns"></a><h4>Returns</h4>
 <p> The bounding box.</p>
-<p></p>
 </div>
-<p class="since">Since 0.10</p>
+<p class="since">Since: 0.10</p>
 </div>
 </div>
 <div class="refsect1">
@@ -166,12 +165,11 @@ champlain_layer_get_bounding_box (<em class="parameter"><code><a class="link" hr
 <pre class="programlisting">struct ChamplainLayer;</pre>
 <p>The <a class="link" href="ChamplainLayer.html" title="ChamplainLayer"><span class="type">ChamplainLayer</span></a> structure contains only private data
 and should be accessed using the provided API</p>
-<p class="since">Since 0.10</p>
+<p class="since">Since: 0.10</p>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.20</div>
+<hr>Generated by GTK-Doc V1.25</div>
 </body>
 </html>

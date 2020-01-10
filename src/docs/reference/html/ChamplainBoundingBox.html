@@ -2,20 +2,20 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>libchamplain Reference Manual: ChamplainBoundingBox</title>
-<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<title>ChamplainBoundingBox: libchamplain Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
 <link rel="home" href="index.html" title="libchamplain Reference Manual">
 <link rel="up" href="pt06.html" title="Part VI. Others">
 <link rel="prev" href="ChamplainTile.html" title="ChamplainTile">
 <link rel="next" href="ChamplainExportable.html" title="ChamplainExportable">
-<meta name="generator" content="GTK-Doc V1.20 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.25 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
-<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="10"><tr valign="middle">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
 <td width="100%" align="left" class="shortcuts">
-<a href="#" class="shortcut">Top</a><span id="nav_description"> <span class="dim">|</span> 
-                  <a href="#ChamplainBoundingBox.description" class="shortcut">Description</a></span><span id="nav_hierarchy"> <span class="dim">|</span> 
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#ChamplainBoundingBox.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
                   <a href="#ChamplainBoundingBox.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
 </td>
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
@@ -34,7 +34,7 @@
 </tr></table></div>
 <div class="refsect1">
 <a name="ChamplainBoundingBox.functions"></a><h2>Functions</h2>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="functions_return">
 <col class="functions_name">
@@ -90,7 +90,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+<a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="ChamplainBoundingBox.html#champlain-bounding-box-is-valid" title="champlain_bounding_box_is_valid ()">champlain_bounding_box_is_valid</a> <span class="c_punctuation">()</span>
@@ -98,7 +98,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+<a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="ChamplainBoundingBox.html#champlain-bounding-box-covers" title="champlain_bounding_box_covers ()">champlain_bounding_box_covers</a> <span class="c_punctuation">()</span>
@@ -109,7 +109,7 @@
 </div>
 <div class="refsect1">
 <a name="ChamplainBoundingBox.other"></a><h2>Types and Values</h2>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="name">
 <col class="description">
@@ -122,7 +122,7 @@
 </div>
 <div class="refsect1">
 <a name="ChamplainBoundingBox.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    GBoxed
+<pre class="screen">    <a href="https://developer.gnome.org/gobject/unstable/gobject-Boxed-Types.html">GBoxed</a>
     <span class="lineart">╰──</span> ChamplainBoundingBox
 </pre>
 </div>
@@ -139,11 +139,10 @@ champlain_bounding_box_new (<em class="parameter"><code><span class="type">void<
 <p>Creates a newly allocated <a class="link" href="ChamplainBoundingBox.html" title="ChamplainBoundingBox"><span class="type">ChamplainBoundingBox</span></a> to be freed
 with <a class="link" href="ChamplainBoundingBox.html#champlain-bounding-box-free" title="champlain_bounding_box_free ()"><code class="function">champlain_bounding_box_free()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.7.3.7.2.5"></a><h4>Returns</h4>
+<a name="champlain-bounding-box-new.returns"></a><h4>Returns</h4>
 <p> a <a class="link" href="ChamplainBoundingBox.html" title="ChamplainBoundingBox"><span class="type">ChamplainBoundingBox</span></a></p>
-<p></p>
 </div>
-<p class="since">Since 0.6</p>
+<p class="since">Since: 0.6</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -153,8 +152,8 @@ champlain_bounding_box_copy (<em class="parameter"><code>const <a class="link" h
 <p>Makes a copy of the bounding box structure. The result must be
 freed using <a class="link" href="ChamplainBoundingBox.html#champlain-bounding-box-free" title="champlain_bounding_box_free ()"><code class="function">champlain_bounding_box_free()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.7.3.7.3.5"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<a name="champlain-bounding-box-copy.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -168,12 +167,11 @@ freed using <a class="link" href="ChamplainBoundingBox.html#champlain-bounding-b
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.7.3.7.3.6"></a><h4>Returns</h4>
+<a name="champlain-bounding-box-copy.returns"></a><h4>Returns</h4>
 <p> an allocated copy of <em class="parameter"><code>bbox</code></em>
 .</p>
-<p></p>
 </div>
-<p class="since">Since 0.6</p>
+<p class="since">Since: 0.6</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -183,8 +181,8 @@ champlain_bounding_box_free (<em class="parameter"><code><a class="link" href="C
 <p>Frees a bounding box structure created with <a class="link" href="ChamplainBoundingBox.html#champlain-bounding-box-new" title="champlain_bounding_box_new ()"><code class="function">champlain_bounding_box_new()</code></a> or
 <a class="link" href="ChamplainBoundingBox.html#champlain-bounding-box-copy" title="champlain_bounding_box_copy ()"><code class="function">champlain_bounding_box_copy()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.7.3.7.4.5"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<a name="champlain-bounding-box-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -197,21 +195,21 @@ champlain_bounding_box_free (<em class="parameter"><code><a class="link" href="C
 </tr></tbody>
 </table></div>
 </div>
-<p class="since">Since 0.6</p>
+<p class="since">Since: 0.6</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="champlain-bounding-box-get-center"></a><h3>champlain_bounding_box_get_center ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 champlain_bounding_box_get_center (<em class="parameter"><code><a class="link" href="ChamplainBoundingBox.html" title="ChamplainBoundingBox"><span class="type">ChamplainBoundingBox</span></a> *bbox</code></em>,
-                                   <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *latitude</code></em>,
-                                   <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *longitude</code></em>);</pre>
+                                   <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *latitude</code></em>,
+                                   <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> *longitude</code></em>);</pre>
 <p>Gets the center's latitude and longitude of the box to <em class="parameter"><code>latitude</code></em>
  and <em class="parameter"><code>longitude</code></em>
 .</p>
 <div class="refsect3">
-<a name="id-1.7.3.7.5.5"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<a name="champlain-bounding-box-get-center.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -236,7 +234,7 @@ champlain_bounding_box_get_center (<em class="parameter"><code><a class="link" h
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 0.6</p>
+<p class="since">Since: 0.6</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -248,8 +246,8 @@ champlain_bounding_box_compose (<em class="parameter"><code><a class="link" href
  and <em class="parameter"><code>other</code></em>
 .</p>
 <div class="refsect3">
-<a name="id-1.7.3.7.6.5"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<a name="champlain-bounding-box-compose.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -269,22 +267,22 @@ champlain_bounding_box_compose (<em class="parameter"><code><a class="link" href
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 0.10</p>
+<p class="since">Since: 0.10</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="champlain-bounding-box-extend"></a><h3>champlain_bounding_box_extend ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 champlain_bounding_box_extend (<em class="parameter"><code><a class="link" href="ChamplainBoundingBox.html" title="ChamplainBoundingBox"><span class="type">ChamplainBoundingBox</span></a> *bbox</code></em>,
-                               <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> latitude</code></em>,
-                               <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> longitude</code></em>);</pre>
+                               <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> latitude</code></em>,
+                               <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> longitude</code></em>);</pre>
 <p>Extend the bounding box so it contains a point with <em class="parameter"><code>latitude</code></em>
  and <em class="parameter"><code>longitude</code></em>
 .
 Do nothing if the point is already inside the bounding box.</p>
 <div class="refsect3">
-<a name="id-1.7.3.7.7.5"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<a name="champlain-bounding-box-extend.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -309,18 +307,18 @@ Do nothing if the point is already inside the bounding box.</p>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 0.10</p>
+<p class="since">Since: 0.10</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="champlain-bounding-box-is-valid"></a><h3>champlain_bounding_box_is_valid ()</h3>
-<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 champlain_bounding_box_is_valid (<em class="parameter"><code><a class="link" href="ChamplainBoundingBox.html" title="ChamplainBoundingBox"><span class="type">ChamplainBoundingBox</span></a> *bbox</code></em>);</pre>
 <p>Checks whether <em class="parameter"><code>bbox</code></em>
  represents a valid bounding box on the map.</p>
 <div class="refsect3">
-<a name="id-1.7.3.7.8.5"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<a name="champlain-bounding-box-is-valid.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -334,24 +332,23 @@ champlain_bounding_box_is_valid (<em class="parameter"><code><a class="link" hre
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.7.3.7.8.6"></a><h4>Returns</h4>
+<a name="champlain-bounding-box-is-valid.returns"></a><h4>Returns</h4>
 <p> TRUE when the bounding box is valid, FALSE otherwise.</p>
-<p></p>
 </div>
-<p class="since">Since 0.10</p>
+<p class="since">Since: 0.10</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="champlain-bounding-box-covers"></a><h3>champlain_bounding_box_covers ()</h3>
-<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 champlain_bounding_box_covers (<em class="parameter"><code><a class="link" href="ChamplainBoundingBox.html" title="ChamplainBoundingBox"><span class="type">ChamplainBoundingBox</span></a> *bbox</code></em>,
-                               <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> latitude</code></em>,
-                               <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> longitude</code></em>);</pre>
+                               <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> latitude</code></em>,
+                               <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> longitude</code></em>);</pre>
 <p>Checks whether <em class="parameter"><code>bbox</code></em>
  covers the given coordinates.</p>
 <div class="refsect3">
-<a name="id-1.7.3.7.9.5"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<a name="champlain-bounding-box-covers.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -377,11 +374,10 @@ champlain_bounding_box_covers (<em class="parameter"><code><a class="link" href=
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.7.3.7.9.6"></a><h4>Returns</h4>
+<a name="champlain-bounding-box-covers.returns"></a><h4>Returns</h4>
 <p> TRUE when the bounding box covers given coordinates, FALSE otherwise.</p>
-<p></p>
 </div>
-<p class="since">Since 0.12.4</p>
+<p class="since">Since: 0.12.4</p>
 </div>
 </div>
 <div class="refsect1">
@@ -397,8 +393,8 @@ champlain_bounding_box_covers (<em class="parameter"><code><a class="link" href=
 </pre>
 <p>Defines the area of a ChamplainMapDataSource that contains data.</p>
 <div class="refsect3">
-<a name="id-1.7.3.8.2.5"></a><h4>Members</h4>
-<div class="informaltable"><table width="100%" border="0">
+<a name="ChamplainBoundingBox.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="300px" class="struct_members_name">
 <col class="struct_members_description">
@@ -406,34 +402,33 @@ champlain_bounding_box_covers (<em class="parameter"><code><a class="link" href=
 </colgroup>
 <tbody>
 <tr>
-<td class="struct_member_name"><p><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> <em class="structfield"><code><a name="ChamplainBoundingBox-struct.left"></a>left</code></em>;</p></td>
+<td class="struct_member_name"><p><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> <em class="structfield"><code><a name="ChamplainBoundingBox-struct.left"></a>left</code></em>;</p></td>
 <td class="struct_member_description"><p>left coordinate</p></td>
 <td class="struct_member_annotations"> </td>
 </tr>
 <tr>
-<td class="struct_member_name"><p><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> <em class="structfield"><code><a name="ChamplainBoundingBox-struct.top"></a>top</code></em>;</p></td>
+<td class="struct_member_name"><p><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> <em class="structfield"><code><a name="ChamplainBoundingBox-struct.top"></a>top</code></em>;</p></td>
 <td class="struct_member_description"><p>top coordinate</p></td>
 <td class="struct_member_annotations"> </td>
 </tr>
 <tr>
-<td class="struct_member_name"><p><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> <em class="structfield"><code><a name="ChamplainBoundingBox-struct.right"></a>right</code></em>;</p></td>
+<td class="struct_member_name"><p><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> <em class="structfield"><code><a name="ChamplainBoundingBox-struct.right"></a>right</code></em>;</p></td>
 <td class="struct_member_description"><p>right coordinate</p></td>
 <td class="struct_member_annotations"> </td>
 </tr>
 <tr>
-<td class="struct_member_name"><p><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> <em class="structfield"><code><a name="ChamplainBoundingBox-struct.bottom"></a>bottom</code></em>;</p></td>
+<td class="struct_member_name"><p><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> <em class="structfield"><code><a name="ChamplainBoundingBox-struct.bottom"></a>bottom</code></em>;</p></td>
 <td class="struct_member_description"><p>bottom coordinate</p></td>
 <td class="struct_member_annotations"> </td>
 </tr>
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 0.6</p>
+<p class="since">Since: 0.6</p>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.20</div>
+<hr>Generated by GTK-Doc V1.25</div>
 </body>
 </html>

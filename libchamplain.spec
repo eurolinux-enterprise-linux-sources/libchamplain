@@ -1,7 +1,8 @@
-Summary:	Map view for Clutter
 Name:		libchamplain
-Version:	0.12.15
-Release:	1%{?dist}
+Version:	0.12.16
+Release:	2%{?dist}
+Summary:	Map view for Clutter
+
 License:	LGPLv2+
 URL:		http://projects.gnome.org/libchamplain/
 Source0:	http://download.gnome.org/sources/libchamplain/0.12/%{name}-%{version}.tar.xz
@@ -13,7 +14,6 @@ BuildRequires:	gobject-introspection-devel
 BuildRequires:	libsoup-devel
 BuildRequires:	sqlite-devel
 BuildRequires:	gtk3-devel
-BuildRequires:	vala-devel
 BuildRequires:	vala
 
 %description
@@ -113,6 +113,10 @@ chrpath --delete $RPM_BUILD_ROOT%{_libdir}/%{name}-gtk-*.so.*
 %doc demos/*.osm
 
 %changelog
+* Mon Jun 04 2018 Richard Hughes <rhughes@redhat.com> - 0.12.16-2
+- Update to 0.12.16
+- Resolves: #1569989
+
 * Wed Mar 08 2017 Kalev Lember <klember@redhat.com> - 0.12.15-1
 - Update to 0.12.15
 - Resolves: #1386998

@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<!DOCTYPE book PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "">
 <book xmlns="http://www.devhelp.net/book" title="libchamplain Reference Manual" link="index.html" author="" name="libchamplain" version="2" language="c">
   <chapters>
     <sub name="Basic API" link="pt01.html">
@@ -361,11 +360,13 @@
     <keyword type="function" name="champlain_network_tile_source_get_proxy_uri ()" link="ChamplainNetworkTileSource.html#champlain-network-tile-source-get-proxy-uri" since="0.6"/>
     <keyword type="function" name="champlain_network_tile_source_set_max_conns ()" link="ChamplainNetworkTileSource.html#champlain-network-tile-source-set-max-conns" since="0.12.14"/>
     <keyword type="function" name="champlain_network_tile_source_get_max_conns ()" link="ChamplainNetworkTileSource.html#champlain-network-tile-source-get-max-conns" since="0.12.14"/>
+    <keyword type="function" name="champlain_network_tile_source_set_user_agent ()" link="ChamplainNetworkTileSource.html#champlain-network-tile-source-set-user-agent" since="0.12.16"/>
     <keyword type="struct" name="struct ChamplainNetworkTileSource" link="ChamplainNetworkTileSource.html#ChamplainNetworkTileSource-struct"/>
     <keyword type="property" name="The “max-conns” property" link="ChamplainNetworkTileSource.html#ChamplainNetworkTileSource--max-conns"/>
     <keyword type="property" name="The “offline” property" link="ChamplainNetworkTileSource.html#ChamplainNetworkTileSource--offline"/>
     <keyword type="property" name="The “proxy-uri” property" link="ChamplainNetworkTileSource.html#ChamplainNetworkTileSource--proxy-uri"/>
     <keyword type="property" name="The “uri-format” property" link="ChamplainNetworkTileSource.html#ChamplainNetworkTileSource--uri-format"/>
+    <keyword type="property" name="The “user-agent” property" link="ChamplainNetworkTileSource.html#ChamplainNetworkTileSource--user-agent"/>
     <keyword type="function" name="champlain_null_tile_source_new_full ()" link="ChamplainNullTileSource.html#champlain-null-tile-source-new-full" since="0.8"/>
     <keyword type="struct" name="struct ChamplainNullTileSource" link="ChamplainNullTileSource.html#ChamplainNullTileSource-struct"/>
     <keyword type="function" name="champlain_file_tile_source_new_full ()" link="ChamplainFileTileSource.html#champlain-file-tile-source-new-full" since="0.8"/>
@@ -375,10 +376,12 @@
     <keyword type="function" name="champlain_network_bbox_tile_source_load_map_data ()" link="ChamplainNetworkBboxTileSource.html#champlain-network-bbox-tile-source-load-map-data" since="0.10"/>
     <keyword type="function" name="champlain_network_bbox_tile_source_get_api_uri ()" link="ChamplainNetworkBboxTileSource.html#champlain-network-bbox-tile-source-get-api-uri" since="0.8"/>
     <keyword type="function" name="champlain_network_bbox_tile_source_set_api_uri ()" link="ChamplainNetworkBboxTileSource.html#champlain-network-bbox-tile-source-set-api-uri" since="0.8"/>
+    <keyword type="function" name="champlain_network_bbox_tile_source_set_user_agent ()" link="ChamplainNetworkBboxTileSource.html#champlain-network-bbox-tile-source-set-user-agent" since="0.12.16"/>
     <keyword type="struct" name="struct ChamplainNetworkBboxTileSource" link="ChamplainNetworkBboxTileSource.html#ChamplainNetworkBboxTileSource-struct"/>
     <keyword type="property" name="The “api-uri” property" link="ChamplainNetworkBboxTileSource.html#ChamplainNetworkBboxTileSource--api-uri"/>
     <keyword type="property" name="The “proxy-uri” property" link="ChamplainNetworkBboxTileSource.html#ChamplainNetworkBboxTileSource--proxy-uri"/>
     <keyword type="property" name="The “state” property" link="ChamplainNetworkBboxTileSource.html#ChamplainNetworkBboxTileSource--state"/>
+    <keyword type="property" name="The “user-agent” property" link="ChamplainNetworkBboxTileSource.html#ChamplainNetworkBboxTileSource--user-agent"/>
     <keyword type="function" name="champlain_tile_cache_store_tile ()" link="ChamplainTileCache.html#champlain-tile-cache-store-tile" since="0.6"/>
     <keyword type="function" name="champlain_tile_cache_refresh_tile_time ()" link="ChamplainTileCache.html#champlain-tile-cache-refresh-tile-time" since="0.6"/>
     <keyword type="function" name="champlain_tile_cache_on_tile_filled ()" link="ChamplainTileCache.html#champlain-tile-cache-on-tile-filled" since="0.6"/>
@@ -424,7 +427,6 @@
     <keyword type="macro" name="CHAMPLAIN_MAP_SOURCE_OWM_TEMPERATURE" link="ChamplainMapSourceFactory.html#CHAMPLAIN-MAP-SOURCE-OWM-TEMPERATURE:CAPS"/>
     <keyword type="macro" name="CHAMPLAIN_MAP_SOURCE_OWM_WIND" link="ChamplainMapSourceFactory.html#CHAMPLAIN-MAP-SOURCE-OWM-WIND:CAPS"/>
     <keyword type="function" name="ChamplainMapSourceConstructor ()" link="ChamplainMapSourceDesc.html#ChamplainMapSourceConstructor" since="0.10"/>
-    <keyword type="macro" name="CHAMPLAIN_MAP_SOURCE_CONSTRUCTOR" link="ChamplainMapSourceDesc.html#CHAMPLAIN-MAP-SOURCE-CONSTRUCTOR:CAPS" since="0.10"/>
     <keyword type="function" name="champlain_map_source_desc_new_full ()" link="ChamplainMapSourceDesc.html#champlain-map-source-desc-new-full" since="0.10"/>
     <keyword type="function" name="champlain_map_source_desc_get_id ()" link="ChamplainMapSourceDesc.html#champlain-map-source-desc-get-id" since="0.10"/>
     <keyword type="function" name="champlain_map_source_desc_get_name ()" link="ChamplainMapSourceDesc.html#champlain-map-source-desc-get-name" since="0.10"/>
@@ -438,6 +440,7 @@
     <keyword type="function" name="champlain_map_source_desc_get_data ()" link="ChamplainMapSourceDesc.html#champlain-map-source-desc-get-data" since="0.10"/>
     <keyword type="function" name="champlain_map_source_desc_get_constructor ()" link="ChamplainMapSourceDesc.html#champlain-map-source-desc-get-constructor" since="0.10"/>
     <keyword type="struct" name="struct ChamplainMapSourceDesc" link="ChamplainMapSourceDesc.html#ChamplainMapSourceDesc-struct"/>
+    <keyword type="macro" name="CHAMPLAIN_MAP_SOURCE_CONSTRUCTOR" link="ChamplainMapSourceDesc.html#CHAMPLAIN-MAP-SOURCE-CONSTRUCTOR:CAPS" since="0.10"/>
     <keyword type="property" name="The “constructor” property" link="ChamplainMapSourceDesc.html#ChamplainMapSourceDesc--constructor"/>
     <keyword type="property" name="The “data” property" link="ChamplainMapSourceDesc.html#ChamplainMapSourceDesc--data"/>
     <keyword type="property" name="The “id” property" link="ChamplainMapSourceDesc.html#ChamplainMapSourceDesc--id"/>
@@ -505,12 +508,31 @@
     <keyword type="struct" name="ChamplainExportable" link="ChamplainExportable.html#ChamplainExportable-struct"/>
     <keyword type="struct" name="struct ChamplainExportableIface" link="ChamplainExportable.html#ChamplainExportableIface"/>
     <keyword type="property" name="The “surface” property" link="ChamplainExportable.html#ChamplainExportable--surface"/>
+    <keyword type="macro" name="CHAMPLAIN_CHECK_VERSION()" link="libchamplain-ChamplainVersion.html#CHAMPLAIN-CHECK-VERSION:CAPS"/>
     <keyword type="macro" name="CHAMPLAIN_MAJOR_VERSION" link="libchamplain-ChamplainVersion.html#CHAMPLAIN-MAJOR-VERSION:CAPS"/>
     <keyword type="macro" name="CHAMPLAIN_MINOR_VERSION" link="libchamplain-ChamplainVersion.html#CHAMPLAIN-MINOR-VERSION:CAPS"/>
     <keyword type="macro" name="CHAMPLAIN_MICRO_VERSION" link="libchamplain-ChamplainVersion.html#CHAMPLAIN-MICRO-VERSION:CAPS"/>
-    <keyword type="macro" name="CHAMPLAIN_VERSION_HEX" link="libchamplain-ChamplainVersion.html#CHAMPLAIN-VERSION-HEX:CAPS"/>
-    <keyword type="macro" name="CHAMPLAIN_CHECK_VERSION()" link="libchamplain-ChamplainVersion.html#CHAMPLAIN-CHECK-VERSION:CAPS"/>
     <keyword type="macro" name="CHAMPLAIN_VERSION" link="libchamplain-ChamplainVersion.html#CHAMPLAIN-VERSION:CAPS"/>
     <keyword type="macro" name="CHAMPLAIN_VERSION_S" link="libchamplain-ChamplainVersion.html#CHAMPLAIN-VERSION-S:CAPS"/>
+    <keyword type="macro" name="CHAMPLAIN_VERSION_HEX" link="libchamplain-ChamplainVersion.html#CHAMPLAIN-VERSION-HEX:CAPS"/>
+    <keyword type="constant" name="CHAMPLAIN_SELECTION_NONE" link="ChamplainMarkerLayer.html#CHAMPLAIN-SELECTION-NONE:CAPS"/>
+    <keyword type="constant" name="CHAMPLAIN_SELECTION_SINGLE" link="ChamplainMarkerLayer.html#CHAMPLAIN-SELECTION-SINGLE:CAPS"/>
+    <keyword type="constant" name="CHAMPLAIN_SELECTION_MULTIPLE" link="ChamplainMarkerLayer.html#CHAMPLAIN-SELECTION-MULTIPLE:CAPS"/>
+    <keyword type="constant" name="CHAMPLAIN_UNIT_KM" link="ChamplainScale.html#CHAMPLAIN-UNIT-KM:CAPS"/>
+    <keyword type="constant" name="CHAMPLAIN_UNIT_MILES" link="ChamplainScale.html#CHAMPLAIN-UNIT-MILES:CAPS"/>
+    <keyword type="constant" name="CHAMPLAIN_MAP_PROJECTION_MERCATOR" link="ChamplainMapSource.html#CHAMPLAIN-MAP-PROJECTION-MERCATOR:CAPS"/>
+    <keyword type="constant" name="CHAMPLAIN_STATE_NONE" link="ChamplainTile.html#CHAMPLAIN-STATE-NONE:CAPS"/>
+    <keyword type="constant" name="CHAMPLAIN_STATE_LOADING" link="ChamplainTile.html#CHAMPLAIN-STATE-LOADING:CAPS"/>
+    <keyword type="constant" name="CHAMPLAIN_STATE_LOADED" link="ChamplainTile.html#CHAMPLAIN-STATE-LOADED:CAPS"/>
+    <keyword type="constant" name="CHAMPLAIN_STATE_DONE" link="ChamplainTile.html#CHAMPLAIN-STATE-DONE:CAPS"/>
+    <keyword type="member" name="ChamplainLocationIface.get-latitude" link="ChamplainLocation.html#ChamplainLocationIface.get-latitude"/>
+    <keyword type="member" name="ChamplainLocationIface.get-longitude" link="ChamplainLocation.html#ChamplainLocationIface.get-longitude"/>
+    <keyword type="member" name="ChamplainLocationIface.set-location" link="ChamplainLocation.html#ChamplainLocationIface.set-location"/>
+    <keyword type="member" name="ChamplainBoundingBox-struct.left" link="ChamplainBoundingBox.html#ChamplainBoundingBox-struct.left"/>
+    <keyword type="member" name="ChamplainBoundingBox-struct.top" link="ChamplainBoundingBox.html#ChamplainBoundingBox-struct.top"/>
+    <keyword type="member" name="ChamplainBoundingBox-struct.right" link="ChamplainBoundingBox.html#ChamplainBoundingBox-struct.right"/>
+    <keyword type="member" name="ChamplainBoundingBox-struct.bottom" link="ChamplainBoundingBox.html#ChamplainBoundingBox-struct.bottom"/>
+    <keyword type="member" name="ChamplainExportableIface.get-surface" link="ChamplainExportable.html#ChamplainExportableIface.get-surface"/>
+    <keyword type="member" name="ChamplainExportableIface.set-surface" link="ChamplainExportable.html#ChamplainExportableIface.set-surface"/>
   </functions>
 </book>

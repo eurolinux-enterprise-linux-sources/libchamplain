@@ -1,11 +1,16 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+import gi
+gi.require_version('Champlain', '0.12')
+gi.require_version('GtkChamplain', '0.12')
+gi.require_version('GtkClutter', '1.0')
 from gi.repository import GtkClutter, Clutter
-GtkClutter.init([]) # Must be initialized before importing those:
+GtkClutter.init([])  # Must be initialized before importing those:
 from gi.repository import GObject, Gtk, Champlain, GtkChamplain, Pango
 
-import os, sys
+import os
+import sys
 os.chdir(os.path.dirname(os.path.abspath(sys.argv[0])))
 
 class LauncherGTK:
@@ -122,7 +127,7 @@ class LauncherGTK:
     def mouse_click_cb(self, actor, event, view):
         x, y = event.x, event.y
         lon, lat = view.x_to_longitude(x), view.y_to_latitude(y)
-        print "Mouse click at: %f %f" % (lat, lon)
+        print("Mouse click at: %f %f" % (lat, lon))
         return True
 
     def zoom_changed(self, widget):
@@ -133,7 +138,7 @@ class LauncherGTK:
         iter = widget.get_active_iter()
         id = model.get_value(iter, 0)
         map_source_factory = Champlain.MapSourceFactory.dup_default()
-        source = map_source_factory.create_cached_source(id);
+        source = map_source_factory.create_cached_source(id)
         self.view.set_property("map-source", source)
 
     def map_zoom_changed(self, widget, value):
@@ -150,9 +155,8 @@ class LauncherGTK:
         if event.button != 1 and event.click_count > 1:
             return False
 
-        print "Montreal was clicked\n"
+        print("Montreal was clicked\n")
         return True
-
 
     def create_marker_layer(self, view):
         orange = Clutter.Color.new(0xf3, 0x94, 0x07, 0xbb)
@@ -196,6 +200,7 @@ class LauncherGTK:
         layer.set_all_markers_draggable()
         layer.show()
         return layer
+
 
 if __name__ == "__main__":
     GObject.threads_init()

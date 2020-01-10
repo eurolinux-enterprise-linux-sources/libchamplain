@@ -2,20 +2,20 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>libchamplain Reference Manual: ChamplainFileTileSource</title>
-<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<title>ChamplainFileTileSource: libchamplain Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
 <link rel="home" href="index.html" title="libchamplain Reference Manual">
 <link rel="up" href="ch04.html" title="Tile Sources">
 <link rel="prev" href="ChamplainNullTileSource.html" title="ChamplainNullTileSource">
 <link rel="next" href="ChamplainNetworkBboxTileSource.html" title="ChamplainNetworkBboxTileSource">
-<meta name="generator" content="GTK-Doc V1.20 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.25 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
-<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="10"><tr valign="middle">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
 <td width="100%" align="left" class="shortcuts">
-<a href="#" class="shortcut">Top</a><span id="nav_description"> <span class="dim">|</span> 
-                  <a href="#ChamplainFileTileSource.description" class="shortcut">Description</a></span><span id="nav_hierarchy"> <span class="dim">|</span> 
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#ChamplainFileTileSource.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
                   <a href="#ChamplainFileTileSource.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
 </td>
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
@@ -34,7 +34,7 @@
 </tr></table></div>
 <div class="refsect1">
 <a name="ChamplainFileTileSource.functions"></a><h2>Functions</h2>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="functions_return">
 <col class="functions_name">
@@ -61,7 +61,7 @@
 </div>
 <div class="refsect1">
 <a name="ChamplainFileTileSource.other"></a><h2>Types and Values</h2>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="name">
 <col class="description">
@@ -74,8 +74,8 @@
 </div>
 <div class="refsect1">
 <a name="ChamplainFileTileSource.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
-    <span class="lineart">╰──</span> <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
         <span class="lineart">╰──</span> <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource">ChamplainMapSource</a>
             <span class="lineart">╰──</span> <a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource">ChamplainTileSource</a>
                 <span class="lineart">╰──</span> ChamplainFileTileSource
@@ -91,19 +91,19 @@ OpenStreetMap XML data files</a> (*.osm).</p>
 <div class="refsect2">
 <a name="champlain-file-tile-source-new-full"></a><h3>champlain_file_tile_source_new_full ()</h3>
 <pre class="programlisting"><a class="link" href="ChamplainFileTileSource.html" title="ChamplainFileTileSource"><span class="returnvalue">ChamplainFileTileSource</span></a> *
-champlain_file_tile_source_new_full (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *id</code></em>,
-                                     <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>,
-                                     <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *license</code></em>,
-                                     <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *license_uri</code></em>,
-                                     <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> min_zoom</code></em>,
-                                     <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> max_zoom</code></em>,
-                                     <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> tile_size</code></em>,
+champlain_file_tile_source_new_full (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *id</code></em>,
+                                     <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>,
+                                     <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *license</code></em>,
+                                     <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *license_uri</code></em>,
+                                     <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a> min_zoom</code></em>,
+                                     <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a> max_zoom</code></em>,
+                                     <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a> tile_size</code></em>,
                                      <em class="parameter"><code><a class="link" href="ChamplainMapSource.html#ChamplainMapProjection" title="enum ChamplainMapProjection"><span class="type">ChamplainMapProjection</span></a> projection</code></em>,
                                      <em class="parameter"><code><a class="link" href="ChamplainRenderer.html" title="ChamplainRenderer"><span class="type">ChamplainRenderer</span></a> *renderer</code></em>);</pre>
 <p>Constructor of <a class="link" href="ChamplainFileTileSource.html" title="ChamplainFileTileSource"><span class="type">ChamplainFileTileSource</span></a>.</p>
 <div class="refsect3">
-<a name="id-1.5.3.5.7.2.5"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<a name="champlain-file-tile-source-new-full.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -159,11 +159,10 @@ champlain_file_tile_source_new_full (<em class="parameter"><code>const <a href="
 </table></div>
 </div>
 <div class="refsect3">
-<a name="id-1.5.3.5.7.2.6"></a><h4>Returns</h4>
+<a name="champlain-file-tile-source-new-full.returns"></a><h4>Returns</h4>
 <p> a constructed <a class="link" href="ChamplainFileTileSource.html" title="ChamplainFileTileSource"><span class="type">ChamplainFileTileSource</span></a> object</p>
-<p></p>
 </div>
-<p class="since">Since 0.8</p>
+<p class="since">Since: 0.8</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -171,11 +170,11 @@ champlain_file_tile_source_new_full (<em class="parameter"><code>const <a href="
 <pre class="programlisting"><span class="returnvalue">void</span>
 champlain_file_tile_source_load_map_data
                                (<em class="parameter"><code><a class="link" href="ChamplainFileTileSource.html" title="ChamplainFileTileSource"><span class="type">ChamplainFileTileSource</span></a> *self</code></em>,
-                                <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *map_path</code></em>);</pre>
+                                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *map_path</code></em>);</pre>
 <p>Loads the OpenStreetMap XML file at the given path.</p>
 <div class="refsect3">
-<a name="id-1.5.3.5.7.3.5"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<a name="champlain-file-tile-source-load-map-data.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -195,7 +194,7 @@ champlain_file_tile_source_load_map_data
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 0.8</p>
+<p class="since">Since: 0.8</p>
 </div>
 </div>
 <div class="refsect1">
@@ -205,12 +204,11 @@ champlain_file_tile_source_load_map_data
 <pre class="programlisting">struct ChamplainFileTileSource;</pre>
 <p>The <a class="link" href="ChamplainFileTileSource.html" title="ChamplainFileTileSource"><span class="type">ChamplainFileTileSource</span></a> structure contains only private data
 and should be accessed using the provided API</p>
-<p class="since">Since 0.8</p>
+<p class="since">Since: 0.8</p>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.20</div>
+<hr>Generated by GTK-Doc V1.25</div>
 </body>
 </html>

@@ -2,20 +2,20 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>libchamplain Reference Manual: ChamplainRenderer</title>
-<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<title>ChamplainRenderer: libchamplain Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
 <link rel="home" href="index.html" title="libchamplain Reference Manual">
 <link rel="up" href="pt05.html" title="Part V. Renderer API">
 <link rel="prev" href="pt05.html" title="Part V. Renderer API">
 <link rel="next" href="ChamplainImageRenderer.html" title="ChamplainImageRenderer">
-<meta name="generator" content="GTK-Doc V1.20 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.25 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
-<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="10"><tr valign="middle">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
 <td width="100%" align="left" class="shortcuts">
-<a href="#" class="shortcut">Top</a><span id="nav_description"> <span class="dim">|</span> 
-                  <a href="#ChamplainRenderer.description" class="shortcut">Description</a></span><span id="nav_hierarchy"> <span class="dim">|</span> 
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#ChamplainRenderer.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
                   <a href="#ChamplainRenderer.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
 </td>
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
@@ -34,7 +34,7 @@
 </tr></table></div>
 <div class="refsect1">
 <a name="ChamplainRenderer.functions"></a><h2>Functions</h2>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="functions_return">
 <col class="functions_name">
@@ -61,7 +61,7 @@
 </div>
 <div class="refsect1">
 <a name="ChamplainRenderer.other"></a><h2>Types and Values</h2>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="name">
 <col class="description">
@@ -74,8 +74,8 @@
 </div>
 <div class="refsect1">
 <a name="ChamplainRenderer.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
-    <span class="lineart">╰──</span> <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
         <span class="lineart">╰──</span> ChamplainRenderer
             <span class="lineart">├──</span> <a class="link" href="ChamplainErrorTileRenderer.html" title="ChamplainErrorTileRenderer">ChamplainErrorTileRenderer</a>
             <span class="lineart">╰──</span> <a class="link" href="ChamplainImageRenderer.html" title="ChamplainImageRenderer">ChamplainImageRenderer</a>
@@ -93,12 +93,12 @@ the provided data - this can be arbitrary data the given renderer understands
 <a name="champlain-renderer-set-data"></a><h3>champlain_renderer_set_data ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 champlain_renderer_set_data (<em class="parameter"><code><a class="link" href="ChamplainRenderer.html" title="ChamplainRenderer"><span class="type">ChamplainRenderer</span></a> *renderer</code></em>,
-                             <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *data</code></em>,
-                             <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> size</code></em>);</pre>
+                             <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *data</code></em>,
+                             <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a> size</code></em>);</pre>
 <p>Sets the data which is used to render tiles by the renderer.</p>
 <div class="refsect3">
-<a name="id-1.6.2.7.2.5"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<a name="champlain-renderer-set-data.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -123,7 +123,7 @@ champlain_renderer_set_data (<em class="parameter"><code><a class="link" href="C
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 0.8</p>
+<p class="since">Since: 0.8</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -136,8 +136,8 @@ to set the content of the tile. When the rendering is finished, the renderer
 emits the <a class="link" href="ChamplainTile.html#ChamplainTile-render-complete" title="The “render-complete” signal"><span class="type">“render-complete”</span></a> signal. The tile has to be displayed manually by
 calling <a class="link" href="ChamplainTile.html#champlain-tile-display-content" title="champlain_tile_display_content ()"><code class="function">champlain_tile_display_content()</code></a>.</p>
 <div class="refsect3">
-<a name="id-1.6.2.7.3.5"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<a name="champlain-renderer-render.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -157,7 +157,7 @@ calling <a class="link" href="ChamplainTile.html#champlain-tile-display-content"
 </tbody>
 </table></div>
 </div>
-<p class="since">Since 0.8</p>
+<p class="since">Since: 0.8</p>
 </div>
 </div>
 <div class="refsect1">
@@ -167,12 +167,11 @@ calling <a class="link" href="ChamplainTile.html#champlain-tile-display-content"
 <pre class="programlisting">struct ChamplainRenderer;</pre>
 <p>The <a class="link" href="ChamplainRenderer.html" title="ChamplainRenderer"><span class="type">ChamplainRenderer</span></a> structure contains only private data
 and should be accessed using the provided API</p>
-<p class="since">Since 0.8</p>
+<p class="since">Since: 0.8</p>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr>
-          Generated by GTK-Doc V1.20</div>
+<hr>Generated by GTK-Doc V1.25</div>
 </body>
 </html>
