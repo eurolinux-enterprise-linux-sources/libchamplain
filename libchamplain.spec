@@ -1,7 +1,7 @@
 Summary:	Map view for Clutter
 Name:		libchamplain
 Version:	0.12.4
-Release:	4%{?dist}
+Release:	5%{?dist}
 License:	LGPLv2+
 Group:		System Environment/Libraries
 URL:		http://projects.gnome.org/libchamplain/
@@ -146,6 +146,10 @@ chrpath --delete $RPM_BUILD_ROOT%{_libdir}/%{name}-gtk-*.so.*
 %doc demos/*.osm
 
 %changelog
+* Mon Apr 27 2015 Dan Winship <danw@redhat.com> - 0.12.4-5
+- Rebuild against the new cogl
+- Resolves: #1174513
+
 * Fri Jan 24 2014 Daniel Mach <dmach@redhat.com> - 0.12.4-4
 - Mass rebuild 2014-01-24
 
