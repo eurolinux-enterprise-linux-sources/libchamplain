@@ -1,7 +1,7 @@
 Summary:	Map view for Clutter
 Name:		libchamplain
 Version:	0.12.4
-Release:	2.2%{?dist}
+Release:	4%{?dist}
 License:	LGPLv2+
 Group:		System Environment/Libraries
 URL:		http://projects.gnome.org/libchamplain/
@@ -146,6 +146,15 @@ chrpath --delete $RPM_BUILD_ROOT%{_libdir}/%{name}-gtk-*.so.*
 %doc demos/*.osm
 
 %changelog
+* Fri Jan 24 2014 Daniel Mach <dmach@redhat.com> - 0.12.4-4
+- Mass rebuild 2014-01-24
+
+* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 0.12.4-3
+- Mass rebuild 2013-12-27
+
+* Mon Jul 22 2013 Dan Winship <danw@redhat.com> - 0.12.4-2.2
+- Regen patch, don't override _default_patch_fuzz
+
 * Mon Jul 22 2013 Dan Winship <danw@redhat.com> - 0.12.4-2.1
 - Don't rebuild the docs, so we don't get multilib conflicts
 
