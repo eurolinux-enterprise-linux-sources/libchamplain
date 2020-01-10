@@ -1,0 +1,2497 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>libchamplain Reference Manual: ChamplainView</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="libchamplain Reference Manual">
+<link rel="up" href="pt01.html" title="Part I. Basic API">
+<link rel="prev" href="pt01.html" title="Part I. Basic API">
+<link rel="next" href="pt02.html" title="Part II. Layers, Markers and Locations">
+<meta name="generator" content="GTK-Doc V1.20 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="10"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description"> <span class="dim">|</span> 
+                  <a href="#ChamplainView.description" class="shortcut">Description</a></span><span id="nav_hierarchy"> <span class="dim">|</span> 
+                  <a href="#ChamplainView.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_interfaces"> <span class="dim">|</span> 
+                  <a href="#ChamplainView.implemented-interfaces" class="shortcut">Implemented Interfaces</a></span><span id="nav_properties"> <span class="dim">|</span> 
+                  <a href="#ChamplainView.properties" class="shortcut">Properties</a></span><span id="nav_signals"> <span class="dim">|</span> 
+                  <a href="#ChamplainView.signals" class="shortcut">Signals</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="pt01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="pt01.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="pt02.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="ChamplainView"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="ChamplainView.top_of_page"></a>ChamplainView</span></h2>
+<p>ChamplainView — A <a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="type">ClutterActor</span></a> to display maps</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="ChamplainView.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="returnvalue">ClutterActor</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-new" title="champlain_view_new ()">champlain_view_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-center-on" title="champlain_view_center_on ()">champlain_view_center_on</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-go-to" title="champlain_view_go_to ()">champlain_view_go_to</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-stop-go-to" title="champlain_view_stop_go_to ()">champlain_view_stop_go_to</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-zoom-in" title="champlain_view_zoom_in ()">champlain_view_zoom_in</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-zoom-out" title="champlain_view_zoom_out ()">champlain_view_zoom_out</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-set-zoom-level" title="champlain_view_set_zoom_level ()">champlain_view_set_zoom_level</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-set-min-zoom-level" title="champlain_view_set_min_zoom_level ()">champlain_view_set_min_zoom_level</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-set-max-zoom-level" title="champlain_view_set_max_zoom_level ()">champlain_view_set_max_zoom_level</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-set-world" title="champlain_view_set_world ()">champlain_view_set_world</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="ChamplainBoundingBox.html" title="ChamplainBoundingBox"><span class="returnvalue">ChamplainBoundingBox</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-get-world" title="champlain_view_get_world ()">champlain_view_get_world</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-ensure-visible" title="champlain_view_ensure_visible ()">champlain_view_ensure_visible</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-ensure-layers-visible" title="champlain_view_ensure_layers_visible ()">champlain_view_ensure_layers_visible</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-set-map-source" title="champlain_view_set_map_source ()">champlain_view_set_map_source</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-add-overlay-source" title="champlain_view_add_overlay_source ()">champlain_view_add_overlay_source</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-remove-overlay-source" title="champlain_view_remove_overlay_source ()">champlain_view_remove_overlay_source</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-get-overlay-sources" title="champlain_view_get_overlay_sources ()">champlain_view_get_overlay_sources</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-set-deceleration" title="champlain_view_set_deceleration ()">champlain_view_set_deceleration</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-set-kinetic-mode" title="champlain_view_set_kinetic_mode ()">champlain_view_set_kinetic_mode</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-set-keep-center-on-resize" title="champlain_view_set_keep_center_on_resize ()">champlain_view_set_keep_center_on_resize</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-set-zoom-on-double-click" title="champlain_view_set_zoom_on_double_click ()">champlain_view_set_zoom_on_double_click</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-set-animate-zoom" title="champlain_view_set_animate_zoom ()">champlain_view_set_animate_zoom</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-set-background-pattern" title="champlain_view_set_background_pattern ()">champlain_view_set_background_pattern</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-set-horizontal-wrap" title="champlain_view_set_horizontal_wrap ()">champlain_view_set_horizontal_wrap</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-add-layer" title="champlain_view_add_layer ()">champlain_view_add_layer</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-remove-layer" title="champlain_view_remove_layer ()">champlain_view_remove_layer</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-get-zoom-level" title="champlain_view_get_zoom_level ()">champlain_view_get_zoom_level</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-get-min-zoom-level" title="champlain_view_get_min_zoom_level ()">champlain_view_get_min_zoom_level</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-get-max-zoom-level" title="champlain_view_get_max_zoom_level ()">champlain_view_get_max_zoom_level</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="returnvalue">ChamplainMapSource</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-get-map-source" title="champlain_view_get_map_source ()">champlain_view_get_map_source</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-get-deceleration" title="champlain_view_get_deceleration ()">champlain_view_get_deceleration</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-get-kinetic-mode" title="champlain_view_get_kinetic_mode ()">champlain_view_get_kinetic_mode</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-get-keep-center-on-resize" title="champlain_view_get_keep_center_on_resize ()">champlain_view_get_keep_center_on_resize</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-get-zoom-on-double-click" title="champlain_view_get_zoom_on_double_click ()">champlain_view_get_zoom_on_double_click</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-get-animate-zoom" title="champlain_view_get_animate_zoom ()">champlain_view_get_animate_zoom</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/clutter/ClutterContent.html"><span class="returnvalue">ClutterContent</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-get-background-pattern" title="champlain_view_get_background_pattern ()">champlain_view_get_background_pattern</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-get-horizontal-wrap" title="champlain_view_get_horizontal_wrap ()">champlain_view_get_horizontal_wrap</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-reload-tiles" title="champlain_view_reload_tiles ()">champlain_view_reload_tiles</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/cairo/cairo-cairo-surface-t.html#cairo-surface-t"><span class="returnvalue">cairo_surface_t</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-to-surface" title="champlain_view_to_surface ()">champlain_view_to_surface</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-x-to-longitude" title="champlain_view_x_to_longitude ()">champlain_view_x_to_longitude</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-y-to-latitude" title="champlain_view_y_to_latitude ()">champlain_view_y_to_latitude</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-longitude-to-x" title="champlain_view_longitude_to_x ()">champlain_view_longitude_to_x</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-latitude-to-y" title="champlain_view_latitude_to_y ()">champlain_view_latitude_to_y</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-get-viewport-origin" title="champlain_view_get_viewport_origin ()">champlain_view_get_viewport_origin</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-bin-layout-add" title="champlain_view_bin_layout_add ()">champlain_view_bin_layout_add</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="ChamplainLicense.html" title="ChamplainLicense"><span class="returnvalue">ChamplainLicense</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-get-license-actor" title="champlain_view_get_license_actor ()">champlain_view_get_license_actor</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-get-center-latitude" title="champlain_view_get_center_latitude ()">champlain_view_get_center_latitude</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-get-center-longitude" title="champlain_view_get_center_longitude ()">champlain_view_get_center_longitude</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="ChamplainBoundingBox.html" title="ChamplainBoundingBox"><span class="returnvalue">ChamplainBoundingBox</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-get-bounding-box" title="champlain_view_get_bounding_box ()">champlain_view_get_bounding_box</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="ChamplainBoundingBox.html" title="ChamplainBoundingBox"><span class="returnvalue">ChamplainBoundingBox</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-get-bounding-box-for-zoom-level" title="champlain_view_get_bounding_box_for_zoom_level ()">champlain_view_get_bounding_box_for_zoom_level</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="ChamplainTile.html#ChamplainState" title="enum ChamplainState"><span class="returnvalue">ChamplainState</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-get-state" title="champlain_view_get_state ()">champlain_view_get_state</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainView.html#champlain-view-get-viewport-anchor" title="champlain_view_get_viewport_anchor ()">champlain_view_get_viewport_anchor</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="ChamplainView.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table border="0">
+<colgroup>
+<col width="150px" class="properties_type">
+<col width="300px" class="properties_name">
+<col width="200px" class="properties_flags">
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="ChamplainView.html#ChamplainView--animate-zoom" title="The “animate-zoom” property">animate-zoom</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="type">ClutterActor</span></a> *</td>
+<td class="property_name"><a class="link" href="ChamplainView.html#ChamplainView--background-pattern" title="The “background-pattern” property">background-pattern</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
+<td class="property_name"><a class="link" href="ChamplainView.html#ChamplainView--deceleration" title="The “deceleration” property">deceleration</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
+<td class="property_name"><a class="link" href="ChamplainView.html#ChamplainView--goto-animation-duration" title="The “goto-animation-duration” property">goto-animation-duration</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="/usr/share/gtk-doc/html/clutter/ClutterTimeline.html#ClutterAnimationMode"><span class="type">ClutterAnimationMode</span></a></td>
+<td class="property_name"><a class="link" href="ChamplainView.html#ChamplainView--goto-animation-mode" title="The “goto-animation-mode” property">goto-animation-mode</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="ChamplainView.html#ChamplainView--horizontal-wrap" title="The “horizontal-wrap” property">horizontal-wrap</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="ChamplainView.html#ChamplainView--keep-center-on-resize" title="The “keep-center-on-resize” property">keep-center-on-resize</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="ChamplainView.html#ChamplainView--kinetic-mode" title="The “kinetic-mode” property">kinetic-mode</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
+<td class="property_name"><a class="link" href="ChamplainView.html#ChamplainView--latitude" title="The “latitude” property">latitude</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
+<td class="property_name"><a class="link" href="ChamplainView.html#ChamplainView--longitude" title="The “longitude” property">longitude</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *</td>
+<td class="property_name"><a class="link" href="ChamplainView.html#ChamplainView--map-source" title="The “map-source” property">map-source</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
+<td class="property_name"><a class="link" href="ChamplainView.html#ChamplainView--max-zoom-level" title="The “max-zoom-level” property">max-zoom-level</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
+<td class="property_name"><a class="link" href="ChamplainView.html#ChamplainView--min-zoom-level" title="The “min-zoom-level” property">min-zoom-level</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a class="link" href="ChamplainTile.html#ChamplainState" title="enum ChamplainState"><span class="type">ChamplainState</span></a></td>
+<td class="property_name"><a class="link" href="ChamplainView.html#ChamplainView--state" title="The “state” property">state</a></td>
+<td class="property_flags">Read</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="ChamplainBoundingBox.html" title="ChamplainBoundingBox"><span class="type">ChamplainBoundingBox</span></a> *</td>
+<td class="property_name"><a class="link" href="ChamplainView.html#ChamplainView--world" title="The “world” property">world</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
+<td class="property_name"><a class="link" href="ChamplainView.html#ChamplainView--zoom-level" title="The “zoom-level” property">zoom-level</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="ChamplainView.html#ChamplainView--zoom-on-double-click" title="The “zoom-on-double-click” property">zoom-on-double-click</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="ChamplainView.signals"></a><h2>Signals</h2>
+<div class="informaltable"><table border="0">
+<colgroup>
+<col width="150px" class="signals_return">
+<col width="300px" class="signals_name">
+<col width="200px" class="signals_flags">
+</colgroup>
+<tbody>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="ChamplainView.html#ChamplainView-animation-completed" title="The “animation-completed” signal">animation-completed</a></td>
+<td class="signal_flags">Has Details</td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="ChamplainView.html#ChamplainView-layer-relocated" title="The “layer-relocated” signal">layer-relocated</a></td>
+<td class="signal_flags">Run Last</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="ChamplainView.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody><tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="ChamplainView.html#ChamplainView-struct" title="struct ChamplainView">ChamplainView</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="ChamplainView.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+    <span class="lineart">╰──</span> <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html">ClutterActor</a>
+            <span class="lineart">╰──</span> ChamplainView
+</pre>
+</div>
+<div class="refsect1">
+<a name="ChamplainView.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+ChamplainView implements
+ <a href="/usr/share/gtk-doc/html/clutter/ClutterContainer.html">ClutterContainer</a>,  <a href="/usr/share/gtk-doc/html/clutter/ClutterScriptable.html">ClutterScriptable</a>,  <a href="/usr/share/gtk-doc/html/clutter/ClutterAnimatable.html">ClutterAnimatable</a> and  AtkImplementorIface.</p>
+</div>
+<div class="refsect1">
+<a name="ChamplainView.description"></a><h2>Description</h2>
+<p>The <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> is a ClutterActor to display maps.  It supports two modes
+of scrolling:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Push: the normal behavior where the maps don't move
+  after the user stopped scrolling;</p></li>
+<li class="listitem"><p>Kinetic: the iPhone-like behavior where the maps
+  decelerate after the user stopped scrolling.</p></li>
+</ul></div>
+<p>You can use the same <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> to display many types of maps.  In
+Champlain they are called map sources.  You can change the <span class="type">map-source</span>
+property at anytime to replace the current displayed map.</p>
+<p>The maps are downloaded from Internet from open maps sources (like
+<a class="ulink" href="http://www.openstreetmap.org" target="_top">OpenStreetMap</a>).  Maps are divided
+in tiles for each zoom level.  When a tile is requested, <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> will
+first check if it is in cache (in the user's cache dir under champlain). If
+an error occurs during download, an error tile will be displayed.</p>
+<p>The button-press-event and button-release-event signals are emitted each
+time a mouse button is pressed and released on the <em class="parameter"><code>view</code></em>
+.</p>
+</div>
+<div class="refsect1">
+<a name="ChamplainView.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="champlain-view-new"></a><h3>champlain_view_new ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="returnvalue">ClutterActor</span></a> *
+champlain_view_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Creates an instance of <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.2.5"></a><h4>Returns</h4>
+<p> a new <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> ready to be used as a <a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="type">ClutterActor</span></a>.</p>
+<p></p>
+</div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-view-center-on"></a><h3>champlain_view_center_on ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_view_center_on (<em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>,
+                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> latitude</code></em>,
+                          <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> longitude</code></em>);</pre>
+<p>Centers the map on these coordinates.</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.3.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>latitude</p></td>
+<td class="parameter_description"><p>the longitude to center the map at</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>longitude</p></td>
+<td class="parameter_description"><p>the longitude to center the map at</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-view-go-to"></a><h3>champlain_view_go_to ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_view_go_to (<em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>,
+                      <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> latitude</code></em>,
+                      <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> longitude</code></em>);</pre>
+<p>Move from the current position to these coordinates. All tiles in the
+intermediate view WILL be loaded!</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.4.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>latitude</p></td>
+<td class="parameter_description"><p>the longitude to center the map at</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>longitude</p></td>
+<td class="parameter_description"><p>the longitude to center the map at</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-view-stop-go-to"></a><h3>champlain_view_stop_go_to ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_view_stop_go_to (<em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>);</pre>
+<p>Stop the go to animation.  The view will stay where it was when the
+animation was stopped.</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.5.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-view-zoom-in"></a><h3>champlain_view_zoom_in ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_view_zoom_in (<em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>);</pre>
+<p>Zoom in the map by one level.</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.6.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-view-zoom-out"></a><h3>champlain_view_zoom_out ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_view_zoom_out (<em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>);</pre>
+<p>Zoom out the map by one level.</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.7.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since 0.1</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-view-set-zoom-level"></a><h3>champlain_view_set_zoom_level ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_view_set_zoom_level (<em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>,
+                               <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> zoom_level</code></em>);</pre>
+<p>Changes the current level of zoom</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.8.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>zoom_level</p></td>
+<td class="parameter_description"><p>the level of zoom, a guint between 1 and 20</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-view-set-min-zoom-level"></a><h3>champlain_view_set_min_zoom_level ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_view_set_min_zoom_level (<em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>,
+                                   <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> zoom_level</code></em>);</pre>
+<p>Changes the lowest allowed level of zoom</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.9.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>zoom_level</p></td>
+<td class="parameter_description"><p>the level of zoom</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-view-set-max-zoom-level"></a><h3>champlain_view_set_max_zoom_level ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_view_set_max_zoom_level (<em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>,
+                                   <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> zoom_level</code></em>);</pre>
+<p>Changes the highest allowed level of zoom</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.10.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>zoom_level</p></td>
+<td class="parameter_description"><p>the level of zoom</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-view-set-world"></a><h3>champlain_view_set_world ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_view_set_world (<em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>,
+                          <em class="parameter"><code><a class="link" href="ChamplainBoundingBox.html" title="ChamplainBoundingBox"><span class="type">ChamplainBoundingBox</span></a> *bbox</code></em>);</pre>
+<p>Set a bounding box to limit the world to. No tiles will be loaded
+outside of this bounding box. It will not be possible to scroll outside
+of this bounding box.</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.11.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>bbox</p></td>
+<td class="parameter_description"><p> the <a class="link" href="ChamplainBoundingBox.html" title="ChamplainBoundingBox"><span class="type">ChamplainBoundingBox</span></a> of the world. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.12.11</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-view-get-world"></a><h3>champlain_view_get_world ()</h3>
+<pre class="programlisting"><a class="link" href="ChamplainBoundingBox.html" title="ChamplainBoundingBox"><span class="returnvalue">ChamplainBoundingBox</span></a> *
+champlain_view_get_world (<em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>);</pre>
+<p>Get the bounding box that represents the extent of the world.</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.12.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.2.2.10.12.6"></a><h4>Returns</h4>
+<p> a <a class="link" href="ChamplainBoundingBox.html" title="ChamplainBoundingBox"><span class="type">ChamplainBoundingBox</span></a> that represents the current world. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since 0.12.11</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-view-ensure-visible"></a><h3>champlain_view_ensure_visible ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_view_ensure_visible (<em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>,
+                               <em class="parameter"><code><a class="link" href="ChamplainBoundingBox.html" title="ChamplainBoundingBox"><span class="type">ChamplainBoundingBox</span></a> *bbox</code></em>,
+                               <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> animate</code></em>);</pre>
+<p>Changes the map's zoom level and center to make sure the given area
+is visible</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.13.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>bbox</p></td>
+<td class="parameter_description"><p>bounding box of the area that should be visible</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>animate</p></td>
+<td class="parameter_description"><p>TRUE to perform animation, FALSE otherwise</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-view-ensure-layers-visible"></a><h3>champlain_view_ensure_layers_visible ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_view_ensure_layers_visible (<em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>,
+                                      <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> animate</code></em>);</pre>
+<p>Changes the map's zoom level and center to make sure that the bounding
+boxes of all inserted layers are visible.</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.14.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>animate</p></td>
+<td class="parameter_description"><p>TRUE to perform animation, FALSE otherwise</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-view-set-map-source"></a><h3>champlain_view_set_map_source ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_view_set_map_source (<em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>,
+                               <em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>);</pre>
+<p>Changes the currently used map source. <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function"><GTKDOCLINK HREF="g-object-unref"><code class="function">g_object_unref()</code></a></code></GTKDOCLINK> will be called on
+the previous one.</p>
+<p>As a side effect, changing the primary map source will also clear all
+secondary map sources.</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.15.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>map_source</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-view-add-overlay-source"></a><h3>champlain_view_add_overlay_source ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_view_add_overlay_source (<em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>,
+                                   <em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>,
+                                   <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> opacity</code></em>);</pre>
+<p>Adds a new overlay map source to render tiles with the supplied opacity on top 
+of the ordinary map source. Multiple overlay sources can be added.</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.16.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>map_source</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>opacity</p></td>
+<td class="parameter_description"><p>opacity to use</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.12.5</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-view-remove-overlay-source"></a><h3>champlain_view_remove_overlay_source ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_view_remove_overlay_source (<em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>,
+                                      <em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>);</pre>
+<p>Removes an overlay source from <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.17.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>map_source</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.12.5</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-view-get-overlay-sources"></a><h3>champlain_view_get_overlay_sources ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+champlain_view_get_overlay_sources (<em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>);</pre>
+<p>Gets a list of overlay sources.</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.18.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.2.2.10.18.6"></a><h4>Returns</h4>
+<p> the list. </p>
+<p><span class="annotation">[<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> ChamplainMapSource]</span></p>
+</div>
+<p class="since">Since 0.12.5</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-view-set-deceleration"></a><h3>champlain_view_set_deceleration ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_view_set_deceleration (<em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>,
+                                 <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> rate</code></em>);</pre>
+<p>The deceleration rate for the kinetic mode.</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.19.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>rate</p></td>
+<td class="parameter_description"><p>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> between 1.001 and 2.0</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-view-set-kinetic-mode"></a><h3>champlain_view_set_kinetic_mode ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_view_set_kinetic_mode (<em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>,
+                                 <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> kinetic</code></em>);</pre>
+<p>Determines the way the view reacts to scroll events.</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.20.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>kinetic</p></td>
+<td class="parameter_description"><p>TRUE for kinetic mode, FALSE for push mode</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-view-set-keep-center-on-resize"></a><h3>champlain_view_set_keep_center_on_resize ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_view_set_keep_center_on_resize
+                               (<em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>,
+                                <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);</pre>
+<p>Keep the current centered position when resizing the view.</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.21.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-view-set-zoom-on-double-click"></a><h3>champlain_view_set_zoom_on_double_click ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_view_set_zoom_on_double_click
+                               (<em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>,
+                                <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);</pre>
+<p>Should the view zoom in and recenter when the user double click on the map.</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.22.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-view-set-animate-zoom"></a><h3>champlain_view_set_animate_zoom ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_view_set_animate_zoom (<em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>,
+                                 <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);</pre>
+<p>Should the view animate zoom level changes.</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.23.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.12</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-view-set-background-pattern"></a><h3>champlain_view_set_background_pattern ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_view_set_background_pattern (<em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>,
+                                       <em class="parameter"><code><a href="/usr/share/gtk-doc/html/clutter/ClutterContent.html"><span class="type">ClutterContent</span></a> *background</code></em>);</pre>
+<p>Sets the background texture displayed behind the map. Setting the background
+pattern affects performence slightly - use reasonably large patterns for
+better performance.</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.24.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>background</p></td>
+<td class="parameter_description"><p>The background texture</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.12.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-view-set-horizontal-wrap"></a><h3>champlain_view_set_horizontal_wrap ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_view_set_horizontal_wrap (<em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>,
+                                    <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> wrap</code></em>);</pre>
+<p>Sets the value of the <a class="link" href="ChamplainView.html#ChamplainView--horizontal-wrap" title="The “horizontal-wrap” property"><span class="type">“horizontal-wrap”</span></a> property.</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.25.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>wrap</p></td>
+<td class="parameter_description"><p><a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> to enable horizontal wrapping</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-view-add-layer"></a><h3>champlain_view_add_layer ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_view_add_layer (<em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>,
+                          <em class="parameter"><code><a class="link" href="ChamplainLayer.html" title="ChamplainLayer"><span class="type">ChamplainLayer</span></a> *layer</code></em>);</pre>
+<p>Adds a new layer to the view</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.26.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>layer</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainLayer.html" title="ChamplainLayer"><span class="type">ChamplainLayer</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.2</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-view-remove-layer"></a><h3>champlain_view_remove_layer ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_view_remove_layer (<em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>,
+                             <em class="parameter"><code><a class="link" href="ChamplainLayer.html" title="ChamplainLayer"><span class="type">ChamplainLayer</span></a> *layer</code></em>);</pre>
+<p>Removes the given layer from the view</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.27.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>layer</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainLayer.html" title="ChamplainLayer"><span class="type">ChamplainLayer</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.4.1</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-view-get-zoom-level"></a><h3>champlain_view_get_zoom_level ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+champlain_view_get_zoom_level (<em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>);</pre>
+<p>Gets the view's current zoom level.</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.28.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.2.2.10.28.6"></a><h4>Returns</h4>
+<p> the view's current zoom level.</p>
+<p></p>
+</div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-view-get-min-zoom-level"></a><h3>champlain_view_get_min_zoom_level ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+champlain_view_get_min_zoom_level (<em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>);</pre>
+<p>Gets the view's minimal allowed zoom level.</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.29.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.2.2.10.29.6"></a><h4>Returns</h4>
+<p> the view's minimal allowed zoom level.</p>
+<p></p>
+</div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-view-get-max-zoom-level"></a><h3>champlain_view_get_max_zoom_level ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+champlain_view_get_max_zoom_level (<em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>);</pre>
+<p>Gets the view's maximum allowed zoom level.</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.30.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.2.2.10.30.6"></a><h4>Returns</h4>
+<p> the view's maximum allowed zoom level.</p>
+<p></p>
+</div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-view-get-map-source"></a><h3>champlain_view_get_map_source ()</h3>
+<pre class="programlisting"><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="returnvalue">ChamplainMapSource</span></a> *
+champlain_view_get_map_source (<em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>);</pre>
+<p>Gets the view's current map source.</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.31.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.2.2.10.31.6"></a><h4>Returns</h4>
+<p> the view's current map source. If you need to keep a reference to the
+map source then you have to call <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-ref"><code class="function"><GTKDOCLINK HREF="g-object-ref"><code class="function">g_object_ref()</code></a></code></GTKDOCLINK>. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-view-get-deceleration"></a><h3>champlain_view_get_deceleration ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+champlain_view_get_deceleration (<em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>);</pre>
+<p>Gets the view's deceleration rate.</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.32.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.2.2.10.32.6"></a><h4>Returns</h4>
+<p> the view's deceleration rate.</p>
+<p></p>
+</div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-view-get-kinetic-mode"></a><h3>champlain_view_get_kinetic_mode ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+champlain_view_get_kinetic_mode (<em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>);</pre>
+<p>Gets the view's scroll mode behaviour.</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.33.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.2.2.10.33.6"></a><h4>Returns</h4>
+<p> TRUE for kinetic mode, FALSE for push mode.</p>
+<p></p>
+</div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-view-get-keep-center-on-resize"></a><h3>champlain_view_get_keep_center_on_resize ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+champlain_view_get_keep_center_on_resize
+                               (<em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>);</pre>
+<p>Checks whether to keep the center on resize</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.34.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.2.2.10.34.6"></a><h4>Returns</h4>
+<p> TRUE if the view keeps the center on resize, FALSE otherwise.</p>
+<p></p>
+</div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-view-get-zoom-on-double-click"></a><h3>champlain_view_get_zoom_on_double_click ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+champlain_view_get_zoom_on_double_click
+                               (<em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>);</pre>
+<p>Checks whether the view zooms on double click.</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.35.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.2.2.10.35.6"></a><h4>Returns</h4>
+<p> TRUE if the view zooms on double click, FALSE otherwise.</p>
+<p></p>
+</div>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-view-get-animate-zoom"></a><h3>champlain_view_get_animate_zoom ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+champlain_view_get_animate_zoom (<em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>);</pre>
+<p>Checks whether the view animates zoom level changes.</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.36.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.2.2.10.36.6"></a><h4>Returns</h4>
+<p> TRUE if the view animates zooms, FALSE otherwise.</p>
+<p></p>
+</div>
+<p class="since">Since 0.12</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-view-get-background-pattern"></a><h3>champlain_view_get_background_pattern ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/clutter/ClutterContent.html"><span class="returnvalue">ClutterContent</span></a> *
+champlain_view_get_background_pattern (<em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>);</pre>
+<p>Gets the current background texture displayed behind the map.</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.37.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.2.2.10.37.6"></a><h4>Returns</h4>
+<p> The texture. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since 0.12.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-view-get-horizontal-wrap"></a><h3>champlain_view_get_horizontal_wrap ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+champlain_view_get_horizontal_wrap (<em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>);</pre>
+<p>Returns the value of the <a class="link" href="ChamplainView.html#ChamplainView--horizontal-wrap" title="The “horizontal-wrap” property"><span class="type">“horizontal-wrap”</span></a> property.</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.38.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.2.2.10.38.6"></a><h4>Returns</h4>
+<p> <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <a class="link" href="ChamplainView.html#ChamplainView--horizontal-wrap" title="The “horizontal-wrap” property"><span class="type">“horizontal-wrap”</span></a> is set. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-view-reload-tiles"></a><h3>champlain_view_reload_tiles ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_view_reload_tiles (<em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>);</pre>
+<p>Reloads all visible tiles.</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.39.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since 0.8</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-view-to-surface"></a><h3>champlain_view_to_surface ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/cairo/cairo-cairo-surface-t.html#cairo-surface-t"><span class="returnvalue">cairo_surface_t</span></a> *
+champlain_view_to_surface (<em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>,
+                           <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> include_layers</code></em>);</pre>
+<p>Will generate a <a href="/usr/share/gtk-doc/html/cairo/cairo-cairo-surface-t.html#cairo-surface-t"><span class="type">cairo_surface_t</span></a> that represents the current view
+of the map. Without any markers or layers. If the current <a class="link" href="ChamplainRenderer.html" title="ChamplainRenderer"><span class="type">ChamplainRenderer</span></a>
+used does not support this, this function will return <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p>
+<p>If <em class="parameter"><code>include_layers</code></em>
+ is set to <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> all layers that implement
+<a class="link" href="ChamplainExportable.html" title="ChamplainExportable"><span class="type">ChamplainExportable</span></a> will be included in the surface.</p>
+<p>The <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> also need to be in <a class="link" href="ChamplainTile.html#CHAMPLAIN-STATE-DONE:CAPS"><span class="type">CHAMPLAIN_STATE_DONE</span></a> state.</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.40.7"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>include_layers</p></td>
+<td class="parameter_description"><p>Set to <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if you want to include layers</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.2.2.10.40.8"></a><h4>Returns</h4>
+<p> a <a href="/usr/share/gtk-doc/html/cairo/cairo-cairo-surface-t.html#cairo-surface-t"><span class="type">cairo_surface_t</span></a> or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> on failure. Free with
+<a href="/usr/share/gtk-doc/html/cairo/cairo-cairo-surface-t.html#cairo-surface-destroy"><code class="function">cairo_surface_destroy()</code></a> when done. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-view-x-to-longitude"></a><h3>champlain_view_x_to_longitude ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+champlain_view_x_to_longitude (<em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>,
+                               <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> x</code></em>);</pre>
+<p>Converts the view's x coordinate to longitude.</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.41.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>x</p></td>
+<td class="parameter_description"><p>x coordinate of the view</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.2.2.10.41.6"></a><h4>Returns</h4>
+<p> the longitude</p>
+<p></p>
+</div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-view-y-to-latitude"></a><h3>champlain_view_y_to_latitude ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+champlain_view_y_to_latitude (<em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>,
+                              <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> y</code></em>);</pre>
+<p>Converts the view's y coordinate to latitude.</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.42.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>y</p></td>
+<td class="parameter_description"><p>y coordinate of the view</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.2.2.10.42.6"></a><h4>Returns</h4>
+<p> the latitude</p>
+<p></p>
+</div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-view-longitude-to-x"></a><h3>champlain_view_longitude_to_x ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+champlain_view_longitude_to_x (<em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>,
+                               <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> longitude</code></em>);</pre>
+<p>Converts the longitude to view's x coordinate.</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.43.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>longitude</p></td>
+<td class="parameter_description"><p>the longitude</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.2.2.10.43.6"></a><h4>Returns</h4>
+<p> the x coordinate</p>
+<p></p>
+</div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-view-latitude-to-y"></a><h3>champlain_view_latitude_to_y ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+champlain_view_latitude_to_y (<em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>,
+                              <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> latitude</code></em>);</pre>
+<p>Converts the latitude to view's y coordinate.</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.44.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>latitude</p></td>
+<td class="parameter_description"><p>the latitude</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.2.2.10.44.6"></a><h4>Returns</h4>
+<p> the y coordinate</p>
+<p></p>
+</div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-view-get-viewport-origin"></a><h3>champlain_view_get_viewport_origin ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_view_get_viewport_origin (<em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>,
+                                    <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *x</code></em>,
+                                    <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *y</code></em>);</pre>
+<p>Gets the x and y coordinate of the viewport in respect to the layer origin.</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.45.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>x</p></td>
+<td class="parameter_description"><p> the x coordinate of the viewport. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>y</p></td>
+<td class="parameter_description"><p> the y coordinate of the viewport. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-view-bin-layout-add"></a><h3>champlain_view_bin_layout_add ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_view_bin_layout_add (<em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>,
+                               <em class="parameter"><code><a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="type">ClutterActor</span></a> *child</code></em>,
+                               <em class="parameter"><code><a href="/usr/share/gtk-doc/html/clutter/ClutterBinLayout.html#ClutterBinAlignment"><span class="type">ClutterBinAlignment</span></a> x_align</code></em>,
+                               <em class="parameter"><code><a href="/usr/share/gtk-doc/html/clutter/ClutterBinLayout.html#ClutterBinAlignment"><span class="type">ClutterBinAlignment</span></a> y_align</code></em>);</pre>
+<div class="warning">
+<p><code class="literal">champlain_view_bin_layout_add</code> has been deprecated since version 0.12.4 and should not be used in newly-written code.</p>
+<p>Use <a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html#ClutterActorAlign"><span class="type">ClutterActorAlign</span></a> and the <a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="type">ClutterActor</span></a>
+API instead.</p>
+</div>
+<p>This function inserts a custom actor to the undrelying <a href="/usr/share/gtk-doc/html/clutter/ClutterBinLayout.html"><span class="type">ClutterBinLayout</span></a>
+manager. The inserted actors appear on top of the map. See <a href="/usr/share/gtk-doc/html/clutter/ClutterBinLayout.html#clutter-bin-layout-add"><code class="function">clutter_bin_layout_add()</code></a>
+for reference.</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.46.7"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>child</p></td>
+<td class="parameter_description"><p>The child to be inserted</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>x_align</p></td>
+<td class="parameter_description"><p>x alignment</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>y_align</p></td>
+<td class="parameter_description"><p>y alignment</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-view-get-license-actor"></a><h3>champlain_view_get_license_actor ()</h3>
+<pre class="programlisting"><a class="link" href="ChamplainLicense.html" title="ChamplainLicense"><span class="returnvalue">ChamplainLicense</span></a> *
+champlain_view_get_license_actor (<em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>);</pre>
+<p>Returns the <a class="link" href="ChamplainLicense.html" title="ChamplainLicense"><span class="type">ChamplainLicense</span></a> actor which is inserted by default into the
+layout manager. It can be manipulated using standard <a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="type">ClutterActor</span></a> methods
+(hidden and so on).</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.47.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.2.2.10.47.6"></a><h4>Returns</h4>
+<p> the license actor. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-view-get-center-latitude"></a><h3>champlain_view_get_center_latitude ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+champlain_view_get_center_latitude (<em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>);</pre>
+<p>Gets the latitude of the view's center.</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.48.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.2.2.10.48.6"></a><h4>Returns</h4>
+<p> the latitude.</p>
+<p></p>
+</div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-view-get-center-longitude"></a><h3>champlain_view_get_center_longitude ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+champlain_view_get_center_longitude (<em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>);</pre>
+<p>Gets the longitude of the view's center.</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.49.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.2.2.10.49.6"></a><h4>Returns</h4>
+<p> the longitude.</p>
+<p></p>
+</div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-view-get-bounding-box"></a><h3>champlain_view_get_bounding_box ()</h3>
+<pre class="programlisting"><a class="link" href="ChamplainBoundingBox.html" title="ChamplainBoundingBox"><span class="returnvalue">ChamplainBoundingBox</span></a> *
+champlain_view_get_bounding_box (<em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>);</pre>
+<p>Gets the bounding box for view <em class="parameter"><code>view</code></em>
+ at current zoom-level.</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.50.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.2.2.10.50.6"></a><h4>Returns</h4>
+<p> the bounding box. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since 0.12.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-view-get-bounding-box-for-zoom-level"></a><h3>champlain_view_get_bounding_box_for_zoom_level ()</h3>
+<pre class="programlisting"><a class="link" href="ChamplainBoundingBox.html" title="ChamplainBoundingBox"><span class="returnvalue">ChamplainBoundingBox</span></a> *
+champlain_view_get_bounding_box_for_zoom_level
+                               (<em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>,
+                                <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> zoom_level</code></em>);</pre>
+<p>Gets the bounding box for view <em class="parameter"><code>view</code></em>
+ at <em class="parameter"><code>zoom_level</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.51.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>zoom_level</p></td>
+<td class="parameter_description"><p>the level of zoom, a guint between 1 and 20</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.2.2.10.51.6"></a><h4>Returns</h4>
+<p> the bounding box for the view at <em class="parameter"><code>zoom_level</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since 0.12.6</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-view-get-state"></a><h3>champlain_view_get_state ()</h3>
+<pre class="programlisting"><a class="link" href="ChamplainTile.html#ChamplainState" title="enum ChamplainState"><span class="returnvalue">ChamplainState</span></a>
+champlain_view_get_state (<em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>);</pre>
+<p>Gets the view's state.</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.52.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.2.2.10.52.6"></a><h4>Returns</h4>
+<p> the state.</p>
+<p></p>
+</div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-view-get-viewport-anchor"></a><h3>champlain_view_get_viewport_anchor ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_view_get_viewport_anchor (<em class="parameter"><code><a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *view</code></em>,
+                                    <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *anchor_x</code></em>,
+                                    <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *anchor_y</code></em>);</pre>
+<p>Gets the x and y coordinate of the viewport anchor in respect to the layer origin.</p>
+<div class="refsect3">
+<a name="id-1.2.2.10.53.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>view</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>anchor_x</p></td>
+<td class="parameter_description"><p> the x coordinate of the viewport anchor. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>anchor_y</p></td>
+<td class="parameter_description"><p> the y coordinate of the viewport anchor. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.12.14</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="ChamplainView.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="ChamplainView-struct"></a><h3>struct ChamplainView</h3>
+<pre class="programlisting">struct ChamplainView;</pre>
+<p>The <a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> structure contains only private data
+and should be accessed using the provided API</p>
+<p class="since">Since 0.1</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="ChamplainView.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="ChamplainView--animate-zoom"></a><h3>The <code class="literal">“animate-zoom”</code> property</h3>
+<pre class="programlisting">  “animate-zoom”             <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Animate zoom change when zooming in/out.</p>
+<p>Flags: Read / Write</p>
+<p>Default value: TRUE</p>
+<p class="since">Since 0.12</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ChamplainView--background-pattern"></a><h3>The <code class="literal">“background-pattern”</code> property</h3>
+<pre class="programlisting">  “background-pattern”       <a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="type">ClutterActor</span></a> *</pre>
+<p>The pattern displayed in the background of the map.</p>
+<p>Flags: Read / Write</p>
+<p class="since">Since 0.12.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ChamplainView--deceleration"></a><h3>The <code class="literal">“deceleration”</code> property</h3>
+<pre class="programlisting">  “deceleration”             <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
+<p>The deceleration rate for the kinetic mode. The default value is 1.1.</p>
+<p>Flags: Read / Write</p>
+<p>Allowed values: [1.0001,2]</p>
+<p>Default value: 1.1</p>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ChamplainView--goto-animation-duration"></a><h3>The <code class="literal">“goto-animation-duration”</code> property</h3>
+<pre class="programlisting">  “goto-animation-duration”  <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
+<p>The duration of an animation when going to a location.
+A value of 0 means that the duration is calculated automatically for you.</p>
+<p>Please note that animation of <a class="link" href="ChamplainView.html#champlain-view-ensure-visible" title="champlain_view_ensure_visible ()"><span class="type">champlain_view_ensure_visible</span></a> also
+involves a 'goto' animation.</p>
+<p>Flags: Read / Write</p>
+<p>Allowed values: &lt;= G_MAXINT</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ChamplainView--goto-animation-mode"></a><h3>The <code class="literal">“goto-animation-mode”</code> property</h3>
+<pre class="programlisting">  “goto-animation-mode”      <a href="/usr/share/gtk-doc/html/clutter/ClutterTimeline.html#ClutterAnimationMode"><span class="type">ClutterAnimationMode</span></a></pre>
+<p>The mode of animation when going to a location.</p>
+<p>Please note that animation of <a class="link" href="ChamplainView.html#champlain-view-ensure-visible" title="champlain_view_ensure_visible ()"><span class="type">champlain_view_ensure_visible</span></a> also
+involves a 'goto' animation.</p>
+<p>Flags: Read / Write</p>
+<p>Default value: CLUTTER_EASE_IN_OUT_CIRC</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ChamplainView--horizontal-wrap"></a><h3>The <code class="literal">“horizontal-wrap”</code> property</h3>
+<pre class="programlisting">  “horizontal-wrap”          <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Determines whether the view should wrap horizontally.</p>
+<p>Flags: Read / Write</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ChamplainView--keep-center-on-resize"></a><h3>The <code class="literal">“keep-center-on-resize”</code> property</h3>
+<pre class="programlisting">  “keep-center-on-resize”    <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Keep the current centered position when resizing the view.</p>
+<p>Flags: Read / Write</p>
+<p>Default value: TRUE</p>
+<p class="since">Since 0.2.7</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ChamplainView--kinetic-mode"></a><h3>The <code class="literal">“kinetic-mode”</code> property</h3>
+<pre class="programlisting">  “kinetic-mode”             <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Determines whether the view should use kinetic mode.</p>
+<p>Flags: Read / Write</p>
+<p>Default value: FALSE</p>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ChamplainView--latitude"></a><h3>The <code class="literal">“latitude”</code> property</h3>
+<pre class="programlisting">  “latitude”                 <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
+<p>The latitude coordonate of the map</p>
+<p>Flags: Read / Write</p>
+<p>Allowed values: [-90,90]</p>
+<p>Default value: 0</p>
+<p class="since">Since 0.1</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ChamplainView--longitude"></a><h3>The <code class="literal">“longitude”</code> property</h3>
+<pre class="programlisting">  “longitude”                <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
+<p>The longitude coordonate of the map</p>
+<p>Flags: Read / Write</p>
+<p>Allowed values: [-180,180]</p>
+<p>Default value: 0</p>
+<p class="since">Since 0.1</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ChamplainView--map-source"></a><h3>The <code class="literal">“map-source”</code> property</h3>
+<pre class="programlisting">  “map-source”               <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *</pre>
+<p>The <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> being displayed</p>
+<p>Flags: Read / Write</p>
+<p class="since">Since 0.2</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ChamplainView--max-zoom-level"></a><h3>The <code class="literal">“max-zoom-level”</code> property</h3>
+<pre class="programlisting">  “max-zoom-level”           <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
+<p>The highest allowed level of zoom of the content.</p>
+<p>Flags: Read / Write</p>
+<p>Allowed values: &lt;= 20</p>
+<p>Default value: 20</p>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ChamplainView--min-zoom-level"></a><h3>The <code class="literal">“min-zoom-level”</code> property</h3>
+<pre class="programlisting">  “min-zoom-level”           <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
+<p>The lowest allowed level of zoom of the content.</p>
+<p>Flags: Read / Write</p>
+<p>Allowed values: &lt;= 20</p>
+<p>Default value: 0</p>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ChamplainView--state"></a><h3>The <code class="literal">“state”</code> property</h3>
+<pre class="programlisting">  “state”                    <a class="link" href="ChamplainTile.html#ChamplainState" title="enum ChamplainState"><span class="type">ChamplainState</span></a></pre>
+<p>The view's global state. Useful to inform using if the view is busy loading
+tiles or not.</p>
+<p>Flags: Read</p>
+<p>Default value: CHAMPLAIN_STATE_NONE</p>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ChamplainView--world"></a><h3>The <code class="literal">“world”</code> property</h3>
+<pre class="programlisting">  “world”                    <a class="link" href="ChamplainBoundingBox.html" title="ChamplainBoundingBox"><span class="type">ChamplainBoundingBox</span></a> *</pre>
+<p>Set a bounding box to limit the world to. No tiles will be loaded
+outside of this bounding box. It will not be possible to scroll outside
+of this bounding box.</p>
+<p>Default world is the actual world.</p>
+<p>Flags: Read / Write</p>
+<p class="since">Since 0.12.11</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ChamplainView--zoom-level"></a><h3>The <code class="literal">“zoom-level”</code> property</h3>
+<pre class="programlisting">  “zoom-level”               <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
+<p>The level of zoom of the content.</p>
+<p>Flags: Read / Write</p>
+<p>Allowed values: &lt;= 20</p>
+<p>Default value: 3</p>
+<p class="since">Since 0.1</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ChamplainView--zoom-on-double-click"></a><h3>The <code class="literal">“zoom-on-double-click”</code> property</h3>
+<pre class="programlisting">  “zoom-on-double-click”     <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Should the view zoom in and recenter when the user double click on the map.</p>
+<p>Flags: Read / Write</p>
+<p>Default value: TRUE</p>
+<p class="since">Since 0.4</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="ChamplainView.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="ChamplainView-animation-completed"></a><h3>The <code class="literal">“animation-completed”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *arg0,
+               <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>       user_data)</pre>
+<p>The <a class="link" href="ChamplainView.html#ChamplainView-animation-completed" title="The “animation-completed” signal"><span class="type">“animation-completed”</span></a> signal is emitted when any animation in the view
+ends.  This is a detailed signal.  For example, if you want to be signaled
+only for go-to animation, you should connect to
+"animation-completed::go-to". And for zoom, connect to "animation-completed::zoom".</p>
+<div class="refsect3">
+<a name="id-1.2.2.13.2.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p>Flags: Has Details</p>
+<p class="since">Since 0.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ChamplainView-layer-relocated"></a><h3>The <code class="literal">“layer-relocated”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="ChamplainView.html" title="ChamplainView"><span class="type">ChamplainView</span></a> *arg0,
+               <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>       user_data)</pre>
+<p>Indicates that the layers have been "relocated". In practice this means that
+every layer should connect to this signal and redraw itself when the signal is
+emitted. Layer relocation happens when zooming in/out and when panning for more
+than MAX_INT pixels.</p>
+<div class="refsect3">
+<a name="id-1.2.2.13.3.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p>Flags: Run Last</p>
+<p class="since">Since 0.10</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.20</div>
+</body>
+</html>

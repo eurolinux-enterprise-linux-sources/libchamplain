@@ -1,0 +1,742 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>libchamplain Reference Manual: ChamplainMarkerLayer</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="libchamplain Reference Manual">
+<link rel="up" href="ch01.html" title="Layers">
+<link rel="prev" href="ChamplainLayer.html" title="ChamplainLayer">
+<link rel="next" href="ChamplainPathLayer.html" title="ChamplainPathLayer">
+<meta name="generator" content="GTK-Doc V1.20 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="10"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description"> <span class="dim">|</span> 
+                  <a href="#ChamplainMarkerLayer.description" class="shortcut">Description</a></span><span id="nav_hierarchy"> <span class="dim">|</span> 
+                  <a href="#ChamplainMarkerLayer.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_interfaces"> <span class="dim">|</span> 
+                  <a href="#ChamplainMarkerLayer.implemented-interfaces" class="shortcut">Implemented Interfaces</a></span><span id="nav_properties"> <span class="dim">|</span> 
+                  <a href="#ChamplainMarkerLayer.properties" class="shortcut">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="ChamplainLayer.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="ChamplainPathLayer.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="ChamplainMarkerLayer"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="ChamplainMarkerLayer.top_of_page"></a>ChamplainMarkerLayer</span></h2>
+<p>ChamplainMarkerLayer — A container for <a class="link" href="ChamplainMarker.html" title="ChamplainMarker"><span class="type">ChamplainMarker</span></a></p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="ChamplainMarkerLayer.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="ChamplainMarkerLayer.html" title="ChamplainMarkerLayer"><span class="returnvalue">ChamplainMarkerLayer</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainMarkerLayer.html#champlain-marker-layer-new" title="champlain_marker_layer_new ()">champlain_marker_layer_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="ChamplainMarkerLayer.html" title="ChamplainMarkerLayer"><span class="returnvalue">ChamplainMarkerLayer</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainMarkerLayer.html#champlain-marker-layer-new-full" title="champlain_marker_layer_new_full ()">champlain_marker_layer_new_full</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainMarkerLayer.html#champlain-marker-layer-add-marker" title="champlain_marker_layer_add_marker ()">champlain_marker_layer_add_marker</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainMarkerLayer.html#champlain-marker-layer-remove-marker" title="champlain_marker_layer_remove_marker ()">champlain_marker_layer_remove_marker</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainMarkerLayer.html#champlain-marker-layer-remove-all" title="champlain_marker_layer_remove_all ()">champlain_marker_layer_remove_all</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainMarkerLayer.html#champlain-marker-layer-get-markers" title="champlain_marker_layer_get_markers ()">champlain_marker_layer_get_markers</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainMarkerLayer.html#champlain-marker-layer-get-selected" title="champlain_marker_layer_get_selected ()">champlain_marker_layer_get_selected</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainMarkerLayer.html#champlain-marker-layer-animate-in-all-markers" title="champlain_marker_layer_animate_in_all_markers ()">champlain_marker_layer_animate_in_all_markers</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainMarkerLayer.html#champlain-marker-layer-animate-out-all-markers" title="champlain_marker_layer_animate_out_all_markers ()">champlain_marker_layer_animate_out_all_markers</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainMarkerLayer.html#champlain-marker-layer-show-all-markers" title="champlain_marker_layer_show_all_markers ()">champlain_marker_layer_show_all_markers</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainMarkerLayer.html#champlain-marker-layer-hide-all-markers" title="champlain_marker_layer_hide_all_markers ()">champlain_marker_layer_hide_all_markers</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainMarkerLayer.html#champlain-marker-layer-set-all-markers-draggable" title="champlain_marker_layer_set_all_markers_draggable ()">champlain_marker_layer_set_all_markers_draggable</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainMarkerLayer.html#champlain-marker-layer-set-all-markers-undraggable" title="champlain_marker_layer_set_all_markers_undraggable ()">champlain_marker_layer_set_all_markers_undraggable</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainMarkerLayer.html#champlain-marker-layer-select-all-markers" title="champlain_marker_layer_select_all_markers ()">champlain_marker_layer_select_all_markers</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainMarkerLayer.html#champlain-marker-layer-unselect-all-markers" title="champlain_marker_layer_unselect_all_markers ()">champlain_marker_layer_unselect_all_markers</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainMarkerLayer.html#champlain-marker-layer-set-selection-mode" title="champlain_marker_layer_set_selection_mode ()">champlain_marker_layer_set_selection_mode</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="ChamplainMarkerLayer.html#ChamplainSelectionMode" title="enum ChamplainSelectionMode"><span class="returnvalue">ChamplainSelectionMode</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainMarkerLayer.html#champlain-marker-layer-get-selection-mode" title="champlain_marker_layer_get_selection_mode ()">champlain_marker_layer_get_selection_mode</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="ChamplainMarkerLayer.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table border="0">
+<colgroup>
+<col width="150px" class="properties_type">
+<col width="300px" class="properties_name">
+<col width="200px" class="properties_flags">
+</colgroup>
+<tbody><tr>
+<td class="property_type"><a class="link" href="ChamplainMarkerLayer.html#ChamplainSelectionMode" title="enum ChamplainSelectionMode"><span class="type">ChamplainSelectionMode</span></a></td>
+<td class="property_name"><a class="link" href="ChamplainMarkerLayer.html#ChamplainMarkerLayer--selection-mode" title="The “selection-mode” property">selection-mode</a></td>
+<td class="property_flags">Read / Write</td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="ChamplainMarkerLayer.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="ChamplainMarkerLayer.html#ChamplainMarkerLayer-struct" title="struct ChamplainMarkerLayer">ChamplainMarkerLayer</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="ChamplainMarkerLayer.html#ChamplainSelectionMode" title="enum ChamplainSelectionMode">ChamplainSelectionMode</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="ChamplainMarkerLayer.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+    <span class="lineart">╰──</span> <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html">ClutterActor</a>
+            <span class="lineart">╰──</span> <a class="link" href="ChamplainLayer.html" title="ChamplainLayer">ChamplainLayer</a>
+                <span class="lineart">╰──</span> ChamplainMarkerLayer
+</pre>
+</div>
+<div class="refsect1">
+<a name="ChamplainMarkerLayer.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+ChamplainMarkerLayer implements
+ <a href="/usr/share/gtk-doc/html/clutter/ClutterContainer.html">ClutterContainer</a>,  <a href="/usr/share/gtk-doc/html/clutter/ClutterScriptable.html">ClutterScriptable</a>,  <a href="/usr/share/gtk-doc/html/clutter/ClutterAnimatable.html">ClutterAnimatable</a>,  AtkImplementorIface and  <a class="link" href="ChamplainExportable.html" title="ChamplainExportable">ChamplainExportable</a>.</p>
+</div>
+<div class="refsect1">
+<a name="ChamplainMarkerLayer.description"></a><h2>Description</h2>
+<p>A ChamplainMarkerLayer displays markers on the map. It is responsible for
+positioning markers correctly, marker selections and group marker operations.</p>
+</div>
+<div class="refsect1">
+<a name="ChamplainMarkerLayer.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="champlain-marker-layer-new"></a><h3>champlain_marker_layer_new ()</h3>
+<pre class="programlisting"><a class="link" href="ChamplainMarkerLayer.html" title="ChamplainMarkerLayer"><span class="returnvalue">ChamplainMarkerLayer</span></a> *
+champlain_marker_layer_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Creates a new instance of <a class="link" href="ChamplainMarkerLayer.html" title="ChamplainMarkerLayer"><span class="type">ChamplainMarkerLayer</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.2.3.9.2.5"></a><h4>Returns</h4>
+<p> a new <a class="link" href="ChamplainMarkerLayer.html" title="ChamplainMarkerLayer"><span class="type">ChamplainMarkerLayer</span></a> ready to be used as a container for the markers.</p>
+<p></p>
+</div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-marker-layer-new-full"></a><h3>champlain_marker_layer_new_full ()</h3>
+<pre class="programlisting"><a class="link" href="ChamplainMarkerLayer.html" title="ChamplainMarkerLayer"><span class="returnvalue">ChamplainMarkerLayer</span></a> *
+champlain_marker_layer_new_full (<em class="parameter"><code><a class="link" href="ChamplainMarkerLayer.html#ChamplainSelectionMode" title="enum ChamplainSelectionMode"><span class="type">ChamplainSelectionMode</span></a> mode</code></em>);</pre>
+<p>Creates a new instance of <a class="link" href="ChamplainMarkerLayer.html" title="ChamplainMarkerLayer"><span class="type">ChamplainMarkerLayer</span></a> with the specified selection mode.</p>
+<div class="refsect3">
+<a name="id-1.3.2.3.9.3.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>mode</p></td>
+<td class="parameter_description"><p>Selection mode</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.2.3.9.3.6"></a><h4>Returns</h4>
+<p> a new <a class="link" href="ChamplainMarkerLayer.html" title="ChamplainMarkerLayer"><span class="type">ChamplainMarkerLayer</span></a> ready to be used as a container for the markers.</p>
+<p></p>
+</div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-marker-layer-add-marker"></a><h3>champlain_marker_layer_add_marker ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_marker_layer_add_marker (<em class="parameter"><code><a class="link" href="ChamplainMarkerLayer.html" title="ChamplainMarkerLayer"><span class="type">ChamplainMarkerLayer</span></a> *layer</code></em>,
+                                   <em class="parameter"><code><a class="link" href="ChamplainMarker.html" title="ChamplainMarker"><span class="type">ChamplainMarker</span></a> *marker</code></em>);</pre>
+<p>Adds the marker to the layer.</p>
+<div class="refsect3">
+<a name="id-1.3.2.3.9.4.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>layer</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainMarkerLayer.html" title="ChamplainMarkerLayer"><span class="type">ChamplainMarkerLayer</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>marker</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainMarker.html" title="ChamplainMarker"><span class="type">ChamplainMarker</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-marker-layer-remove-marker"></a><h3>champlain_marker_layer_remove_marker ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_marker_layer_remove_marker (<em class="parameter"><code><a class="link" href="ChamplainMarkerLayer.html" title="ChamplainMarkerLayer"><span class="type">ChamplainMarkerLayer</span></a> *layer</code></em>,
+                                      <em class="parameter"><code><a class="link" href="ChamplainMarker.html" title="ChamplainMarker"><span class="type">ChamplainMarker</span></a> *marker</code></em>);</pre>
+<p>Removes the marker from the layer.</p>
+<div class="refsect3">
+<a name="id-1.3.2.3.9.5.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>layer</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainMarkerLayer.html" title="ChamplainMarkerLayer"><span class="type">ChamplainMarkerLayer</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>marker</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainMarker.html" title="ChamplainMarker"><span class="type">ChamplainMarker</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-marker-layer-remove-all"></a><h3>champlain_marker_layer_remove_all ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_marker_layer_remove_all (<em class="parameter"><code><a class="link" href="ChamplainMarkerLayer.html" title="ChamplainMarkerLayer"><span class="type">ChamplainMarkerLayer</span></a> *layer</code></em>);</pre>
+<p>Removes all markers from the layer.</p>
+<div class="refsect3">
+<a name="id-1.3.2.3.9.6.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>layer</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainMarkerLayer.html" title="ChamplainMarkerLayer"><span class="type">ChamplainMarkerLayer</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-marker-layer-get-markers"></a><h3>champlain_marker_layer_get_markers ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+champlain_marker_layer_get_markers (<em class="parameter"><code><a class="link" href="ChamplainMarkerLayer.html" title="ChamplainMarkerLayer"><span class="type">ChamplainMarkerLayer</span></a> *layer</code></em>);</pre>
+<p>Gets a copy of the list of all markers inserted into the layer. You should
+free the list but not its contents.</p>
+<div class="refsect3">
+<a name="id-1.3.2.3.9.7.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>layer</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainMarkerLayer.html" title="ChamplainMarkerLayer"><span class="type">ChamplainMarkerLayer</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.2.3.9.7.6"></a><h4>Returns</h4>
+<p> the list. </p>
+<p><span class="annotation">[<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> ChamplainMarker]</span></p>
+</div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-marker-layer-get-selected"></a><h3>champlain_marker_layer_get_selected ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+champlain_marker_layer_get_selected (<em class="parameter"><code><a class="link" href="ChamplainMarkerLayer.html" title="ChamplainMarkerLayer"><span class="type">ChamplainMarkerLayer</span></a> *layer</code></em>);</pre>
+<p>Gets a list of selected markers in the layer.</p>
+<div class="refsect3">
+<a name="id-1.3.2.3.9.8.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>layer</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainMarkerLayer.html" title="ChamplainMarkerLayer"><span class="type">ChamplainMarkerLayer</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.2.3.9.8.6"></a><h4>Returns</h4>
+<p> the list. </p>
+<p><span class="annotation">[<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> ChamplainMarker]</span></p>
+</div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-marker-layer-animate-in-all-markers"></a><h3>champlain_marker_layer_animate_in_all_markers ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_marker_layer_animate_in_all_markers
+                               (<em class="parameter"><code><a class="link" href="ChamplainMarkerLayer.html" title="ChamplainMarkerLayer"><span class="type">ChamplainMarkerLayer</span></a> *layer</code></em>);</pre>
+<p>Fade in all markers in the layer with an animation</p>
+<div class="refsect3">
+<a name="id-1.3.2.3.9.9.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>layer</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainMarkerLayer.html" title="ChamplainMarkerLayer"><span class="type">ChamplainMarkerLayer</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-marker-layer-animate-out-all-markers"></a><h3>champlain_marker_layer_animate_out_all_markers ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_marker_layer_animate_out_all_markers
+                               (<em class="parameter"><code><a class="link" href="ChamplainMarkerLayer.html" title="ChamplainMarkerLayer"><span class="type">ChamplainMarkerLayer</span></a> *layer</code></em>);</pre>
+<p>Fade out all markers in the layer with an animation</p>
+<div class="refsect3">
+<a name="id-1.3.2.3.9.10.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>layer</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainMarkerLayer.html" title="ChamplainMarkerLayer"><span class="type">ChamplainMarkerLayer</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-marker-layer-show-all-markers"></a><h3>champlain_marker_layer_show_all_markers ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_marker_layer_show_all_markers
+                               (<em class="parameter"><code><a class="link" href="ChamplainMarkerLayer.html" title="ChamplainMarkerLayer"><span class="type">ChamplainMarkerLayer</span></a> *layer</code></em>);</pre>
+<p>Shows all markers in the layer</p>
+<div class="refsect3">
+<a name="id-1.3.2.3.9.11.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>layer</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainMarkerLayer.html" title="ChamplainMarkerLayer"><span class="type">ChamplainMarkerLayer</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-marker-layer-hide-all-markers"></a><h3>champlain_marker_layer_hide_all_markers ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_marker_layer_hide_all_markers
+                               (<em class="parameter"><code><a class="link" href="ChamplainMarkerLayer.html" title="ChamplainMarkerLayer"><span class="type">ChamplainMarkerLayer</span></a> *layer</code></em>);</pre>
+<p>Hides all the markers in the layer</p>
+<div class="refsect3">
+<a name="id-1.3.2.3.9.12.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>layer</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainMarkerLayer.html" title="ChamplainMarkerLayer"><span class="type">ChamplainMarkerLayer</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-marker-layer-set-all-markers-draggable"></a><h3>champlain_marker_layer_set_all_markers_draggable ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_marker_layer_set_all_markers_draggable
+                               (<em class="parameter"><code><a class="link" href="ChamplainMarkerLayer.html" title="ChamplainMarkerLayer"><span class="type">ChamplainMarkerLayer</span></a> *layer</code></em>);</pre>
+<p>Sets all markers draggable in the layer</p>
+<div class="refsect3">
+<a name="id-1.3.2.3.9.13.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>layer</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainMarkerLayer.html" title="ChamplainMarkerLayer"><span class="type">ChamplainMarkerLayer</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-marker-layer-set-all-markers-undraggable"></a><h3>champlain_marker_layer_set_all_markers_undraggable ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_marker_layer_set_all_markers_undraggable
+                               (<em class="parameter"><code><a class="link" href="ChamplainMarkerLayer.html" title="ChamplainMarkerLayer"><span class="type">ChamplainMarkerLayer</span></a> *layer</code></em>);</pre>
+<p>Sets all markers undraggable in the layer</p>
+<div class="refsect3">
+<a name="id-1.3.2.3.9.14.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>layer</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainMarkerLayer.html" title="ChamplainMarkerLayer"><span class="type">ChamplainMarkerLayer</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-marker-layer-select-all-markers"></a><h3>champlain_marker_layer_select_all_markers ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_marker_layer_select_all_markers
+                               (<em class="parameter"><code><a class="link" href="ChamplainMarkerLayer.html" title="ChamplainMarkerLayer"><span class="type">ChamplainMarkerLayer</span></a> *layer</code></em>);</pre>
+<p>Selects all markers in the layer.</p>
+<div class="refsect3">
+<a name="id-1.3.2.3.9.15.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>layer</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainMarkerLayer.html" title="ChamplainMarkerLayer"><span class="type">ChamplainMarkerLayer</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-marker-layer-unselect-all-markers"></a><h3>champlain_marker_layer_unselect_all_markers ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_marker_layer_unselect_all_markers
+                               (<em class="parameter"><code><a class="link" href="ChamplainMarkerLayer.html" title="ChamplainMarkerLayer"><span class="type">ChamplainMarkerLayer</span></a> *layer</code></em>);</pre>
+<p>Unselects all markers in the layer.</p>
+<div class="refsect3">
+<a name="id-1.3.2.3.9.16.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>layer</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainMarkerLayer.html" title="ChamplainMarkerLayer"><span class="type">ChamplainMarkerLayer</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-marker-layer-set-selection-mode"></a><h3>champlain_marker_layer_set_selection_mode ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_marker_layer_set_selection_mode
+                               (<em class="parameter"><code><a class="link" href="ChamplainMarkerLayer.html" title="ChamplainMarkerLayer"><span class="type">ChamplainMarkerLayer</span></a> *layer</code></em>,
+                                <em class="parameter"><code><a class="link" href="ChamplainMarkerLayer.html#ChamplainSelectionMode" title="enum ChamplainSelectionMode"><span class="type">ChamplainSelectionMode</span></a> mode</code></em>);</pre>
+<p>Sets the selection mode of the layer.</p>
+<p>NOTE: changing selection mode to CHAMPLAIN_SELECTION_NONE or
+CHAMPLAIN_SELECTION_SINGLE will clear all previously selected markers.</p>
+<div class="refsect3">
+<a name="id-1.3.2.3.9.17.6"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>layer</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainMarkerLayer.html" title="ChamplainMarkerLayer"><span class="type">ChamplainMarkerLayer</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>mode</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainMarkerLayer.html#ChamplainSelectionMode" title="enum ChamplainSelectionMode"><span class="type">ChamplainSelectionMode</span></a> value</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-marker-layer-get-selection-mode"></a><h3>champlain_marker_layer_get_selection_mode ()</h3>
+<pre class="programlisting"><a class="link" href="ChamplainMarkerLayer.html#ChamplainSelectionMode" title="enum ChamplainSelectionMode"><span class="returnvalue">ChamplainSelectionMode</span></a>
+champlain_marker_layer_get_selection_mode
+                               (<em class="parameter"><code><a class="link" href="ChamplainMarkerLayer.html" title="ChamplainMarkerLayer"><span class="type">ChamplainMarkerLayer</span></a> *layer</code></em>);</pre>
+<p>Gets the selection mode of the layer.</p>
+<div class="refsect3">
+<a name="id-1.3.2.3.9.18.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>layer</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainMarkerLayer.html" title="ChamplainMarkerLayer"><span class="type">ChamplainMarkerLayer</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.2.3.9.18.6"></a><h4>Returns</h4>
+<p> the selection mode of the layer.</p>
+<p></p>
+</div>
+<p class="since">Since 0.10</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="ChamplainMarkerLayer.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="ChamplainMarkerLayer-struct"></a><h3>struct ChamplainMarkerLayer</h3>
+<pre class="programlisting">struct ChamplainMarkerLayer;</pre>
+<p>The <a class="link" href="ChamplainMarkerLayer.html" title="ChamplainMarkerLayer"><span class="type">ChamplainMarkerLayer</span></a> structure contains only private data
+and should be accessed using the provided API</p>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ChamplainSelectionMode"></a><h3>enum ChamplainSelectionMode</h3>
+<p>Selection mode</p>
+<div class="refsect3">
+<a name="id-1.3.2.3.10.3.4"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="CHAMPLAIN-SELECTION-NONE:CAPS"></a>CHAMPLAIN_SELECTION_NONE</p></td>
+<td class="enum_member_description">
+<p>No marker can be selected.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CHAMPLAIN-SELECTION-SINGLE:CAPS"></a>CHAMPLAIN_SELECTION_SINGLE</p></td>
+<td class="enum_member_description">
+<p>Only one marker can be selected.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="CHAMPLAIN-SELECTION-MULTIPLE:CAPS"></a>CHAMPLAIN_SELECTION_MULTIPLE</p></td>
+<td class="enum_member_description">
+<p>Multiple marker can be selected.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="ChamplainMarkerLayer.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="ChamplainMarkerLayer--selection-mode"></a><h3>The <code class="literal">“selection-mode”</code> property</h3>
+<pre class="programlisting">  “selection-mode”           <a class="link" href="ChamplainMarkerLayer.html#ChamplainSelectionMode" title="enum ChamplainSelectionMode"><span class="type">ChamplainSelectionMode</span></a></pre>
+<p>Determines the type of selection that will be performed.</p>
+<p>Flags: Read / Write</p>
+<p>Default value: CHAMPLAIN_SELECTION_NONE</p>
+<p class="since">Since 0.10</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.20</div>
+</body>
+</html>

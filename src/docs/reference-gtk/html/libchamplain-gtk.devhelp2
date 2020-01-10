@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE book PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "">
+<book xmlns="http://www.devhelp.net/book" title="libchamplain-gtk Reference Manual" link="index.html" author="" name="libchamplain-gtk" version="2" language="c">
+  <chapters>
+    <sub name="API Reference" link="pt01.html">
+      <sub name="GtkChamplainEmbed" link="GtkChamplainEmbed.html"/>
+      <sub name="Annotation Glossary" link="annotation-glossary.html"/>
+    </sub>
+  </chapters>
+  <functions>
+    <keyword type="function" name="gtk_champlain_embed_new ()" link="GtkChamplainEmbed.html#gtk-champlain-embed-new" since="0.4"/>
+    <keyword type="function" name="gtk_champlain_embed_get_view ()" link="GtkChamplainEmbed.html#gtk-champlain-embed-get-view" since="0.4"/>
+    <keyword type="struct" name="struct GtkChamplainEmbed" link="GtkChamplainEmbed.html#GtkChamplainEmbed-struct"/>
+    <keyword type="property" name="The “champlain-view” property" link="GtkChamplainEmbed.html#GtkChamplainEmbed--champlain-view"/>
+  </functions>
+</book>

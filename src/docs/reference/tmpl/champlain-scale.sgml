@@ -1,0 +1,108 @@
+<!-- ##### SECTION Title ##### -->
+ChamplainScale
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT ChamplainScale ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG ChamplainScale:max-width ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG ChamplainScale:unit ##### -->
+<para>
+
+</para>
+
+<!-- ##### ENUM ChamplainUnit ##### -->
+<para>
+
+</para>
+
+@CHAMPLAIN_UNIT_KM: 
+@CHAMPLAIN_UNIT_MILES: 
+
+<!-- ##### FUNCTION champlain_scale_new ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_scale_set_max_width ##### -->
+<para>
+
+</para>
+
+@scale: 
+@value: 
+
+
+<!-- ##### FUNCTION champlain_scale_set_unit ##### -->
+<para>
+
+</para>
+
+@scale: 
+@unit: 
+
+
+<!-- ##### FUNCTION champlain_scale_get_max_width ##### -->
+<para>
+
+</para>
+
+@scale: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_scale_get_unit ##### -->
+<para>
+
+</para>
+
+@scale: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_scale_connect_view ##### -->
+<para>
+
+</para>
+
+@scale: 
+@view: 
+
+
+<!-- ##### FUNCTION champlain_scale_disconnect_view ##### -->
+<para>
+
+</para>
+
+@scale: 
+
+

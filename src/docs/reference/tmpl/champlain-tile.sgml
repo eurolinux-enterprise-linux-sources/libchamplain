@@ -1,0 +1,279 @@
+<!-- ##### SECTION Title ##### -->
+ChamplainTile
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### ENUM ChamplainState ##### -->
+<para>
+
+</para>
+
+@CHAMPLAIN_STATE_NONE: 
+@CHAMPLAIN_STATE_LOADING: 
+@CHAMPLAIN_STATE_LOADED: 
+@CHAMPLAIN_STATE_DONE: 
+
+<!-- ##### STRUCT ChamplainTile ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SIGNAL ChamplainTile::render-complete ##### -->
+<para>
+
+</para>
+
+@champlaintile: the object which received the signal.
+@arg1: 
+@arg2: 
+@arg3: 
+
+<!-- ##### ARG ChamplainTile:content ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG ChamplainTile:etag ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG ChamplainTile:fade-in ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG ChamplainTile:size ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG ChamplainTile:state ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG ChamplainTile:x ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG ChamplainTile:y ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG ChamplainTile:zoom-level ##### -->
+<para>
+
+</para>
+
+<!-- ##### FUNCTION champlain_tile_new ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_tile_new_full ##### -->
+<para>
+
+</para>
+
+@x: 
+@y: 
+@size: 
+@zoom_level: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_tile_get_x ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_tile_get_y ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_tile_get_zoom_level ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_tile_get_size ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_tile_get_state ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_tile_get_fade_in ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_tile_set_x ##### -->
+<para>
+
+</para>
+
+@self: 
+@x: 
+
+
+<!-- ##### FUNCTION champlain_tile_set_y ##### -->
+<para>
+
+</para>
+
+@self: 
+@y: 
+
+
+<!-- ##### FUNCTION champlain_tile_set_zoom_level ##### -->
+<para>
+
+</para>
+
+@self: 
+@zoom_level: 
+
+
+<!-- ##### FUNCTION champlain_tile_set_size ##### -->
+<para>
+
+</para>
+
+@self: 
+@size: 
+
+
+<!-- ##### FUNCTION champlain_tile_set_state ##### -->
+<para>
+
+</para>
+
+@self: 
+@state: 
+
+
+<!-- ##### FUNCTION champlain_tile_set_fade_in ##### -->
+<para>
+
+</para>
+
+@self: 
+@fade_in: 
+
+
+<!-- ##### FUNCTION champlain_tile_get_content ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_tile_get_etag ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_tile_get_modified_time ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_tile_set_content ##### -->
+<para>
+
+</para>
+
+@self: 
+@actor: 
+
+
+<!-- ##### FUNCTION champlain_tile_set_etag ##### -->
+<para>
+
+</para>
+
+@self: 
+@etag: 
+
+
+<!-- ##### FUNCTION champlain_tile_set_modified_time ##### -->
+<para>
+
+</para>
+
+@self: 
+@time: 
+
+
+<!-- ##### FUNCTION champlain_tile_display_content ##### -->
+<para>
+
+</para>
+
+@self: 
+
+

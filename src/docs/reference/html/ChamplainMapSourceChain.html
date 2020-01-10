@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>libchamplain Reference Manual: ChamplainMapSourceChain</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="libchamplain Reference Manual">
+<link rel="up" href="ch06.html" title="Map Source Utilities">
+<link rel="prev" href="ch06.html" title="Map Source Utilities">
+<link rel="next" href="ChamplainMapSourceFactory.html" title="ChamplainMapSourceFactory">
+<meta name="generator" content="GTK-Doc V1.20 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="10"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description"> <span class="dim">|</span> 
+                  <a href="#ChamplainMapSourceChain.description" class="shortcut">Description</a></span><span id="nav_hierarchy"> <span class="dim">|</span> 
+                  <a href="#ChamplainMapSourceChain.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch06.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="ch06.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="ChamplainMapSourceFactory.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="ChamplainMapSourceChain"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="ChamplainMapSourceChain.top_of_page"></a>ChamplainMapSourceChain</span></h2>
+<p>ChamplainMapSourceChain — A map source simplifying creation of source chains</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="ChamplainMapSourceChain.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="ChamplainMapSourceChain.html" title="ChamplainMapSourceChain"><span class="returnvalue">ChamplainMapSourceChain</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainMapSourceChain.html#champlain-map-source-chain-new" title="champlain_map_source_chain_new ()">champlain_map_source_chain_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainMapSourceChain.html#champlain-map-source-chain-push" title="champlain_map_source_chain_push ()">champlain_map_source_chain_push</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainMapSourceChain.html#champlain-map-source-chain-pop" title="champlain_map_source_chain_pop ()">champlain_map_source_chain_pop</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="ChamplainMapSourceChain.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody><tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="ChamplainMapSourceChain.html#ChamplainMapSourceChain-struct" title="struct ChamplainMapSourceChain">ChamplainMapSourceChain</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="ChamplainMapSourceChain.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+    <span class="lineart">╰──</span> <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span> <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource">ChamplainMapSource</a>
+            <span class="lineart">╰──</span> ChamplainMapSourceChain
+</pre>
+</div>
+<div class="refsect1">
+<a name="ChamplainMapSourceChain.description"></a><h2>Description</h2>
+<p>This map source simplifies creation of map chains by providing two
+functions for their creation and modification in a stack-like manner:
+<a class="link" href="ChamplainMapSourceChain.html#champlain-map-source-chain-push" title="champlain_map_source_chain_push ()"><code class="function">champlain_map_source_chain_push()</code></a> and <a class="link" href="ChamplainMapSourceChain.html#champlain-map-source-chain-pop" title="champlain_map_source_chain_pop ()"><code class="function">champlain_map_source_chain_pop()</code></a>.
+For instance, to create a chain consisting of <a class="link" href="ChamplainMemoryCache.html" title="ChamplainMemoryCache"><span class="type">ChamplainMemoryCache</span></a>,
+<a class="link" href="ChamplainFileCache.html" title="ChamplainFileCache"><span class="type">ChamplainFileCache</span></a> and <a class="link" href="ChamplainNetworkTileSource.html" title="ChamplainNetworkTileSource"><span class="type">ChamplainNetworkTileSource</span></a>, the map
+sources have to be pushed into the chain in the reverse order starting
+from <a class="link" href="ChamplainNetworkTileSource.html" title="ChamplainNetworkTileSource"><span class="type">ChamplainNetworkTileSource</span></a>. After its creation, <a class="link" href="ChamplainMapSourceChain.html" title="ChamplainMapSourceChain"><span class="type">ChamplainMapSourceChain</span></a>
+behaves as a chain of map sources it contains.</p>
+</div>
+<div class="refsect1">
+<a name="ChamplainMapSourceChain.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="champlain-map-source-chain-new"></a><h3>champlain_map_source_chain_new ()</h3>
+<pre class="programlisting"><a class="link" href="ChamplainMapSourceChain.html" title="ChamplainMapSourceChain"><span class="returnvalue">ChamplainMapSourceChain</span></a> *
+champlain_map_source_chain_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Constructor of <a class="link" href="ChamplainMapSourceChain.html" title="ChamplainMapSourceChain"><span class="type">ChamplainMapSourceChain</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.5.5.2.7.2.5"></a><h4>Returns</h4>
+<p> a new empty <a class="link" href="ChamplainMapSourceChain.html" title="ChamplainMapSourceChain"><span class="type">ChamplainMapSourceChain</span></a>.</p>
+<p></p>
+</div>
+<p class="since">Since 0.6</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-map-source-chain-push"></a><h3>champlain_map_source_chain_push ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_map_source_chain_push (<em class="parameter"><code><a class="link" href="ChamplainMapSourceChain.html" title="ChamplainMapSourceChain"><span class="type">ChamplainMapSourceChain</span></a> *source_chain</code></em>,
+                                 <em class="parameter"><code><a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> *map_source</code></em>);</pre>
+<p>Pushes a map source into the chain.</p>
+<div class="refsect3">
+<a name="id-1.5.5.2.7.3.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>source_chain</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainMapSourceChain.html" title="ChamplainMapSourceChain"><span class="type">ChamplainMapSourceChain</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>map_source</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource"><span class="type">ChamplainMapSource</span></a> to be pushed into the chain</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.6</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-map-source-chain-pop"></a><h3>champlain_map_source_chain_pop ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_map_source_chain_pop (<em class="parameter"><code><a class="link" href="ChamplainMapSourceChain.html" title="ChamplainMapSourceChain"><span class="type">ChamplainMapSourceChain</span></a> *source_chain</code></em>);</pre>
+<p>Pops a map source from the top of the stack from the chain.</p>
+<div class="refsect3">
+<a name="id-1.5.5.2.7.4.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>source_chain</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainMapSourceChain.html" title="ChamplainMapSourceChain"><span class="type">ChamplainMapSourceChain</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since 0.6</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="ChamplainMapSourceChain.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="ChamplainMapSourceChain-struct"></a><h3>struct ChamplainMapSourceChain</h3>
+<pre class="programlisting">struct ChamplainMapSourceChain;</pre>
+<p>The <a class="link" href="ChamplainMapSourceChain.html" title="ChamplainMapSourceChain"><span class="type">ChamplainMapSourceChain</span></a> structure contains only private data
+and should be accessed using the provided API</p>
+<p class="since">Since 0.6</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.20</div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!-- ##### SECTION Title ##### -->
+ChamplainLayer
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT ChamplainLayer ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### FUNCTION champlain_layer_set_view ##### -->
+<para>
+
+</para>
+
+@layer: 
+@view: 
+
+
+<!-- ##### FUNCTION champlain_layer_get_bounding_box ##### -->
+<para>
+
+</para>
+
+@layer: 
+@Returns: 
+
+

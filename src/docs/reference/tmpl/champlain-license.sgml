@@ -1,0 +1,100 @@
+<!-- ##### SECTION Title ##### -->
+ChamplainLicense
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT ChamplainLicense ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG ChamplainLicense:alignment ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG ChamplainLicense:extra-text ##### -->
+<para>
+
+</para>
+
+<!-- ##### FUNCTION champlain_license_new ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_license_set_extra_text ##### -->
+<para>
+
+</para>
+
+@license: 
+@text: 
+
+
+<!-- ##### FUNCTION champlain_license_get_extra_text ##### -->
+<para>
+
+</para>
+
+@license: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_license_set_alignment ##### -->
+<para>
+
+</para>
+
+@license: 
+@alignment: 
+
+
+<!-- ##### FUNCTION champlain_license_get_alignment ##### -->
+<para>
+
+</para>
+
+@license: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_license_connect_view ##### -->
+<para>
+
+</para>
+
+@license: 
+@view: 
+
+
+<!-- ##### FUNCTION champlain_license_disconnect_view ##### -->
+<para>
+
+</para>
+
+@license: 
+
+

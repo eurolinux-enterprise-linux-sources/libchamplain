@@ -1,0 +1,47 @@
+<!-- ##### SECTION Title ##### -->
+ChamplainRenderer
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT ChamplainRenderer ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### FUNCTION champlain_renderer_set_data ##### -->
+<para>
+
+</para>
+
+@renderer: 
+@data: 
+@size: 
+
+
+<!-- ##### FUNCTION champlain_renderer_render ##### -->
+<para>
+
+</para>
+
+@renderer: 
+@tile: 
+
+

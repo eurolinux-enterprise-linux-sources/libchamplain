@@ -1,0 +1,187 @@
+<!-- ##### SECTION Title ##### -->
+ChamplainMapSourceFactory
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT ChamplainMapSourceFactory ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### FUNCTION champlain_map_source_factory_dup_default ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_map_source_factory_create ##### -->
+<para>
+
+</para>
+
+@factory: 
+@id: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_map_source_factory_create_cached_source ##### -->
+<para>
+
+</para>
+
+@factory: 
+@id: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_map_source_factory_create_memcached_source ##### -->
+<para>
+
+</para>
+
+@factory: 
+@id: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_map_source_factory_create_error_source ##### -->
+<para>
+
+</para>
+
+@factory: 
+@tile_size: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_map_source_factory_register ##### -->
+<para>
+
+</para>
+
+@factory: 
+@desc: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_map_source_factory_get_registered ##### -->
+<para>
+
+</para>
+
+@factory: 
+@Returns: 
+
+
+<!-- ##### MACRO CHAMPLAIN_MAP_SOURCE_OSM_MAPNIK ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO CHAMPLAIN_MAP_SOURCE_OSM_CYCLE_MAP ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO CHAMPLAIN_MAP_SOURCE_OSM_TRANSPORT_MAP ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO CHAMPLAIN_MAP_SOURCE_OSM_AERIAL_MAP ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO CHAMPLAIN_MAP_SOURCE_OSM_MAPQUEST ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO CHAMPLAIN_MAP_SOURCE_MFF_RELIEF ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO CHAMPLAIN_MAP_SOURCE_OAM ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO CHAMPLAIN_MAP_SOURCE_OSM_OSMARENDER ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO CHAMPLAIN_MAP_SOURCE_OWM_CLOUDS ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO CHAMPLAIN_MAP_SOURCE_OWM_PRECIPITATION ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO CHAMPLAIN_MAP_SOURCE_OWM_PRESSURE ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO CHAMPLAIN_MAP_SOURCE_OWM_TEMPERATURE ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO CHAMPLAIN_MAP_SOURCE_OWM_WIND ##### -->
+<para>
+
+</para>
+
+
+

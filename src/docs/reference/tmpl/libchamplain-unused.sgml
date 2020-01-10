@@ -1,0 +1,184 @@
+<!-- ##### SECTION ./tmpl/champlain-memphis-renderer.sgml:Image ##### -->
+
+
+
+<!-- ##### SECTION ./tmpl/champlain-memphis-renderer.sgml:Long_Description ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION ./tmpl/champlain-memphis-renderer.sgml:See_Also ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION ./tmpl/champlain-memphis-renderer.sgml:Short_Description ##### -->
+
+
+
+<!-- ##### SECTION ./tmpl/champlain-memphis-renderer.sgml:Stability_Level ##### -->
+
+
+
+<!-- ##### SECTION ./tmpl/champlain-memphis-renderer.sgml:Title ##### -->
+ChamplainMemphisRenderer
+
+
+<!-- ##### MACRO CHAMPLAIN_MAP_SOURCE_MEMPHIS_LOCAL ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### MACRO CHAMPLAIN_MAP_SOURCE_MEMPHIS_NETWORK ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### STRUCT ChamplainMemphisRenderer ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG ChamplainMemphisRenderer:bounding-box ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG ChamplainMemphisRenderer:tile-size ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### STRUCT ChamplainMemphisRule ##### -->
+<para>
+
+</para>
+
+@keys: 
+@values: 
+@type: 
+@polygon: 
+@line: 
+@border: 
+@text: 
+
+<!-- ##### STRUCT ChamplainMemphisRuleAttr ##### -->
+<para>
+
+</para>
+
+@z_min: 
+@z_max: 
+@color_red: 
+@color_green: 
+@color_blue: 
+@color_alpha: 
+@style: 
+@size: 
+
+<!-- ##### ENUM ChamplainMemphisRuleType ##### -->
+<para>
+
+</para>
+
+@CHAMPLAIN_MEMPHIS_RULE_TYPE_UNKNOWN: 
+@CHAMPLAIN_MEMPHIS_RULE_TYPE_NODE: 
+@CHAMPLAIN_MEMPHIS_RULE_TYPE_WAY: 
+@CHAMPLAIN_MEMPHIS_RULE_TYPE_RELATION: 
+
+<!-- ##### FUNCTION champlain_memphis_renderer_get_background_color ##### -->
+<para>
+
+</para>
+
+@renderer: 
+@Returns: 
+
+<!-- ##### FUNCTION champlain_memphis_renderer_get_bounding_box ##### -->
+<para>
+
+</para>
+
+@renderer: 
+@Returns: 
+
+<!-- ##### FUNCTION champlain_memphis_renderer_get_rule ##### -->
+<para>
+
+</para>
+
+@renderer: 
+@id: 
+@Returns: 
+
+<!-- ##### FUNCTION champlain_memphis_renderer_get_rule_ids ##### -->
+<para>
+
+</para>
+
+@renderer: 
+@Returns: 
+
+<!-- ##### FUNCTION champlain_memphis_renderer_get_tile_size ##### -->
+<para>
+
+</para>
+
+@renderer: 
+@Returns: 
+
+<!-- ##### FUNCTION champlain_memphis_renderer_load_rules ##### -->
+<para>
+
+</para>
+
+@renderer: 
+@rules_path: 
+
+<!-- ##### FUNCTION champlain_memphis_renderer_new_full ##### -->
+<para>
+
+</para>
+
+@tile_size: 
+@Returns: 
+
+<!-- ##### FUNCTION champlain_memphis_renderer_remove_rule ##### -->
+<para>
+
+</para>
+
+@renderer: 
+@id: 
+
+<!-- ##### FUNCTION champlain_memphis_renderer_set_background_color ##### -->
+<para>
+
+</para>
+
+@renderer: 
+@color: 
+
+<!-- ##### FUNCTION champlain_memphis_renderer_set_rule ##### -->
+<para>
+
+</para>
+
+@renderer: 
+@rule: 
+
+<!-- ##### FUNCTION champlain_memphis_renderer_set_tile_size ##### -->
+<para>
+
+</para>
+
+@renderer: 
+@size: 
+

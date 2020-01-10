@@ -1,0 +1,37 @@
+<!-- ##### SECTION Title ##### -->
+ChamplainNullTileSource
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT ChamplainNullTileSource ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### FUNCTION champlain_null_tile_source_new_full ##### -->
+<para>
+
+</para>
+
+@renderer: 
+@Returns: 
+
+

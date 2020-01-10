@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>libchamplain Reference Manual: libchamplain Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="libchamplain Reference Manual">
+<link rel="next" href="pt01.html" title="Part I. Basic API">
+<meta name="generator" content="GTK-Doc V1.20 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="book">
+<div class="titlepage">
+<div>
+<div><table class="navigation" id="top" width="100%" cellpadding="2" cellspacing="0"><tr><th valign="middle"><p class="title">libchamplain Reference Manual</p></th></tr></table></div>
+<div>
+<p class="releaseinfo">
+      for libchamplain 0.12.15
+
+      </p>
+<p>
+      The latest version of this documentation can be found on-line at
+      <a class="ulink" href="http://library.gnome.org/devel/libchamplain/unstable/" target="_top">http://library.gnome.org/devel/libchamplain/unstable/</a>.
+      </p>
+<p class="releaseinfo">
+    </p>
+</div>
+<div><p class="copyright">Copyright © 2008-2013 libchamplain contributors</p></div>
+<div><div class="legalnotice">
+<a name="id-1.1.4"></a><p>
+        Permission is granted to copy, distribute and/or modify this
+        document under the terms of the <em class="citetitle">GNU Free
+        Documentation License</em>, Version 1.1 or any later
+        version published by the Free Software Foundation with no
+        Invariant Sections, no Front-Cover Texts, and no Back-Cover
+        Texts. You may obtain a copy of the <em class="citetitle">GNU Free
+        Documentation License</em> from the Free Software
+        Foundation by visiting <a class="ulink" href="http://www.fsf.org" target="_top">their Web site</a> or by writing
+        to:
+
+        </p>
+<div class="address"><p><br>
+          The Free Software Foundation, Inc.,<br>
+          <span class="street">59 Temple Place</span> - Suite 330,<br>
+          <span class="city">Boston</span>, <span class="state">MA</span> <span class="postcode">02111-1307</span>,<br>
+          <span class="country">USA</span><br>
+        </p></div>
+<p>
+      </p>
+</div></div>
+</div>
+<hr>
+</div>
+<div class="toc"><dl class="toc">
+<dt><span class="part"><a href="pt01.html">I. Basic API</a></span></dt>
+<dd><dl><dt>
+<span class="refentrytitle"><a href="ChamplainView.html">ChamplainView</a></span><span class="refpurpose">A <span class="type">ClutterActor</span> to display maps</span>
+</dt></dl></dd>
+<dt><span class="part"><a href="pt02.html">II. Layers, Markers and Locations</a></span></dt>
+<dd><dl>
+<dt><span class="chapter"><a href="ch01.html">Layers</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="ChamplainLayer.html">ChamplainLayer</a></span><span class="refpurpose"> — Base class of libchamplain layers</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="ChamplainMarkerLayer.html">ChamplainMarkerLayer</a></span><span class="refpurpose">A container for <span class="type">ChamplainMarker</span></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="ChamplainPathLayer.html">ChamplainPathLayer</a></span><span class="refpurpose">A layer displaying line path between inserted <span class="type">ChamplainLocation</span>
+objects</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="ch02.html">Markers</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="ChamplainMarker.html">ChamplainMarker</a></span><span class="refpurpose"> — Base class of libchamplain markers</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="ChamplainLabel.html">ChamplainLabel</a></span><span class="refpurpose"> — A label to identify points of interest on a map</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="ChamplainPoint.html">ChamplainPoint</a></span><span class="refpurpose"> — A simple point to mark a coordinate</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="ChamplainCustomMarker.html">ChamplainCustomMarker</a></span><span class="refpurpose">A marker implementing the
+<span class="type">ClutterContainer</span> interface. Deprecated.</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="ch03.html">Locations</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="ChamplainLocation.html">ChamplainLocation</a></span><span class="refpurpose"> — An interface common to objects having latitude and longitude</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="ChamplainCoordinate.html">ChamplainCoordinate</a></span><span class="refpurpose">The simplest implementation of <span class="type">ChamplainLocation</span></span>
+</dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="part"><a href="pt03.html">III. Widgets</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="ChamplainLicense.html">ChamplainLicense</a></span><span class="refpurpose"> — An actor that displays license text.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="ChamplainScale.html">ChamplainScale</a></span><span class="refpurpose"> — An actor displaying a scale.</span>
+</dt>
+</dl></dd>
+<dt><span class="part"><a href="pt04.html">IV. Map Source API</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="ChamplainMapSource.html">ChamplainMapSource</a></span><span class="refpurpose"> — A base class for map sources</span>
+</dt>
+<dt><span class="chapter"><a href="ch04.html">Tile Sources</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="ChamplainTileSource.html">ChamplainTileSource</a></span><span class="refpurpose"> — A base class of tile sources</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="ChamplainNetworkTileSource.html">ChamplainNetworkTileSource</a></span><span class="refpurpose"> — A map source that downloads tile data from a web server</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="ChamplainNullTileSource.html">ChamplainNullTileSource</a></span><span class="refpurpose"> — A tile source that doesn't load map data from anywhere</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="ChamplainFileTileSource.html">ChamplainFileTileSource</a></span><span class="refpurpose"> — A map source that loads tile data from a file</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="ChamplainNetworkBboxTileSource.html">ChamplainNetworkBboxTileSource</a></span><span class="refpurpose"> — A map source that loads tile data from an OpenStreetMap API
+server</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="ch05.html">Tile Caches</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="ChamplainTileCache.html">ChamplainTileCache</a></span><span class="refpurpose"> — A base class of tile caches</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="ChamplainFileCache.html">ChamplainFileCache</a></span><span class="refpurpose"> — Stores and loads cached tiles from the file system</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="ChamplainMemoryCache.html">ChamplainMemoryCache</a></span><span class="refpurpose"> — Stores and loads cached tiles from the memory</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="ch06.html">Map Source Utilities</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="ChamplainMapSourceChain.html">ChamplainMapSourceChain</a></span><span class="refpurpose"> — A map source simplifying creation of source chains</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="ChamplainMapSourceFactory.html">ChamplainMapSourceFactory</a></span><span class="refpurpose">Manages <span class="type">ChamplainMapSource</span> instances</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="ChamplainMapSourceDesc.html">ChamplainMapSourceDesc</a></span><span class="refpurpose"> — A class that describes map sources.</span>
+</dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="part"><a href="pt05.html">V. Renderer API</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="ChamplainRenderer.html">ChamplainRenderer</a></span><span class="refpurpose"> — A base class of renderers</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="ChamplainImageRenderer.html">ChamplainImageRenderer</a></span><span class="refpurpose"> — A renderer that renders tiles from binary image data</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="ChamplainErrorTileRenderer.html">ChamplainErrorTileRenderer</a></span><span class="refpurpose"> — A renderer that renders error tiles independently of input data</span>
+</dt>
+</dl></dd>
+<dt><span class="part"><a href="pt06.html">VI. Others</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="ChamplainTile.html">ChamplainTile</a></span><span class="refpurpose"> — An object that represent map tiles</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="ChamplainBoundingBox.html">ChamplainBoundingBox</a></span><span class="refpurpose"> — A basic struct to describe a bounding box</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="ChamplainExportable.html">ChamplainExportable</a></span><span class="refpurpose"> — An interface for objects exportable to a cairo surface</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libchamplain-ChamplainVersion.html">ChamplainVersion</a></span><span class="refpurpose"> — Versioning utility macros</span>
+</dt>
+</dl></dd>
+<dt><span class="part"><a href="pt07.html">VII. Annotation Glossary</a></span></dt>
+<dd><dl><dt><span class="glossary"><a href="annotation-glossary.html">Annotation Glossary</a></span></dt></dl></dd>
+<dt><span class="index"><a href="ix01.html">Index</a></span></dt>
+<dt><span class="index"><a href="ix02.html">Index of deprecated symbols</a></span></dt>
+<dt><span class="index"><a href="ix03.html">Index of new symbols in 0.1</a></span></dt>
+<dt><span class="index"><a href="ix04.html">Index of new symbols in 0.2</a></span></dt>
+<dt><span class="index"><a href="ix05.html">Index of new symbols in 0.4</a></span></dt>
+<dt><span class="index"><a href="ix06.html">Index of new symbols in 0.6</a></span></dt>
+<dt><span class="index"><a href="ix07.html">Index of new symbols in 0.8</a></span></dt>
+<dt><span class="index"><a href="ix08.html">Index of new symbols in 0.10</a></span></dt>
+<dt><span class="index"><a href="ix09.html">Index of new symbols in 0.12</a></span></dt>
+</dl></div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.20</div>
+</body>
+</html>

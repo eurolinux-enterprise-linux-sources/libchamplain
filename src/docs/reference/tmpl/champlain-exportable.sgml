@@ -1,0 +1,59 @@
+<!-- ##### SECTION Title ##### -->
+ChamplainExportable
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT ChamplainExportable ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG ChamplainExportable:surface ##### -->
+<para>
+
+</para>
+
+<!-- ##### STRUCT ChamplainExportableIface ##### -->
+<para>
+
+</para>
+
+@get_surface: 
+@set_surface: 
+
+<!-- ##### FUNCTION champlain_exportable_set_surface ##### -->
+<para>
+
+</para>
+
+@exportable: 
+@surface: 
+
+
+<!-- ##### FUNCTION champlain_exportable_get_surface ##### -->
+<para>
+
+</para>
+
+@exportable: 
+@Returns: 
+
+

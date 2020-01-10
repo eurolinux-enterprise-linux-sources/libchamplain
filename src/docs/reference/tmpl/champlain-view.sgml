@@ -1,0 +1,605 @@
+<!-- ##### SECTION Title ##### -->
+ChamplainView
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT ChamplainView ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SIGNAL ChamplainView::animation-completed ##### -->
+<para>
+
+</para>
+
+@champlainview: the object which received the signal.
+
+<!-- ##### SIGNAL ChamplainView::layer-relocated ##### -->
+<para>
+
+</para>
+
+@champlainview: the object which received the signal.
+
+<!-- ##### ARG ChamplainView:animate-zoom ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG ChamplainView:background-pattern ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG ChamplainView:deceleration ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG ChamplainView:goto-animation-duration ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG ChamplainView:goto-animation-mode ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG ChamplainView:horizontal-wrap ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG ChamplainView:keep-center-on-resize ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG ChamplainView:kinetic-mode ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG ChamplainView:latitude ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG ChamplainView:longitude ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG ChamplainView:map-source ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG ChamplainView:max-zoom-level ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG ChamplainView:min-zoom-level ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG ChamplainView:state ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG ChamplainView:world ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG ChamplainView:zoom-level ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG ChamplainView:zoom-on-double-click ##### -->
+<para>
+
+</para>
+
+<!-- ##### FUNCTION champlain_view_new ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_view_center_on ##### -->
+<para>
+
+</para>
+
+@view: 
+@latitude: 
+@longitude: 
+
+
+<!-- ##### FUNCTION champlain_view_go_to ##### -->
+<para>
+
+</para>
+
+@view: 
+@latitude: 
+@longitude: 
+
+
+<!-- ##### FUNCTION champlain_view_stop_go_to ##### -->
+<para>
+
+</para>
+
+@view: 
+
+
+<!-- ##### FUNCTION champlain_view_zoom_in ##### -->
+<para>
+
+</para>
+
+@view: 
+
+
+<!-- ##### FUNCTION champlain_view_zoom_out ##### -->
+<para>
+
+</para>
+
+@view: 
+
+
+<!-- ##### FUNCTION champlain_view_set_zoom_level ##### -->
+<para>
+
+</para>
+
+@view: 
+@zoom_level: 
+
+
+<!-- ##### FUNCTION champlain_view_set_min_zoom_level ##### -->
+<para>
+
+</para>
+
+@view: 
+@zoom_level: 
+
+
+<!-- ##### FUNCTION champlain_view_set_max_zoom_level ##### -->
+<para>
+
+</para>
+
+@view: 
+@zoom_level: 
+
+
+<!-- ##### FUNCTION champlain_view_set_world ##### -->
+<para>
+
+</para>
+
+@view: 
+@bbox: 
+
+
+<!-- ##### FUNCTION champlain_view_get_world ##### -->
+<para>
+
+</para>
+
+@view: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_view_ensure_visible ##### -->
+<para>
+
+</para>
+
+@view: 
+@bbox: 
+@animate: 
+
+
+<!-- ##### FUNCTION champlain_view_ensure_layers_visible ##### -->
+<para>
+
+</para>
+
+@view: 
+@animate: 
+
+
+<!-- ##### FUNCTION champlain_view_set_map_source ##### -->
+<para>
+
+</para>
+
+@view: 
+@map_source: 
+
+
+<!-- ##### FUNCTION champlain_view_add_overlay_source ##### -->
+<para>
+
+</para>
+
+@view: 
+@map_source: 
+@opacity: 
+
+
+<!-- ##### FUNCTION champlain_view_remove_overlay_source ##### -->
+<para>
+
+</para>
+
+@view: 
+@map_source: 
+
+
+<!-- ##### FUNCTION champlain_view_get_overlay_sources ##### -->
+<para>
+
+</para>
+
+@view: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_view_set_deceleration ##### -->
+<para>
+
+</para>
+
+@view: 
+@rate: 
+
+
+<!-- ##### FUNCTION champlain_view_set_kinetic_mode ##### -->
+<para>
+
+</para>
+
+@view: 
+@kinetic: 
+
+
+<!-- ##### FUNCTION champlain_view_set_keep_center_on_resize ##### -->
+<para>
+
+</para>
+
+@view: 
+@value: 
+
+
+<!-- ##### FUNCTION champlain_view_set_zoom_on_double_click ##### -->
+<para>
+
+</para>
+
+@view: 
+@value: 
+
+
+<!-- ##### FUNCTION champlain_view_set_animate_zoom ##### -->
+<para>
+
+</para>
+
+@view: 
+@value: 
+
+
+<!-- ##### FUNCTION champlain_view_set_background_pattern ##### -->
+<para>
+
+</para>
+
+@view: 
+@background: 
+
+
+<!-- ##### FUNCTION champlain_view_set_horizontal_wrap ##### -->
+<para>
+
+</para>
+
+@view: 
+@wrap: 
+
+
+<!-- ##### FUNCTION champlain_view_add_layer ##### -->
+<para>
+
+</para>
+
+@view: 
+@layer: 
+
+
+<!-- ##### FUNCTION champlain_view_remove_layer ##### -->
+<para>
+
+</para>
+
+@view: 
+@layer: 
+
+
+<!-- ##### FUNCTION champlain_view_get_zoom_level ##### -->
+<para>
+
+</para>
+
+@view: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_view_get_min_zoom_level ##### -->
+<para>
+
+</para>
+
+@view: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_view_get_max_zoom_level ##### -->
+<para>
+
+</para>
+
+@view: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_view_get_map_source ##### -->
+<para>
+
+</para>
+
+@view: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_view_get_deceleration ##### -->
+<para>
+
+</para>
+
+@view: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_view_get_kinetic_mode ##### -->
+<para>
+
+</para>
+
+@view: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_view_get_keep_center_on_resize ##### -->
+<para>
+
+</para>
+
+@view: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_view_get_zoom_on_double_click ##### -->
+<para>
+
+</para>
+
+@view: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_view_get_animate_zoom ##### -->
+<para>
+
+</para>
+
+@view: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_view_get_background_pattern ##### -->
+<para>
+
+</para>
+
+@view: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_view_get_horizontal_wrap ##### -->
+<para>
+
+</para>
+
+@view: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_view_reload_tiles ##### -->
+<para>
+
+</para>
+
+@view: 
+
+
+<!-- ##### FUNCTION champlain_view_to_surface ##### -->
+<para>
+
+</para>
+
+@view: 
+@include_layers: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_view_x_to_longitude ##### -->
+<para>
+
+</para>
+
+@view: 
+@x: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_view_y_to_latitude ##### -->
+<para>
+
+</para>
+
+@view: 
+@y: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_view_longitude_to_x ##### -->
+<para>
+
+</para>
+
+@view: 
+@longitude: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_view_latitude_to_y ##### -->
+<para>
+
+</para>
+
+@view: 
+@latitude: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_view_get_viewport_origin ##### -->
+<para>
+
+</para>
+
+@view: 
+@x: 
+@y: 
+
+
+<!-- ##### FUNCTION champlain_view_bin_layout_add ##### -->
+<para>
+
+</para>
+
+@view: 
+@child: 
+@x_align: 
+@y_align: 
+
+
+<!-- ##### FUNCTION champlain_view_get_license_actor ##### -->
+<para>
+
+</para>
+
+@view: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_view_get_center_latitude ##### -->
+<para>
+
+</para>
+
+@view: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_view_get_center_longitude ##### -->
+<para>
+
+</para>
+
+@view: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_view_get_bounding_box ##### -->
+<para>
+
+</para>
+
+@view: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_view_get_bounding_box_for_zoom_level ##### -->
+<para>
+
+</para>
+
+@view: 
+@zoom_level: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_view_get_state ##### -->
+<para>
+
+</para>
+
+@view: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_view_get_viewport_anchor ##### -->
+<para>
+
+</para>
+
+@view: 
+@anchor_x: 
+@anchor_y: 
+
+

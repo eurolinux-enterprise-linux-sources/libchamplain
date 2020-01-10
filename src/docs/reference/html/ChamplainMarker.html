@@ -1,0 +1,861 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>libchamplain Reference Manual: ChamplainMarker</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="libchamplain Reference Manual">
+<link rel="up" href="ch02.html" title="Markers">
+<link rel="prev" href="ch02.html" title="Markers">
+<link rel="next" href="ChamplainLabel.html" title="ChamplainLabel">
+<meta name="generator" content="GTK-Doc V1.20 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="10"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description"> <span class="dim">|</span> 
+                  <a href="#ChamplainMarker.description" class="shortcut">Description</a></span><span id="nav_hierarchy"> <span class="dim">|</span> 
+                  <a href="#ChamplainMarker.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_interfaces"> <span class="dim">|</span> 
+                  <a href="#ChamplainMarker.implemented-interfaces" class="shortcut">Implemented Interfaces</a></span><span id="nav_properties"> <span class="dim">|</span> 
+                  <a href="#ChamplainMarker.properties" class="shortcut">Properties</a></span><span id="nav_signals"> <span class="dim">|</span> 
+                  <a href="#ChamplainMarker.signals" class="shortcut">Signals</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch02.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="ch02.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="ChamplainLabel.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="ChamplainMarker"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="ChamplainMarker.top_of_page"></a>ChamplainMarker</span></h2>
+<p>ChamplainMarker — Base class of libchamplain markers</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="ChamplainMarker.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="returnvalue">ClutterActor</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainMarker.html#champlain-marker-new" title="champlain_marker_new ()">champlain_marker_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainMarker.html#champlain-marker-set-selectable" title="champlain_marker_set_selectable ()">champlain_marker_set_selectable</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainMarker.html#champlain-marker-get-selectable" title="champlain_marker_get_selectable ()">champlain_marker_get_selectable</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainMarker.html#champlain-marker-set-draggable" title="champlain_marker_set_draggable ()">champlain_marker_set_draggable</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainMarker.html#champlain-marker-get-draggable" title="champlain_marker_get_draggable ()">champlain_marker_get_draggable</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainMarker.html#champlain-marker-set-selected" title="champlain_marker_set_selected ()">champlain_marker_set_selected</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainMarker.html#champlain-marker-get-selected" title="champlain_marker_get_selected ()">champlain_marker_get_selected</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainMarker.html#champlain-marker-animate-in" title="champlain_marker_animate_in ()">champlain_marker_animate_in</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainMarker.html#champlain-marker-animate-in-with-delay" title="champlain_marker_animate_in_with_delay ()">champlain_marker_animate_in_with_delay</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainMarker.html#champlain-marker-animate-out" title="champlain_marker_animate_out ()">champlain_marker_animate_out</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainMarker.html#champlain-marker-animate-out-with-delay" title="champlain_marker_animate_out_with_delay ()">champlain_marker_animate_out_with_delay</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="/usr/share/gtk-doc/html/clutter/clutter-Colors.html#ClutterColor"><span class="returnvalue">ClutterColor</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainMarker.html#champlain-marker-get-selection-color" title="champlain_marker_get_selection_color ()">champlain_marker_get_selection_color</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="/usr/share/gtk-doc/html/clutter/clutter-Colors.html#ClutterColor"><span class="returnvalue">ClutterColor</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainMarker.html#champlain-marker-get-selection-text-color" title="champlain_marker_get_selection_text_color ()">champlain_marker_get_selection_text_color</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainMarker.html#champlain-marker-set-selection-color" title="champlain_marker_set_selection_color ()">champlain_marker_set_selection_color</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainMarker.html#champlain-marker-set-selection-text-color" title="champlain_marker_set_selection_text_color ()">champlain_marker_set_selection_text_color</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="ChamplainMarker.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table border="0">
+<colgroup>
+<col width="150px" class="properties_type">
+<col width="300px" class="properties_name">
+<col width="200px" class="properties_flags">
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="ChamplainMarker.html#ChamplainMarker--draggable" title="The “draggable” property">draggable</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="ChamplainMarker.html#ChamplainMarker--selectable" title="The “selectable” property">selectable</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="ChamplainMarker.html#ChamplainMarker--selected" title="The “selected” property">selected</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="ChamplainMarker.signals"></a><h2>Signals</h2>
+<div class="informaltable"><table border="0">
+<colgroup>
+<col width="150px" class="signals_return">
+<col width="300px" class="signals_name">
+<col width="200px" class="signals_flags">
+</colgroup>
+<tbody>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="ChamplainMarker.html#ChamplainMarker-button-press" title="The “button-press” signal">button-press</a></td>
+<td class="signal_flags">Run Last</td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="ChamplainMarker.html#ChamplainMarker-button-release" title="The “button-release” signal">button-release</a></td>
+<td class="signal_flags">Run Last</td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="ChamplainMarker.html#ChamplainMarker-drag-finish" title="The “drag-finish” signal">drag-finish</a></td>
+<td class="signal_flags">Run Last</td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="ChamplainMarker.html#ChamplainMarker-drag-motion" title="The “drag-motion” signal">drag-motion</a></td>
+<td class="signal_flags">Run Last</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="ChamplainMarker.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody><tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="ChamplainMarker.html#ChamplainMarker-struct" title="struct ChamplainMarker">ChamplainMarker</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="ChamplainMarker.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+    <span class="lineart">╰──</span> <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html">ClutterActor</a>
+            <span class="lineart">╰──</span> ChamplainMarker
+                <span class="lineart">├──</span> <a class="link" href="ChamplainCustomMarker.html" title="ChamplainCustomMarker">ChamplainCustomMarker</a>
+                <span class="lineart">├──</span> <a class="link" href="ChamplainLabel.html" title="ChamplainLabel">ChamplainLabel</a>
+                <span class="lineart">╰──</span> <a class="link" href="ChamplainPoint.html" title="ChamplainPoint">ChamplainPoint</a>
+</pre>
+</div>
+<div class="refsect1">
+<a name="ChamplainMarker.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+ChamplainMarker implements
+ <a href="/usr/share/gtk-doc/html/clutter/ClutterContainer.html">ClutterContainer</a>,  <a href="/usr/share/gtk-doc/html/clutter/ClutterScriptable.html">ClutterScriptable</a>,  <a href="/usr/share/gtk-doc/html/clutter/ClutterAnimatable.html">ClutterAnimatable</a>,  AtkImplementorIface and  <a class="link" href="ChamplainLocation.html" title="ChamplainLocation">ChamplainLocation</a>.</p>
+</div>
+<div class="refsect1">
+<a name="ChamplainMarker.description"></a><h2>Description</h2>
+<p>Markers represent points of interest on a map. Markers need to be
+placed on a layer (a <a class="link" href="ChamplainMarkerLayer.html" title="ChamplainMarkerLayer"><span class="type">ChamplainMarkerLayer</span></a>). Layers have to be added to a
+<span class="type">champlainview</span> for the markers to show on the map.</p>
+<p>A marker is nothing more than a regular <span class="type">clutteractor</span>. You can draw on
+it what ever you want.  Set the marker's position
+on the map using <a class="link" href="ChamplainLocation.html#champlain-location-set-location" title="champlain_location_set_location ()"><span class="type">champlain_location_set_location</span></a>. Don't forget to set the 
+marker's pointer position using <a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html#clutter-actor-set-translation"><span class="type">clutter_actor_set_translation</span></a>.</p>
+<p>This is a base class of all markers. libchamplain has a more evoluted
+type of markers with text and image support. See <a class="link" href="ChamplainLabel.html" title="ChamplainLabel"><span class="type">ChamplainLabel</span></a> for more details.</p>
+</div>
+<div class="refsect1">
+<a name="ChamplainMarker.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="champlain-marker-new"></a><h3>champlain_marker_new ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="returnvalue">ClutterActor</span></a> *
+champlain_marker_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Creates an instance of <a class="link" href="ChamplainMarker.html" title="ChamplainMarker"><span class="type">ChamplainMarker</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.3.3.2.10.2.5"></a><h4>Returns</h4>
+<p> a new <a class="link" href="ChamplainMarker.html" title="ChamplainMarker"><span class="type">ChamplainMarker</span></a>.</p>
+<p></p>
+</div>
+<p class="since">Since 0.12.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-marker-set-selectable"></a><h3>champlain_marker_set_selectable ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_marker_set_selectable (<em class="parameter"><code><a class="link" href="ChamplainMarker.html" title="ChamplainMarker"><span class="type">ChamplainMarker</span></a> *marker</code></em>,
+                                 <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);</pre>
+<p>Sets the marker as selectable or not.</p>
+<div class="refsect3">
+<a name="id-1.3.3.2.10.3.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>marker</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainMarker.html" title="ChamplainMarker"><span class="type">ChamplainMarker</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>the selectable state</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-marker-get-selectable"></a><h3>champlain_marker_get_selectable ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+champlain_marker_get_selectable (<em class="parameter"><code><a class="link" href="ChamplainMarker.html" title="ChamplainMarker"><span class="type">ChamplainMarker</span></a> *marker</code></em>);</pre>
+<p>Checks whether the marker is selectable.</p>
+<div class="refsect3">
+<a name="id-1.3.3.2.10.4.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>marker</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainMarker.html" title="ChamplainMarker"><span class="type">ChamplainMarker</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.3.2.10.4.6"></a><h4>Returns</h4>
+<p> the selectable or not state of the marker.</p>
+<p></p>
+</div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-marker-set-draggable"></a><h3>champlain_marker_set_draggable ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_marker_set_draggable (<em class="parameter"><code><a class="link" href="ChamplainMarker.html" title="ChamplainMarker"><span class="type">ChamplainMarker</span></a> *marker</code></em>,
+                                <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);</pre>
+<p>Sets the marker as draggable or not.</p>
+<div class="refsect3">
+<a name="id-1.3.3.2.10.5.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>marker</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainMarker.html" title="ChamplainMarker"><span class="type">ChamplainMarker</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>the draggable state</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-marker-get-draggable"></a><h3>champlain_marker_get_draggable ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+champlain_marker_get_draggable (<em class="parameter"><code><a class="link" href="ChamplainMarker.html" title="ChamplainMarker"><span class="type">ChamplainMarker</span></a> *marker</code></em>);</pre>
+<p>Checks whether the marker is draggable.</p>
+<div class="refsect3">
+<a name="id-1.3.3.2.10.6.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>marker</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainMarker.html" title="ChamplainMarker"><span class="type">ChamplainMarker</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.3.2.10.6.6"></a><h4>Returns</h4>
+<p> the draggable or not state of the marker.</p>
+<p></p>
+</div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-marker-set-selected"></a><h3>champlain_marker_set_selected ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_marker_set_selected (<em class="parameter"><code><a class="link" href="ChamplainMarker.html" title="ChamplainMarker"><span class="type">ChamplainMarker</span></a> *marker</code></em>,
+                               <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);</pre>
+<p>Sets the marker as selected or not. This will affect the "Selected" look
+of the marker.</p>
+<div class="refsect3">
+<a name="id-1.3.3.2.10.7.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>marker</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainMarker.html" title="ChamplainMarker"><span class="type">ChamplainMarker</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>the selected state</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-marker-get-selected"></a><h3>champlain_marker_get_selected ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+champlain_marker_get_selected (<em class="parameter"><code><a class="link" href="ChamplainMarker.html" title="ChamplainMarker"><span class="type">ChamplainMarker</span></a> *marker</code></em>);</pre>
+<p>Checks whether the marker is selected.</p>
+<div class="refsect3">
+<a name="id-1.3.3.2.10.8.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>marker</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainMarker.html" title="ChamplainMarker"><span class="type">ChamplainMarker</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.3.2.10.8.6"></a><h4>Returns</h4>
+<p> the selected or not state of the marker.</p>
+<p></p>
+</div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-marker-animate-in"></a><h3>champlain_marker_animate_in ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_marker_animate_in (<em class="parameter"><code><a class="link" href="ChamplainMarker.html" title="ChamplainMarker"><span class="type">ChamplainMarker</span></a> *marker</code></em>);</pre>
+<p>Animates the marker as if it were falling from the sky onto the map.</p>
+<div class="refsect3">
+<a name="id-1.3.3.2.10.9.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>marker</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainMarker.html" title="ChamplainMarker"><span class="type">ChamplainMarker</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-marker-animate-in-with-delay"></a><h3>champlain_marker_animate_in_with_delay ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_marker_animate_in_with_delay
+                               (<em class="parameter"><code><a class="link" href="ChamplainMarker.html" title="ChamplainMarker"><span class="type">ChamplainMarker</span></a> *marker</code></em>,
+                                <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> delay</code></em>);</pre>
+<p>Animates the marker as if it were falling from the sky onto the map after
+delay.</p>
+<div class="refsect3">
+<a name="id-1.3.3.2.10.10.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>marker</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainMarker.html" title="ChamplainMarker"><span class="type">ChamplainMarker</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>delay</p></td>
+<td class="parameter_description"><p>The delay in milliseconds</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-marker-animate-out"></a><h3>champlain_marker_animate_out ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_marker_animate_out (<em class="parameter"><code><a class="link" href="ChamplainMarker.html" title="ChamplainMarker"><span class="type">ChamplainMarker</span></a> *marker</code></em>);</pre>
+<p>Animates the marker as if it were drawn through the sky.</p>
+<div class="refsect3">
+<a name="id-1.3.3.2.10.11.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>marker</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainMarker.html" title="ChamplainMarker"><span class="type">ChamplainMarker</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-marker-animate-out-with-delay"></a><h3>champlain_marker_animate_out_with_delay ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_marker_animate_out_with_delay
+                               (<em class="parameter"><code><a class="link" href="ChamplainMarker.html" title="ChamplainMarker"><span class="type">ChamplainMarker</span></a> *marker</code></em>,
+                                <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> delay</code></em>);</pre>
+<p>Animates the marker as if it were drawn through the sky after
+delay.</p>
+<div class="refsect3">
+<a name="id-1.3.3.2.10.12.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>marker</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainMarker.html" title="ChamplainMarker"><span class="type">ChamplainMarker</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>delay</p></td>
+<td class="parameter_description"><p>The delay in milliseconds</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-marker-get-selection-color"></a><h3>champlain_marker_get_selection_color ()</h3>
+<pre class="programlisting">const <a href="/usr/share/gtk-doc/html/clutter/clutter-Colors.html#ClutterColor"><span class="returnvalue">ClutterColor</span></a> *
+champlain_marker_get_selection_color (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Gets the selection color.</p>
+<div class="refsect3">
+<a name="id-1.3.3.2.10.13.5"></a><h4>Returns</h4>
+<p> the selection color. Should not be freed.</p>
+<p></p>
+</div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-marker-get-selection-text-color"></a><h3>champlain_marker_get_selection_text_color ()</h3>
+<pre class="programlisting">const <a href="/usr/share/gtk-doc/html/clutter/clutter-Colors.html#ClutterColor"><span class="returnvalue">ClutterColor</span></a> *
+champlain_marker_get_selection_text_color
+                               (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Gets the selection text color.</p>
+<div class="refsect3">
+<a name="id-1.3.3.2.10.14.5"></a><h4>Returns</h4>
+<p> the selection text color. Should not be freed.</p>
+<p></p>
+</div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-marker-set-selection-color"></a><h3>champlain_marker_set_selection_color ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_marker_set_selection_color (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/clutter/clutter-Colors.html#ClutterColor"><span class="type">ClutterColor</span></a> *color</code></em>);</pre>
+<p>Changes the selection color, this is to ensure a better integration with
+the desktop, this is automatically done by GtkChamplainEmbed.</p>
+<div class="refsect3">
+<a name="id-1.3.3.2.10.15.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>color</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/clutter/clutter-Colors.html#ClutterColor"><span class="type">ClutterColor</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-marker-set-selection-text-color"></a><h3>champlain_marker_set_selection_text_color ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_marker_set_selection_text_color
+                               (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/clutter/clutter-Colors.html#ClutterColor"><span class="type">ClutterColor</span></a> *color</code></em>);</pre>
+<p>Changes the selection text color, this is to ensure a better integration with
+the desktop, this is automatically done by GtkChamplainEmbed.</p>
+<div class="refsect3">
+<a name="id-1.3.3.2.10.16.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>color</p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/clutter/clutter-Colors.html#ClutterColor"><span class="type">ClutterColor</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since 0.10</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="ChamplainMarker.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="ChamplainMarker-struct"></a><h3>struct ChamplainMarker</h3>
+<pre class="programlisting">struct ChamplainMarker;</pre>
+<p>The <a class="link" href="ChamplainMarker.html" title="ChamplainMarker"><span class="type">ChamplainMarker</span></a> structure contains only private data
+and should be accessed using the provided API</p>
+<p class="since">Since 0.10</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="ChamplainMarker.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="ChamplainMarker--draggable"></a><h3>The <code class="literal">“draggable”</code> property</h3>
+<pre class="programlisting">  “draggable”                <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>The draggable state of the marker</p>
+<p>Flags: Read / Write</p>
+<p>Default value: FALSE</p>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ChamplainMarker--selectable"></a><h3>The <code class="literal">“selectable”</code> property</h3>
+<pre class="programlisting">  “selectable”               <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>The selectable state of the marker</p>
+<p>Flags: Read / Write</p>
+<p>Default value: FALSE</p>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ChamplainMarker--selected"></a><h3>The <code class="literal">“selected”</code> property</h3>
+<pre class="programlisting">  “selected”                 <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>The selected state of the marker</p>
+<p>Flags: Read / Write</p>
+<p>Default value: FALSE</p>
+<p class="since">Since 0.10</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="ChamplainMarker.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="ChamplainMarker-button-press"></a><h3>The <code class="literal">“button-press”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="ChamplainMarker.html" title="ChamplainMarker"><span class="type">ChamplainMarker</span></a> *self,
+               <a href="/usr/share/gtk-doc/html/clutter/clutter-Events.html#ClutterEvent"><span class="type">ClutterEvent</span></a>    *event,
+               <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>         user_data)</pre>
+<p>Emitted when button is pressed.</p>
+<div class="refsect3">
+<a name="id-1.3.3.2.13.2.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainMarker.html" title="ChamplainMarker"><span class="type">ChamplainMarker</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>event</p></td>
+<td class="parameter_description"><p>the underlying ClutterEvent</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: Run Last</p>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ChamplainMarker-button-release"></a><h3>The <code class="literal">“button-release”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="ChamplainMarker.html" title="ChamplainMarker"><span class="type">ChamplainMarker</span></a> *self,
+               <a href="/usr/share/gtk-doc/html/clutter/clutter-Events.html#ClutterEvent"><span class="type">ClutterEvent</span></a>    *event,
+               <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>         user_data)</pre>
+<p>Emitted when button is released. This signal is not emmitted at the end of dragging.</p>
+<div class="refsect3">
+<a name="id-1.3.3.2.13.3.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainMarker.html" title="ChamplainMarker"><span class="type">ChamplainMarker</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>event</p></td>
+<td class="parameter_description"><p>the underlying ClutterEvent</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: Run Last</p>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ChamplainMarker-drag-finish"></a><h3>The <code class="literal">“drag-finish”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="ChamplainMarker.html" title="ChamplainMarker"><span class="type">ChamplainMarker</span></a> *self,
+               <a href="/usr/share/gtk-doc/html/clutter/clutter-Events.html#ClutterEvent"><span class="type">ClutterEvent</span></a>    *event,
+               <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>         user_data)</pre>
+<p>Emitted when marker dragging ends (i.e. the button is released at the end
+of dragging).</p>
+<div class="refsect3">
+<a name="id-1.3.3.2.13.4.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainMarker.html" title="ChamplainMarker"><span class="type">ChamplainMarker</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>event</p></td>
+<td class="parameter_description"><p>the underlying ClutterEvent</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: Run Last</p>
+<p class="since">Since 0.10</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ChamplainMarker-drag-motion"></a><h3>The <code class="literal">“drag-motion”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="ChamplainMarker.html" title="ChamplainMarker"><span class="type">ChamplainMarker</span></a> *self,
+               <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a>          dx,
+               <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a>          dy,
+               <a href="/usr/share/gtk-doc/html/clutter/clutter-Events.html#ClutterEvent"><span class="type">ClutterEvent</span></a>    *event,
+               <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>         user_data)</pre>
+<p>Emmitted when the marker is dragged by mouse. dx and dy specify by how much
+the marker has been dragged since last time.</p>
+<div class="refsect3">
+<a name="id-1.3.3.2.13.5.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainMarker.html" title="ChamplainMarker"><span class="type">ChamplainMarker</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>dx</p></td>
+<td class="parameter_description"><p>by how much the marker has been moved in the x direction</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>dy</p></td>
+<td class="parameter_description"><p>by how much the marker has been moved in the y direction</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>event</p></td>
+<td class="parameter_description"><p>the underlying ClutterEvent</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: Run Last</p>
+<p class="since">Since 0.10</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.20</div>
+</body>
+</html>

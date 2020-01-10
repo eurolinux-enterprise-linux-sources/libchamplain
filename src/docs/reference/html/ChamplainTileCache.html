@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>libchamplain Reference Manual: ChamplainTileCache</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="libchamplain Reference Manual">
+<link rel="up" href="ch05.html" title="Tile Caches">
+<link rel="prev" href="ch05.html" title="Tile Caches">
+<link rel="next" href="ChamplainFileCache.html" title="ChamplainFileCache">
+<meta name="generator" content="GTK-Doc V1.20 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="10"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description"> <span class="dim">|</span> 
+                  <a href="#ChamplainTileCache.description" class="shortcut">Description</a></span><span id="nav_hierarchy"> <span class="dim">|</span> 
+                  <a href="#ChamplainTileCache.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch05.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="ch05.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="ChamplainFileCache.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="ChamplainTileCache"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="ChamplainTileCache.top_of_page"></a>ChamplainTileCache</span></h2>
+<p>ChamplainTileCache — A base class of tile caches</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="ChamplainTileCache.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainTileCache.html#champlain-tile-cache-store-tile" title="champlain_tile_cache_store_tile ()">champlain_tile_cache_store_tile</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainTileCache.html#champlain-tile-cache-refresh-tile-time" title="champlain_tile_cache_refresh_tile_time ()">champlain_tile_cache_refresh_tile_time</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ChamplainTileCache.html#champlain-tile-cache-on-tile-filled" title="champlain_tile_cache_on_tile_filled ()">champlain_tile_cache_on_tile_filled</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="ChamplainTileCache.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody><tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="ChamplainTileCache.html#ChamplainTileCache-struct" title="struct ChamplainTileCache">ChamplainTileCache</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="ChamplainTileCache.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+    <span class="lineart">╰──</span> <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span> <a class="link" href="ChamplainMapSource.html" title="ChamplainMapSource">ChamplainMapSource</a>
+            <span class="lineart">╰──</span> ChamplainTileCache
+                <span class="lineart">├──</span> <a class="link" href="ChamplainFileCache.html" title="ChamplainFileCache">ChamplainFileCache</a>
+                <span class="lineart">╰──</span> <a class="link" href="ChamplainMemoryCache.html" title="ChamplainMemoryCache">ChamplainMemoryCache</a>
+</pre>
+</div>
+<div class="refsect1">
+<a name="ChamplainTileCache.description"></a><h2>Description</h2>
+<p>This class defines properties and methods commons to all caches (that is, map
+sources that permit storage and retrieval of tiles). Tiles are typically
+stored by <a class="link" href="ChamplainTileSource.html" title="ChamplainTileSource"><span class="type">ChamplainTileSource</span></a> objects.</p>
+</div>
+<div class="refsect1">
+<a name="ChamplainTileCache.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="champlain-tile-cache-store-tile"></a><h3>champlain_tile_cache_store_tile ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_tile_cache_store_tile (<em class="parameter"><code><a class="link" href="ChamplainTileCache.html" title="ChamplainTileCache"><span class="type">ChamplainTileCache</span></a> *tile_cache</code></em>,
+                                 <em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *tile</code></em>,
+                                 <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *contents</code></em>,
+                                 <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> size</code></em>);</pre>
+<p>Stores the tile including the metadata into the cache.</p>
+<div class="refsect3">
+<a name="id-1.5.4.2.7.2.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>tile_cache</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainTileCache.html" title="ChamplainTileCache"><span class="type">ChamplainTileCache</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tile</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>contents</p></td>
+<td class="parameter_description"><p>the tile contents that should be stored</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>size</p></td>
+<td class="parameter_description"><p>size of the contents in bytes</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.6</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-tile-cache-refresh-tile-time"></a><h3>champlain_tile_cache_refresh_tile_time ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_tile_cache_refresh_tile_time
+                               (<em class="parameter"><code><a class="link" href="ChamplainTileCache.html" title="ChamplainTileCache"><span class="type">ChamplainTileCache</span></a> *tile_cache</code></em>,
+                                <em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *tile</code></em>);</pre>
+<p>Refreshes the tile access time in the cache.</p>
+<div class="refsect3">
+<a name="id-1.5.4.2.7.3.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>tile_cache</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainTileCache.html" title="ChamplainTileCache"><span class="type">ChamplainTileCache</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tile</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.6</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="champlain-tile-cache-on-tile-filled"></a><h3>champlain_tile_cache_on_tile_filled ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+champlain_tile_cache_on_tile_filled (<em class="parameter"><code><a class="link" href="ChamplainTileCache.html" title="ChamplainTileCache"><span class="type">ChamplainTileCache</span></a> *tile_cache</code></em>,
+                                     <em class="parameter"><code><a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a> *tile</code></em>);</pre>
+<p>When a cache fills a tile and the next source in the chain is a tile cache,
+it should call this function on the next source. This way all the caches
+preceding a tile source in the chain get informed that the tile was used and
+can modify their metadata accordingly in the implementation of this function.
+In addition, the call of this function should be chained so within the
+implementation of this function it should be called on the next source
+in the chain when next source is a tile cache.</p>
+<div class="refsect3">
+<a name="id-1.5.4.2.7.4.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>tile_cache</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainTileCache.html" title="ChamplainTileCache"><span class="type">ChamplainTileCache</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tile</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ChamplainTile.html" title="ChamplainTile"><span class="type">ChamplainTile</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 0.6</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="ChamplainTileCache.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="ChamplainTileCache-struct"></a><h3>struct ChamplainTileCache</h3>
+<pre class="programlisting">struct ChamplainTileCache;</pre>
+<p>The <a class="link" href="ChamplainTileCache.html" title="ChamplainTileCache"><span class="type">ChamplainTileCache</span></a> structure contains only private data
+and should be accessed using the provided API</p>
+<p class="since">Since 0.6</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.20</div>
+</body>
+</html>

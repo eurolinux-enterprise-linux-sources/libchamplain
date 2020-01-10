@@ -1,0 +1,93 @@
+<!-- ##### SECTION Title ##### -->
+ChamplainPoint
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT ChamplainPoint ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG ChamplainPoint:color ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG ChamplainPoint:size ##### -->
+<para>
+
+</para>
+
+<!-- ##### FUNCTION champlain_point_new ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_point_new_full ##### -->
+<para>
+
+</para>
+
+@size: 
+@color: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_point_set_color ##### -->
+<para>
+
+</para>
+
+@point: 
+@color: 
+
+
+<!-- ##### FUNCTION champlain_point_get_color ##### -->
+<para>
+
+</para>
+
+@point: 
+@Returns: 
+
+
+<!-- ##### FUNCTION champlain_point_set_size ##### -->
+<para>
+
+</para>
+
+@point: 
+@size: 
+
+
+<!-- ##### FUNCTION champlain_point_get_size ##### -->
+<para>
+
+</para>
+
+@point: 
+@Returns: 
+
+
